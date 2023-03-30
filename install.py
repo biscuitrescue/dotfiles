@@ -14,9 +14,10 @@ def get_home():
             )
     return (a.stdout.strip() + "/")
 
-home_config = f"{get_home()}.config/"
-home_theme = f"{get_home()}.themes/"
-home_scripts = f"{get_home()}scripts/"
+home = get_home
+home_config = f"{home}.config/"
+home_theme = f"{home}.themes/"
+home_scripts = f"{home}scripts/"
 
 def check_path(dir):
     if os.path.exists(dir):
@@ -40,7 +41,7 @@ def get_lists():
 
 def symlink(what, config):
     for i in what:
-        newconf = f"{config}{i}"
+        newconf = f"{config}"
         if os.path.exists(newconf) and os.path.isdir(newconf):
             rmtree(newconf)
         run(
@@ -56,8 +57,9 @@ for i in schema:
         path = home_scripts
         if os.path.exists(home_scripts):
             rmtree(home_scripts)
+            os.mkdir(home_scripts)
         run(
-                f"ln -sf {os.getcwd()}/scripts {home_scripts}",
+                f"ln -sf {os.getcwd()}/scripts {home}",
                 shell=True
                 )
     else:
