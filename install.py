@@ -54,6 +54,8 @@ schema = get_lists()
 for i in schema:
     if i == 'scripts':
         path = home_scripts
+        if os.path.exists(home_scripts):
+            rmtree(home_scripts)
         run(
                 f"ln -sf {os.getcwd()}/scripts {home_scripts}",
                 shell=True
