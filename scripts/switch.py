@@ -49,7 +49,7 @@ themes = {
         "polybar": "ashes",
         "alacritty": "ashes",
         "zathura": "ashes",
-        "waybar": "mocha",
+        "waybar": "ashes",
         "dunst": "ashes",
         "rofi": "ashes"
     },
