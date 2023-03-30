@@ -2,4 +2,4 @@
 
 mkdir -p ~/Pictures/Screenshots
 maim ~/Pictures/Screenshots/$(date +%s).png
-notify-send Screenshot taken
+dunstify -r 3101 'Screenshot taken'
