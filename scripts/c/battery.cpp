@@ -35,13 +35,13 @@ int main() {
     while(true){
         int x = check_battery();
         if(x>=99 && !(check_status())) {
-            system("notify-send 'Battery Full'");
+            system("dunstify -r 3000 'Battery Full' -h int:value:100 -h string:hlcolor:#95c7ae");
         }
         if(x<=30 && check_status()) {
-            system("notify-send 'Battery low ;('");
+            system("dunstify -r 3000 'Battery low ;('");
         }
         if(x<5 && check_status()) {
-            system("notify-send 'Suspending system in 30s'");
+            system("dunstify -r 3000 'Suspending system in 30s'");
             sleep(30);
             system("systemctl suspend");
         }
