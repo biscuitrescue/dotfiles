@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+xrdb -merge ~/.Xresources
+nm-applet &
+dunst &
+cppswap &
+picom -b --experimental-backend &
+xfce-polkit &
+battery &
+xss-lock --transfer-sleep-lock -- ./.lock.sh --nofork &
+libinput-gestures-setup start &
+xset s 1800 1800 &
+~/.fehbg

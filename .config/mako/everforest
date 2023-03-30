@@ -1,0 +1,13 @@
+# Colors
+
+background-color=#323d43
+text-color=#d8caac
+border-color=#e68183
+progress-color=over #6272a4
+border-radius=10
+padding=15
+font=azukifontB 14
+default-timeout=5000
+
+[urgency=high]
+border-color=#F8BD96

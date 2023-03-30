@@ -1,0 +1,4 @@
+#+TITLE: My config for picom
+
+** Need
+**** picom-jonaburg-fix (is on AUR)

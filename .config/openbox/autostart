@@ -1,0 +1,29 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
+
+xrdb merge ~/.Xresources
+nm-applet &
+bash /home/cafo/.config/polybar/launch.sh &
+xfce-polkit &
+picom -b &
+./.fehbg &
+xss-lock --transfer-sleep-lock -- ./.lock.sh --nofork &
+dunst &
+cppswap &
+xset s 1800 1800 &
+libinput-gestures-setup start &
