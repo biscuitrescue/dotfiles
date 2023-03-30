@@ -1,0 +1,25 @@
+[Monday]
+06:30-07:30 maths
+09:00-11:00 economics
+
+[Tuesday]
+01:00-02:00 physics
+02:00-03:00 english
+
+[Wednesday]
+04:00-05:30 physics
+06:00-08:00 maths
+
+[Thursday]
+02:00-11:00 ufnvpjsd
+08:00-01:00 oifndvm
+
+[Friday]
+01:00-02:00 ijdmvpdz
+08:00-10:00 ozhivfn
+
+[Saturday]
+08:00-10:00 Chemistry_module
+
+[Sunday]
+09:30-04:00 ionffvmk

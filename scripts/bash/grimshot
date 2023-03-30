@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/Pictures/Screenshots
+grim -t png ~/Pictures/Screenshots/$(date +%s).png
+notify-send Screenshot taken

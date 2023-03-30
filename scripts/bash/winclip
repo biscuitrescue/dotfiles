@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+maim | xclip -selection clipboard -t image/png
+notify-send Screen clipped

@@ -1,0 +1,1 @@
+{"digest":"97a62351235e16031755829ba2f42b46da054f4a","css":".ignore-in-parent-frame body {\n  filter: invert(100%) hue-rotate(180deg);\n  color: #111;\n}\n.ignore-in-parent-frame img {\n  filter: invert(100%) hue-rotate(180deg);\n}\n","imports":[],"version":1}

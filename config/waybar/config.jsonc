@@ -1,0 +1,91 @@
+{
+    "gtk-layer-shell": true,
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["wlr/workspaces", "memory", "cpu"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["tray", "pulseaudio", "backlight", "upower","battery", "clock"],
+    "wlr/workspaces": {
+        "on-click": "activate",
+        "disable-scroll": true,
+        "sort-by-number": true,
+        "format": "  {name}  ",
+        "format-icons": {
+            "default": ""
+        }
+    },
+    "hyprland/window": {
+        "format": " {} ",
+        "separate-outputs": true
+    },
+    "memory": {
+        "interval": 2,
+        "format": " {used}Gb  {swapUsed}Gb"
+    },
+    "cpu": {
+        "interval": 2,
+        "format": " {}%"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "custom/music": {
+        "format": "  {}",
+        "escape": true,
+        "interval": 5,
+        "tooltip": false,
+        "exec": "playerctl metadata --format='{{ title }}'",
+        "on-click": "playerctl play-pause",
+        "max-length": 50
+    },
+    "clock": {
+        "timezone": "Asia/Kolkata",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%H:%M} ",
+        "format-alt": " {%d/%m/%Y}"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
+    },
+    "upower": {
+        "icon-size": 15,
+        "hide-if-empty": true,
+        "tooltip": true,
+        "tooltip-spacing": 20
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-charging": "",
+        "format-plugged": "",
+        "format-alt": "{icon}",
+        "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""]
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-muted": "  {volume}%",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "pamixer -t"
+    },
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
+        "format": ""
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout &",
+        "format": "襤"
+    }
+}

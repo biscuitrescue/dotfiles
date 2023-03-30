@@ -1,0 +1,6 @@
+joseluisq/gitnow@2.1.1
+oh-my-fish/plugin-pj
+franciscolourenco/done
+jorgebucaran/autopair.fish
+jorgebucaran/fish-bax
+jorgebucaran/fisher

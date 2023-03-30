@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+mic(){
+	inp=`pamixer --list-sources | awk '/alsa_input/ {printf $1}'`
+	mic=`pamixer --source $inp --get-volume-human`
+	if [[ "$mic" == "muted" ]]; then
+		notify-send "Mic has been unmuted";
+		pamixer --source $inp -t
+		sleep 2;
+		dunstctl close-all;
+	else
+		pamixer --source $inp -t
+		notify-send "Mic has been muted";
+		sleep 2;
+		dunstctl close-all;
+	fi
+}
+
+mic
