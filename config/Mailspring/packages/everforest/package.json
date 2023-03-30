@@ -1,0 +1,13 @@
+{
+  "name": "everforest",
+  "title": "Everforest Theme",
+  "displayName": "Everforest Theme",
+  "theme": "ui",
+  "version": "0.1.0",
+  "description": "A great dark theme.",
+  "license": "MIT",
+  "engines": {
+    "mailspring": "*"
+  }
+}
+

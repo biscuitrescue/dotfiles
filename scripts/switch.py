@@ -6,9 +6,22 @@ from shutil import copyfile
 from os.path import exists
 
 
-# def find_nvim():
-#     with open(f"{home}.config/nvim/init.lua") as f:
-#         pass
+a = run(
+    'echo $HOME',
+    shell=True,
+    text=True,
+    capture_output=True
+)
+
+home = a.stdout.strip()+'/'
+
+
+def find_nvim():
+    with open(f"{home}.config/nvim/init.lua") as f:
+        x = f.readlines()
+    for i in x:
+        if "colorscheme" in i:
+            return x.index(i)
 
 
 def switch_theme(obj, theme):
@@ -35,7 +48,7 @@ themes = {
         "kitty": "ashes",
         "polybar": "ashes",
         "alacritty": "ashes",
-        "zathura": "mocha",
+        "zathura": "ashes",
         "waybar": "mocha",
         "dunst": "ashes",
         "rofi": "ashes"
@@ -167,7 +180,7 @@ thing = {
     'alacritty': ((61, (33, -5)), '.config/alacritty/alacritty.yml'),
     'Gtk': ((1, (15, -1)), '.config/gtk-3.0/settings.ini'),
     'polybar': ((0, (40, -5)), '.config/polybar/config.ini'),
-    'nvim': ((-5, (21, -3)), '.config/nvim/init.lua'),
+    'nvim': ((find_nvim(), (21, -3)), '.config/nvim/init.lua'),
     'zathura': ((-1, (8, -1)), '.config/zathura/zathurarc'),
     'waybar': ((0, (9, -7)), '.config/waybar/style.css'),
     'rofi': ((-1, (8, -2)), '.config/rofi/config.rasi')
@@ -176,15 +189,6 @@ thing = {
 theme = argv[-1]
 
 theme = theme.capitalize()
-
-a = run(
-    'echo $HOME',
-    shell=True,
-    text=True,
-    capture_output=True
-)
-
-home = a.stdout.strip()+'/'
 
 if theme not in themes:
     print("Error: Theme not found")
@@ -211,7 +215,7 @@ if theme in ['Mocha', 'Macchiato', 'Frappe', 'Latte']:
             )
 else:
     run(
-            "kvantummanager --set Monterey-Dark",
+            "kvantummanager --set MontereyDark",
             shell=True
             )
 
@@ -248,3 +252,4 @@ run(
     f'bash {home}.config/dunst/reload',
     shell=True
 )
+print(find_nvim())
