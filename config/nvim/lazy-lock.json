@@ -38,7 +38,5 @@
   "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
   "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
   "undotree": { "branch": "master", "commit": "485f01efde4e22cb1ce547b9e8c9238f36566f21" },
-  "vim-fugitive": { "branch": "master", "commit": "9acbad1335ee6f30a8497733dcb2373c4550c8a2" },
-  "vimwiki": { "branch": "dev", "commit": "dec6a9ecab3e5ec9ceff28b84cabb5c62d05ee9f" },
-  "vimwiki-server.nvim": { "branch": "master", "commit": "5a8fab371988ad84be9c3c567d9f1a89ea0ca15c" }
+  "vim-fugitive": { "branch": "master", "commit": "9acbad1335ee6f30a8497733dcb2373c4550c8a2" }
 }

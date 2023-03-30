@@ -35,8 +35,8 @@ require("lazy").setup({
     'numToStr/FTerm.nvim',
     'theprimeagen/harpoon',
 
-    'vimwiki/vimwiki',
-    {'chipsenkbeil/vimwiki-server.nvim', tag = 'v0.1.0-alpha.5' },
+    -- 'vimwiki/vimwiki',
+    -- {'chipsenkbeil/vimwiki-server.nvim', tag = 'v0.1.0-alpha.5' },
     {
         'toppair/peek.nvim',
         build = 'deno task --quiet build:fast',

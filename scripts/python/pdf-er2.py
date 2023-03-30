@@ -8,7 +8,7 @@ homedir='/home/cafo/pdf/'
 
 L = listdir(homedir)
 file=homedir+L[0]
-run(f'/home/cafo/.local/bin/har-extractor {file} -o {homedir}',shell=True)
+run(f'~/.local/bin/har-extractor {file} -o {homedir}',shell=True)
 newfile=file+'.d'
 pdf=newfile+'/online.vidyamandir.com/getpdf.php'
 name = input('File name: ')

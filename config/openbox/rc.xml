@@ -481,12 +481,12 @@
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="execute">
-        <command>light -U 5</command>
+        <command>dunster brightness_down</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="execute">
-        <command>light -A 5</command>
+        <command>dunster brightness_up</command>
       </action>
     </keybind>
     <keybind key="W-Prior">
@@ -501,7 +501,7 @@
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="execute">
-        <command>pamixer -t</command>
+        <command>dunster volume_mute</command>
       </action>
     </keybind>
     <keybind key="F4">
@@ -516,12 +516,12 @@
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="execute">
-        <command>pamixer -d 5</command>
+        <command>dunster volume_down</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="execute">
-        <command>pamixer -i 5</command>
+        <command>dunster volume_up</command>
       </action>
     </keybind>
     <keybind key="XF86AudioPlay">
