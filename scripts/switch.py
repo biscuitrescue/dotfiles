@@ -6,9 +6,9 @@ from shutil import copyfile
 from os.path import exists
 
 
-def find_nvim():
-    with open(f"{home}.config/nvim/init.lua") as f:
-        pass
+# def find_nvim():
+#     with open(f"{home}.config/nvim/init.lua") as f:
+#         pass
 
 
 def switch_theme(obj, theme):
@@ -209,6 +209,13 @@ if theme in ['Mocha', 'Macchiato', 'Frappe', 'Latte']:
             f"kvantummanager --set Catppuccin-{theme}-Rosewater",
             shell=True
             )
+else:
+    run(
+            "kvantummanager --set Monterey-Dark",
+            shell=True
+            )
+
+
 run(
     f'gsettings set org.gnome.desktop.interface gtk-theme {themes[theme]["Gtk"]}',
     shell=True
