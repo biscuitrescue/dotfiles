@@ -40,7 +40,7 @@ xset +fp /home/karttikeya/.local/share/fonts
 # ./.pipewire-start.sh &
 # exec bspwm
 XDG_SESSION_TYPE=x11
-dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+# dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 exec qtile start
 
 # exec dbus-launch --exit-with-session openbox
