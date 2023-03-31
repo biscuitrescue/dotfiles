@@ -30,8 +30,8 @@ elif theme == "nord":
     theme = nord[0]
 
 
-xx = 23
-xf = "jetbrainsmono nerd font bold"
+xx = 25
+xf = "mononoki nerd font bold"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
