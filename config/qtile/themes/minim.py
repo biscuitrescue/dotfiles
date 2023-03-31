@@ -30,8 +30,8 @@ elif theme == "nord":
     theme = nord[0]
 
 
-xx = 23
-xf = "jetbrainsmono nerd font bold"
+xx = 25
+xf = "mononoki nerd font bold"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -213,7 +213,7 @@ screens = [
         top=bar.Bar(
             default,
             38,
-            opacity=0.8,
+            # opacity=0.9,
             # margin=[10,10,6,10],
             background=theme["black"],
         ),
