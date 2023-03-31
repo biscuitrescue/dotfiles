@@ -14,61 +14,34 @@ def get_home():
             )
     return (a.stdout.strip() + "/")
 
-home = get_home
+
+def check_dir(path):
+    if os.path.exists(path):
+        rmtree(path)
+    os.mkdir(path)
+
+
+workdir = os.getcwd()
+home = get_home()
 home_config = f"{home}.config/"
 home_theme = f"{home}.themes/"
 home_scripts = f"{home}scripts/"
 
-def check_path(dir):
-    if os.path.exists(dir):
-        return True
-    return False
 
+run(
+        f"ln -sf {workdir}/config/* {home_config}",
+        shell=True
+        )
 
-def get_lists():
-    x = os.listdir()
-    for i in x:
-        if os.path.isdir(i):
-            if i == "config":
-                config = os.listdir(i)
-            elif i == "themes":
-                themes = os.listdir(i)
-            elif i == "scripts":
-                scripts = os.listdir(i)
+run(
+        f"ln -sf {workdir}/themes/* {home_theme}",
+        shell=True
+        )
 
-    return {'config': config, 'scripts': scripts, 'themes': themes}
+run(
+        f"ln -sf {workdir}/scripts {home_scripts}",
+        shell=True
+        )
 
-
-def symlink(what, config):
-    for i in what:
-        newconf = f"{config}"
-        if os.path.exists(newconf) and os.path.isdir(newconf):
-            rmtree(newconf)
-        run(
-                f"ln -sf {os.getcwd()}/{i} {newconf}",
-                shell=True
-                )
-
-
-schema = get_lists()
-
-for i in schema:
-    if i == 'scripts':
-        path = home_scripts
-        if os.path.exists(home_scripts):
-            rmtree(home_scripts)
-            os.mkdir(home_scripts)
-        run(
-                f"ln -sf {os.getcwd()}/scripts {home}",
-                shell=True
-                )
-    else:
-        if i == 'config':
-            path = home_config
-        elif i == 'themes':
-            path = home_theme
-        print(
-                symlink(schema[i], path)
-                )
 
 print("\tAll setup.\n\tTerminating...")
