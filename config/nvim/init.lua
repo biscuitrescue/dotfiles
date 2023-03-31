@@ -61,8 +61,8 @@ end
 
 require("cafo.remap")
 require 'colorizer'.setup()
-
 require("cafo.lazy")
+
 vim.cmd.colorscheme("catppuccin-latte")
 vim.cmd("hi LazyNormal guibg=bg")
 vim.cmd("hi MasonNormal guibg=bg")

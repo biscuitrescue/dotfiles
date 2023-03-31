@@ -134,6 +134,7 @@ require("lazy").setup({
         lazy = true
     },
 -- Packer
+    'NLKNguyen/papercolor-theme',
     'drewtempelmeyer/palenight.vim',
     {'NTBBloodbath/doom-one.nvim', lazy = true},
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
