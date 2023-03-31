@@ -41,7 +41,7 @@ def switch_theme(obj, theme):
 
 themes = {
     "Ashes": {
-        "openbox": "mocha",
+        "openbox": "Ashes-Openbox",
         "qtile": "ashes",
         "nvim": "ashes",
         "Gtk": "Otis-forest",
@@ -132,7 +132,7 @@ themes = {
         "waybar": "mocha"
     },
     "Dracula": {
-        "openbox": "Dracula-withoutBorder",
+        "openbox": "Dracula",
         "qtile": "dracula",
         "nvim": "dracula",
         "Gtk": "dracula",

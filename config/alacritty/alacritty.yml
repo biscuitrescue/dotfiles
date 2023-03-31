@@ -59,7 +59,7 @@ cursor:
   vi_mode_style: Underline
 
 import:
-  - /home/cafo/.config/alacritty/latte.yml
+  - /home/cafo/.config/alacritty/ashes.yml
 
 
 key_bindings:

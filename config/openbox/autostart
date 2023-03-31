@@ -20,7 +20,7 @@ xrdb merge ~/.Xresources
 nm-applet &
 bash /home/cafo/.config/polybar/launch.sh &
 xfce-polkit &
-picom -b &
+picom -b --experimental-backends &
 ./.fehbg &
 xss-lock --transfer-sleep-lock -- ./.lock.sh --nofork &
 dunst &

@@ -37,7 +37,7 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
 local lualine = require('lualine')
 
 
-local colors = require("catppuccin.palettes").get_palette()
+-- local colors = require("catppuccin.palettes").get_palette()
 -- local colors = {
 --     bg       = '#202328',
 --     fg       = '#bbc2cf',
@@ -64,7 +64,7 @@ local colors = require("catppuccin.palettes").get_palette()
 --     blue     = '#bd93f9',
 --     red      = '#ff5555',
 -- }
---[[ local colors = {
+local colors = {
     bg       = '#1c2023',
     fg       = '#c7ccd1',
     yellow   = '#c7ae95',
@@ -76,7 +76,7 @@ local colors = require("catppuccin.palettes").get_palette()
     magenta  = '#c795ae',
     blue     = '#95aec7',
     red      = '#f38ba8',
-} ]]
+}
 
 local conditions = {
     buffer_not_empty = function()

@@ -40,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Latte-Openbox</name>
+    <name>Ashes-Openbox</name>
     <titleLayout>CIMLDN</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -461,7 +461,7 @@
     <!-- Keybindings for running applications -->
     <keybind key="W-r">
       <action name="execute">
-        <command>rofi -show run</command>
+        <command>dmenu_run -p RUN </command>
       </action>
     </keybind>
     <keybind key="W-v">
@@ -472,6 +472,16 @@
     <keybind key="W-Return">
       <action name="execute">
         <command>kitty</command>
+      </action>
+    </keybind>
+    <keybind key="W-C-d">
+      <action name="execute">
+        <command>dunstop</command>
+      </action>
+    </keybind>
+    <keybind key="W-z">
+      <action name="execute">
+        <command>rofi -show window</command>
       </action>
     </keybind>
     <keybind key="W-d">
@@ -562,6 +572,11 @@
     <keybind key="W-Print">
       <action name="execute">
         <command>crop</command>
+      </action>
+    </keybind>
+    <keybind key="W-s">
+      <action name="execute">
+        <command>dmscripts/dmswitch</command>
       </action>
     </keybind>
     <keybind key="W-x">

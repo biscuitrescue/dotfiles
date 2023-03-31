@@ -54,12 +54,13 @@ require("lazy").setup({
             require('gitsigns').setup()
         end,
     },
-    {
-        "windwp/nvim-autopairs",
-        config = function()
-            require("nvim-autopairs").setup {}
-        end
-    },
+    -- {
+    --     "windwp/nvim-autopairs",
+    --     config = function()
+    --         require("nvim-autopairs").setup {}
+    --     end
+    -- },
+    'Raimondi/delimitMate',
     {
         'numToStr/Comment.nvim',
         config = function()
