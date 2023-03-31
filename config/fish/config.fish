@@ -6,7 +6,6 @@ set TERM "xterm-256color"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -Ux FZF_DEFAULT_OPTS "--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD"
 
-# fish_config theme choose Catppuccin\ Mocha
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/scripts/bash"
 fish_add_path "$HOME/.local/bin"
@@ -15,7 +14,7 @@ fish_add_path "$HOME/.neva/bin"
 set -x OPENAI_API_KEY "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"
 set fish_color_normal brwhite
 set fish_color_autosuggestion brgrey
-set fish_color_command brblue # '#50fa7b'
+set fish_color_command brgreen # '#50fa7b'
 set fish_color_error brred #'#ff5555'
 set fish_color_quote bryellow
 

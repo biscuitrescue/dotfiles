@@ -276,7 +276,7 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#1c2023"
-    foreground = "#c7ccd1"
+    foreground = "#97c7ae"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     icon = ~/.config/dunst/images/notification.png
@@ -284,7 +284,7 @@
 [urgency_normal]
 
     background = "#1c2023"
-    foreground = "#c7ccd1"
+    foreground = "#97aec7"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     icon = ~/.config/dunst/images/notification.png
