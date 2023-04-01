@@ -126,16 +126,11 @@ require("lazy").setup({
         'nvim-lualine/lualine.nvim',
         dependencies = { 'kyazdani42/nvim-web-devicons'}
     },
-    {
-        'maxmx03/dracula.nvim',
-        lazy = true,
-    },
-    {
-        'Soares/base16.nvim',
-        lazy = true
-    },
--- Packer
-    'NLKNguyen/papercolor-theme',
+
+    -- themes
+    'shaunsingh/nord.nvim',
+    { 'maxmx03/dracula.nvim', lazy = true, },
+    { 'Soares/base16.nvim', lazy = true },
     'drewtempelmeyer/palenight.vim',
     {'NTBBloodbath/doom-one.nvim', lazy = true},
     { "catppuccin/nvim", name = "catppuccin", lazy = true },

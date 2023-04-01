@@ -66,19 +66,6 @@ themes = {
         "dunst": "one",
         "rofi": "one"
     },
-    "Everforest": {
-        "openbox": "Everforest-Openbox",
-        "qtile": "everforest",
-        "nvim": "everforest",
-        "Gtk": "Everforest-Dark-BL",
-        "kitty": "everforest",
-        "polybar": "everforest",
-        "alacritty": "palenight",
-        "zathura": "everforest",
-        "waybar": "everforest",
-        "dunst": "everforest",
-        "rofi": "dracula"
-    },
     "Latte": {
         "openbox": "Latte-Openbox",
         "qtile": "latte",

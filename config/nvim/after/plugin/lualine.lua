@@ -37,6 +37,7 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
 local lualine = require('lualine')
 
 
+-- local colors = require("nord.named_colors")
 -- local colors = require("catppuccin.palettes").get_palette()
 -- local colors = {
 --     bg       = '#202328',
