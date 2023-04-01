@@ -5,7 +5,8 @@ from qtile_extras.widget.decorations import RectDecoration
 from qtile_extras import widget
 from colours import *
 
-theme = "ashes"
+
+theme = "latte"
 
 if theme == "ashes":
     theme = ashes[0]
