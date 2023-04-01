@@ -2,11 +2,11 @@ import os
 from libqtile.config import Screen
 from libqtile import layout, bar, widget, hook
 from qtile_extras.widget.decorations import RectDecoration
-from qtile_extras.bar import Bar
 from qtile_extras import widget
 from colours import *
 
-theme = "ashes"
+
+theme = "latte"
 
 if theme == "ashes":
     theme = ashes[0]
@@ -96,7 +96,7 @@ default = [
         linewidth=0,
     ),
     widget.CurrentLayoutIcon(
-        scale=0.45,
+        scale=0.4,
         custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
     ),
 
@@ -107,12 +107,12 @@ default = [
         padding=4,
     ),
     widget.TextBox(
-        foreground=theme["blood"],
+        foreground=theme["red"],
         text="|",
         font=xf,
     ),
     widget.CPU(
-        background=theme["blood"],
+        background=theme["red"],
         foreground=theme["black"],
         format=' {load_percent}%',
         font=xf,
@@ -262,7 +262,7 @@ screens = [
     Screen(
         top=bar.Bar(
             default,
-            42,
+            44,
             # opacity=0.9,
             margin=[10,10,6,10],
             background=theme["black"],

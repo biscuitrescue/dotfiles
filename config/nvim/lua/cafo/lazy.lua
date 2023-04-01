@@ -54,13 +54,13 @@ require("lazy").setup({
             require('gitsigns').setup()
         end,
     },
-    -- {
-    --     "windwp/nvim-autopairs",
-    --     config = function()
-    --         require("nvim-autopairs").setup {}
-    --     end
-    -- },
-    'Raimondi/delimitMate',
+    {
+        "windwp/nvim-autopairs",
+        config = function()
+            require("nvim-autopairs").setup {}
+        end
+    },
+    -- 'Raimondi/delimitMate',
     {
         'numToStr/Comment.nvim',
         config = function()
@@ -131,7 +131,7 @@ require("lazy").setup({
     'shaunsingh/nord.nvim',
     { 'maxmx03/dracula.nvim', lazy = true, },
     { 'Soares/base16.nvim', lazy = true },
-    'drewtempelmeyer/palenight.vim',
+    {'drewtempelmeyer/palenight.vim', lazy = true},
     {'NTBBloodbath/doom-one.nvim', lazy = true},
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
 })

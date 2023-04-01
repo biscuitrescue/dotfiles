@@ -14,4 +14,4 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "ashes"
+@theme "latte"
