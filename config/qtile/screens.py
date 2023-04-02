@@ -31,7 +31,7 @@ elif theme == "nord":
 
 
 xx = 25
-xf = "mononoki nerd font bold"
+xf = "Operator Mono Medium"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -39,8 +39,9 @@ default = [
         font=xf,
     ),
     widget.GroupBox(
-        font="operator mono",
-        fontsize=xx+1,
+        font=xf,
+        # font="operator mono",
+        fontsize=xx,
         margin_y=4,
         margin_x=5,
         padding_y=3,
