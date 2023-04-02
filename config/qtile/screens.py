@@ -30,7 +30,7 @@ elif theme == "nord":
     theme = nord[0]
 
 
-xx = 25
+xx = 31
 xf = "Operator Mono Medium"
 default = [
     widget.TextBox(
@@ -213,7 +213,7 @@ screens = [
     Screen(
         top=bar.Bar(
             default,
-            38,
+            44,
             # opacity=0.9,
             # margin=[10,10,6,10],
             background=theme["black"],

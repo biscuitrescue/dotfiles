@@ -1,4 +1,5 @@
 [global]
+    font = M PLUS 1 CODE nerd font 13
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
@@ -86,7 +87,6 @@
 
     ### Text ###
 
-    font = jetbrainsmono nerd font 12
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
