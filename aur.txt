@@ -1,0 +1,11 @@
+brave-bin
+i3lock-color
+libinput-gestures
+ly
+mailspring
+paru-bin
+picom-animations-git
+qtile-extras-git
+qtile-git
+signal-desktop-beta-bin
+spicetify-cli
