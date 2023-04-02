@@ -40,17 +40,17 @@ local lualine = require('lualine')
 -- local colors = require("nord.named_colors")
 -- local colors = require("catppuccin.palettes").get_palette()
 -- local colors = {
---     bg       = '#202328',
---     fg       = '#bbc2cf',
---     yellow   = '#ECBE7B',
---     cyan     = '#008080',
+--     bg       = '#292D3E',
+--     fg       = '#bfc7d5',
+--     yellow   = '#ffcb6b',
+--     cyan     = '#89DDFF',
 --     darkblue = '#081633',
---     green    = '#98be65',
---     orange   = '#FF8800',
---     violet   = '#a9a1e1',
---     magenta  = '#c678dd',
---     blue     = '#51afef',
---     red      = '#ec5f67',
+--     green    = '#C3E88D',
+--     orange   = '#F78C6C',
+--     violet   = '#c792ea',
+--     magenta  = '#939ede',
+--     blue     = '#82b1ff',
+--     red      = '#ff5370',
 -- }
 -- local colors = {
 --     bg       = '#282a36',
@@ -64,7 +64,7 @@ local lualine = require('lualine')
 --     magenta  = '#ff79c6',
 --     blue     = '#bd93f9',
 --     red      = '#ff5555',
--- }
+--
 local colors = {
     bg       = '#1c2023',
     fg       = '#c7ccd1',

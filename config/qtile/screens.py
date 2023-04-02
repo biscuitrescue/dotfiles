@@ -95,7 +95,7 @@ default = [
         foreground=theme["yellow"],
         measure_mem='G',
         measure_swap='G',
-        format=' {MemUsed: .2f} GB',
+        format='{MemUsed: .2f} GB',
     ),
     widget.TextBox(
         foreground=theme["magenta"],

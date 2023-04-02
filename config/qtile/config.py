@@ -14,7 +14,7 @@ border = dict(
 )
 layouts = [
     layout.Tile(
-        margin=8,
+        margin=13,
         ratio=0.55,
         # border_on_single=False,
         shift_windows=True,
