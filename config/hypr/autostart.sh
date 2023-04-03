@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-killall mako
-mako &
+killall dunst
+dunst &
 killall xfce-polkit
 xfce-polkit &
 killall nm-applet
 nm-applet --indicator &
-wayblur &
+# wayblur &
 killall battery
 battery &
-wbg ~/Pictures/wallpapers/lake_trees.png &
-swayidle -w timeout 600 'wayblur' before-sleep 'wayblur' &
+wbg ~/Pictures/wallpapers/beachhouses.png &
+swayidle -w timeout 900 'wayblur' before-sleep 'wayblur' &
