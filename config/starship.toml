@@ -2,14 +2,14 @@ palette = "ashes"
 
 [character]
 # Note the use of Catppuccin color 'maroon'
-success_symbol = "[[♥](red) ❯](blue)"
-error_symbol = "[❯](magenta)"
-vicmd_symbol = "[❮](lavender)"
+success_symbol = "[[!/](blue)❯](magenta)"
+error_symbol = "[[!!](magenta)❯](red)"
+vicmd_symbol = "[[//](magenta)❮](blue)"
 
 [directory]
 truncation_length = 4
 # Catppuccin 'lavender'
-style = "bold lavender"
+style = "bold blue"
 
 # palette tables should be last in the config ⚓️
 [palettes.ashes]
@@ -22,8 +22,11 @@ yellow = "#AEC795"
 
 [palettes.dracula]
 green = "#50fa7b"
-red = "#ff5555"
-maroon = "#bd93f9"
+red = "#ff6e6e"
+lavender = "#bd93f9"
+blue = "#6272a4"
+magenta = "#ff79c6"
+yellow = "#f1fa8c"
 
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"

@@ -40,6 +40,19 @@ local lualine = require('lualine')
 -- local colors = require("nord.named_colors")
 -- local colors = require("catppuccin.palettes").get_palette()
 -- local colors = {
+--     bg       = '#282c34',
+--     fg       = '#bfc7d5',
+--     yellow   = '#ecbe7b',
+--     cyan     = '#46d9ff',
+--     darkblue = '#081633',
+--     green    = '#98be65',
+--     orange   = '#da8548',
+--     violet   = '#a9a1e1',
+--     magenta  = '#a9a1e1',
+--     blue     = '#51afef',
+--     red      = '#ff6c6b',
+-- }
+-- local colors = {
 --     bg       = '#292D3E',
 --     fg       = '#bfc7d5',
 --     yellow   = '#ffcb6b',
@@ -64,7 +77,7 @@ local lualine = require('lualine')
 --     magenta  = '#ff79c6',
 --     blue     = '#bd93f9',
 --     red      = '#ff5555',
---
+-- }
 local colors = {
     bg       = '#1c2023',
     fg       = '#c7ccd1',
@@ -109,8 +122,8 @@ local config = {
         -- these are to remove the defaults
         lualine_a = {},
         lualine_b = {},
-        lualine_y = {},
-        lualine_z = {{"macro_recording", fmt = show_macro_recording,}},
+        lualine_y = {{"macro_recording", fmt = show_macro_recording}},
+        lualine_z = {},
         -- These will be filled later
         lualine_c = {},
         lualine_x = {},
