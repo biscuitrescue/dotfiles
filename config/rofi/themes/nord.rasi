@@ -35,7 +35,7 @@
     highlight:     underline bold #eceff4;
 
     transparent: rgba(46,52,64,0);
-    font: "AzukifontBI 20";
+    font: "M Plus 1 Code Nerd Font Medium 20";
 }
 
 window {

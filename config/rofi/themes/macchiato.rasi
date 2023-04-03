@@ -9,7 +9,7 @@
     grey: #6e738d;
 
     width: 650;
-    font: "JetBrainsMono Nerd Font 14";
+    font: "M Plus 1 Code Nerd Font Medium 20";
 }
 
 element-text, element-icon , mode-switcher {
