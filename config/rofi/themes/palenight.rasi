@@ -9,7 +9,7 @@
     grey: #606579;
 
     width: 650;
-    font: "M Plus 1 Code Nerd Font Medium 20";
+    font: "M Plus 1 Code Nerd Font Medium 13";
 }
 
 element-text, element-icon , mode-switcher {

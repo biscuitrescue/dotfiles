@@ -9,7 +9,7 @@
     "modules-right": ["tray", "pulseaudio", "backlight", "upower","battery", "clock"],
     "wlr/workspaces": {
         "on-click": "activate",
-        "disable-scroll": true,
+        "disable-scroll": false,
         "sort-by-number": true,
         "format": "  {name}  ",
         "format-icons": {
