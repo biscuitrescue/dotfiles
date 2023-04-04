@@ -2,7 +2,7 @@
 
 * {
     font-family: KOULEN;
-    font-size: 14px;
+    font-size: 15px;
     min-width: 0;
     padding: 0.05rem;
 }
@@ -29,7 +29,7 @@
 
 #workspaces button.active {
     background: @surface0;
-    border-radius: 1rem;
+    border-radius: 0.4rem;
     color: @blue;
 }
 
