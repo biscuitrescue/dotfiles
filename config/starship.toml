@@ -1,4 +1,4 @@
-palette = "catppuccin_mocha"
+palette = "dracula"
 
 [character]
 # Note the use of Catppuccin color 'maroon'
@@ -9,7 +9,7 @@ vicmd_symbol = "[[//](blue)❮](mauve)"
 [directory]
 truncation_length = 4
 # Catppuccin 'lavender'
-style = "bold blue"
+style = "bold magenta"
 
 # palette tables should be last in the config ⚓️
 [palettes.ashes]
@@ -23,7 +23,7 @@ yellow = "#AEC795"
 [palettes.dracula]
 green = "#50fa7b"
 red = "#ff6e6e"
-lavender = "#bd93f9"
+mauve = "#bd93f9"
 blue = "#6272a4"
 magenta = "#ff79c6"
 yellow = "#f1fa8c"

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+wbg ~/Pictures/wallpapers/bridge.png &

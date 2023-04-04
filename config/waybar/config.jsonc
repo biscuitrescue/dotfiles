@@ -65,7 +65,6 @@
         "timezone": "Asia/Kolkata",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%H\n%M}",
-        "format-alt": "{%d/%m/%Y}"
     },
     "backlight": {
         "device": "intel_backlight",
