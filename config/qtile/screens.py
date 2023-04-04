@@ -30,7 +30,7 @@ elif theme == "nord":
     theme = nord[0]
 
 
-xx = 31
+xx = 28
 xf = "Operator Mono Medium"
 default = [
     widget.TextBox(

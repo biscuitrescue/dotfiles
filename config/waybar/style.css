@@ -1,8 +1,8 @@
 @import "ashes.css";
 
 * {
-  font-family: 'M PLUS 1 Code nerd font medium';
-  font-size: 15px;
+  font-family: jetbrainsmono nerd font medium;
+  font-size: 14px;
   min-height: 0;
 }
 
@@ -26,12 +26,13 @@
 }
 
 #workspaces button.active {
-  color: @green;
+  color: @maroon;
   border-radius: 1rem;
 }
 
 #workspaces button:hover {
-  color: @sapphire;
+  color: @base;
+  background: @maroon;
   border-radius: 1rem;
 }
 

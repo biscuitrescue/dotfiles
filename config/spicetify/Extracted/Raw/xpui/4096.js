@@ -1,2 +1,0 @@
-"use strict";(("undefined"!=typeof self?self:global).webpackChunkopen=("undefined"!=typeof self?self:global).webpackChunkopen||[]).push([[4096],{34096:(e,s,r)=>{r.r(s),r.d(s,{PodcastSponsorsWrapper:()=>a,default:()=>d});var n=r(96206),t=r(13218);const l="Opi2dmbjxhZcr0do4cr9";var o=r(85893);function a({shelfHeaderProps:e,listProps:s}){return(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)(t.r,{title:n.ag.get("episode.sponsored_by"),...e}),(0,o.jsx)("aside",{className:l,...s})]})}const d=a}}]);
-//# sourceMappingURL=4096.js.map
