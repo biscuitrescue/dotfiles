@@ -15,12 +15,12 @@ menu.title.text.justify:        Center
 menu.items.bg:                  flat solid
 menu.items.bg.color:            #1c2023
 
-menu.items.text.color:          #C9CBFF
+menu.items.text.color:          #95aec7
 menu.items.disabled.text.color: #1c2023
 
 menu.items.active.bg:           flat solid
 menu.items.active.bg.color:     #1c2023
-menu.items.active.text.color:   #95aec7
+menu.items.active.text.color:   #c79595
 
 # Active window
 
