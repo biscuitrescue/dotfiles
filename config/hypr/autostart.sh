@@ -9,6 +9,6 @@ nm-applet --indicator &
 # wayblur &
 killall battery
 battery &
-wbg ~/Pictures/wallpapers/ashstreet.png &
+wbg ~/Pictures/wallpapers/beachhouses.png &
 swayidle -w timeout 900 'wayblur' before-sleep 'wayblur' &
 waybar &

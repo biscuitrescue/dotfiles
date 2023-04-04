@@ -1,7 +1,7 @@
 @import "mocha.css";
 
 * {
-    font-family: operator mono bold;
+    font-family: KOULEN;
     font-size: 15px;
     min-width: 0;
     padding: 0.05rem;
@@ -16,14 +16,14 @@
 
 #workspaces {
     border-radius: 0.4rem;
-    margin: 0.4rem;
+    margin: 0.2rem;
     background: @blue;
     padding: 0.15rem;
 }
 
 #workspaces button {
     color: @base;
-    padding: 0.2rem 0rem 0.2rem 0rem;
+    /* padding: 0.2rem 0rem 0.2rem 0rem; */
     border-radius: 0.4rem;
 }
 
@@ -42,9 +42,11 @@
 #tray {
     background-color: @surface0;
     border-radius: 0.4rem;
-    padding: 0.4rem;
-    margin: 0.4rem;
+    padding: 0rem;
+    margin: 0.2rem;
+    margin-bottom: 0.3rem;
     color: @blue;
+    margin-bottom: 0.4rem;
 }
 #backlight,
 #clock,
@@ -52,8 +54,8 @@
     color: @base;
     background: @maroon;
     border-radius: 0.4rem;
-    padding: 0.4rem;
-    margin: 0.4rem;
+    padding: 0.1rem;
+    margin: 0.2rem;
     margin-bottom: 0.2rem;
     margin-top: 0.6rem;
 }
@@ -61,8 +63,8 @@
     color: @base;
     background: @maroon;
     border-radius: 0.4rem;
-    padding: 0.4rem;
-    margin: 0.4rem;
+    padding: 0.1rem;
+    margin: 0.2rem;
     margin-bottom: 0.6rem;
     margin-top: 0.2rem;
 }
@@ -73,13 +75,14 @@
     border-radius: 0.4rem;
     color: @base;
     background: @blue;
-    padding: 0.4rem;
-    margin: 0.4rem;
+    padding: 0rem;
+    margin: 0.2rem;
     margin-top: 0.4rem;
+    margin-bottom: 0.6rem;
 }
 
 #battery.charging {
-  color: @green;
+  background: @green;
 }
 
 #battery.warning:not(.charging) {
@@ -98,32 +101,37 @@
     background: @lavender;
     color: @base;
     border-radius: 0.4rem;
-    margin: 0.4rem;
-    padding: 0.4rem;
+    margin: 0.2rem;
+    padding: 0rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 
 #cpu {
     color: @base;
     background: @yellow;
     border-radius: 0.4rem;
-    padding: 0.4rem;
-    margin: 0.4rem;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 #memory.mem {
     color: @base;
     border-radius: 0.4rem;
-    padding: 0.4rem;
+    padding: 0rem;
     background: @peach;
-    margin: 0.4rem;
-    margin-bottom: 0.3rem;
+    margin: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0.6rem;
 }
 #memory.swap {
     color: @base;
     border-radius: 0.4rem;
-    padding: 0.4rem;
+    padding: 0rem;
     background: @peach;
-    margin: 0.4rem;
-    margin-top: 0rem;
+    margin: 0.2rem;
+    margin-top: 0.2rem;
     margin-bottom: 0.6rem;
 }
 

@@ -58,7 +58,7 @@
     "clock#date": {
         "timezone": "Asia/Kolkata",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%d\n\n%m\n\n%y}"
+        "format": "{:%d\n%m\n%y}"
     },
     "clock#time": {
         // "rotate": ,
@@ -86,7 +86,7 @@
             "critical": 15
         },
         "format": "{capacity}",
-        "format-charging": "",
+        // "format-charging": "",
         "format-plugged": "",
         "format-alt": "{icon}",
         "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""]
