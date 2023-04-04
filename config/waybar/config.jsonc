@@ -1,4 +1,9 @@
 {
+    "name": "main",
+    "id": "bar",
+    "exclusive": "true",
+    "ipc": "true",
+    "fixed-center": "true",
     "gtk-layer-shell": true,
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
@@ -11,8 +16,8 @@
         "on-click": "activate",
         "disable-scroll": false,
         "sort-by-number": true,
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-     "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
         "format": "  {name}  ",
         "format-icons": {
             "default": ""

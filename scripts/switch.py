@@ -217,24 +217,24 @@ if exists(f"{home}.themes/{themes[theme]['Gtk']}/gtk-4.0/gtk.css"):
 
 copyfile(f"{home}.config/dunst/{themes[theme]['dunst']}", f"{home}.config/dunst/dunstrc")
 
-copyfile(f"{home}.config/mako/{themes[theme]['dunst']}", f"{home}.config/mako/config")
+# copyfile(f"{home}.config/mako/{themes[theme]['dunst']}", f"{home}.config/mako/config")
 
+# run(
+#     'qtile cmd-obj -o cmd -f reload_config',
+#     shell=True
+# )
+# run(
+#     'openbox --reconfigure',
+#     shell=True
+# )
 run(
-    'qtile cmd-obj -o cmd -f reload_config',
+    "killall -SIGUSR2 waybar",
     shell=True
 )
-run(
-    'openbox --reconfigure',
-    shell=True
-)
-run(
-    'killall waybar && waybar &',
-    shell=True
-)
-run(
-    'makoctl reload',
-    shell=True
-)
+# run(
+#     'makoctl reload',
+#     shell=True
+# )
 run(
     f'bash {home}.config/dunst/reload',
     shell=True

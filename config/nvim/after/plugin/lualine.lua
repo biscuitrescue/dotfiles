@@ -38,7 +38,7 @@ local lualine = require('lualine')
 
 
 -- local colors = require("nord.named_colors")
--- local colors = require("catppuccin.palettes").get_palette()
+local colors = require("catppuccin.palettes").get_palette()
 -- local colors = {
 --     bg       = '#282c34',
 --     fg       = '#bfc7d5',
@@ -78,19 +78,19 @@ local lualine = require('lualine')
 --     blue     = '#bd93f9',
 --     red      = '#ff5555',
 -- }
-local colors = {
-    bg       = '#1c2023',
-    fg       = '#c7ccd1',
-    yellow   = '#c7ae95',
-    cyan     = '#95c7ae',
-    darkblue = '#747c84',
-    green    = '#aec795',
-    orange   = '#fab387',
-    violet   = '#ae95c7',
-    magenta  = '#c795ae',
-    blue     = '#95aec7',
-    red      = '#f38ba8',
-}
+-- local colors = {
+--     bg       = '#1c2023',
+--     fg       = '#c7ccd1',
+--     yellow   = '#c7ae95',
+--     cyan     = '#95c7ae',
+--     darkblue = '#747c84',
+--     green    = '#aec795',
+--     orange   = '#fab387',
+--     violet   = '#ae95c7',
+--     magenta  = '#c795ae',
+--     blue     = '#95aec7',
+--     red      = '#f38ba8',
+-- }
 
 local conditions = {
     buffer_not_empty = function()
