@@ -3,22 +3,20 @@
     "id": "bar",
     "exclusive": "true",
     "ipc": "true",
-    "fixed-center": "true",
     "gtk-layer-shell": true,
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    // "width": 1280, // Waybar width
-    // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "memory", "cpu"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "pulseaudio", "backlight", "upower","battery", "clock"],
+    "layer": "top",
+    "position": "right",
+    "height": "", 		
+    "width": 40,
+    "modules-left": ["wlr/workspaces"],
+    "modules-right": ["tray", "cpu","pulseaudio","clock#date", "clock#time", "memory#mem", "memory#swap", "battery"],
     "wlr/workspaces": {
         "on-click": "activate",
         "disable-scroll": false,
         "sort-by-number": true,
     "on-scroll-up": "hyprctl dispatch workspace e-1",
     "on-scroll-down": "hyprctl dispatch workspace e+1",
-        "format": "  {name}  ",
+        "format": "{name}",
         "format-icons": {
             "default": ""
         }
@@ -27,16 +25,25 @@
         "format": " {} ",
         "separate-outputs": true
     },
-    "memory": {
+    "memory#mem": {
         "interval": 2,
-        "format": " {used}Gb  {swapUsed}Gb"
+        // "format": "{icon}",
+        "format": "{percentage}\n {icon}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    },
+    "memory#swap": {
+        "interval": 2,
+        "format": "{swapPercentage}",
+        // "format": "{icon}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
     },
     "cpu": {
+        "format": "{icon}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
         "interval": 2,
-        "format": " {}%"
     },
     "tray": {
-        "icon-size": 18,
+        "icon-size": 15,
         "spacing": 10
     },
     "custom/music": {
@@ -48,29 +55,37 @@
         "on-click": "playerctl play-pause",
         "max-length": 50
     },
-    "clock": {
+    "clock#date": {
         "timezone": "Asia/Kolkata",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": " {:%H:%M} ",
-        "format-alt": " {%d/%m/%Y}"
+        "format": "{:%d\n\n%m\n\n%y}"
+    },
+    "clock#time": {
+        // "rotate": ,
+        "timezone": "Asia/Kolkata",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%H\n%M}",
+        "format-alt": "{%d/%m/%Y}"
     },
     "backlight": {
         "device": "intel_backlight",
-        "format": "{percent}% {icon}",
+        "format": "{percent}%",
         "format-icons": ["", ""]
     },
     "upower": {
         "icon-size": 15,
         "hide-if-empty": true,
+        "format": "{percentage}",
         "tooltip": true,
         "tooltip-spacing": 20
     },
     "battery": {
+        "interval": 2,
         "states": {
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}",
+        "format": "{capacity}",
         "format-charging": "",
         "format-plugged": "",
         "format-alt": "{icon}",
@@ -78,8 +93,8 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-muted": "  {volume}%",
+        "format": "{volume}",
+        "format-muted": "",
         "format-icons": {
             "default": ["", "", " "]
         },
