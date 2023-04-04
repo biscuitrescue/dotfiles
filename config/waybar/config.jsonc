@@ -28,7 +28,7 @@
     "memory#mem": {
         "interval": 2,
         // "format": "{icon}",
-        "format": "{percentage}\n {icon}",
+        "format": "{percentage}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
     },
     "memory#swap": {

@@ -1,8 +1,8 @@
 @import "ashes.css";
 
 * {
-    font-family: jetbrainsmono nerd fon5;
-    font-size: 12px;
+    font-family: operator mono bold;
+    font-size: 15px;
     min-width: 0;
     padding: 0.05rem;
 }
@@ -23,11 +23,11 @@
 
 #workspaces button {
     color: @base;
+    padding: 0.2rem 0rem 0.2rem 0rem;
     border-radius: 0.4rem;
 }
 
 #workspaces button.active {
-    padding: 0.2rem 0rem 0.2rem 0rem;
     background: @surface0;
     border-radius: 1rem;
     color: @blue;
