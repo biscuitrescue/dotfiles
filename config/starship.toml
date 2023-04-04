@@ -1,10 +1,10 @@
-palette = "ashes"
+palette = "catppuccin_mocha"
 
 [character]
 # Note the use of Catppuccin color 'maroon'
-success_symbol = "[[!/](lavender)❯](blue)"
+success_symbol = "[[!/](blue)❯](mauve)"
 error_symbol = "[[!!](magenta)❯](red)"
-vicmd_symbol = "[[//](lavender)❮](blue)"
+vicmd_symbol = "[[//](blue)❮](mauve)"
 
 [directory]
 truncation_length = 4

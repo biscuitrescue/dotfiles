@@ -1,4 +1,4 @@
-@import "ashes.css";
+@import "mocha.css";
 
 * {
     font-family: operator mono bold;
@@ -59,7 +59,7 @@
 }
 #clock.time {
     color: @base;
-    background: @mauve;
+    background: @maroon;
     border-radius: 0.4rem;
     padding: 0.4rem;
     margin: 0.4rem;
@@ -104,7 +104,7 @@
 
 #cpu {
     color: @base;
-    background: @pink;
+    background: @yellow;
     border-radius: 0.4rem;
     padding: 0.4rem;
     margin: 0.4rem;

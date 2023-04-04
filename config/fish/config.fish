@@ -11,7 +11,7 @@ fish_add_path "$HOME/scripts/bash"
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.neva/bin"
 
-set fish_color_normal brwhite
+set fish_color_normal brcyan
 set fish_color_autosuggestion brgrey
 set fish_color_command brgreen # '#50fa7b'
 set fish_color_error brred #'#ff5555'
