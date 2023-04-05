@@ -43,7 +43,7 @@ themes = {
     "Ashes": {
         "openbox": "Ashes-Openbox",
         "qtile": "ashes",
-        "nvim": "ashes",
+        "nvim": "catppuccin-macchiato",
         "Gtk": "Otis-forest",
         "kitty": "ashes",
         "polybar": "ashes",

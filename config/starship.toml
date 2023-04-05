@@ -2,9 +2,9 @@ palette = "ashes"
 
 [character]
 # Note the use of Catppuccin color 'maroon'
-success_symbol = "[[!/](blue)❯](mauve)"
-error_symbol = "[[!!](magenta)❯](red)"
-vicmd_symbol = "[[//](blue)❮](mauve)"
+success_symbol = "[[!/](blue)❯](magenta)"
+error_symbol = "[[!!](mauve)❯](red)"
+vicmd_symbol = "[[//](blue)❮](magenta)"
 
 [directory]
 truncation_length = 4
@@ -14,10 +14,10 @@ style = "bold magenta"
 # palette tables should be last in the config ⚓️
 [palettes.ashes]
 green = "#95C7AE"
-red = "#C79595"
+red = "#c795ae"
 mauve = "#AE95C7"
 blue = "#95AEC7"
-magenta = "#c795ae"
+magenta = "#C79595"
 yellow = "#AEC795"
 
 [palettes.dracula]
