@@ -73,7 +73,7 @@
 #battery {
     border-radius: 0.4rem;
     color: @base;
-    background: @mauve;
+    background: @green;
     padding: 0.3rem;
     margin: 0.2rem;
     margin-top: 0.4rem;
@@ -81,7 +81,7 @@
 }
 
 #battery.charging {
-  background: @green;
+  background: @lavender;
 }
 
 #battery.warning:not(.charging) {
@@ -119,7 +119,7 @@
     color: @base;
     border-radius: 0.4rem;
     padding: 0.3rem;
-    background: @green;
+    background: @mauve;
     margin: 0.2rem;
     margin-bottom: 0.15rem;
     margin-top: 0.4rem;
@@ -128,7 +128,7 @@
     color: @base;
     border-radius: 0.4rem;
     padding: 0.3rem;
-    background: @green;
+    background: @mauve;
     margin: 0.2rem;
     margin-top: 0.15rem;
     margin-bottom: 0.2em;
