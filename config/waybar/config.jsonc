@@ -5,11 +5,14 @@
     "ipc": "true",
     "gtk-layer-shell": true,
     "layer": "top",
-    "position": "left",
+    "position": "right",
     "height": "", 		
-    "width": 34,
-    "modules-left": ["wlr/workspaces"],
+    "width": 42,
+    "modules-left": ["river/tags", "wlr/workspaces"],
     "modules-right": ["tray", "cpu", "pulseaudio", "memory#mem", "memory#swap", "clock#date", "clock#time", "battery"],
+    "river/tags": {
+        "num-tags": 9,
+    },
     "wlr/workspaces": {
         "on-click": "activate",
         "disable-scroll": false,
