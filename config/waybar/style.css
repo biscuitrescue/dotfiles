@@ -1,8 +1,8 @@
-@import "dracula.css";
+@import "latte.css";
 
 * {
-    font-family: KOULEN;
-    font-size: 15px;
+    font-family: operator mono bold;
+    font-size: 14px;
     min-width: 0;
     padding: 0.05rem;
 }
@@ -23,7 +23,7 @@
 
 #workspaces button {
     color: @base;
-    /* padding: 0.2rem 0rem 0.2rem 0rem; */
+    padding: 0.2rem 0rem 0.2rem 0rem;
     border-radius: 0.4rem;
 }
 
@@ -40,9 +40,9 @@
 }
 
 #tray {
-    background-color: @surface0;
+    background-color: @surface2;
     border-radius: 0.4rem;
-    padding: 0.2rem;
+    padding: 0.3rem;
     margin: 0.2rem;
     margin-bottom: 0.3rem;
     color: @blue;
@@ -54,19 +54,19 @@
     color: @base;
     background: @maroon;
     border-radius: 0.4rem;
-    padding: 0.1rem;
+    padding: 0.3rem;
     margin: 0.2rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.15rem;
     margin-top: 0.6rem;
 }
 #clock.time {
     color: @base;
     background: @maroon;
     border-radius: 0.4rem;
-    padding: 0.1rem;
+    padding: 0.3rem;
     margin: 0.2rem;
     margin-bottom: 0.6rem;
-    margin-top: 0.2rem;
+    margin-top: 0.15rem;
 }
 
 
@@ -75,10 +75,10 @@
     border-radius: 0.4rem;
     color: @base;
     background: @blue;
-    padding: 0rem;
+    padding: 0.3rem;
     margin: 0.2rem;
     margin-top: 0.4rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.2rem;
 }
 
 #battery.charging {
@@ -102,7 +102,7 @@
     color: @base;
     border-radius: 0.4rem;
     margin: 0.2rem;
-    padding: 0rem;
+    padding: 0.3rem;
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
 }
@@ -119,20 +119,20 @@
 #memory.mem {
     color: @base;
     border-radius: 0.4rem;
-    padding: 0rem;
+    padding: 0.3rem;
     background: @peach;
     margin: 0.2rem;
-    margin-bottom: 0.2rem;
-    margin-top: 0.6rem;
+    margin-bottom: 0.15rem;
+    margin-top: 0.4rem;
 }
 #memory.swap {
     color: @base;
     border-radius: 0.4rem;
-    padding: 0rem;
+    padding: 0.3rem;
     background: @peach;
     margin: 0.2rem;
-    margin-top: 0.2rem;
-    margin-bottom: 0.6rem;
+    margin-top: 0.15rem;
+    margin-bottom: 0.64em;
 }
 
 #window {

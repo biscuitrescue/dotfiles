@@ -5,7 +5,7 @@
     "ipc": "true",
     "gtk-layer-shell": true,
     "layer": "top",
-    "position": "right",
+    "position": "left",
     "height": "", 		
     "width": 40,
     "modules-left": ["wlr/workspaces"],

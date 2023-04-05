@@ -38,7 +38,7 @@ local lualine = require('lualine')
 
 
 -- local colors = require("nord.named_colors")
--- local colors = require("catppuccin.palettes").get_palette()
+local colors = require("catppuccin.palettes").get_palette()
 -- local colors = {
 --     bg       = '#282c34',
 --     fg       = '#bfc7d5',
@@ -65,19 +65,19 @@ local lualine = require('lualine')
 --     blue     = '#82b1ff',
 --     red      = '#ff5370',
 -- }
-local colors = {
-    bg       = '#282a36',
-    fg       = '#ffffff',
-    yellow   = '#ff5555',
-    cyan     = '#8be9fd',
-    darkblue = '#6272a4',
-    green    = '#50fa7b',
-    orange   = '#ffb86c',
-    violet   = '#bd93f9',
-    magenta  = '#ff79c6',
-    blue     = '#bd93f9',
-    red      = '#ff5555',
-}
+-- local colors = {
+--     bg       = '#282a36',
+--     fg       = '#ffffff',
+--     yellow   = '#ff5555',
+--     cyan     = '#8be9fd',
+--     darkblue = '#6272a4',
+--     green    = '#50fa7b',
+--     orange   = '#ffb86c',
+--     violet   = '#bd93f9',
+--     magenta  = '#ff79c6',
+--     blue     = '#bd93f9',
+--     red      = '#ff5555',
+-- }
 -- local colors = {
 --     bg       = '#1c2023',
 --     fg       = '#c7ccd1',
@@ -88,6 +88,7 @@ local colors = {
 --     orange   = '#fab387',
 --     violet   = '#ae95c7',
 --     magenta  = '#c795ae',
+--     mauve    = '#c795ae',
 --     blue     = '#95aec7',
 --     red      = '#f38ba8',
 -- }
@@ -244,7 +245,7 @@ ins_left {
         return msg
     end,
     icon = ' LSP:',
-    color = { fg = colors.magenta, gui = 'bold' },
+    color = { fg = colors.mauve, gui = 'bold' },
 }
 
 -- Add components to right sections
