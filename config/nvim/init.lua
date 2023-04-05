@@ -64,7 +64,3 @@ require 'colorizer'.setup()
 require("cafo.lazy")
 
 vim.cmd.colorscheme("catppuccin-macchiato")
--- vim.cmd("hi LazyNormal guibg=bg")
--- vim.cmd("hi MasonNormal guibg=bg")
--- vim.cmd("hi LineNr guibg=bg")
--- vim.cmd("hi WinSeparator guibg=bg guifg=grey")
