@@ -1,8 +1,8 @@
-@import "latte.css";
+@import "ashes.css";
 
 * {
     font-family: operator mono bold;
-    font-size: 14px;
+    font-size: 15px;
     min-width: 0;
     padding: 0.05rem;
 }
@@ -40,13 +40,12 @@
 }
 
 #tray {
-    background-color: @surface2;
+    background-color: @surface0;
     border-radius: 0.4rem;
     padding: 0.3rem;
     margin: 0.2rem;
-    margin-bottom: 0.3rem;
     color: @blue;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
 }
 #backlight,
 #clock,
@@ -57,7 +56,7 @@
     padding: 0.3rem;
     margin: 0.2rem;
     margin-bottom: 0.15rem;
-    margin-top: 0.6rem;
+    margin-top: 0.4rem;
 }
 #clock.time {
     color: @base;
@@ -65,7 +64,7 @@
     border-radius: 0.4rem;
     padding: 0.3rem;
     margin: 0.2rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.2rem;
     margin-top: 0.15rem;
 }
 
@@ -74,7 +73,7 @@
 #battery {
     border-radius: 0.4rem;
     color: @base;
-    background: @blue;
+    background: @mauve;
     padding: 0.3rem;
     margin: 0.2rem;
     margin-top: 0.4rem;
@@ -98,29 +97,29 @@
 }
 
 #pulseaudio {
-    background: @lavender;
+    background: @green;
     color: @base;
     border-radius: 0.4rem;
     margin: 0.2rem;
     padding: 0.3rem;
     margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
 }
 
 #cpu {
     color: @base;
-    background: @yellow;
+    background: @peach;
     border-radius: 0.4rem;
     padding: 0.3rem;
     margin: 0.2rem;
     margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
 }
 #memory.mem {
     color: @base;
     border-radius: 0.4rem;
     padding: 0.3rem;
-    background: @peach;
+    background: @lavender;
     margin: 0.2rem;
     margin-bottom: 0.15rem;
     margin-top: 0.4rem;
@@ -129,10 +128,10 @@
     color: @base;
     border-radius: 0.4rem;
     padding: 0.3rem;
-    background: @peach;
+    background: @lavender;
     margin: 0.2rem;
     margin-top: 0.15rem;
-    margin-bottom: 0.64em;
+    margin-bottom: 0.2em;
 }
 
 #window {

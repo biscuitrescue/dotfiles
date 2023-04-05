@@ -7,9 +7,9 @@
     "layer": "top",
     "position": "left",
     "height": "", 		
-    "width": 40,
+    "width": 44,
     "modules-left": ["wlr/workspaces"],
-    "modules-right": ["tray", "cpu","pulseaudio","clock#date", "clock#time", "memory#mem", "memory#swap", "battery"],
+    "modules-right": ["tray", "cpu", "pulseaudio", "memory#mem", "memory#swap", "clock#date", "clock#time", "battery"],
     "wlr/workspaces": {
         "on-click": "activate",
         "disable-scroll": false,
@@ -94,6 +94,7 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}",
         "format-muted": "",
+        "format-full": "",
         "format-icons": {
             "default": ["", "", " "]
         },
