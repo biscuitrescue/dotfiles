@@ -1,5 +1,5 @@
 require("catppuccin").setup({
-    flavour = "mocha",
+    flavour = "macchiato",
     transparent_background = true,
     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
     term_colors = true,
@@ -37,6 +37,7 @@ require("catppuccin").setup({
             yellow = "#c7c795",
             green = "#aec795",
             teal = "#95c7ae",
+            sapphire = "#95c7ae",
             blue = "#95aec7",
             lavender = "#95aec7",
             text = "#c7ccd1",

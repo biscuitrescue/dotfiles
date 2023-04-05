@@ -2,7 +2,7 @@
 
 * {
     font-family: operator mono bold;
-    font-size: 15px;
+    font-size: 17px;
     min-width: 0;
     padding: 0.05rem;
 }
@@ -97,7 +97,7 @@
 }
 
 #pulseaudio {
-    background: @green;
+    background: @peach;
     color: @base;
     border-radius: 0.4rem;
     margin: 0.2rem;
@@ -108,7 +108,7 @@
 
 #cpu {
     color: @base;
-    background: @peach;
+    background: @red;
     border-radius: 0.4rem;
     padding: 0.3rem;
     margin: 0.2rem;
@@ -119,7 +119,7 @@
     color: @base;
     border-radius: 0.4rem;
     padding: 0.3rem;
-    background: @lavender;
+    background: @green;
     margin: 0.2rem;
     margin-bottom: 0.15rem;
     margin-top: 0.4rem;
@@ -128,7 +128,7 @@
     color: @base;
     border-radius: 0.4rem;
     padding: 0.3rem;
-    background: @lavender;
+    background: @green;
     margin: 0.2rem;
     margin-top: 0.15rem;
     margin-bottom: 0.2em;

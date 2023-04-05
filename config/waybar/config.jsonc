@@ -7,7 +7,7 @@
     "layer": "top",
     "position": "left",
     "height": "", 		
-    "width": 44,
+    "width": 34,
     "modules-left": ["wlr/workspaces"],
     "modules-right": ["tray", "cpu", "pulseaudio", "memory#mem", "memory#swap", "clock#date", "clock#time", "battery"],
     "wlr/workspaces": {

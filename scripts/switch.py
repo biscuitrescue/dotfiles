@@ -186,6 +186,7 @@ obj = list(thing)
 for i in obj:
     switch_theme(i, theme)
 
+
 if theme in ['Mocha', 'Macchiato', 'Frappe', 'Latte']:
     with open(f"{home}.config/nvim/after/plugin/catppuccin.lua") as f:
         x = f.readlines()
@@ -205,7 +206,6 @@ else:
             "kvantummanager --set MontereyDark",
             shell=True
             )
-
 
 run(
     f'gsettings set org.gnome.desktop.interface gtk-theme {themes[theme]["Gtk"]}',
