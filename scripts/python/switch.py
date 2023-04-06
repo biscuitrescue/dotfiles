@@ -41,9 +41,9 @@ def switch_theme(obj, theme):
 
 themes = {
     "Ashes": {
-        "openbox": "mocha",
+        "openbox": "Ashes-Openbox",
         "qtile": "ashes",
-        "nvim": "ashes",
+        "nvim": "catppuccin-macchiato",
         "Gtk": "Otis-forest",
         "kitty": "ashes",
         "polybar": "ashes",
@@ -65,19 +65,6 @@ themes = {
         "waybar": "one",
         "dunst": "one",
         "rofi": "one"
-    },
-    "Everforest": {
-        "openbox": "Everforest-Openbox",
-        "qtile": "everforest",
-        "nvim": "everforest",
-        "Gtk": "Everforest-Dark-BL",
-        "kitty": "everforest",
-        "polybar": "everforest",
-        "alacritty": "palenight",
-        "zathura": "everforest",
-        "waybar": "everforest",
-        "dunst": "everforest",
-        "rofi": "dracula"
     },
     "Latte": {
         "openbox": "Latte-Openbox",
@@ -132,10 +119,10 @@ themes = {
         "waybar": "mocha"
     },
     "Dracula": {
-        "openbox": "Dracula-withoutBorder",
+        "openbox": "Dracula",
         "qtile": "dracula",
         "nvim": "dracula",
-        "Gtk": "dracula",
+        "Gtk": "Dracula-slim",
         "kitty": "dracula",
         "polybar": "dracula",
         "alacritty": "dracula",
@@ -199,6 +186,7 @@ obj = list(thing)
 for i in obj:
     switch_theme(i, theme)
 
+
 if theme in ['Mocha', 'Macchiato', 'Frappe', 'Latte']:
     with open(f"{home}.config/nvim/after/plugin/catppuccin.lua") as f:
         x = f.readlines()
@@ -219,7 +207,6 @@ else:
             shell=True
             )
 
-
 run(
     f'gsettings set org.gnome.desktop.interface gtk-theme {themes[theme]["Gtk"]}',
     shell=True
@@ -230,24 +217,24 @@ if exists(f"{home}.themes/{themes[theme]['Gtk']}/gtk-4.0/gtk.css"):
 
 copyfile(f"{home}.config/dunst/{themes[theme]['dunst']}", f"{home}.config/dunst/dunstrc")
 
-copyfile(f"{home}.config/mako/{themes[theme]['dunst']}", f"{home}.config/mako/config")
+# copyfile(f"{home}.config/mako/{themes[theme]['dunst']}", f"{home}.config/mako/config")
 
+# run(
+#     'qtile cmd-obj -o cmd -f reload_config',
+#     shell=True
+# )
+# run(
+#     'openbox --reconfigure',
+#     shell=True
+# )
 run(
-    'qtile cmd-obj -o cmd -f reload_config',
+    "killall -SIGUSR2 waybar",
     shell=True
 )
-run(
-    'openbox --reconfigure',
-    shell=True
-)
-run(
-    'killall waybar && waybar &',
-    shell=True
-)
-run(
-    'makoctl reload',
-    shell=True
-)
+# run(
+#     'makoctl reload',
+#     shell=True
+# )
 run(
     f'bash {home}.config/dunst/reload',
     shell=True
