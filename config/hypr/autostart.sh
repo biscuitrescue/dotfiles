@@ -2,8 +2,6 @@
 
 killall dunst
 dunst &
-killall xfce-polkit
-xfce-polkit &
 killall nm-applet
 nm-applet --indicator &
 # wayblur &
