@@ -116,7 +116,7 @@
 }
 
 #battery.warning:not(.charging) {
-  background: @yellow;
+  background: @peach;
 }
 
 #battery.critical:not(.charging) {
@@ -128,7 +128,7 @@
 }
 
 #pulseaudio {
-    background: @peach;
+    background: @yellow;
     color: @base;
     border-radius: 0.4rem;
     margin: 0.2rem;

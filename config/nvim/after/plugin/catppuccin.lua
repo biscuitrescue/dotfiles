@@ -31,7 +31,7 @@ require("catppuccin").setup({
             flamingo = "#F0C6C6",
             pink = "#c795ae",
             mauve = "#ae95c7",
-            red = "#ED8796",
+            red = "#C77C80",
             maroon = "#c79595",
             peach = "#c7ae95",
             yellow = "#c7c795",
