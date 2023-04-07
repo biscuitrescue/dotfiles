@@ -48,7 +48,7 @@ local colors = require("catppuccin.palettes").get_palette()
 --     green    = '#98be65',
 --     orange   = '#da8548',
 --     violet   = '#a9a1e1',
---     magenta  = '#a9a1e1',
+--     maroon  = '#a9a1e1',
 --     blue     = '#51afef',
 --     red      = '#ff6c6b',
 -- }
@@ -61,7 +61,7 @@ local colors = require("catppuccin.palettes").get_palette()
 --     green    = '#C3E88D',
 --     orange   = '#F78C6C',
 --     violet   = '#c792ea',
---     magenta  = '#939ede',
+--     maroon  = '#939ede',
 --     blue     = '#82b1ff',
 --     red      = '#ff5370',
 -- }
@@ -74,7 +74,7 @@ local colors = require("catppuccin.palettes").get_palette()
 --     green    = '#50fa7b',
 --     orange   = '#ffb86c',
 --     violet   = '#bd93f9',
---     magenta  = '#ff79c6',
+--     maroon  = '#ff79c6',
 --     blue     = '#bd93f9',
 --     red      = '#ff5555',
 -- }
@@ -87,7 +87,7 @@ local colors = require("catppuccin.palettes").get_palette()
 --     green    = '#aec795',
 --     orange   = '#fab387',
 --     violet   = '#ae95c7',
---     magenta  = '#c795ae',
+--     maroon  = '#c795ae',
 --     mauve    = '#c795ae',
 --     blue     = '#95aec7',
 --     red      = '#f38ba8',
@@ -171,14 +171,14 @@ ins_left {
             v = colors.blue,
             [''] = colors.blue,
             V = colors.blue,
-            c = colors.magenta,
+            c = colors.maroon,
             no = colors.red,
-            s = colors.orange,
-            S = colors.orange,
-            [''] = colors.orange,
+            s = colors.peach,
+            S = colors.peach,
+            [''] = colors.peach,
             ic = colors.yellow,
-            R = colors.violet,
-            Rv = colors.violet,
+            R = colors.mauve,
+            Rv = colors.mauve,
             cv = colors.red,
             ce = colors.red,
             r = colors.cyan,
@@ -196,17 +196,18 @@ ins_left {
     -- filesize component
     'filesize',
     cond = conditions.buffer_not_empty,
+    color = { fg = colors.peach, gui = 'bold' },
 }
 
 ins_left {
     'filename',
     cond = conditions.buffer_not_empty,
-    color = { fg = colors.magenta, gui = 'bold' },
+    color = { fg = colors.maroon, gui = 'bold' },
 }
 
-ins_left { 'location' }
+ins_left { 'location', color = { fg = colors.green, gui = 'bold' } }
 
-ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
+ins_left { 'progress', color = { fg = colors.green, gui = 'bold' } }
 
 ins_left {
     'diagnostics',
