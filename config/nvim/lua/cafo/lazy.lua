@@ -30,7 +30,7 @@ require("lazy").setup({
     },
     {
         'nvim-treesitter/nvim-treesitter',
-        build = ':TSUpdate'
+        run = ':TSUpdate'
     },
     'numToStr/FTerm.nvim',
     'theprimeagen/harpoon',
@@ -109,7 +109,7 @@ require("lazy").setup({
         "folke/noice.nvim",
         dependencies = {
             "MunifTanjim/nui.nvim",
-            "rcarriga/nvim-notify",
+            -- "rcarriga/nvim-notify",
         }
     },
     {

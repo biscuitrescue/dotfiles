@@ -5,13 +5,14 @@
     font-size: 16px;
     min-width: 0;
     padding: 0.05rem;
+    border-radius: 0.3rem;
 }
 
 #waybar {
     background: @base;
     color: @text;
-    border-radius: 0rem;
     padding: 0.05rem;
+    border-radius: 0rem;
 }
 
 #tags {
@@ -46,7 +47,6 @@
 }
 
 #workspaces {
-    border-radius: 0.4rem;
     margin: 0.2rem;
     background: @blue;
     padding: 0.15rem;
@@ -55,12 +55,10 @@
 #workspaces button {
     color: @base;
     padding: 0.2rem 0rem 0.2rem 0rem;
-    border-radius: 0.4rem;
 }
 
 #workspaces button.active {
     background: @surface0;
-    border-radius: 0.4rem;
     color: @blue;
 }
 
@@ -72,7 +70,6 @@
 
 #tray {
     background-color: @surface0;
-    border-radius: 0.4rem;
     padding: 0.3rem;
     margin: 0.2rem;
     color: @blue;
@@ -83,7 +80,6 @@
 #clock.date {
     color: @base;
     background: @maroon;
-    border-radius: 0.4rem;
     padding: 0.3rem;
     margin: 0.2rem;
     margin-bottom: 0.15rem;
@@ -92,7 +88,6 @@
 #clock.time {
     color: @base;
     background: @maroon;
-    border-radius: 0.4rem;
     padding: 0.3rem;
     margin: 0.2rem;
     margin-bottom: 0.2rem;
@@ -102,7 +97,6 @@
 
 
 #battery {
-    border-radius: 0.4rem;
     color: @base;
     background: @lavender;
     padding: 0.3rem;
@@ -130,7 +124,6 @@
 #pulseaudio {
     background: @yellow;
     color: @base;
-    border-radius: 0.4rem;
     margin: 0.2rem;
     padding: 0.3rem;
     margin-top: 0.4rem;
@@ -140,7 +133,6 @@
 #cpu {
     color: @base;
     background: @red;
-    border-radius: 0.4rem;
     padding: 0.3rem;
     margin: 0.2rem;
     margin-top: 0.4rem;
@@ -148,7 +140,6 @@
 }
 #memory.mem {
     color: @base;
-    border-radius: 0.4rem;
     padding: 0.3rem;
     background: @mauve;
     margin: 0.2rem;
@@ -157,7 +148,6 @@
 }
 #memory.swap {
     color: @base;
-    border-radius: 0.4rem;
     padding: 0.3rem;
     background: @mauve;
     margin: 0.2rem;
