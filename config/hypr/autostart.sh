@@ -8,4 +8,4 @@ nm-applet --indicator &
 killall battery
 battery &
 swayidle -w timeout 900 'wayblur' before-sleep 'wayblur' &
-waybar &
+waybar -c ~/.config/waybar/backup.jsonc &

@@ -2,13 +2,13 @@ env:
   TERM: xterm-256color
 
 window:
-  opacity: 0.9
+  opacity: 0.8
   
   dimensions:
-    columns: 0
-    lines: 0
-    # columns: 140
-    # lines: 32
+    # columns: 0
+    # lines: 0
+    columns: 90
+    lines: 24
   
   padding:
     x: 10
