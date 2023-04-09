@@ -1,8 +1,8 @@
-@import "ashes.css";
+@import "dracula.css";
 
 * {
     font-family: operator mono bold;
-    font-size: 16px;
+    font-size: 15px;
     min-width: 0;
     padding: 0.05rem;
     border-radius: 0.3rem;

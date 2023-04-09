@@ -122,7 +122,7 @@ themes = {
         "openbox": "Dracula",
         "qtile": "dracula",
         "nvim": "dracula",
-        "Gtk": "Dracula-slim",
+        "Gtk": "Dracula",
         "kitty": "dracula",
         "polybar": "dracula",
         "alacritty": "dracula",
