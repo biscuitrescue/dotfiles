@@ -33,7 +33,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'mocha)
-(setq doom-font (font-spec :family "Operator Mono Medium" :size 32))
+(setq doom-font (font-spec :family "Operator Mono Medium" :size 24))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
