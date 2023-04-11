@@ -14,4 +14,6 @@ configuration {
     sidebar-mode: true;
 }
 
-@theme "dracula"
+//@theme "ashes"
+//@theme "/home/cafo/.config/rofi/themes/ashes.rasi"
+@theme "/home/cafo/.config/rofi/themes/ashes.rasi"

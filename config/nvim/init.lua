@@ -63,6 +63,6 @@ require("cafo.remap")
 require 'colorizer'.setup()
 require("cafo.lazy")
 
-vim.cmd.colorscheme("dracula")
+vim.cmd.colorscheme("catppuccin-macchiato")
 vim.cmd("hi IndentBlanklineSpaceChar guifg=comment")
 vim.cmd("hi IndentBlanklineSpaceCharBlankline guifg=comment")

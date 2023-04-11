@@ -5,12 +5,11 @@
     "ipc": "true",
     "gtk-layer-shell": true,
     "layer": "top",
-    "position": "left",
+    "position": "right",
     "height": "", 		
     "width": 32,
-    "modules-left": ["memory#mem", "memory#swap", "pulseaudio"], //"river/tags", "wlr/workspaces"
-    "modules-center": ["clock#date", "clock#time"],
-    "modules-right": ["tray", "cpu", "battery"],
+    "modules-left": ["river/tags", "wlr/workspaces"],
+    "modules-right": ["tray", "cpu", "pulseaudio", "memory#mem", "memory#swap", "clock#date", "clock#time", "battery"],
     "river/tags": {
         "num-tags": 9,
     },

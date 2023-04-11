@@ -5,7 +5,7 @@
     "ipc": "true",
     "gtk-layer-shell": true,
     "layer": "top",
-    "position": "left",
+    "position": "right",
     "height": "", 		
     "width": 32,
     "modules-left": ["memory#mem", "memory#swap", "pulseaudio"], //"river/tags", "wlr/workspaces"

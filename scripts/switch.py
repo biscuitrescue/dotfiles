@@ -109,7 +109,7 @@ themes = {
         "openbox": "Mocha-Openbox",
         "qtile": "mocha",
         "nvim": "catppuccin-mocha",
-        "Gtk": "Catppuccin-Mocha-Standard-Maroon-Dark",
+        "Gtk": "Catppuccin-Mocha-BL",
         "kitty": "mocha",
         "polybar": "mocha",
         "alacritty": "mocha",
