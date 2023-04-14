@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-wbg ~/Pictures/wallpapers/nature-1.png &
+wbg ~/Pictures/wallpapers/extra-14.png &

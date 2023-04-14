@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# TODO -> multithreading
+
 from subprocess import run
 from os import listdir, getcwd
 from os.path import isdir

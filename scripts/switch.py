@@ -153,9 +153,9 @@ themes = {
         "polybar": "nord",
         "alacritty": "one",
         "zathura": "macchiato",
-        "dunst": "palenight",
+        "dunst": "nord",
         "rofi": "palenight",
-        "waybar": "palenight"
+        "waybar": "nord"
     },
 }
 
