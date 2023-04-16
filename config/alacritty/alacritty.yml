@@ -40,7 +40,7 @@ font:
     family: jetbrainsmono nerd font
     style: Bold Italic
 
-  size: 14
+  size: 12
 
   offset:
     x: 0

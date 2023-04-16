@@ -60,8 +60,8 @@ if vim.g.neovide then
 end
 
 require("cafo.remap")
-require 'colorizer'.setup()
 require("cafo.lazy")
+require 'colorizer'.setup()
 
 vim.cmd.colorscheme("catppuccin-macchiato")
 vim.cmd("hi IndentBlanklineSpaceChar guifg=comment")
