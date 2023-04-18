@@ -1,5 +1,5 @@
 require("catppuccin").setup({
-    flavour = "macchiato",
+    flavour = "latte",
     transparent_background = true,
     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
     term_colors = true,
@@ -45,7 +45,12 @@ require("catppuccin").setup({
             surface1 = "#565E65",
         }
     },
-    custom_highlights = {},
+    -- custom_highlights = {},
+    custom_highlights = function(colors)
+        return {
+            -- variable = { fg = colors.red},
+        }
+    end,
     integrations = {
         cmp = true,
         gitsigns = true,

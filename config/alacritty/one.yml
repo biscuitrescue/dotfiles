@@ -41,7 +41,7 @@ doom_dark: &doom_dark
     cyan: "#46d9ff"
     white: "#bbc2cf"
   bright:
-    black: "#3f444a"
+    black: "#9ca0a4"
     red: "#ff6c6b"
     green: "#98be65"
     yellow: "#da8548"

@@ -13,6 +13,11 @@ border = dict(
     border_width=2,
 )
 layouts = [
+    layout.MonadTall(
+        margin=13,
+        ratio=0.55,
+        **border
+    ),
     layout.Tile(
         margin=13,
         ratio=0.55,
@@ -20,11 +25,11 @@ layouts = [
         shift_windows=True,
         **border
     ),
-    layout.MonadThreeCol(
-        min_ratio=0.25,
-        margin=8,
-        **border,
-    ),
+    # layout.MonadThreeCol(
+    #     min_ratio=0.25,
+    #     margin=8,
+    #     **border,
+    # ),
     layout.Max(),
 
 ]

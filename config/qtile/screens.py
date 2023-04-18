@@ -6,7 +6,7 @@ from colours import *
 
 
 
-theme = "ashes"
+theme = "latte"
 
 if theme == "ashes":
     theme = ashes[0]
@@ -30,8 +30,8 @@ elif theme == "nord":
     theme = nord[0]
 
 
-xx = 28
-xf = "Operator Mono Medium"
+xx = 22
+xf = "Jetbrainsmono Nerd Font Medium"
 default = [
     widget.TextBox(
         foreground=theme["teal"],

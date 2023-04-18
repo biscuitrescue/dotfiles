@@ -219,14 +219,14 @@ copyfile(f"{home}.config/dunst/{themes[theme]['dunst']}", f"{home}.config/dunst/
 
 # copyfile(f"{home}.config/mako/{themes[theme]['dunst']}", f"{home}.config/mako/config")
 
-# run(
-#     'qtile cmd-obj -o cmd -f reload_config',
-#     shell=True
-# )
-# run(
-#     'openbox --reconfigure',
-#     shell=True
-# )
+run(
+    'qtile cmd-obj -o cmd -f reload_config',
+    shell=True
+)
+run(
+    'openbox --reconfigure',
+    shell=True
+)
 run(
     "killall -SIGUSR2 waybar",
     shell=True

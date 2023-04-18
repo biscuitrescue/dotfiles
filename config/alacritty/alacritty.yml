@@ -40,7 +40,7 @@ font:
     family: jetbrainsmono nerd font
     style: Bold Italic
 
-  size: 12
+  size: 12.5
 
   offset:
     x: 0
@@ -59,7 +59,7 @@ cursor:
   vi_mode_style: Underline
 
 import:
-  - /home/cafo/.config/alacritty/ashes.yml
+  - /home/cafo/.config/alacritty/latte.yml
 
 
 key_bindings:

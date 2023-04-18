@@ -4,8 +4,7 @@ from libqtile.config import Group, Key, Match, ScratchPad, DropDown
 from libqtile.command import lazy
 from keys import keys
 
-# myTerm = "kitty -o background_opacity=0.7"
-myTerm = "kitty"
+myTerm = "alacritty"
 mod = "mod4"
 mod1 = "mod1"
 mod2 = "control"
@@ -20,6 +19,7 @@ groups = [
                   Match(wm_class=["Firefox"]),
                   Match(wm_class=["firefox"]),
                   Match(wm_class=["Vivaldi-stable"]),
+                  Match(wm_class=["Brave-browser-nightly"]),
                   ]
               ),
 
@@ -109,7 +109,7 @@ groups.append(ScratchPad('Scratchpad', [
     DropDown("vim", "neovide",
              width=0.9, height=0.9,
              x=0.05, y=0.05, opacity=1),
-    DropDown("editor", "kitty -e nvim",
+    DropDown("editor", "alacritty -e nvim",
              width=0.95, height=0.9,
              x=0.025, y=0.05, opacity=1,
              on_focus_lost_hide=False),

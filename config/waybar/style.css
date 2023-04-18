@@ -1,11 +1,11 @@
-@import "ashes.css";
+@import "latte.css";
 
 * {
     font-family: operator mono bold;
     font-size: 15px;
     min-width: 0;
     padding: 0.05rem;
-    border-radius: 0.3rem;
+    border-radius: 0.4rem;
 }
 
 #waybar {
@@ -48,7 +48,7 @@
 
 #workspaces {
     margin: 0.2rem;
-    background: @blue;
+    background: @lavender;
     padding: 0.15rem;
 }
 
@@ -59,7 +59,7 @@
 
 #workspaces button.active {
     background: @surface0;
-    color: @blue;
+    color: @lavender;
 }
 
 #workspaces button:hover {

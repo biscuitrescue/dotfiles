@@ -41,7 +41,7 @@ alias ll='exa -al --color=always --group-directories-first' # my preferred listi
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ls='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a | egrep "^\."'
+alias l.='exa -a | grep -E "^\."'
 alias vim='nvim'
 alias bstart='startx /usr/bin/bspwm'
 alias openstart='startx /usr/bin/openbox-session'
