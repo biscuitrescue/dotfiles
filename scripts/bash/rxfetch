@@ -195,7 +195,7 @@ if [ "$os" = Android ]; then
 	echo -e "               ${c5}phone${c3}  $(getprop ro.product.brand) $(getprop ro.product.model)"
 fi
 
-echo -e "\n\n"
+# echo -e "\n\n"
 echo -e "  ┏━━━━━━━━━━━━━━━━━━━━━━┓"
 echo -e "  ┃ ${c1}r${c2}x${c7}f${c4}e${c5}t${c6}${c7}c${c1}h${c0}      ${c5}${c0}  ${c7}${c0}  ${c6}${c0} ┃  ${c1}$(whoami)${c5}@${c1}${c2}$(cat /etc/hostname)"
 echo -e "  ┣━━━━━━━━━━━━━━━━━━━━━━┫"
@@ -208,7 +208,7 @@ echo -e "  ┃                      ┃  ${c1}init${c3}   $(get_init)"
 echo -e "  ┃     arch ${c1}${c0} ${c1}linux     ┃  ${c2}wm   ${c3}  $(get_de_wm)"
 echo -e "  ┃                      ┃  ${c6}disk${c3}   $(get_storage_info)"
 echo -e "  ┗━━━━━━━━━━━━━━━━━━━━━━┛  ${c1}━━━${c2}━━━${c3}━━━${c4}━━━${c5}━━━${c6}━━━${c7}━━━"
-echo -e "\n\n"
+# echo -e "\n\n"
 
 #echo -e "     •_•       "
 #echo -e "     oo|       "

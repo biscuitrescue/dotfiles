@@ -37,7 +37,7 @@ int main() {
         if(x>=99 && !(check_status())) {
             system("dunstify -r 3000 'Battery Full' -h int:value:100 -h string:hlcolor:#95c7ae");
         }
-        if(x<=30 && check_status()) {
+        if(x<=20 && check_status()) {
             system("dunstify -r 3000 'Battery low ;('");
         }
         if(x<5 && check_status()) {
