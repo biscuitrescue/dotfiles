@@ -30,8 +30,8 @@ elif theme == "nord":
     theme = nord[0]
 
 
-xx = 25
-xf = "mononoki nerd font bold"
+xx = 22
+xf = "Jetbrainsmono Nerd Font Medium"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -39,8 +39,9 @@ default = [
         font=xf,
     ),
     widget.GroupBox(
-        font="operator mono",
-        fontsize=xx+1,
+        font=xf,
+        # font="operator mono",
+        fontsize=xx,
         margin_y=4,
         margin_x=5,
         padding_y=3,
@@ -94,7 +95,7 @@ default = [
         foreground=theme["yellow"],
         measure_mem='G',
         measure_swap='G',
-        format=' {MemUsed: .2f} GB',
+        format='{MemUsed: .2f} GB',
     ),
     widget.TextBox(
         foreground=theme["magenta"],
@@ -212,9 +213,9 @@ screens = [
     Screen(
         top=bar.Bar(
             default,
-            38,
+            44,
             # opacity=0.9,
-            # margin=[10,10,6,10],
+            margin=[10,10,6,10],
             background=theme["black"],
         ),
     ),

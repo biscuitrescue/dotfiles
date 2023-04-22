@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-wbg ~/Pictures/wallpapers/nordic.png
+wbg ~/Pictures/wallpapers/ash_darknet.png

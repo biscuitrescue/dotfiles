@@ -31,7 +31,7 @@ keys = [
     Key([mod], "z", lazy.spawn("rofi -show window")),
     Key([mod], "g", lazy.spawn("rofi -show filebrowser")),
     Key([mod], "d", lazy.spawn("rofi -show drun")),
-    Key([mod], "r", lazy.spawn("rofi -show run")),
+    Key([mod], "r", lazy.spawn("dmenu_run -p 'RUN:'")),
     Key([mod, "shift"], "Return", lazy.spawn("albert toggle")),
 
     Key([], "XF86AudioMute", lazy.spawn("dunster volume_mute")),

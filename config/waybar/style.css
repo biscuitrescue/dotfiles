@@ -1,11 +1,11 @@
-@import "latte.css";
+@import "ashes.css";
 
 * {
     font-family: operator mono bold;
     font-size: 15px;
     min-width: 0;
     padding: 0.05rem;
-    border-radius: 0.4rem;
+    border-radius: 0.45rem;
 }
 
 #waybar {

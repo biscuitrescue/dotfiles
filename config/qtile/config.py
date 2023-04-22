@@ -6,6 +6,7 @@ from keys import keys
 from groups import groups
 from screens import screens
 from screens import theme
+from libqtile.backend.wayland import InputConfig
 
 
 border = dict(
@@ -13,11 +14,11 @@ border = dict(
     border_width=2,
 )
 layouts = [
-    layout.MonadTall(
-        margin=13,
-        ratio=0.55,
-        **border
-    ),
+    # layout.MonadTall(
+    #     margin=13,
+    #     ratio=0.55,
+    #     **border
+    # ),
     layout.Tile(
         margin=13,
         ratio=0.55,
@@ -33,6 +34,13 @@ layouts = [
     layout.Max(),
 
 ]
+
+wl_input_rules = {
+    "1267:12608:MSFT0001:00 04F3:3140 Touchpad": InputConfig(natural_scroll=True, tap=True),
+    "*": InputConfig(natural_scroll=True, tap=True),
+    "type:keyboard": InputConfig(kb_options="ctrl:nocaps,compose:ralt"),
+}
+
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 follow_mouse_focus = True

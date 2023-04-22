@@ -2,7 +2,7 @@ env:
   TERM: xterm-256color
 
 window:
-  opacity: 0.8
+  opacity: 1
   
   dimensions:
     # columns: 0
@@ -25,22 +25,22 @@ scrolling:
 
 font:
   normal:
-    family: jetbrainsmono nerd font
+    family: Iosevka nerd font
     style: Medium
 
   bold:
-    family: jetbrainsmono nerd font
+    family: Iosevka nerd font 
     style: Bold
 
   italic:
-    family: jetbrainsmono nerd font
+    family: Iosevka nerd font 
     style: Medium Italic
 
   bold_italic:
-    family: jetbrainsmono nerd font
+    family: Iosevka nerd font
     style: Bold Italic
 
-  size: 12.5
+  size: 13.5
 
   offset:
     x: 0
@@ -59,7 +59,7 @@ cursor:
   vi_mode_style: Underline
 
 import:
-  - /home/cafo/.config/alacritty/latte.yml
+  - /home/cafo/.config/alacritty/ashes.yml
 
 
 key_bindings:
