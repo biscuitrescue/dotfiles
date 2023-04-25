@@ -134,8 +134,8 @@ themes = {
     "Palenight": {
         "openbox": "Palenight-Openbox",
         "qtile": "palenight",
-        "nvim": "palenight",
-        "Gtk": "palenight",
+        "nvim": "palenightfall",
+        "Gtk": "Material-Palenight-Borderless",
         "kitty": "palenight",
         "polybar": "palenight",
         "alacritty": "palenight",

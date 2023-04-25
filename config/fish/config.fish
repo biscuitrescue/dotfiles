@@ -2,7 +2,7 @@ set -x EDITOR "nvim"
 set -x BAT_THEME "ansi"
 set fish_greeting
 set -x RANGER_LOAD_DEFAULT_RC "FALSE"
-set TERM "kitty"
+set TERM "xterm-256color"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -Ux FZF_DEFAULT_OPTS "--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD"
 
@@ -61,11 +61,12 @@ alias bsdk="lsblk"
 alias up="paru -Syyu --sudoloop"
 alias it="paru -S --sudoloop"
 alias v="vim"
+alias tmsource="tmux source-file ~/.config/tmux/tmux.conf"
+alias mux="tmux new-session -t shell"
 
 function getc
 	gcc -dM -E - < /dev/null | grep __STDC_VERSION__ | awk '{ print $2 " --> " $3 }'
 end
-
 
 function ipub
 	echo (drill myip.opendns.com @resolver1.opendns.com | awk '/myip/ {printf $5}')

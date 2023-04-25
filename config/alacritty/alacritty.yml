@@ -2,7 +2,7 @@ env:
   TERM: xterm-256color
 
 window:
-  opacity: 1
+  opacity: 0.8
   
   dimensions:
     # columns: 0
@@ -40,11 +40,11 @@ font:
     family: Iosevka nerd font
     style: Bold Italic
 
-  size: 13.5
+  size: 13
 
   offset:
     x: 0
-    y: 1
+    y: 0
 
 draw_bold_text_with_bright_colors: true
 

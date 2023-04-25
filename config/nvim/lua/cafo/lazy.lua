@@ -29,6 +29,10 @@ require("lazy").setup({
         end
     },
     {
+        'christoomey/vim-tmux-navigator',
+        lazy=false,
+    },
+    {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     },
@@ -130,7 +134,8 @@ require("lazy").setup({
     -- themes
     'shaunsingh/nord.nvim',
     { 'maxmx03/dracula.nvim', lazy = true, },
-    {'drewtempelmeyer/palenight.vim', lazy = true},
+    'JoosepAlviste/palenightfall.nvim',
+    -- {'drewtempelmeyer/palenight.vim', lazy = true},
     {'NTBBloodbath/doom-one.nvim', lazy = true},
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
 })
