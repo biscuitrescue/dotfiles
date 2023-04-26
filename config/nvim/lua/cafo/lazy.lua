@@ -130,6 +130,7 @@ require("lazy").setup({
         'nvim-lualine/lualine.nvim',
         dependencies = { 'kyazdani42/nvim-web-devicons'}
     },
+    -- {'akinsho/bufferline.nvim', version = "*", dependencies = 'kyazdani42/nvim-web-devicons'},
 
     -- themes
     'shaunsingh/nord.nvim',
