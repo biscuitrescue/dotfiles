@@ -264,7 +264,7 @@ screens = [
             default,
             44,
             # opacity=0.9,
-            # margin=[10,10,6,10],
+            margin=[8,8,2,8],
             background=theme["black"],
             foreground=theme["zero"],
         ),

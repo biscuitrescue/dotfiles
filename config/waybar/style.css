@@ -2,10 +2,11 @@
 
 * {
     font-family: operator mono bold;
-    font-size: 15px;
+    font-size: 14px;
     min-width: 0;
-    padding: 0.05rem;
-    border-radius: 0.45rem;
+    min-height: 0;
+    padding: 0.03rem;
+    border-radius:0.4rem;
 }
 
 #waybar {
