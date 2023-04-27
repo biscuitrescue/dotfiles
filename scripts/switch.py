@@ -203,7 +203,7 @@ if theme in ['Mocha', 'Macchiato', 'Frappe', 'Latte']:
             )
 else:
     run(
-            "kvantummanager --set MontereyDark",
+            "kvantummanager --set Infinity-Kvantum",
             shell=True
             )
 
