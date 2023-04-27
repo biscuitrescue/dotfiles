@@ -36,7 +36,7 @@ decor = {
             use_widget_background=True,
             radius=rad,
             filled=True,
-            padding_y=9,
+            padding_y=8,
         )
     ],
     "padding": 10,
@@ -47,7 +47,7 @@ decor1 = {
             use_widget_background=True,
             radius=[rad, 0, 0, rad],
             filled=True,
-            padding_y=9,
+            padding_y=8,
         )
     ],
     "padding": 10,
@@ -58,7 +58,7 @@ decor2 = {
             use_widget_background=True,
             radius=[0, rad, rad, 0],
             filled=True,
-            padding_y=9,
+            padding_y=8,
         )
     ],
     "padding": 10,

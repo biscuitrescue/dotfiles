@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>fs", ":w<CR>")
 vim.keymap.set("n", "<leader>fr", ":so<CR>")
-vim.keymap.set("n", "<leader><leader>", ":")
+vim.keymap.set("n", ";", ":")
 vim.keymap.set("n", "<leader>cd", ":cd ")
 vim.keymap.set("n", "<leader>wv", ":vs<CR>")
 vim.keymap.set("n", "<leader>w", "<C-w>")

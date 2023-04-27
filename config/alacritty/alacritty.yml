@@ -25,19 +25,19 @@ scrolling:
 
 font:
   normal:
-    family: Iosevka nerd font
+    family: Iosevka
     style: Medium
 
   bold:
-    family: Iosevka nerd font 
+    family: Iosevka
     style: Bold
 
   italic:
-    family: Iosevka nerd font 
+    family:  Iosevka
     style: Medium Italic
 
   bold_italic:
-    family: Iosevka nerd font
+    family: Iosevka
     style: Bold Italic
 
   size: 13

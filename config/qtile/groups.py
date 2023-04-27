@@ -4,7 +4,7 @@ from libqtile.config import Group, Key, Match, ScratchPad, DropDown
 from libqtile.command import lazy
 from keys import keys
 
-myTerm = "alacritty -o window.opacity=0.8"
+myTerm = "alacritty"
 mod = "mod4"
 mod1 = "mod1"
 mod2 = "control"
@@ -100,20 +100,20 @@ groups.append(ScratchPad('Scratchpad', [
     DropDown("sig", "signal-desktop-beta", height=0.8,
              width=0.75, x=0.125, y=0.1, opacity=1,
              on_focus_lost_hide=True),
-    DropDown("term", myTerm,
+    DropDown("term", f'{myTerm} -e tmux new-session -t shell',
              # width=0.9, height=0.7,
              # x=0.05, y=0.01, opacity=1,
-             width=0.75, height=0.9,
-             x=0.125, y=0.05, opacity=1,
+             width=0.95, height=0.9,
+             x=0.025, y=0.05, opacity=1,
              on_focus_lost_hide=False),
     DropDown("vim", "neovide",
              width=0.9, height=0.9,
              x=0.05, y=0.05, opacity=1),
-    DropDown("editor", "alacritty -e nvim",
+    DropDown("editor", "emacs",
              width=0.95, height=0.9,
              x=0.025, y=0.05, opacity=1,
              on_focus_lost_hide=False),
-    DropDown("fmger", "nautilus",
+    DropDown("fmger", "dolphin",
              width=0.75, height=0.85,
              x=0.125, y=0.075, opacity=1),
     DropDown("Music", "spotify",

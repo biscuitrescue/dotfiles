@@ -1,9 +1,11 @@
 [global]
-    font = M PLUS 1 CODE nerd font 13
+    font = Iosevka 12
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
     monitor = 0
+    # height=45
+    # width=300
 
     # Display notification on focused monitor.  Possible modes are:
     #   mouse: follow mouse pointer
@@ -30,8 +32,8 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x60-15+46"
-
+    origin = "bottom-right"
+    offset = 30x30
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
 
@@ -52,7 +54,7 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 2
+    separator_height = 4
 
     # Padding between text and separator.
     padding = 8
@@ -62,10 +64,10 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 2
+    frame_width = 0
 
     # Defines color of the frame around the notification window.
-    frame_color = "#81a1c1"
+    frame_color = "#00000000"
 
     # Define a color for the separator.
     # possible values are:
@@ -249,28 +251,6 @@
     # using the resolution and physical size. This might be useful in setups
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
-
-[shortcuts]
-
-    # Shortcuts are specified as [modifier+][modifier+]...key
-    # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
-    # "mod3" and "mod4" (windows-key).
-    # Xev might be helpful to find names for keys.
-
-    # Close notification.
-    close = ctrl+space
-
-    # Close all notifications.
-    close_all = ctrl+shift+space
-
-    # Redisplay last message(s).
-    # On the US keyboard layout "grave" is normally above TAB and left
-    # of "1". Make sure this key actually exists on your keyboard layout,
-    # e.g. check output of 'xmodmap -pke'
-    history = ctrl+grave
-
-    # Context menu.
-    context = ctrl+shift+grave
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
