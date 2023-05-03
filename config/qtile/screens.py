@@ -6,7 +6,7 @@ from qtile_extras import widget
 from colours import *
 
 
-theme = "ashes"
+theme = "dracula"
 
 if theme == "ashes":
     theme = ashes[0]

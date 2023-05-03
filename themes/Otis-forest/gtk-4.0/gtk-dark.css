@@ -152,19 +152,19 @@ read if you used those and something break with a version upgrade you're on your
 /***************
 * Action bars *
 ***************/
-.action-bar {
-  background-color: #050708;
+.action-bar, actionbar > revealer > box {
+  background-color: #14181d;
   border: solid #0b0e11;
   border-width: 1px 0 0 0;
   color: #d8dee9;
   box-shadow: none; }
-  .action-bar:backdrop {
+  .action-bar:backdrop, actionbar > revealer > box:backdrop {
     background-color: #050708;
     box-shadow: none; }
-  .action-bar:first-child {
+  .action-bar:first-child, actionbar > revealer > box:first-child {
     border-radius: 6px 6px 0px 0px;
     border-width: 1px 1px 0px 1px; }
-  .action-bar:last-child {
+  .action-bar:last-child, actionbar > revealer > box:last-child {
     border-radius: 0 0 6px 6px;
     border-width: 0px 1px 1px 1px; }
 
@@ -1124,7 +1124,8 @@ check:checked {
 
 radio:checked {
   -gtk-icon-source: -gtk-scaled(url("../assets/radio-checked-dark.png"), url("../assets/radio-checked@2.png"));
-  -gtk-icon-shadow: none; }
+  -gtk-icon-shadow: none;
+  background: none; }
 
 check:checked:hover {
   -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-checked-hover-dark.png"), url("../assets/checkbox-checked-hover@2.png"));
@@ -1132,7 +1133,8 @@ check:checked:hover {
 
 radio:checked:hover {
   -gtk-icon-source: -gtk-scaled(url("../assets/radio-checked-hover-dark.png"), url("../assets/radio-checked-hover@2.png"));
-  -gtk-icon-shadow: none; }
+  -gtk-icon-shadow: none;
+  background: none; }
 
 check:checked:active {
   -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-checked-active-dark.png"), url("../assets/checkbox-checked-active@2.png"));
@@ -1140,7 +1142,8 @@ check:checked:active {
 
 radio:checked:active {
   -gtk-icon-source: -gtk-scaled(url("../assets/radio-checked-active-dark.png"), url("../assets/radio-checked-active@2.png"));
-  -gtk-icon-shadow: none; }
+  -gtk-icon-shadow: none;
+  background: none; }
 
 check:checked:backdrop {
   -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-checked-backdrop-dark.png"), url("../assets/checkbox-checked-backdrop@2.png"));
@@ -1148,7 +1151,8 @@ check:checked:backdrop {
 
 radio:checked:backdrop {
   -gtk-icon-source: -gtk-scaled(url("../assets/radio-checked-backdrop-dark.png"), url("../assets/radio-checked-backdrop@2.png"));
-  -gtk-icon-shadow: none; }
+  -gtk-icon-shadow: none;
+  background: none; }
 
 check:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-checked-insensitive-dark.png"), url("../assets/checkbox-checked-insensitive@2.png"));
@@ -1156,7 +1160,8 @@ check:checked:disabled {
 
 radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("../assets/radio-checked-insensitive-dark.png"), url("../assets/radio-checked-insensitive@2.png"));
-  -gtk-icon-shadow: none; }
+  -gtk-icon-shadow: none;
+  background: none; }
 
 check:checked:disabled:backdrop {
   -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-checked-insensitive-dark.png"), url("../assets/checkbox-checked-insensitive@2.png"));
@@ -1164,7 +1169,8 @@ check:checked:disabled:backdrop {
 
 radio:checked:disabled:backdrop {
   -gtk-icon-source: -gtk-scaled(url("../assets/radio-checked-insensitive-dark.png"), url("../assets/radio-checked-insensitive@2.png"));
-  -gtk-icon-shadow: none; }
+  -gtk-icon-shadow: none;
+  background: none; }
 
 check:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-mixed.png"), url("../assets/checkbox-mixed@2.png"));
@@ -2209,13 +2215,13 @@ GraniteWidgetsWelcome {
     headerbar button.suggested-action {
       box-shadow: none;
       border: none;
-      background-image: #79B4B7; }
+      background-color: #79B4B7; }
       .titlebar button.suggested-action:disabled, .titlebar button.suggested-action:disabled:backdrop, .titlebar button.suggested-action:backdrop,
       headerbar button.suggested-action:disabled,
       headerbar button.suggested-action:disabled:backdrop,
       headerbar button.suggested-action:backdrop {
         border: none;
-        background-image: #79B4B7; }
+        background-color: #79B4B7; }
         .titlebar button.suggested-action:disabled:hover, .titlebar button.suggested-action:disabled:active, .titlebar button.suggested-action:disabled:checked, .titlebar button.suggested-action:disabled:backdrop:hover, .titlebar button.suggested-action:disabled:backdrop:active, .titlebar button.suggested-action:disabled:backdrop:checked, .titlebar button.suggested-action:backdrop:hover, .titlebar button.suggested-action:backdrop:active, .titlebar button.suggested-action:backdrop:checked,
         headerbar button.suggested-action:disabled:hover,
         headerbar button.suggested-action:disabled:active,
@@ -2227,7 +2233,7 @@ GraniteWidgetsWelcome {
         headerbar button.suggested-action:backdrop:active,
         headerbar button.suggested-action:backdrop:checked {
           border: none;
-          background-image: #79B4B7; }
+          background-color: #79B4B7; }
     .titlebar button.appmenu,
     headerbar button.appmenu {
       background: transparent; }
@@ -5576,7 +5582,6 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
   .nautilus-window.background:backdrop {
     background-color: rgba(24, 29, 35, 0.95); }
 .nautilus-window #NautilusPathBar {
-  height: 20px;
   margin-top: 7px;
   margin-bottom: 7px;
   color: #d8dee9;

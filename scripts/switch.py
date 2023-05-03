@@ -239,4 +239,3 @@ run(
     f'bash {home}.config/dunst/reload',
     shell=True
 )
-print(find_nvim())

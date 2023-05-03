@@ -84,6 +84,18 @@ require("lazy").setup({
         dependencies = {'kyazdani42/nvim-web-devicons'},
 
     },
+    {
+        "utilyre/barbecue.nvim",
+        name = "barbecue",
+        version = "*",
+        dependencies = {
+            "SmiteshP/nvim-navic",
+            "kyazdani42/nvim-web-devicons", -- optional dependency
+        },
+        -- opts = {
+        --     -- configurations go here
+        -- },
+    },
     -- LSP
     {
         'VonHeikemen/lsp-zero.nvim',
