@@ -34,10 +34,10 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
 })
 
 
-local lualine = require('lualine')
 
 
-local colors = require("catppuccin.palettes").get_palette()
+-- lualine_y = {{"macro_recording", fmt = show_macro_recording}},
+-- local colors = require("catppuccin.palettes").get_palette()
 -- local colors = {
 --     bg       = '#282c34',
 --     fg       = '#bfc7d5',
@@ -77,27 +77,27 @@ local colors = require("catppuccin.palettes").get_palette()
 --     blue     = '#bd93f9',
 --     red      = '#ff5555',
 -- }
--- local colors = {
---     bg       = '#1c2023',
---     fg       = '#c7ccd1',
---     yellow   = '#c7ae95',
---     cyan     = '#95c7ae',
---     darkblue = '#747c84',
---     green    = '#aec795',
---     orange   = '#fab387',
---     violet   = '#ae95c7',
---     maroon  = '#c795ae',
---     mauve    = '#c795ae',
---     blue     = '#95aec7',
---     red      = '#f38ba8',
--- }
+local colors = {
+    bg       = '#1c2023',
+    fg       = '#c7ccd1',
+    yellow   = '#c7ae95',
+    cyan     = '#95c7ae',
+    darkblue = '#747c84',
+    green    = '#aec795',
+    orange   = '#fab387',
+    violet   = '#ae95c7',
+    maroon   = '#c795ae',
+    mauve    = '#c795ae',
+    blue     = '#95aec7',
+    red      = '#f38ba8',
+}
 
 local conditions = {
     buffer_not_empty = function()
         return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
     end,
     hide_in_width = function()
-        return vim.fn.winwidth(0) > 80
+        return vim.fn.winwidth(0) > 90
     end,
     check_git_workspace = function()
         local filepath = vim.fn.expand('%:p:h')
@@ -289,6 +289,49 @@ ins_right {
     padding = { left = 1 },
 }
 
--- Now don't forget to initialize lualine
-lualine.setup(config)
-
+require('lualine').setup(config)
+-- -- Now don't forget to initialize lualine
+-- require('lualine').setup {
+--   options = {
+--     icons_enabled = true,
+--     theme = 'auto',
+--     section_separators = { left = '', right = '' },
+--     component_separators = { left = '', right = '' },
+--     -- component_separators = { left = '', right = ''},
+--     -- section_separators = { left = '', right = ''},
+--     disabled_filetypes = {
+--       statusline = {},
+--       winbar = {},
+--     },
+--     ignore_focus = {},
+--     always_divide_middle = true,
+--     globalstatus = true,
+--     refresh = {
+--       statusline = 1000,
+--       tabline = 1000,
+--       winbar = 1000,
+--     }
+--   },
+--   sections = {
+-- -- lualine_y = {{"macro_recording", fmt = show_macro_recording}},
+--     lualine_a = {'mode', {"macro_recording", fmt = show_macro_recording}},
+--     lualine_b = {'branch', 'diff', 'diagnostics'},
+--     lualine_c = {'filename'},
+--     lualine_x = {'encoding', 'fileformat', 'filetype'},
+--     lualine_y = {'progress'},
+--     lualine_z = {'location'}
+--   },
+--   inactive_sections = {
+--     lualine_a = {},
+--     lualine_b = {},
+--     lualine_c = {'filename'},
+--     lualine_x = {'location'},
+--     lualine_y = {},
+--     lualine_z = {}
+--   },
+--   tabline = {},
+--   winbar = {},
+--   inactive_winbar = {},
+--   extensions = {}
+-- }
+--

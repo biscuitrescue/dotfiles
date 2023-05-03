@@ -6,7 +6,7 @@
     "gtk-layer-shell": true,
     "layer": "top",
     "position": "left",
-    "height": "98",
+    "height": "",
     "width": "30",
     "modules-left": ["river/tags", "wlr/workspaces"],
     "modules-right": ["tray", "cpu", "pulseaudio", "memory#mem", "memory#swap", "clock#date", "clock#time", "battery"],
@@ -96,7 +96,7 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}",
-        "format-muted": "",
+        "format-muted": "M",
         "format-full": "",
         "format-icons": {
             "default": ["", "", " "]

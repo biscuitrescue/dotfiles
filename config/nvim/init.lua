@@ -63,7 +63,7 @@ require("cafo.remap")
 require("cafo.lazy")
 require 'colorizer'.setup()
 
-require('palenightfall').setup()
+-- require('palenightfall').setup()
 vim.cmd("hi IndentBlanklineSpaceCharBlankline guifg=Comment")
 vim.cmd("hi IndentBlanklineSpaceChar guifg=Comment")
 vim.cmd.colorscheme("catppuccin-macchiato")
