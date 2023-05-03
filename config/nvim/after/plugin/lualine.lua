@@ -33,9 +33,6 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
     end,
 })
 
-
-
-
 -- lualine_y = {{"macro_recording", fmt = show_macro_recording}},
 -- local colors = require("catppuccin.palettes").get_palette()
 -- local colors = {
