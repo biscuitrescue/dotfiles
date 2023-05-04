@@ -119,7 +119,7 @@ themes = {
         "waybar": "mocha"
     },
     "Dracula": {
-        "openbox": "Dracula",
+            "openbox": "Dracula-withoutBorder",
         "qtile": "dracula",
         "nvim": "dracula",
         "Gtk": "Dracula",
@@ -203,7 +203,7 @@ if theme in ['Mocha', 'Macchiato', 'Frappe', 'Latte']:
             )
 else:
     run(
-            "kvantummanager --set Harmony",
+            "kvantummanager --set Dracula",
             shell=True
             )
 
