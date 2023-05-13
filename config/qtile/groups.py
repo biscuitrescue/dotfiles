@@ -97,10 +97,10 @@ for i in groups:
 # ScratchPad
 
 groups.append(ScratchPad('Scratchpad', [
-    DropDown("sig", "signal-desktop-beta", height=0.8,
-             width=0.75, x=0.125, y=0.1, opacity=1,
+    DropDown("sig", "signal-desktop-beta", height=0.85,
+             width=0.85, x=0.075, y=0.075, opacity=1,
              on_focus_lost_hide=True),
-    DropDown("term", f'{myTerm} -e tmux new-session -t shell',
+    DropDown("term", f'{myTerm} --class alacritty-dropdown',
              # width=0.9, height=0.7,
              # x=0.05, y=0.01, opacity=1,
              width=0.95, height=0.9,
@@ -117,7 +117,7 @@ groups.append(ScratchPad('Scratchpad', [
              width=0.75, height=0.85,
              x=0.125, y=0.075, opacity=1),
     DropDown("Music", "spotify",
-             height=0.8, opacity=1,
+             height=0.9, opacity=1,
              width=0.9, x=0.05, y=0.05,
              on_focus_lost_hide=True),
     DropDown("fm", myTerm+' -e ranger',

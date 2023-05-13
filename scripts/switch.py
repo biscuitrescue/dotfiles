@@ -203,7 +203,7 @@ if theme in ['Mocha', 'Macchiato', 'Frappe', 'Latte']:
             )
 else:
     run(
-            "kvantummanager --set Dracula",
+            "kvantummanager --set Harmony",
             shell=True
             )
 

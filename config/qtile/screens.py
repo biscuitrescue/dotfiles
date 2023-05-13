@@ -240,7 +240,7 @@ else:
                 fontsize=xx,
                 font=xf,
                 low_percentage=0.25,
-                low_background=theme["teal"],
+                low_background=theme["blue"],
                 low_foreground=theme["black"],
                 foreground=theme["black"],
                 background=theme["blue"],

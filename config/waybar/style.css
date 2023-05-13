@@ -49,18 +49,19 @@
 
 #workspaces {
     margin: 0.2rem;
-    background: @lavender;
+    background: @base;
     padding: 0.15rem;
+    color: @lavender;
 }
 
 #workspaces button {
-    color: @base;
+    color: @lavender;
     padding: 0.2rem 0rem 0.2rem 0rem;
 }
 
 #workspaces button.active {
-    background: @surface0;
-    color: @lavender;
+    background: @;
+    color: @red;
 }
 
 #workspaces button:hover {
