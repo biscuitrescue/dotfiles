@@ -40,11 +40,11 @@ font:
     family: Iosevka
     style: Bold Italic
 
-  size: 13
+  size: 11.5
 
   offset:
-    x: 0
-    y: 0
+    x: -1
+    y: 1
 
 draw_bold_text_with_bright_colors: true
 
@@ -59,7 +59,7 @@ cursor:
   vi_mode_style: Underline
 
 import:
-  - /home/cafo/.config/alacritty/ashes.yml
+  - /home/cafo/.config/alacritty/awesome.yml
 
 
 key_bindings:
