@@ -113,7 +113,7 @@ groups.append(ScratchPad('Scratchpad', [
              width=0.95, height=0.9,
              x=0.025, y=0.05, opacity=1,
              on_focus_lost_hide=False),
-    DropDown("fmger", "dolphin",
+    DropDown("fmger", "nautilus",
              width=0.75, height=0.85,
              x=0.125, y=0.075, opacity=1),
     DropDown("Music", "spotify",
