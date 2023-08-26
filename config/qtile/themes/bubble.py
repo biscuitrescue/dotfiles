@@ -6,7 +6,7 @@ from qtile_extras import widget
 from colours import *
 
 
-theme = "latte"
+theme = "ashes"
 
 if theme == "ashes":
     theme = ashes[0]
@@ -36,7 +36,7 @@ decor = {
             use_widget_background=True,
             radius=rad,
             filled=True,
-            padding_y=9,
+            padding_y=8,
         )
     ],
     "padding": 10,
@@ -47,7 +47,7 @@ decor1 = {
             use_widget_background=True,
             radius=[rad, 0, 0, rad],
             filled=True,
-            padding_y=9,
+            padding_y=8,
         )
     ],
     "padding": 10,
@@ -58,7 +58,7 @@ decor2 = {
             use_widget_background=True,
             radius=[0, rad, rad, 0],
             filled=True,
-            padding_y=9,
+            padding_y=8,
         )
     ],
     "padding": 10,
@@ -164,13 +164,13 @@ default = [
         **decor,
     ),
     widget.TextBox(
-        foreground=theme["blue"],
+        foreground=theme["teal"],
         text="|",
         font=xf,
     ),
     widget.Clock(
         foreground=theme["black"],
-        background=theme["blue"],
+        background=theme["teal"],
         format=' %d %B, %a',
         font=xf,
         fontsize=xx,
@@ -226,7 +226,7 @@ else:
                 fill_charge=theme["green"],
                 fill_low=theme["yellow"],
                 fill_normal=theme["black"],
-                background=theme["teal"],
+                background=theme["blue"],
                 border_colour=theme["black"],
                 border_critical_colour=theme["black"],
                 border_charge_colour=theme["black"],
@@ -240,10 +240,10 @@ else:
                 fontsize=xx,
                 font=xf,
                 low_percentage=0.25,
-                low_background=theme["teal"],
+                low_background=theme["blue"],
                 low_foreground=theme["black"],
                 foreground=theme["black"],
-                background=theme["teal"],
+                background=theme["blue"],
                 charge_char='↑',
                 discharge_char='',
                 update_interval=1,
@@ -264,7 +264,7 @@ screens = [
             default,
             44,
             # opacity=0.9,
-            margin=[10,10,6,10],
+            margin=[8,8,2,8],
             background=theme["black"],
             foreground=theme["zero"],
         ),

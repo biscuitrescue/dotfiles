@@ -7,8 +7,8 @@ mod1 = "mod1"
 mod2 = "control"
 mod3 = "shift"
 home = os.path.expanduser('~')
-Term2 = "kitty"
-myTerm = "alacritty"
+Term2 = "alacritty"
+myTerm = "kitty"
 
 
 @lazy.function

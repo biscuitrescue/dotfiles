@@ -147,8 +147,8 @@ require("lazy").setup({
     -- themes
     'shaunsingh/nord.nvim',
     { 'maxmx03/dracula.nvim', lazy = true, },
-    'JoosepAlviste/palenightfall.nvim',
-    -- {'drewtempelmeyer/palenight.vim', lazy = true},
+    -- 'JoosepAlviste/palenightfall.nvim',
+    {'drewtempelmeyer/palenight.vim', lazy = true},
     {'NTBBloodbath/doom-one.nvim', lazy = true},
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
 })

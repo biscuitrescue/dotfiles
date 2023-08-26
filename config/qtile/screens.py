@@ -1,12 +1,12 @@
 import os
 from libqtile.config import Screen
 from libqtile import layout, bar, widget, hook
-from qtile_extras.widget.decorations import RectDecoration
 from qtile_extras import widget
 from colours import *
 
 
-theme = "ashes"
+
+theme = "palenight"
 
 if theme == "ashes":
     theme = ashes[0]
@@ -29,44 +29,9 @@ elif theme == "one":
 elif theme == "nord":
     theme = nord[0]
 
-rad = 7
-decor = {
-    "decorations": [
-        RectDecoration(
-            use_widget_background=True,
-            radius=rad,
-            filled=True,
-            padding_y=8,
-        )
-    ],
-    "padding": 10,
-}
-decor1 = {
-    "decorations": [
-        RectDecoration(
-            use_widget_background=True,
-            radius=[rad, 0, 0, rad],
-            filled=True,
-            padding_y=8,
-        )
-    ],
-    "padding": 10,
-}
-decor2 = {
-    "decorations": [
-        RectDecoration(
-            use_widget_background=True,
-            radius=[0, rad, rad, 0],
-            filled=True,
-            padding_y=8,
-        )
-    ],
-    "padding": 10,
-}
-
 
 xx = 22
-xf = "jetbrainsmono nerd font bold"
+xf = "Jetbrainsmono Nerd Font Medium"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -96,9 +61,10 @@ default = [
         linewidth=0,
     ),
     widget.CurrentLayoutIcon(
-        scale=0.4,
+        scale=0.45,
         custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
     ),
+
 
     widget.Spacer(),
 
@@ -112,12 +78,10 @@ default = [
         font=xf,
     ),
     widget.CPU(
-        background=theme["red"],
-        foreground=theme["black"],
+        foreground=theme["red"],
         format=' {load_percent}%',
         font=xf,
         fontsize=xx,
-        **decor,
     ),
     widget.TextBox(
         foreground=theme["yellow"],
@@ -127,12 +91,10 @@ default = [
     widget.Memory(
         font=xf,
         fontsize=xx,
-        background=theme["yellow"],
-        foreground=theme["black"],
+        foreground=theme["yellow"],
         measure_mem='G',
         measure_swap='G',
-        format=' {MemUsed: .2f} GB',
-        **decor,
+        format='{MemUsed: .2f} GB',
     ),
     widget.TextBox(
         foreground=theme["magenta"],
@@ -143,11 +105,9 @@ default = [
         measure_mem='G',
         font=xf,
         fontsize=xx,
-        foreground=theme["black"],
-        background=theme["magenta"],
+        foreground=theme["magenta"],
         measure_swap='G',
         format='{SwapUsed: .2f} GB',
-        **decor,
     ),
     widget.TextBox(
         foreground=theme["green"],
@@ -156,25 +116,21 @@ default = [
     ),
     widget.Volume(
         mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("pavucontrol")},
-        background=theme["green"],
-        foreground=theme["black"],
+        foreground=theme["green"],
         update_interval=0.01,
         font=xf,
         fontsize=xx,
-        **decor,
     ),
     widget.TextBox(
-        foreground=theme["teal"],
+        foreground=theme["blue"],
         text="|",
         font=xf,
     ),
     widget.Clock(
-        foreground=theme["black"],
-        background=theme["teal"],
+        foreground=theme["blue"],
         format=' %d %B, %a',
         font=xf,
         fontsize=xx,
-        **decor,
     ),
     widget.TextBox(
         foreground=theme["violet"],
@@ -182,12 +138,10 @@ default = [
         font=xf,
     ),
     widget.Clock(
-        foreground=theme["black"],
-        background=theme["violet"],
+        foreground=theme["violet"],
         font=xf,
         fontsize=xx,
         format=' %I:%M %p',
-        **decor,
     ),
     widget.TextBox(
         foreground=theme["teal"],
@@ -203,7 +157,6 @@ if len(os.listdir("/sys/class/power_supply")) == 0:
                 font=xf,
                 foreground=theme["black"],
                 background=theme["teal"],
-                **decor,
             ),
             widget.TextBox(
                 foreground=theme["teal"],
@@ -225,30 +178,27 @@ else:
                 fill_critical="#ff0000",
                 fill_charge=theme["green"],
                 fill_low=theme["yellow"],
-                fill_normal=theme["black"],
-                background=theme["blue"],
-                border_colour=theme["black"],
-                border_critical_colour=theme["black"],
-                border_charge_colour=theme["black"],
+                fill_normal=theme["teal"],
+                border_colour=theme["teal"],
+                border_critical_colour="#ff0000",
+                border_low_colour=theme["yellow"],
+                border_charge_colour=theme["green"],
                 text_charging="",
                 text_discharging="",
                 text_displaytime="",
                 margin=10,
-                **decor1,
             ),
             widget.Battery(
                 fontsize=xx,
                 font=xf,
-                low_percentage=0.25,
-                low_background=theme["blue"],
-                low_foreground=theme["black"],
-                foreground=theme["black"],
-                background=theme["blue"],
+                low_percentage=0.3,
+                low_background=theme["black"],
+                low_foreground=theme["teal"],
+                foreground=theme["teal"],
                 charge_char='↑',
                 discharge_char='',
                 update_interval=1,
                 format='{percent:2.0%}{char}',
-                **decor2,
             ),
             widget.TextBox(
                 foreground=theme["teal"],
@@ -264,9 +214,8 @@ screens = [
             default,
             44,
             # opacity=0.9,
-            margin=[8,8,2,8],
+            # margin=[0, 0, 6, 0],
             background=theme["black"],
-            foreground=theme["zero"],
         ),
     ),
 ]

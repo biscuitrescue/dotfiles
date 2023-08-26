@@ -168,6 +168,7 @@ thing = {
     'Gtk': ((1, (15, -1)), '.config/gtk-3.0/settings.ini'),
     'polybar': ((0, (40, -5)), '.config/polybar/config.ini'),
     'nvim': ((find_nvim(), (21, -3)), '.config/nvim/init.lua'),
+    # 'emacs': ((find_nvim(), (21, -3)), '.config/nvim/init.lua'),
     'zathura': ((-1, (8, -1)), '.config/zathura/zathurarc'),
     'waybar': ((0, (9, -7)), '.config/waybar/style.css'),
     'rofi': ((-1, (8, -2)), '.config/rofi/config.rasi')
