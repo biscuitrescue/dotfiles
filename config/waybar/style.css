@@ -1,4 +1,4 @@
-@import "palenight.css";
+@import "ashes.css";
 
 * {
     font-family: operator mono bold;
@@ -49,24 +49,25 @@
 
 #workspaces {
     margin: 0.2rem;
-    background: @base;
+    background: @lavender;
     padding: 0.15rem;
-    color: @lavender;
+    color: @base;
 }
 
 #workspaces button {
-    color: @lavender;
+    color: @base;
     padding: 0.2rem 0rem 0.2rem 0rem;
 }
 
 #workspaces button.active {
-    background: @;
-    color: @red;
+    background: @red;
+    color: @base;
+    border-radius: 1rem;
 }
 
 #workspaces button:hover {
     color: @base;
-    background: @maroon;
+    background: @yellow;
     border-radius: 1rem;
 }
 

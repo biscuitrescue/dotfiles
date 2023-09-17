@@ -8,12 +8,12 @@
     "position": "left",
     "height": "",
     "width": "30",
-    "modules-left": ["river/tags", "wlr/workspaces"],
+    "modules-left": ["river/tags", "hyprland/workspaces"],
     "modules-right": ["tray", "cpu", "pulseaudio", "memory#mem", "memory#swap", "clock#date", "clock#time", "battery"],
     "river/tags": {
         "num-tags": 9,
     },
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "on-click": "activate",
         "disable-scroll": false,
         "sort-by-number": true,

@@ -6,7 +6,7 @@ from colours import *
 
 
 
-theme = "palenight"
+theme = "ashes"
 
 if theme == "ashes":
     theme = ashes[0]

@@ -40,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Palenight-Openbox</name>
+    <name>Ashes-Openbox</name>
     <titleLayout>CIMLDN</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.

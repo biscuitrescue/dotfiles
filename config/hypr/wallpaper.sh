@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-wbg ~/Pictures/wallpapers/keyboard.png
+wbg ~/Pictures/wallpapers/chaos.png

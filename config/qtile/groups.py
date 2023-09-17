@@ -118,7 +118,7 @@ groups.append(ScratchPad('Scratchpad', [
              x=0.125, y=0.075, opacity=1),
     DropDown("Music", "spotify",
              height=0.9, opacity=1,
-             width=0.9, x=0.05, y=0.05,
+             width=0.9, x=0.05, y=0.025,
              on_focus_lost_hide=True),
     DropDown("fm", myTerm+' -e ranger',
              width=0.85, height=0.85,
