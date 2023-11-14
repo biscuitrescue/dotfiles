@@ -39,8 +39,7 @@ default = [
         font=xf,
     ),
     widget.GroupBox(
-        font=xf,
-        # font="operator mono",
+        font="operator mono",
         fontsize=xx,
         margin_y=4,
         margin_x=5,
@@ -95,7 +94,7 @@ default = [
         foreground=theme["yellow"],
         measure_mem='G',
         measure_swap='G',
-        format='{MemUsed: .2f} GB',
+        format=' {MemUsed: .2f} GB',
     ),
     widget.TextBox(
         foreground=theme["magenta"],
@@ -215,7 +214,7 @@ screens = [
             default,
             44,
             # opacity=0.9,
-            margin=[10,10,6,10],
+            # margin=[0, 0, 6, 0],
             background=theme["black"],
         ),
     ),
