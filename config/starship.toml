@@ -1,4 +1,4 @@
-palette = "ashes"
+palette = "catppuccin_latte"
 
 [character]
 
@@ -31,8 +31,8 @@ yellow = "#AEC795"
 [palettes.dracula]
 green = "#50fa7b"
 red = "#ff6e6e"
-mauve = "#bd93f9"
-blue = "#6272a4"
+mauve = "#6272a4"
+blue = "#bd93f9"
 magenta = "#ff79c6"
 yellow = "#f1fa8c"
 

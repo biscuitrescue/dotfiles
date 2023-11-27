@@ -51,6 +51,8 @@ themes = {
         "zathura": "ashes",
         "waybar": "ashes",
         "dunst": "ashes",
+        "emacs": "ashes",
+        "starship": "ashes",
         "rofi": "ashes"
     },
     "One": {
@@ -64,19 +66,23 @@ themes = {
         "zathura": "dracula",
         "waybar": "one",
         "dunst": "one",
+        "emacs": "doom-one",
+        "starship": "one",
         "rofi": "one"
     },
     "Latte": {
         "openbox": "Latte-Openbox",
         "qtile": "latte",
         "nvim": "catppuccin-latte",
-        "Gtk": "Catppuccin-Latte",
+        "Gtk": "Catppuccin-Latte-Standard-Maroon-Light",
         "kitty": "latte",
         "polybar": "latte",
         "alacritty": "latte",
         "zathura": "latte",
         "dunst": "latte",
         "rofi": "latte",
+        "emacs": "latte",
+        "starship": "catppuccin_latte",
         "waybar": "latte"
     },
     "Macchiato": {
@@ -90,6 +96,7 @@ themes = {
         "zathura": "macchiato",
         "dunst": "macchiato",
         "rofi": "macchiato",
+        "emacs": "macchiato",
         "waybar": "macchiato"
     },
     "Frappe": {
@@ -103,6 +110,7 @@ themes = {
         "zathura": "frappe",
         "dunst": "frappe",
         "rofi": "frappe",
+        "emacs": "frappe",
         "waybar": "frappe"
     },
     "Mocha": {
@@ -116,32 +124,38 @@ themes = {
         "zathura": "mocha",
         "dunst": "mocha",
         "rofi": "mocha",
+        "emacs": "mocha",
+        "starship": "catppuccin_mocha",
         "waybar": "mocha"
     },
     "Dracula": {
-        "openbox": "Dracula",
+        "openbox": "Dracula-withoutBorder",
         "qtile": "dracula",
         "nvim": "dracula",
-        "Gtk": "Dracula-slim",
+        "Gtk": "Dracula",
         "kitty": "dracula",
         "polybar": "dracula",
         "alacritty": "dracula",
         "zathura": "dracula",
         "dunst": "dracula",
         "rofi": "dracula",
+        "emacs": "doom-dracula",
+        "starship": "dracula",
         "waybar": "dracula"
     },
     "Palenight": {
         "openbox": "Palenight-Openbox",
         "qtile": "palenight",
-        "nvim": "palenight",
-        "Gtk": "palenight",
+        "nvim": "palenightfall",
+        "Gtk": "Material-Palenight-Borderless",
         "kitty": "palenight",
         "polybar": "palenight",
         "alacritty": "palenight",
         "zathura": "palenight",
         "dunst": "palenight",
         "rofi": "palenight",
+        "emacs": "doom-palenight",
+        "starship": "dracula",
         "waybar": "palenight"
     },
     "Nord": {
@@ -153,23 +167,27 @@ themes = {
         "polybar": "nord",
         "alacritty": "one",
         "zathura": "macchiato",
-        "dunst": "palenight",
+        "dunst": "nord",
         "rofi": "palenight",
-        "waybar": "palenight"
+        "emacs": "doom-nord",
+        "starship": "ashes",
+        "waybar": "nord"
     },
 }
 
 
 thing = {
-    'openbox': ((42, (10, -8)), '.config/openbox/rc.xml'),
+    'openbox': ((43, (10, -8)), '.config/openbox/rc.xml'),
     'qtile': ((8, (9, -2)), '.config/qtile/screens.py'),
     'kitty': ((-1, (15, -6)), '.config/kitty/kitty.conf'),
     'alacritty': ((61, (33, -5)), '.config/alacritty/alacritty.yml'),
     'Gtk': ((1, (15, -1)), '.config/gtk-3.0/settings.ini'),
     'polybar': ((0, (40, -5)), '.config/polybar/config.ini'),
     'nvim': ((find_nvim(), (21, -3)), '.config/nvim/init.lua'),
+    'emacs': ((34, (18, -2)), '.config/doom/config.el'),
     'zathura': ((-1, (8, -1)), '.config/zathura/zathurarc'),
     'waybar': ((0, (9, -7)), '.config/waybar/style.css'),
+    'starship': ((0, (11, -2)), '.config/starship.toml'),
     'rofi': ((-1, (8, -2)), '.config/rofi/config.rasi')
 }
 
@@ -203,7 +221,7 @@ if theme in ['Mocha', 'Macchiato', 'Frappe', 'Latte']:
             )
 else:
     run(
-            "kvantummanager --set MontereyDark",
+            "kvantummanager --set Harmony",
             shell=True
             )
 
@@ -219,14 +237,14 @@ copyfile(f"{home}.config/dunst/{themes[theme]['dunst']}", f"{home}.config/dunst/
 
 # copyfile(f"{home}.config/mako/{themes[theme]['dunst']}", f"{home}.config/mako/config")
 
-# run(
-#     'qtile cmd-obj -o cmd -f reload_config',
-#     shell=True
-# )
-# run(
-#     'openbox --reconfigure',
-#     shell=True
-# )
+run(
+    'qtile cmd-obj -o cmd -f reload_config',
+    shell=True
+)
+run(
+    'openbox --reconfigure',
+    shell=True
+)
 run(
     "killall -SIGUSR2 waybar",
     shell=True
@@ -239,4 +257,3 @@ run(
     f'bash {home}.config/dunst/reload',
     shell=True
 )
-print(find_nvim())

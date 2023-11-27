@@ -12,7 +12,7 @@ mod3 = "shift"
 home = os.path.expanduser('~')
 groups = [
         Group("1", label="1"),
-        Group("2", label="2", spawn="vivaldi",
+        Group("2", label="2", spawn="Brave-browser-nightly",
               matches=[
                   Match(wm_class=["Icecat"]),
                   Match(wm_class=["LibreWolf"]),
