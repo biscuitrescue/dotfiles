@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.1',
+        tag = '0.1.5',
         dependencies = { {'nvim-lua/plenary.nvim'} },
         -- lazy = true,
         -- cmd = require("telescope.builtin"),
@@ -129,6 +129,9 @@ require("lazy").setup({
             "rcarriga/nvim-notify",
         }
     },
+
+    'LnL7/vim-nix',
+
     {
         "folke/persistence.nvim",
         event = "BufReadPre", -- this will only start session saving when an actual file was opened
@@ -147,8 +150,8 @@ require("lazy").setup({
 
     -- themes
     'shaunsingh/nord.nvim',
-    'dracula/vim',
-    -- 'Mofiqul/dracula.nvim',
+    -- 'dracula/vim',
+    'Mofiqul/dracula.nvim',
     -- { 'maxmx03/dracula.nvim', lazy = true, },
     -- 'JoosepAlviste/palenightfall.nvim',
     {'drewtempelmeyer/palenight.vim', lazy = true},
