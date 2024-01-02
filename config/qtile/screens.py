@@ -6,7 +6,7 @@ from qtile_extras import widget
 from colours import *
 
 
-theme = "latte"
+theme = "mocha"
 
 if theme == "ashes":
     theme = ashes[0]

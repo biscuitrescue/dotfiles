@@ -6,4 +6,4 @@ map <C-i> recolor
 set smooth-scroll true
 set show-v-scrollbar true
 
-include latte
+include mocha
