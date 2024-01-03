@@ -6,7 +6,7 @@ from qtile_extras import widget
 from colours import *
 
 
-theme = "ashes"
+theme = "mocha"
 
 if theme == "ashes":
     theme = ashes[0]
@@ -215,27 +215,27 @@ if len(os.listdir("/sys/class/power_supply")) == 0:
 else:
     default.extend(
         [
-            widget.UPowerWidget(
-                font=xf,
-                battery_width=27,
-                battery_height=14,
-                fontsize=xx,
-                percentage_low=0.5,
-                percentage_critical=0.3,
-                fill_critical="#ff0000",
-                fill_charge=theme["green"],
-                fill_low=theme["yellow"],
-                fill_normal=theme["black"],
-                background=theme["blue"],
-                border_colour=theme["black"],
-                border_critical_colour=theme["black"],
-                border_charge_colour=theme["black"],
-                text_charging="",
-                text_discharging="",
-                text_displaytime="",
-                margin=10,
-                **decor1,
-            ),
+        #     widget.UPowerWidget(
+        #         font=xf,
+        #         battery_width=27,
+        #         battery_height=14,
+        #         fontsize=xx,
+        #         percentage_low=0.5,
+        #         percentage_critical=0.3,
+        #         fill_critical="#ff0000",
+        #         fill_charge=theme["green"],
+        #         fill_low=theme["yellow"],
+        #         fill_normal=theme["black"],
+        #         background=theme["blue"],
+        #         border_colour=theme["black"],
+        #         border_critical_colour=theme["black"],
+        #         border_charge_colour=theme["black"],
+        #         text_charging="",
+        #         text_discharging="",
+        #         text_displaytime="",
+        #         margin=10,
+        #         **decor1,
+        #     ),
             widget.Battery(
                 fontsize=xx,
                 font=xf,
@@ -248,7 +248,7 @@ else:
                 discharge_char='',
                 update_interval=1,
                 format='{percent:2.0%}{char}',
-                **decor2,
+                **decor,
             ),
             widget.TextBox(
                 foreground=theme["teal"],
