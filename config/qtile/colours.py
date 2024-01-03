@@ -64,6 +64,18 @@ macchiato = {
     "teal": "#b7bdf8",
     "blood": "#f2779c",
     },
+docha = {
+    "zero": "#D8DEE9",
+    "black": "#282a36",
+    "red": "#f38baf",
+    "green": "#a6ebaf",
+    "yellow": "#f9e2af",
+    "magenta": "#f2cdcd",
+    "violet": "#cba6f7",
+    "blue": "#96CDFB",
+    "teal": "#c9cbff",
+    "blood": "#f2779c",
+    },
 mocha = {
     "zero": "#D8DEE9",
     "black": "#1e1e2e",

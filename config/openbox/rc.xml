@@ -41,7 +41,7 @@
   </placement>
   <theme>
     <name>Mocha-Openbox</name>
-    <titleLayout>CIMLDN</titleLayout>
+    <titleDracula-withoutBorderLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon

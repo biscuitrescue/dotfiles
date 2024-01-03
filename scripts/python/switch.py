@@ -128,6 +128,21 @@ themes = {
         "starship": "catppuccin_mocha",
         "waybar": "mocha"
     },
+    "Docha": {
+        "openbox": "Dracula-withoutBorder",
+        "qtile": "docha",
+        "nvim": "catppuccin-mocha",
+        "Gtk": "Dracula",
+        "kitty": "docha",
+        "polybar": "dracula",
+        "alacritty": "dracula",
+        "zathura": "dracula",
+        "dunst": "dracula",
+        "rofi": "dracula",
+        "emacs": "doom-dracula",
+        "starship": "catppuccin_mocha",
+        "waybar": "dracula"
+    },
     "Dracula": {
         "openbox": "Dracula-withoutBorder",
         "qtile": "dracula",

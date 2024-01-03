@@ -1,6 +1,6 @@
 import os
-from libqtile import layout
-from libqtile.config import Group, Key, Match, ScratchPad, DropDown
+from libqtile import layout, hook
+from libqtile.config import Group, Key, Match, ScratchPad, DropDown, EzKey
 from libqtile.command import lazy
 from keys import keys
 
@@ -10,6 +10,8 @@ mod1 = "mod1"
 mod2 = "control"
 mod3 = "shift"
 home = os.path.expanduser('~')
+
+
 groups = [
         Group("1", label="1"),
         Group("2", label="2", spawn="Brave-browser-nightly",
@@ -96,6 +98,9 @@ for i in groups:
 
 # ScratchPad
 
+# mutscr = qtile_mutable_scratch.MutableScratch()
+# groups.append(Group(''))
+
 groups.append(ScratchPad('Scratchpad', [
     DropDown("sig", "signal-desktop-beta", height=0.85,
              width=0.85, x=0.075, y=0.075, opacity=1,
@@ -133,6 +138,12 @@ groups.append(ScratchPad('Scratchpad', [
              width=0.85, height=0.95,
              x=0.075, y=0.025, opacity=1),
     ]))
+
+# keys.extend([
+#     EzKey('M-S-<minus>', mutscr.add_current_window()),
+#     EzKey('M-C-<minus>', mutscr.remove_current_window()),
+#     EzKey('M-<minus>', mutscr.toggle()),
+#     ])
 
 keys.extend([
     Key([mod], "space",
