@@ -192,7 +192,7 @@ themes = {
 
 
 thing = {
-    'openbox': ((43, (10, -8)), '.config/openbox/rc.xml'),
+    'openbox': ((42, (10, -8)), '.config/openbox/rc.xml'),
     'qtile': ((8, (9, -2)), '.config/qtile/screens.py'),
     'kitty': ((-1, (15, -6)), '.config/kitty/kitty.conf'),
     'alacritty': ((61, (33, -5)), '.config/alacritty/alacritty.yml'),
