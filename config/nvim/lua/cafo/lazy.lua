@@ -65,7 +65,17 @@ require("lazy").setup({
         end
     },
 
-        {'romgrk/barbar.nvim',
+    -- {
+    --     'akinsho/bufferline.nvim',
+    --     version = "*",
+    --     dependencies = 'nvim-tree/nvim-web-devicons',
+    --     config = function()
+    --         require("bufferline").setup{}
+    --     end
+    -- },
+
+    {
+        'romgrk/barbar.nvim',
         dependencies = {
             'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
             'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
@@ -125,28 +135,42 @@ require("lazy").setup({
         -- },
     },
     -- LSP
-    {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
-        dependencies = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim'},           -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},         -- Required
-            {'hrsh7th/cmp-nvim-lsp'},     -- Required
-            {'hrsh7th/cmp-buffer'},       -- Optional
-            {'hrsh7th/cmp-path'},         -- Optional
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
-            {'hrsh7th/cmp-nvim-lua'},     -- Optional
-
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},             -- Required
-            {'rafamadriz/friendly-snippets'}, -- Optional
-        }
-    },
+    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
+    {'saadparwaiz1/cmp_luasnip'},
+    {'hrsh7th/cmp-nvim-lua'},
+    {'rafamadriz/friendly-snippets'},
+    {'L3MON4D3/LuaSnip'},
+    {'williamboman/mason-lspconfig.nvim'},
+    {'williamboman/mason.nvim'},
+    -- {
+    --     'VonHeikemen/lsp-zero.nvim',
+    --     branch = 'v1.x',
+    --     dependencies = {
+    --         -- LSP Support
+    --         {'neovim/nvim-lspconfig'},             -- Required
+    --         {'williamboman/mason.nvim'},           -- Optional
+    --         {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    --
+    --         -- Autocompletion
+    --         {'hrsh7th/nvim-cmp'},         -- Required
+    --         {'hrsh7th/cmp-nvim-lsp'},     -- Required
+    --         {'hrsh7th/cmp-buffer'},       -- Optional
+    --         {'hrsh7th/cmp-path'},         -- Optional
+    --         {'saadparwaiz1/cmp_luasnip'}, -- Optional
+    --         {'hrsh7th/cmp-nvim-lua'},     -- Optional
+    --
+    --         -- Snippets
+    --         {'L3MON4D3/LuaSnip'},             -- Required
+    --         {'rafamadriz/friendly-snippets'}, -- Optional
+    --     }
+    -- },
 
 
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
