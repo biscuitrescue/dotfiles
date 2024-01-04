@@ -40,8 +40,8 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Mocha-Openbox</name>
-    <titleDracula-withoutBorderLayout>
+    <name>Dracula-withoutBorder</name>
+    <titleLayout>CIMLDN</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
