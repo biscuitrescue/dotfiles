@@ -1,14 +1,16 @@
 import os
 from libqtile.config import Screen
-from libqtile import layout, bar, widget, hook
-from qtile_extras import widget
+from libqtile import bar, widget
 from colours import *
 
 
+theme = "oxocarbon"
 
-theme = "docha"
-
-if theme == "ashes":
+if theme == "levuaska":
+    theme = levuaska[0]
+elif theme == "oxocarbon":
+    theme = oxocarbon[0]
+elif theme == "ashes":
     theme = ashes[0]
 elif theme == "latte":
     theme = latte[0]

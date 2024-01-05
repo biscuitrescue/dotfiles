@@ -1,5 +1,31 @@
 #!/usr/bin/env python3
 
+oxocarbon = {
+    "zero": "#83b6af",
+    "black": "#161616",
+    "red": "#ff7eb6",
+    "green": "#42be65",
+    "yellow": "#f1fa8c",
+    "magenta": "#d7beda",
+    "violet": "#be95ff",
+    "blue": "#78A9FF",
+    "teal": "#AEC795",
+    "blood": "#f07178",
+    },
+
+levuaska = {
+    "zero": "#83b6af",
+    "black": "#0f0f17",
+    "red": "#d78787",
+    "green": "#afbea2",
+    "yellow": "#e4c9af",
+    "magenta": "#d7beda",
+    "violet": "#ae95c7",
+    "blue": "#a1bdce",
+    "teal": "#AEC795",
+    "blood": "#f07178",
+    },
+
 ashes = {
     "zero": "#83b6af",
     "black": "#1c2023",

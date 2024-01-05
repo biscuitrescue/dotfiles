@@ -1,10 +1,9 @@
 import os
-from libqtile import layout, hook
 from libqtile.config import Group, Key, Match, ScratchPad, DropDown, EzKey
 from libqtile.command import lazy
 from keys import keys
 
-myTerm = "kitty"
+myTerm = "alacritty"
 mod = "mod4"
 mod1 = "mod1"
 mod2 = "control"
@@ -14,7 +13,7 @@ home = os.path.expanduser('~')
 
 groups = [
         Group("1", label="1"),
-        Group("2", label="2", spawn="Brave-browser-nightly",
+        Group("2", label="2",  # spawn="Brave-browser-nightly",
               matches=[
                   Match(wm_class=["Icecat"]),
                   Match(wm_class=["LibreWolf"]),
@@ -22,6 +21,7 @@ groups = [
                   Match(wm_class=["firefox"]),
                   Match(wm_class=["Vivaldi-stable"]),
                   Match(wm_class=["Brave-browser-nightly"]),
+                  Match(wm_class=["Brave-browser"]),
                   ]
               ),
 
@@ -78,10 +78,10 @@ groups = [
               ),
 
         Group('f', label='',
-              matches=[
-                  Match(wm_class=["Brave-browser"]),
-                  #     Match(wm_class=["Signal Beta"]),
-                  ]
+              # matches=[
+              #     Match(wm_class=["Brave-browser"]),
+              #     #     Match(wm_class=["Signal Beta"]),
+              #     ]
               ),
 ]
 for i in groups:

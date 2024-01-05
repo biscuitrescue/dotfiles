@@ -20,6 +20,8 @@ elif theme == "frappe":
     theme = frappe[0]
 elif theme == "mocha":
     theme = mocha[0]
+elif theme == "docha":
+    theme = docha[0]
 elif theme == "macchiato":
     theme = macchiato[0]
 elif theme == "dracula":

@@ -131,7 +131,7 @@ themes = {
     "Docha": {
         "openbox": "Dracula-withoutBorder",
         "qtile": "docha",
-        "nvim": "catppuccin-mocha",
+        "nvim": "dracula-soft",
         "Gtk": "Dracula",
         "kitty": "docha",
         "polybar": "dracula",
@@ -241,16 +241,17 @@ else:
             )
 
 run(
-    f'gsettings set org.gnome.desktop.interface gtk-theme {themes[theme]["Gtk"]}',
+    f'gsettings set org.gnome.desktop.interface gtk-theme \
+            {themes[theme]["Gtk"]}',
     shell=True
 )
 
 if exists(f"{home}.themes/{themes[theme]['Gtk']}/gtk-4.0/gtk.css"):
-    copyfile(f"{home}.themes/{themes[theme]['Gtk']}/gtk-4.0/gtk.css", f"{home}.config/gtk-4.0/gtk.css")
+    copyfile(f"{home}.themes/{themes[theme]['Gtk']}/gtk-4.0/gtk.css",
+             f"{home}.config/gtk-4.0/gtk.css")
 
-copyfile(f"{home}.config/dunst/{themes[theme]['dunst']}", f"{home}.config/dunst/dunstrc")
-
-# copyfile(f"{home}.config/mako/{themes[theme]['dunst']}", f"{home}.config/mako/config")
+copyfile(f"{home}.config/dunst/{themes[theme]['dunst']}",
+         f"{home}.config/dunst/dunstrc")
 
 run(
     'qtile cmd-obj -o cmd -f reload_config',

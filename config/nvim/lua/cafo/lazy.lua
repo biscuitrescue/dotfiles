@@ -1,5 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if  not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
         "git",
         "clone",
@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.:',
+        tag = '0.1.5',
         dependencies = { {'nvim-lua/plenary.nvim'} },
         -- lazy = true,
         -- cmd = require("telescope.builtin"),
@@ -198,15 +198,33 @@ require("lazy").setup({
         'nvim-lualine/lualine.nvim',
         dependencies = { 'kyazdani42/nvim-web-devicons'}
     },
-    -- {'akinsho/bufferline.nvim', version = "*", dependencies = 'kyazdani42/nvim-web-devicons'},
 
     -- themes
     'shaunsingh/nord.nvim',
-    -- 'dracula/vim',
-    'Mofiqul/dracula.nvim',
-    -- { 'maxmx03/dracula.nvim', lazy = true, },
-    -- 'JoosepAlviste/palenightfall.nvim',
+    {
+        'maxmx03/dracula.nvim',
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = function ()
+            -- require('dracula').setup()
+            -- vim.cmd.colorscheme 'dracula'
+        end
+    },
+    'Abstract-IDE/Abstract-cs',
     {'drewtempelmeyer/palenight.vim', lazy = true},
     {'NTBBloodbath/doom-one.nvim', lazy = true},
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
+    { 'levuaska/levuaska.nvim', as = 'levuaska' },
+    {
+        "nyoom-engineering/oxocarbon.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme 'oxocarbon'
+        end,
+        -- Add in any other configuration; 
+        --   event = foo, 
+        --   config = bar
+        --   end,
+    },
 })
