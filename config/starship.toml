@@ -9,7 +9,7 @@ vicmd_symbol = "[[//](blue)❮](magenta)"
 [directory]
 truncation_length = 4
 # Catppuccin 'lavender'
-style = "bold magenta"
+style = "bold yellow"
 
 # palette tables should be last in the config ⚓️
 
