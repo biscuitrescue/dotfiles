@@ -1,5 +1,7 @@
 require('kanagawa').setup({
 
+    commentStyle = { italic = true },
+
     colors = {
         theme = {
             all = {

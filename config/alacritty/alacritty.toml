@@ -15,19 +15,19 @@ TERM = "xterm-256color"
 size = 11
 
 [font.bold]
-family = "Iosevka"
+family = "Go Mono for powerline"
 style = "Bold"
 
 [font.bold_italic]
-family = "Iosevka"
+family = "Go Mono for powerline"
 style = "Bold Italic"
 
 [font.italic]
-family = "Iosevka"
-style = "Medium Italic"
+family = "Go Mono for powerline"
+style = "Italic"
 
 [font.normal]
-family = "Iosevka"
+family = "Go Mono for powerline"
 style = "Medium"
 
 [font.offset]

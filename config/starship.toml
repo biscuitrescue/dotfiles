@@ -1,4 +1,4 @@
-palette = "oxocarbon"
+palette = "kanagawa"
 
 [character]
 
@@ -12,6 +12,15 @@ truncation_length = 4
 style = "bold magenta"
 
 # palette tables should be last in the config ⚓️
+
+[palettes.kanagawa]
+green = "#8a9a7b"
+red = "#c4746e"
+mauve = "#a292a3"
+blue = "#8ba4b0"
+magenta = "#a292a3"
+yellow = "#c4b28a"
+
 [palettes.one]
 green = "#98be65"
 red = "#ff6c6b"

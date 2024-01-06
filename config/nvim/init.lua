@@ -43,9 +43,11 @@ opt.background = 'dark'
 vim.api.nvim_set_hl(0, 'Comment', { italic=true })
 
 -- vim.cmd("hi Comment guifg=darkgrey")
+-- vim.highlight.create('Comment', {cterm='italic', gui='italic'}, false)
 -- vim.cmd("IndentLinesEnable")
 -- vim.cmd("hi NvimTreeNormal guibg=NONE")
 -- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+-- vim.api.nvim_set_hl(0, 'Comment', { italic=true })
 
 g.mapleader = " "
 
