@@ -16,4 +16,4 @@ configuration {
 
 //@theme "ashes"
 //@theme "/home/cafo/.config/rofi/themes/ashes.rasi"
-@theme "ashes"
+@theme "one"

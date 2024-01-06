@@ -1,5 +1,19 @@
 #!/usr/bin/env python3
 
+
+kanagawa = {
+    "zero": "#83b6af",
+    "black": "#181616",
+    "red": "#c4746e",
+    "green": "#8a9a7b",
+    "yellow": "#c4b28a",
+    "magenta": "#d7beda",
+    "violet": "#a292a3",
+    "blue": "#8ba4b0",
+    "teal": "#AEC795",
+    "blood": "#f07178",
+    },
+
 oxocarbon = {
     "zero": "#83b6af",
     "black": "#161616",

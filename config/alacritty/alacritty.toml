@@ -1,4 +1,4 @@
-import = ["/home/cafo/.config/alacritty/oxocarbon.toml"]
+import = ["/home/cafo/.config/alacritty/kanagawa.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -126,9 +126,9 @@ title = "Alacritty"
 general = "Alacritty"
 instance = "Alacritty"
 
-[window.dimensions]
-columns = 100
-lines = 30
+# [window.dimensions]
+# columns = 100
+# lines = 30
 
 [window.padding]
 x = 10

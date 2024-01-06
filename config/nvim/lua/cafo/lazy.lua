@@ -210,21 +210,17 @@ require("lazy").setup({
             -- vim.cmd.colorscheme 'dracula'
         end
     },
-    'Abstract-IDE/Abstract-cs',
     {'drewtempelmeyer/palenight.vim', lazy = true},
     {'NTBBloodbath/doom-one.nvim', lazy = true},
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
-    { 'levuaska/levuaska.nvim', as = 'levuaska' },
+    "rebelot/kanagawa.nvim",
+    'tanvirtin/monokai.nvim',
     {
         "nyoom-engineering/oxocarbon.nvim",
         lazy = false,
-        priority = 1000,
-        config = function()
-            vim.cmd.colorscheme 'oxocarbon'
-        end,
-        -- Add in any other configuration; 
-        --   event = foo, 
-        --   config = bar
-        --   end,
+        -- priority = 1000,
+        -- config = function()
+        --     vim.cmd.colorscheme 'oxocarbon'
+        -- end,
     },
 })

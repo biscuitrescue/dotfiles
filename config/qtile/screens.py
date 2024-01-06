@@ -4,10 +4,12 @@ from libqtile import bar, widget
 from colours import *
 
 
-theme = "oxocarbon"
+theme = "kanagawa"
 
 if theme == "levuaska":
     theme = levuaska[0]
+elif theme == "kanagawa":
+    theme = kanagawa[0]
 elif theme == "oxocarbon":
     theme = oxocarbon[0]
 elif theme == "ashes":
