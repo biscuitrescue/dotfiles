@@ -5,8 +5,9 @@ from colours import *
 
 
 theme = "kanagawa"
-
-if theme == "levuaska":
+ashesdashesrashesaashescashesuasheslashesaashes
+ashesdraculadracula
+draculaif theme == "levuaska":
     theme = levuaska[0]
 elif theme == "kanagawa":
     theme = kanagawa[0]

@@ -40,6 +40,36 @@ def switch_theme(obj, theme):
 
 
 themes = {
+    "Kanagawa": {
+        "openbox": "Ashes-Openbox",
+        "qtile": "kanagawa",
+        "nvim": "kanagawa-dragon",
+        "Gtk": "Otis-forest",
+        "kitty": "ashes",
+        "polybar": "ashes",
+        "alacritty": "monokai",
+        "zathura": "ashes",
+        "waybar": "ashes",
+        "dunst": "ashes",
+        "emacs": "ashes",
+        "starship": "ashes",
+        "rofi": "ashes"
+    },
+    "Monokai": {
+        "openbox": "Ashes-Openbox",
+        "qtile": "monokai",
+        "nvim": "monokai_pro",
+        "Gtk": "Otis-forest",
+        "kitty": "ashes",
+        "polybar": "ashes",
+        "alacritty": "monokai",
+        "zathura": "ashes",
+        "waybar": "ashes",
+        "dunst": "ashes",
+        "emacs": "ashes",
+        "starship": "ashes",
+        "rofi": "ashes"
+    },
     "Ashes": {
         "openbox": "Ashes-Openbox",
         "qtile": "ashes",
@@ -193,7 +223,7 @@ themes = {
 
 thing = {
     'openbox': ((42, (10, -8)), '.config/openbox/rc.xml'),
-    'qtile': ((8, (9, -2)), '.config/qtile/screens.py'),
+    'qtile': ((7, (9, -2)), '.config/qtile/screens.py'),
     'kitty': ((-1, (15, -6)), '.config/kitty/kitty.conf'),
     'alacritty': ((61, (33, -5)), '.config/alacritty/alacritty.yml'),
     'Gtk': ((1, (15, -1)), '.config/gtk-3.0/settings.ini'),
