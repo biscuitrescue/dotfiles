@@ -215,12 +215,10 @@ require("lazy").setup({
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
     "rebelot/kanagawa.nvim",
     'tanvirtin/monokai.nvim',
+    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true },
+    { "savq/melange-nvim" },
     {
         "nyoom-engineering/oxocarbon.nvim",
         lazy = false,
-        -- priority = 1000,
-        -- config = function()
-        --     vim.cmd.colorscheme 'oxocarbon'
-        -- end,
     },
 })
