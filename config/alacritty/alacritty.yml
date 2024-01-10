@@ -59,7 +59,7 @@ cursor:
   vi_mode_style: Underline
 
 import:
-  - /home/cafo/.config/alacritty/ashes.yml
+  - /home/cafo/.config/alacritty/monokai.yml
 
 
 key_bindings:

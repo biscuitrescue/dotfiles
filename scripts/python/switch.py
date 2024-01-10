@@ -44,7 +44,7 @@ themes = {
         "openbox": "Ashes-Openbox",
         "qtile": "kanagawa",
         "nvim": "kanagawa-dragon",
-        "Gtk": "Otis-forest",
+        "Gtk": "Dracula",
         "kitty": "ashes",
         "polybar": "ashes",
         "alacritty": "monokai",
@@ -223,7 +223,7 @@ themes = {
 
 thing = {
     'openbox': ((42, (10, -8)), '.config/openbox/rc.xml'),
-    'qtile': ((7, (9, -2)), '.config/qtile/screens.py'),
+    # 'qtile': ((7, (9, -2)), '.config/qtile/screens.py'),
     'kitty': ((-1, (15, -6)), '.config/kitty/kitty.conf'),
     'alacritty': ((61, (33, -5)), '.config/alacritty/alacritty.yml'),
     'Gtk': ((1, (15, -1)), '.config/gtk-3.0/settings.ini'),

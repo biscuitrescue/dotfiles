@@ -9,10 +9,6 @@ from screens import theme
 from libqtile.backend.wayland import InputConfig
 
 
-func():
-    pass
-
-
 border = dict(
     border_focus=theme["blue"],
     border_width=2
