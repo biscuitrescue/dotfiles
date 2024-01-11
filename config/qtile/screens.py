@@ -4,7 +4,7 @@ from libqtile import bar, widget
 from colours import *
 
 
-theme = "kanagawa"
+theme = "mocha"
 
 
 if theme == "levuaska":
