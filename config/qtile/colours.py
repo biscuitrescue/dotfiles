@@ -1,6 +1,19 @@
 #!/usr/bin/env python3
 
 
+kanagawa_lotus = {
+    "zero": "#83b6af",
+    "black": "#f2ecbc",
+    "red": "#c84053",
+    "green": "#6f894e",
+    "yellow": "#77713f",
+    "magenta": "#b35b79",
+    "violet": "#a292a3",
+    "blue": "#4d699b",
+    "teal": "#597b75",
+    "blood": "#f07178",
+    },
+
 kanagawa = {
     "zero": "#83b6af",
     "black": "#181616",

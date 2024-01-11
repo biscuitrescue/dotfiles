@@ -14,8 +14,8 @@ opt.nu = true
 opt.rnu = true
 o.mouse = "a"
 opt.clipboard = "unnamedplus"
-opt.shiftwidth = 4
-opt.tabstop = 4
+opt.shiftwidth = 2
+opt.tabstop = 2
 opt.scrolloff = 4
 opt.laststatus = 3
 opt.confirm = true
@@ -52,13 +52,13 @@ vim.api.nvim_set_hl(0, 'Comment', { italic=true })
 g.mapleader = " "
 
 if vim.g.neovide then
-    vim.o.guifont = "jetbrainsmono nerd font:h14"
-    vim.opt.linespace = 0
-    vim.g.neovide_scale_factor = 1.0
-    vim.g.neovide_padding_top = 1
-    vim.g.neovide_padding_bottom = 1
-    vim.g.neovide_padding_right = 1
-    vim.g.neovide_padding_left = 1
+  vim.o.guifont = "jetbrainsmono nerd font:h14"
+  vim.opt.linespace = 0
+  vim.g.neovide_scale_factor = 1.0
+  vim.g.neovide_padding_top = 1
+  vim.g.neovide_padding_bottom = 1
+  vim.g.neovide_padding_right = 1
+  vim.g.neovide_padding_left = 1
 end
 
 require("cafo.remap")
@@ -68,4 +68,4 @@ require 'colorizer'.setup()
 -- require('palenightfall').setup()
 vim.cmd("hi IndentBlanklineSpaceCharBlankline guifg=Comment")
 vim.cmd("hi IndentBlanklineSpaceChar guifg=Comment")
-vim.cmd.colorscheme("kanagawa-dragon")
+vim.cmd.colorscheme("catppuccin-mocha")

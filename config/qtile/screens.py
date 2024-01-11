@@ -9,6 +9,8 @@ theme = "kanagawa"
 
 if theme == "levuaska":
     theme = levuaska[0]
+elif theme == "kanagawa_lotus":
+    theme = kanagawa_lotus[0]
 elif theme == "kanagawa":
     theme = kanagawa[0]
 elif theme == "oxocarbon":

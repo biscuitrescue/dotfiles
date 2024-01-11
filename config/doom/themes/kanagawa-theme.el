@@ -48,15 +48,15 @@ Can be an integer to determine the exact padding."
 
    (grey base5)
 
-   (red         '("#ff5d62" "#e46876" "red"))
+   (red         '("#c4746e" "#c4746e" "red"))
    (orange      '("#ffa066" "#ffa066" "brightred"))
-   (green       '("#98bb6c" "#98bb6c" "green"))
+   (green       '("#8a9a7b" "#8a9a7b" "green"))
    (teal        '("#44b9b1" "#00d7af" "brightgreen"))
-   (yellow      '("#ffcb6b" "#ffd700" "brightyellow"))
-   (blue        '("#7fb4ca" "#7fb4ca" "brightblue"))
+   (yellow      '("#c4b28a" "#c4b28a" "brightyellow"))
+   (blue        '("#8ba4b0" "#8ba4b0" "brightblue"))
    (dark-blue   '("#7e9cd8" "#7e9cd8" "blue"))
-   (magenta     '("#d27e99" "#d27e99" "brightmagenta"))
-   (violet      '("#957fb8" "#957fb8" "magenta"))
+   (magenta     '("#a292a3" "#a292a3" "brightmagenta"))
+   (violet      '("#d27e99" "#d27e99" "magenta"))
    (cyan        '("#89DDFF" "#5fd7ff" "brightcyan"))
    (dark-cyan   '("#80cbc4" "#00d7af" "cyan"))
 
