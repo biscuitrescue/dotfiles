@@ -35,6 +35,7 @@ set("n", ";", ":")
 set("n", "<leader>cd", ":cd ")
 set("n", "<leader>wv", ":vs<CR>")
 set("n", "<leader>w", "<C-w>")
+set("n", "<leader>zz", ":ZenMode<CR>")
 
 set("n", "<leader>op", ":e ")
 

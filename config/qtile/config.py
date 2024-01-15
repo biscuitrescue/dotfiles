@@ -20,7 +20,7 @@ layouts = [
     #     **border
     # ),
     layout.Tile(
-        margin=10,
+        margin=6,
         ratio=0.55,
         # border_on_single=False,
         shift_windows=True,

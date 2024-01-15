@@ -1,4 +1,4 @@
-import = ["/home/cafo/.config/alacritty/catppuccin-mocha.toml"]
+import = ["/home/cafo/.config/alacritty/kanagawa.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -15,19 +15,19 @@ TERM = "xterm-256color"
 size = 11
 
 [font.bold]
-family = "Go Mono for powerline"
+family = "Operator Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "Go Mono for powerline"
+family = "Operator Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "Go Mono for powerline"
+family = "Operator Mono"
 style = "Italic"
 
 [font.normal]
-family = "Go Mono for powerline"
+family = "Operator Mono"
 style = "Medium"
 
 [font.offset]

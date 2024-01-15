@@ -4,7 +4,7 @@ from libqtile import bar, widget
 from colours import *
 
 
-theme = "mocha"
+theme = "kanagawa"
 
 
 if theme == "levuaska":
@@ -80,6 +80,7 @@ default = [
     widget.Systray(
         icon_size=20,
         padding=4,
+        # background="#000000",
     ),
     widget.TextBox(
         foreground=theme["red"],

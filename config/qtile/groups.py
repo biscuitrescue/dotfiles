@@ -3,7 +3,7 @@ from libqtile.config import Group, Key, Match, ScratchPad, DropDown, EzKey
 from libqtile.command import lazy
 from keys import keys
 
-myTerm = "alacritty"
+myTerm = "kitty"
 mod = "mod4"
 mod1 = "mod1"
 mod2 = "control"
@@ -105,11 +105,11 @@ groups.append(ScratchPad('Scratchpad', [
     DropDown("sig", "signal-desktop-beta", height=0.85,
              width=0.85, x=0.075, y=0.075, opacity=1,
              on_focus_lost_hide=True),
-    DropDown("term", f'{myTerm} --class alacritty-dropdown',
-             # width=0.9, height=0.7,
-             # x=0.05, y=0.01, opacity=1,
-             width=0.95, height=0.9,
-             x=0.025, y=0.05, opacity=1,
+    DropDown("term", f'{myTerm}',
+             width=0.99, height=0.8,
+             x=0.005, y=0.19, opacity=1,
+             # width=0.95, height=0.9,
+             # x=0.025, y=0.05, opacity=1,
              on_focus_lost_hide=False),
     DropDown("vim", "neovide",
              width=0.9, height=0.9,
