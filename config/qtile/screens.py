@@ -1,43 +1,12 @@
 import os
 from libqtile.config import Screen
 from libqtile import bar, widget
-from colours import *
+from colours import themes
 
 
 theme = "ashes"
 
-
-if theme == "levuaska":
-    theme = levuaska[0]
-elif theme == "kanagawa_lotus":
-    theme = kanagawa_lotus[0]
-elif theme == "kanagawa":
-    theme = kanagawa[0]
-elif theme == "oxocarbon":
-    theme = oxocarbon[0]
-elif theme == "ashes":
-    theme = ashes[0]
-elif theme == "latte":
-    theme = latte[0]
-elif theme == "everforest":
-    theme = everforest[0]
-elif theme == "palenight":
-    theme = palenight[0]
-elif theme == "frappe":
-    theme = frappe[0]
-elif theme == "mocha":
-    theme = mocha[0]
-elif theme == "docha":
-    theme = docha[0]
-elif theme == "macchiato":
-    theme = macchiato[0]
-elif theme == "dracula":
-    theme = dracula[0]
-elif theme == "one":
-    theme = one[0]
-elif theme == "nord":
-    theme = nord[0]
-
+theme = themes[theme]
 
 xx = 22
 xf = "Jetbrainsmono Nerd Font Medium"
@@ -59,7 +28,7 @@ default = [
         active=theme["red"],
         rounded=True,
         urgent_alert_method="block",
-        urgent_text=theme["blood"],
+        urgent_text="#f07a78",
         highlight_color=theme["yellow"],
         highlight_method="block",
         this_current_screen_border=theme["red"],
