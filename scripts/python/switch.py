@@ -127,6 +127,7 @@ themes = {
         "dunst": "macchiato",
         "rofi": "macchiato",
         "emacs": "macchiato",
+        "starship": "catppuccin_macchiato",
         "waybar": "macchiato"
     },
     "Frappe": {
@@ -137,6 +138,7 @@ themes = {
         "kitty": "frappe",
         "polybar": "frappe",
         "alacritty": "frappe",
+        "starship": "catppuccin_frappe",
         "zathura": "frappe",
         "dunst": "frappe",
         "rofi": "frappe",
@@ -161,7 +163,7 @@ themes = {
     "Docha": {
         "openbox": "Dracula-withoutBorder",
         "qtile": "docha",
-        "nvim": "dracula-soft",
+        "nvim": "catppuccin-mocha",
         "Gtk": "Dracula",
         "kitty": "docha",
         "polybar": "dracula",
@@ -260,8 +262,12 @@ if theme in ['Mocha', 'Macchiato', 'Frappe', 'Latte']:
     with open(f"{home}.config/nvim/after/plugin/catppuccin.lua", "w") as w:
         for i in x:
             w.write(i)
+    if theme == 'Mocha':
+        cmd = f"kvantummanager --set Catppuccin-{theme}-Lavender"
+    else:
+        cmd = f"kvantummanager --set Catppuccin-{theme}-Rosewater"
     run(
-            f"kvantummanager --set Catppuccin-{theme}-Rosewater",
+            cmd,
             shell=True
             )
 else:

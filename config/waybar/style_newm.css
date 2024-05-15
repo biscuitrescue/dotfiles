@@ -1,18 +1,18 @@
-@import "mocha.css";
+@import "macchiato.css";
 
 * {
     font-family: operator mono bold;
     font-size: 14px;
     min-width: 0;
     min-height: 0;
-    padding: 0.03rem;
+    padding: 0.02rem;
     border-radius:0.4rem;
 }
 
 #waybar {
     background: @base;
     color: @text;
-    padding: 0.05rem;
+    padding: 0.01rem;
     border-radius: 0rem;
 }
 
@@ -103,8 +103,8 @@
     color: @base;
     background: @lavender;
     padding: 0.3rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
+    /* padding-left: 0rem; */
+    /* padding-right: 0rem; */
     margin: 0.2rem;
     margin-top: 0.4rem;
     margin-bottom: 0.2rem;
@@ -131,8 +131,8 @@
     color: @base;
     margin: 0.2rem;
     padding: 0.3rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
+    /* padding-left: 0rem; */
+    /* padding-right: 0rem; */
     margin-top: 0.4rem;
     margin-bottom: 0.2rem;
 }

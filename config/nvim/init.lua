@@ -14,8 +14,8 @@ opt.nu = true
 opt.rnu = true
 o.mouse = "a"
 opt.clipboard = "unnamedplus"
-opt.shiftwidth = 2
-opt.tabstop = 2
+opt.shiftwidth = 4
+opt.tabstop = 4
 opt.scrolloff = 4
 opt.laststatus = 3
 opt.confirm = true
@@ -38,6 +38,7 @@ opt.updatetime = 50
 opt.cursorline = true
 opt.cursorcolumn = false
 opt.background = 'dark'
+opt.conceallevel = 2
 
 
 vim.api.nvim_set_hl(0, 'Comment', { italic=true })
@@ -51,12 +52,12 @@ vim.api.nvim_set_hl(0, 'Comment', { italic=true })
 g.mapleader = " "
 
 vim.api.nvim_create_autocmd({"BufReadPost"}, {
-    pattern = {"*"},
-    callback = function()
-        if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line("$") then
-            vim.api.nvim_exec("normal! g'\"",false)
-        end
+  pattern = {"*"},
+  callback = function()
+    if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line("$") then
+      vim.api.nvim_exec("normal! g'\"",false)
     end
+  end
 })
 
 if vim.g.neovide then
@@ -77,4 +78,4 @@ require 'colorizer'.setup()
 vim.cmd("hi IndentBlanklineSpaceCharBlankline guifg=Comment")
 vim.cmd("hi IndentBlanklineSpaceChar guifg=Comment")
 -- vim.api.nvim_set_hl(0, 'Comment', { italic=true })
-vim.cmd.colorscheme("catppuccin-macchiato")
+vim.cmd.colorscheme("catppuccin-mocha")

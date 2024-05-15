@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-wbg ~/Pictures/wallpapers/chaos.png
+swaybg -i ~/Pictures/wallpapers/chaos.png &

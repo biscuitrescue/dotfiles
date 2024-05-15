@@ -149,6 +149,11 @@ require("lazy").setup({
         {'L3MON4D3/LuaSnip'},
         {'williamboman/mason-lspconfig.nvim'},
         {'williamboman/mason.nvim'},
+        {
+            'mrcjkb/rustaceanvim',
+            version = '^4', -- Recommended
+            ft = { 'rust' },
+        },
         -- {
           --     'VonHeikemen/lsp-zero.nvim',
           --     branch = 'v1.x',
@@ -170,6 +175,102 @@ require("lazy").setup({
             --         {'L3MON4D3/LuaSnip'},             -- Required
             --         {'rafamadriz/friendly-snippets'}, -- Optional
             --     }
+            -- },
+
+          --   { "epwalsh/obsidian.nvim",
+          --   version = "*",  -- recommended, use latest release instead of latest commit
+          --   lazy = false,
+          --   ft = "markdown",
+          --   dependencies = {
+          --     "nvim-lua/plenary.nvim",
+          --   },
+          --   opts = {
+          --     workspaces = {
+          --       {
+          --         name = "notes",
+          --         path = "~/vaults/notes",
+          --       },
+          --     },
+          --
+          --     -- see below for full list of options 👇
+          --   },
+          --   completion = {
+          --     nvim_cmp = true,
+          --     min_chars = 2,
+          --     new_notes_dir = "current_dir",
+          --     prepend_note_id = true,
+          --     prepend_note_path = false,
+          --   },
+          --   mappings = {
+          --     ["gf"] = {
+          --       action = function()
+          --         return require("obsidian").util.gf_passthrough()
+          --       end,
+          --       opts = { noremap = false, expr = true, buffer = true },
+          --     },
+          --     -- Toggle check-boxes.
+          --     ["<leader>ch"] = {
+          --       action = function()
+          --         return require("obsidian").util.toggle_checkbox()
+          --       end,
+          --       opts = { buffer = true },
+          --     },
+          --   },
+          --   templates = {
+          --     subdir = "templates",
+          --     date_format = "%Y-%m-%d",
+          --     time_format = "%H:%M",
+          --     -- A map for custom variables, the key should be the variable and the value a function
+          --     substitutions = {},
+          --   },
+          --   picker = {
+          --     name = "telescope.nvim",
+          --     mappings = {
+          --       -- Create a new note from your query.
+          --       new = "<C-x>",
+          --       -- Insert a link to the selected note.
+          --       insert_link = "<C-l>",
+          --     },
+          --   },
+          --   note_id_func = function(title)
+          --     -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
+          --     -- In this case a note with the title 'My new note' will be given an ID that looks
+          --     -- like '1657296016-my-new-note', and therefore the file name '1657296016-my-new-note.md'
+          --     local suffix = ""
+          --     if title ~= nil then
+          --       -- If title is given, transform it into valid file name.
+          --       suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+          --     else
+          --       -- If title is nil, just add 4 random uppercase letters to the suffix.
+          --       for _ = 1, 4 do
+          --         suffix = suffix .. string.char(math.random(65, 90))
+          --       end
+          --     end
+          --     return tostring(os.time()) .. "-" .. suffix
+          --   end,
+          -- },
+
+            --   {
+            --     "nvim-neorg/neorg",
+            --     build = ":Neorg sync-parsers",
+            --     lazy = false, -- specify lazy = false because some lazy.nvim distributions set lazy = true by default
+            --     -- tag = "*",
+            --     dependencies = { "nvim-lua/plenary.nvim" },
+            --     config = function()
+            --       require("neorg").setup {
+            --         load = {
+            --           ["core.defaults"] = {}, -- Loads default behaviour
+            --           ["core.concealer"] = {}, -- Adds pretty icons to your documents
+            --           ["core.dirman"] = { -- Manages Neorg workspaces
+            --           config = {
+            --             workspaces = {
+            --               notes = "~/Documents/Notes/",
+            --             },
+            --           },
+            --         },
+            --       },
+            --     }
+            --   end,
             -- },
 
 
@@ -233,4 +334,33 @@ require("lazy").setup({
               "nyoom-engineering/oxocarbon.nvim",
               lazy = false,
             },
+            {
+              "neanias/everforest-nvim",
+              version = false,
+              lazy = false,
+              priority = 1000, -- make sure to load this before all the other start plugins
+              -- Optional; default configuration will be used if setup isn't called.
+              config = function()
+                require("everforest").setup({
+                  -- Your config here
+                })
+              end,
+            },
+            {
+              'andersevenrud/nordic.nvim',
+              config = function()
+                -- The table used in this example contains the default settings.
+                -- Modify or remove these to your liking (this also applies to alternatives below):
+                require('nordic').colorscheme({
+                  -- Underline style used for spelling
+                  -- Options: 'none', 'underline', 'undercurl'
+                  underline_option = 'undercurl',
+                  italic = true,
+                  italic_comments = true,
+                  minimal_mode = false,
+                  alternate_backgrounds = false,
+
+                })
+              end
+            }
           })

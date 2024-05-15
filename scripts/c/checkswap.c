@@ -1,18 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <unistd.h>
+
 
 void read(char datatype[10]) {
     char data[100];
+    char cmd[50];
 
     if(datatype == "disk") {
-        char cmd[50] = "lsblk -f | awk '/swap/ {printf $1}'";
+        cmd = "lsblk -f | awk '/swap/ {printf $1}'";
         bool alpha = true;
     } else if(datatype == "swap") {
-        char cmd[50] = "lsblk -f | awk '/SWAP {printf $1}'";
+        cmd = "lsblk -f | awk '/SWAP {printf $1}'";
         bool alpha = true;
     } else {
-        char cmd[50] = "free -h | awk '/Mem {printf $3}'";
+        cmd = "free -h | awk '/Mem {printf $3}'";
         bool alpha = false;
     }
 
@@ -29,7 +32,7 @@ void read(char datatype[10]) {
 }
 
 int main() {
-    read("swap");
+    // read("swap");
     /* FILE *fp; */
     /* char output[40]; */
 
