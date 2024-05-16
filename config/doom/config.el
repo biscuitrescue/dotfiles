@@ -9,6 +9,11 @@
 (setq user-full-name "Karttikeya Sinha"
       user-mail-address "karttikeyasinha11@gmail.com")
 
+(setq auto-save-default t
+      make-backup-files t)
+
+(setq confirm-kill-emacs nil)
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
 ;; - `doom-font' -- the primary font to use
@@ -27,19 +32,29 @@
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
-;; wasn't installed correctly. Font issues are rarely Doom issues!
+;; wasn't installemocha!
 
 ;; There are two way to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'mocha)
-(setq doom-font (font-spec :family "Iosevka medium" :size 24))
+(setq doom-theme 'docha)
+(setq doom-font (font-spec :family "Iosevka" :size 26))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
 (custom-set-faces!
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
+
+;; (after! highlight-indent-guides
+;;   (set-face-background 'highlight-indent-guides-odd-face "darkgray")
+;;   (set-face-background 'highlight-indent-guides-even-face "dimgray")
+;;   (set-face-foreground 'highlight-indent-guides-character-face "white")
+;;   )
+
+;; (set-face-background 'highlight-indent-guides-odd-face "darkgray")
+;; (set-face-background 'highlight-indent-guides-even-face "dimgray")
+;; (set-face-foreground 'highlight-indent-guides-character-face "dimgray")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.

@@ -7,8 +7,8 @@ mod1 = "mod1"
 mod2 = "control"
 mod3 = "shift"
 home = os.path.expanduser('~')
-Term2 = "alacritty"
-myTerm = "kitty"
+myTerm = "alacritty"
+term2 = "kitty"
 
 
 @lazy.function
@@ -121,7 +121,7 @@ keys = [
 
     # APPLICATIONS
 
-    Key([mod, "shift"], "Return", lazy.spawn(Term2)),
+    Key([mod, "shift"], "Return", lazy.spawn(term2)),
     Key([mod, "shift"], "a", lazy.spawn("./.lock.sh")),
     Key([mod], "KP_Subtract", lazy.spawn("./.lock.sh")),
     Key([mod], "KP_Add", lazy.spawn("i3lock -c 000000")),

@@ -15,19 +15,19 @@ TERM = "xterm-256color"
 size = 11
 
 [font.bold]
-family = "Operator Mono"
+family = "Iosevka"
 style = "Bold"
 
 [font.bold_italic]
-family = "Operator Mono"
+family = "Iosevka"
 style = "Bold Italic"
 
 [font.italic]
-family = "Operator Mono"
+family = "Iosevka"
 style = "Italic"
 
 [font.normal]
-family = "Operator Mono"
+family = "Iosevka"
 style = "Medium"
 
 [font.offset]
