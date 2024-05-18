@@ -11,7 +11,7 @@ from libqtile.backend.wayland import InputConfig
 
 border = dict(
     border_focus=theme["blue"],
-    border_width=2
+    border_width=3
 )
 layouts = [
     # layout.MonadTall(
@@ -20,7 +20,7 @@ layouts = [
     #     **border
     # ),
     layout.Tile(
-        margin=6,
+        margin=2,
         ratio=0.55,
         # border_on_single=False,
         shift_windows=True,

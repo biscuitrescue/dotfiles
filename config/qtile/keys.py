@@ -126,6 +126,7 @@ keys = [
     Key([mod], "KP_Subtract", lazy.spawn("./.lock.sh")),
     Key([mod], "KP_Add", lazy.spawn("i3lock -c 000000")),
     Key([mod], "Return", lazy.spawn(myTerm)),
+    Key([mod], "o", lazy.spawn("emacsclient -n -c -a ''")),
     Key([mod], "KP_Enter", lazy.spawn(myTerm)),
     Key([mod], "v", lazy.spawn("pavucontrol")),
     Key([], "F9", lazy.spawn("pavucontrol")),

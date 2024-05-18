@@ -14,7 +14,7 @@ opt.nu = true
 opt.rnu = true
 o.mouse = "a"
 opt.clipboard = "unnamedplus"
-opt.shiftwidth = 4
+opt.shiftwidth = 2
 opt.tabstop = 4
 opt.scrolloff = 4
 opt.laststatus = 3
@@ -78,4 +78,4 @@ require 'colorizer'.setup()
 vim.cmd("hi IndentBlanklineSpaceCharBlankline guifg=Comment")
 vim.cmd("hi IndentBlanklineSpaceChar guifg=Comment")
 -- vim.api.nvim_set_hl(0, 'Comment', { italic=true })
-vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("catppuccin-latte")
