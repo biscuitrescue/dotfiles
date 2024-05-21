@@ -1,6 +1,7 @@
 import os
 from libqtile.config import Click, Drag, KeyChord, Key
 from libqtile.command import lazy
+from libqtile import layout, hook, extension
 
 mod = "mod4"
 mod1 = "mod1"
@@ -9,7 +10,6 @@ mod3 = "shift"
 home = os.path.expanduser('~')
 myTerm = "alacritty"
 term2 = "kitty"
-
 
 @lazy.function
 def window_to_prev_group(qtile):

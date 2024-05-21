@@ -30,7 +30,8 @@ groups = [
               matches=[
                   Match(wm_class=["Zathura"]),
                   Match(wm_class=["Evince"]),
-                  ]
+                  ],
+              layout = "treetab"
               ),
 
         Group("4", label="4",

@@ -8,7 +8,6 @@ from screens import screens
 from screens import theme
 from libqtile.backend.wayland import InputConfig
 
-
 border = dict(
     border_focus=theme["blue"],
     border_width=3
@@ -26,6 +25,28 @@ layouts = [
         shift_windows=True,
         **border
     ),
+    layout.TreeTab(
+        font = "Iosevka Bold",
+        fontsize = 17,
+        border_width = 0,
+        bg_color = theme["black"],
+        active_bg = theme["red"],
+        active_fg = theme["black"],
+        inactive_bg = theme["black"],
+        inactive_fg = theme["teal"],
+        padding_left = 8,
+        padding_x = 8,
+        padding_y = 6,
+        sections = ["ONE", "TWO", "THREE"],
+        section_fontsize = 15,
+        section_fg = theme["blue"],
+        section_top = 15,
+        section_bottom = 15,
+        level_shift = 8,
+        vspace = 3,
+        panel_width = 240
+        ),
+
     # layout.MonadThreeCol(
     #     min_ratio=0.25,
     #     margin=8,
