@@ -1,6 +1,6 @@
 import os
 from libqtile.config import Group, Key, Match, ScratchPad, DropDown, EzKey
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from keys import keys
 
 myTerm = "alacritty"
@@ -14,68 +14,61 @@ home = os.path.expanduser('~')
 groups = [
         Group("1", label="1"),
         Group("2", label="2",  # spawn="Brave-browser-nightly",
-              matches=[
-                  Match(wm_class=["Icecat"]),
-                  Match(wm_class=["LibreWolf"]),
-                  Match(wm_class=["Firefox"]),
-                  Match(wm_class=["firefox"]),
-                  Match(wm_class=["Vivaldi-stable"]),
-                  Match(wm_class=["Brave-browser-nightly"]),
-                  Match(wm_class=["Brave-browser"]),
-                  ]
+              # matches=[
+              #     Match(wm_class=["Icecat"]),
+              #     Match(wm_class=["LibreWolf"]),
+              #     Match(wm_class=["Firefox"]),
+              #     Match(wm_class=["firefox"]),
+              #     Match(wm_class=["Vivaldi-stable"]),
+              #     Match(wm_class=["Brave-browser-nightly"]),
+              #     Match(wm_class=["Brave-browser"]),
+              #     ]
               ),
 
 
         Group("3", label="3",
-              matches=[
-                  Match(wm_class=["Zathura"]),
-                  Match(wm_class=["Evince"]),
-                  ],
+              # matches=[
+              #     Match(wm_class=["Zathura"]),
+              #     Match(wm_class=["Evince"]),
+              #     ],
               layout = "treetab"
               ),
 
         Group("4", label="4",
-              matches=[
-                  Match(wm_class=["discord"]),
-                  Match(wm_class=["Mailspring"]),
-                  Match(wm_class=["Session"]),
-                  ]
+              # matches=[
+              #     Match(wm_class=["discord"]),
+              #     Match(wm_class=["Mailspring"]),
+              #     Match(wm_class=["Session"]),
+                  # ]
               ),
 
         Group("5", label="5",
-              matches=[
-                  Match(wm_class=["Mplayer"]),
-                  ]
+              # matches=[
+              #     Match(wm_class=["Mplayer"]),
+              #     ]
               ),
 
         Group("6", label="6",
-              matches=[
+              # matches=[
                   # Match(wm_class=["pcmanfm"]),
-                  Match(wm_class=["qBittorrent"]),
-                  ]
+                  # Match(wm_class=["qBittorrent"]),
+                  # ]
               ),
 
         Group("7", label="7",
-              matches=[
-                  Match(wm_class=["pavucontrol"]),
-                  Match(wm_class=["Cider"])
-                  ]
+              # matches=[
+              #     Match(wm_class=["pavucontrol"]),
+              #     Match(wm_class=["Cider"])
+              #     ]
               ),
 
         Group("8", label="8", layout="max"),
 
         Group("9", label="9", layout="max",
-              matches=[
-                  Match(wm_class=["zoom"]),
-                  Match(wm_class=["Microsoft Teams - Preview"]),
-                  ]
-              ),
-
-        Group("0", label="10",
-              matches=[
-                  Match(wm_class=["Virt-manager"]),
-                  Match(wm_class=["VirtualBox Manager"]),
-                  ]
+              # matches=[
+              #     Match(wm_class=["zoom"]),
+              #     Match(wm_class=["Microsoft Teams - Preview"]),
+              #     ]
               ),
 
         Group('f', label='',

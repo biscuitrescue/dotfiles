@@ -1,6 +1,6 @@
 import os
 from libqtile.config import Click, Drag, KeyChord, Key
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from libqtile import layout, hook, extension
 
 mod = "mod4"
