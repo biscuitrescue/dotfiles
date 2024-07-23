@@ -9,7 +9,7 @@
     grey: #6c7086;
 
     width: 650;
-    font: "M Plus 1 Code Nerd Font Medium 13";
+    font: "Zed Mono Extended 9";
 }
 
 element-text, element-icon , mode-switcher {
@@ -18,7 +18,8 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 400px;
+    height: 300px;
+    width: 500px;
     border: 3px;
     border-color: @border-col;
     background-color: @bg-col;

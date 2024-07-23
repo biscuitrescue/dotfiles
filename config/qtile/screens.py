@@ -8,8 +8,8 @@ theme = "mocha"
 
 theme = themes[theme]
 
-xx = 22
-xf = "Jetbrainsmono Nerd Font Medium"
+xx = 20
+xf = "Zed Mono Extended Bold"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -17,8 +17,8 @@ default = [
         font=xf,
     ),
     widget.GroupBox(
-        font="operator mono",
-        fontsize=xx,
+        font="Zed Mono Extended Bold",
+        fontsize=18,
         margin_y=4,
         margin_x=5,
         padding_y=3,

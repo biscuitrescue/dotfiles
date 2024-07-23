@@ -12,22 +12,22 @@ vi_mode_style = "Underline"
 TERM = "xterm-256color"
 
 [font]
-size = 11
+size = 10
 
 [font.bold]
-family = "Iosevka"
+family = "Zed Mono Extended"
 style = "Bold"
 
 [font.bold_italic]
-family = "Iosevka"
+family = "Zed Mono Extended"
 style = "Bold Italic"
 
 [font.italic]
-family = "Iosevka"
+family = "Zed Mono Extended"
 style = "Italic"
 
 [font.normal]
-family = "Iosevka"
+family = "Zed Mono Extended"
 style = "Medium"
 
 [font.offset]
@@ -119,7 +119,7 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 1
+opacity = 0.8
 title = "Alacritty"
 
 [window.class]
