@@ -9,6 +9,7 @@ set -Ux FZF_DEFAULT_OPTS "--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/scripts/bash"
 fish_add_path "$HOME/scripts/python"
+fish_add_path "$HOME/scripts/c"
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.config/emacs/bin"
 fish_add_path "/usr/bin/flutter/bin"

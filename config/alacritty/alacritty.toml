@@ -119,16 +119,16 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 0.8
+opacity = 1
 title = "Alacritty"
 
 [window.class]
 general = "Alacritty"
 instance = "Alacritty"
 
-# [window.dimensions]
-# columns = 100
-# lines = 30
+[window.dimensions]
+columns = 125
+lines = 30
 
 [window.padding]
 x = 10

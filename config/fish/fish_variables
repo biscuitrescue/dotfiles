@@ -41,5 +41,5 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/usr/bin/flutter/bin\x1e/home/cafo/\x2econfig/emacs/bin\x1e/home/cafo/scripts/python\x1e/home/cafo/scripts/bash\x1e/home/cafo/\x2eneva/bin\x1e/home/cafo/\x2elocal/bin\x1e/home/cafo/\x2ecargo/bin
+SETUVAR fish_user_paths:/home/cafo/scripts/c\x1e/usr/bin/flutter/bin\x1e/home/cafo/\x2econfig/emacs/bin\x1e/home/cafo/scripts/python\x1e/home/cafo/scripts/bash\x1e/home/cafo/\x2eneva/bin\x1e/home/cafo/\x2elocal/bin\x1e/home/cafo/\x2ecargo/bin
 SETUVAR project_path:/home/mr_robot/lang/python/\x1e/home/mr_robot/home
