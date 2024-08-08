@@ -24,6 +24,7 @@ opt.expandtab = true
 o.statusline = o.statusline .. '%#warningmsg#' .. '%*'
 opt.linebreak = true
 opt.termguicolors = true
+-- vim.g.term = "screen-256color"
 
 opt.swapfile = false
 opt.backup = false
@@ -74,8 +75,7 @@ require("cafo.remap")
 require("cafo.lazy")
 require 'colorizer'.setup()
 
--- require('palenightfall').setup()
 vim.cmd("hi IndentBlanklineSpaceCharBlankline guifg=Comment")
 vim.cmd("hi IndentBlanklineSpaceChar guifg=Comment")
--- vim.api.nvim_set_hl(0, 'Comment', { italic=true })
-vim.cmd.colorscheme("catppuccin-mocha")
+vim.api.nvim_set_hl(0, 'Comment', { italic=true })
+vim.cmd.colorscheme("kanagawa-dragon")

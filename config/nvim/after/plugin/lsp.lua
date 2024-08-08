@@ -46,3 +46,5 @@ cmp.setup({
         ['<C-s>'] = cmp.mapping.complete(),
     }),
 })
+local LspUI = require("LspUI")
+LspUI.setup()

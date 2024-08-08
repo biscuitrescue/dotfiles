@@ -1,4 +1,4 @@
-import = ["/home/cafo/.config/alacritty/catppuccin-mocha.toml"]
+import = ["/home/cafo/.config/alacritty/kanagawa.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -119,7 +119,7 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 1
+opacity = 0.80
 title = "Alacritty"
 
 [window.class]
