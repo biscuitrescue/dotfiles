@@ -13,7 +13,7 @@ a = run(
     capture_output=True
 )
 
-home = a.stdout.strip()+'/'
+home = a.stdout.strip() + '/'
 
 
 def find_nvim():
@@ -44,7 +44,7 @@ themes = {
         "openbox": "Ashes-Openbox",
         "qtile": "kanagawa",
         "nvim": "kanagawa-dragon",
-        "Gtk": "Dracula",
+        "Gtk": "Colloid-Dark",
         "kitty": "kanagawa",
         "polybar": "ashes",
         "alacritty": "kanagawa",
@@ -267,14 +267,14 @@ if theme in ['Mocha', 'Macchiato', 'Frappe', 'Latte']:
     else:
         cmd = f"kvantummanager --set Catppuccin-{theme}-Rosewater"
     run(
-            cmd,
-            shell=True
-            )
+        cmd,
+        shell=True
+    )
 else:
     run(
-            "kvantummanager --set Harmony",
-            shell=True
-            )
+        "kvantummanager --set Harmony",
+        shell=True
+    )
 
 run(
     f'gsettings set org.gnome.desktop.interface gtk-theme \
