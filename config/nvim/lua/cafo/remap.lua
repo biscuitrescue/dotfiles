@@ -3,8 +3,10 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 -- Move to previous/next
-map('n', '<A-w>', '^', opts)
-map('n', '<A-e>', '$', opts)
+set({"n", "v", "x"}, "<A-w>", "^")
+set({"n", "v", "x"}, "<A-e>", "$")
+-- map('x', '<A-w>', '^', opts)
+-- map('x', '<A-e>', '$', opts)
 map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
