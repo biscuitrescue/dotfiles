@@ -1,39 +1,15 @@
 import os
 from libqtile.config import Screen
-from libqtile import layout, bar, widget, hook
-from qtile_extras import widget
-from colours import *
+from libqtile import bar, widget
+from colours import themes
 
 
+theme = "kanagawa"
 
-theme = "dracula"
+theme = themes[theme]
 
-if theme == "ashes":
-    theme = ashes[0]
-elif theme == "latte":
-    theme = latte[0]
-elif theme == "everforest":
-    theme = everforest[0]
-elif theme == "palenight":
-    theme = palenight[0]
-elif theme == "frappe":
-    theme = frappe[0]
-elif theme == "mocha":
-    theme = mocha[0]
-elif theme == "docha":
-    theme = docha[0]
-elif theme == "macchiato":
-    theme = macchiato[0]
-elif theme == "dracula":
-    theme = dracula[0]
-elif theme == "one":
-    theme = one[0]
-elif theme == "nord":
-    theme = nord[0]
-
-
-xx = 22
-xf = "Jetbrainsmono Nerd Font Medium"
+xx = 20
+xf = "Zed Mono Extended Bold"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -41,8 +17,8 @@ default = [
         font=xf,
     ),
     widget.GroupBox(
-        font="operator mono",
-        fontsize=xx,
+        font="Zed Mono Extended Bold",
+        fontsize=18,
         margin_y=4,
         margin_x=5,
         padding_y=3,
@@ -52,7 +28,7 @@ default = [
         active=theme["red"],
         rounded=True,
         urgent_alert_method="block",
-        urgent_text=theme["blood"],
+        urgent_text="#f07a78",
         highlight_color=theme["yellow"],
         highlight_method="block",
         this_current_screen_border=theme["red"],
@@ -73,6 +49,7 @@ default = [
     widget.Systray(
         icon_size=20,
         padding=4,
+        # background="#000000",
     ),
     widget.TextBox(
         foreground=theme["red"],
@@ -214,7 +191,7 @@ screens = [
     Screen(
         top=bar.Bar(
             default,
-            44,
+            40,
             # opacity=0.9,
             # margin=[0, 0, 6, 0],
             background=theme["black"],
