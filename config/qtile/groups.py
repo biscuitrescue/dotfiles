@@ -3,7 +3,7 @@ from libqtile.config import Group, Key, Match, ScratchPad, DropDown, EzKey
 from libqtile.lazy import lazy
 from keys import keys
 
-myTerm = "kitty"
+myTerm = "alacritty"
 mod = "mod4"
 mod1 = "mod1"
 mod2 = "control"
@@ -99,7 +99,6 @@ groups.append(ScratchPad('Scratchpad', [
     DropDown("sig", "signal-desktop-beta --password-store='gnome-libsecret'", height=0.85,
              width=0.85, x=0.075, y=0.075, opacity=1,
              on_focus_lost_hide=True),
-    # DropDown("term", f'{myTerm} -e tmux new -A -s scratchpad',
     DropDown("term", f'{myTerm} -e tmux new -A -s Dropdown',
              width=0.99, height=0.8,
              x=0.005, y=0.19, opacity=1,
@@ -120,7 +119,7 @@ groups.append(ScratchPad('Scratchpad', [
              height=0.9, opacity=1,
              width=0.9, x=0.05, y=0.025,
              on_focus_lost_hide=True),
-    DropDown("fm", myTerm+' -e ranger',
+    DropDown("fm", myTerm+' -e yazi',
              width=0.85, height=0.85,
              x=0.075, y=0.075, opacity=1),
     DropDown("hitop", myTerm+' -e htop',

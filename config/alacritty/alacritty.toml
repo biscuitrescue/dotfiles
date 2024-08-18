@@ -1,4 +1,4 @@
-import = ["/home/cafo/.config/alacritty/kanagawa.toml"]
+import = ["/home/cafo/.config/alacritty/catppuccin-mocha.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -15,19 +15,19 @@ TERM = "xterm-256color"
 size = 9.5
 
 [font.bold]
-family = "Zed Mono Extended"
+family = "Fira Code"
 style = "Bold"
 
 [font.bold_italic]
-family = "Zed Mono Extended"
+family = "Fira Code"
 style = "Bold Italic"
 
 [font.italic]
-family = "Zed Mono Extended"
+family = "Fira Code"
 style = "Italic"
 
 [font.normal]
-family = "Zed Mono Extended"
+family = "Fira Code"
 style = "Medium"
 
 [font.offset]
@@ -119,7 +119,7 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 0.80
+opacity = 1
 title = "Alacritty"
 
 [window.class]

@@ -8,8 +8,8 @@ mod1 = "mod1"
 mod2 = "control"
 mod3 = "shift"
 home = os.path.expanduser('~')
-myTerm = "kitty"
-term2 = "alacritty"
+term2 = "kitty"
+myTerm = "alacritty"
 
 @lazy.function
 def window_to_prev_group(qtile):

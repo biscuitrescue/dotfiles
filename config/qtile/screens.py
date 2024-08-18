@@ -4,9 +4,9 @@ from libqtile import layout, bar, widget, hook
 from qtile_extras.widget.decorations import RectDecoration
 from qtile_extras import widget
 from colours import themes
+theme = "mocha"
 
 
-theme = "kanagawa"
 
 theme = themes[theme]
 

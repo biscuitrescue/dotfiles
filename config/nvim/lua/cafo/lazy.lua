@@ -200,14 +200,14 @@ require("lazy").setup({
       end,
     },
 
-    {
-      "MunifTanjim/nougat.nvim",
-    },
-    -- LUALINE
     -- {
-    --   'nvim-lualine/lualine.nvim',
-    --   dependencies = { 'kyazdani42/nvim-web-devicons'}
+    --   "MunifTanjim/nougat.nvim",
     -- },
+    -- LUALINE
+    {
+      'nvim-lualine/lualine.nvim',
+      dependencies = { 'kyazdani42/nvim-web-devicons'}
+    },
 
     -- themes
     'shaunsingh/nord.nvim',
