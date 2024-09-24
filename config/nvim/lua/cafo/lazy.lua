@@ -138,6 +138,15 @@ require("lazy").setup({
     },
     -- LSP
 
+    {
+      "jinzhongjia/LspUI.nvim",
+      branch = "main",
+      config = function()
+        -- require("LspUI").setup({
+        --   -- config options go here
+        -- })
+      end
+    },
 
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
     {'neovim/nvim-lspconfig'},
@@ -155,15 +164,6 @@ require("lazy").setup({
       'mrcjkb/rustaceanvim',
       version = '^4', -- Recommended
       ft = { 'rust' },
-    },
-    {
-      "jinzhongjia/LspUI.nvim",
-      branch = "main",
-      config = function()
-        require("LspUI").setup({
-          -- config options go here
-        })
-      end
     },
 
     -- {'onsails/lspkind.nvim'},
@@ -243,8 +243,8 @@ require("lazy").setup({
           -- Underline style used for spelling
           -- Options: 'none', 'underline', 'undercurl'
           underline_option = 'undercurl',
-          italic = true,
-          italic_comments = true,
+          -- italic = true,
+          -- italic_comments = true,
           minimal_mode = false,
           alternate_backgrounds = false,
 

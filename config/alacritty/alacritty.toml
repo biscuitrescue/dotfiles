@@ -1,4 +1,4 @@
-import = ["/home/cafo/.config/alacritty/catppuccin-mocha.toml"]
+import = ["/home/cafo/.config/alacritty/ashes.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -12,22 +12,22 @@ vi_mode_style = "Underline"
 TERM = "xterm-256color"
 
 [font]
-size = 9.5
+size = 10
 
 [font.bold]
-family = "Fira Code"
+family = "M Plus 1 Code nerd font"
 style = "Bold"
 
 [font.bold_italic]
-family = "Fira Code"
+family = "M Plus 1 Code nerd font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Fira Code"
+family = "Operator Mono"
 style = "Italic"
 
 [font.normal]
-family = "Fira Code"
+family = "M Plus 1 Code nerd font"
 style = "Medium"
 
 [font.offset]
@@ -119,7 +119,7 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 1
+opacity = 0.9
 title = "Alacritty"
 
 [window.class]

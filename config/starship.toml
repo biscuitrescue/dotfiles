@@ -1,17 +1,34 @@
-palette = "catppuccin_mocha"
+palette = "ashes"
 
 [character]
-
-success_symbol = "[[!/](blue)❯](magenta)"
-error_symbol = "[[!!](mauve)❯](red)"
-vicmd_symbol = "[[//](blue)❮](magenta)"
+#
+# success_symbol = "[[!/](blue)❯ ](magenta)"
+success_symbol = "[ ](yellow)"
+error_symbol = "[ ](red)"
+vicmd_symbol = "[ ](blue)"
 
 [directory]
 truncation_length = 4
 # Catppuccin 'lavender'
-style = "bold yellow"
+style = "bold red"
 
 # palette tables should be last in the config ⚓️
+
+[palettes.ashes]
+green = "#95C7AE"
+red = "#c795ae"
+mauve = "#AE95c7"
+blue = "#95AEC7"
+magenta = "#C7ae95"
+yellow = "#AEC795"
+
+[palettes.nordic]
+green = "#a3d6a9"
+red = "#bd6062"
+mauve = "#c7a9d9"
+blue = "#8ba4b0"
+magenta = "#a292a3"
+yellow = "#f0dfaf"
 
 [palettes.kanagawa]
 green = "#8a9a7b"
@@ -36,14 +53,6 @@ mauve = "#be95ff"
 blue = "#78a9ff"
 magenta = "#ff7eb6"
 yellow = "#f1fa8c"
-
-[palettes.ashes]
-green = "#95C7AE"
-red = "#c795ae"
-mauve = "#AE95C7"
-blue = "#95AEC7"
-magenta = "#C79595"
-yellow = "#AEC795"
 
 [palettes.dracula]
 green = "#50fa7b"

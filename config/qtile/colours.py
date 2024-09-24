@@ -144,6 +144,17 @@ themes = {
             "blue": "#61afef",
             "teal": "#56b6c2",
             },
+    "nordic": {
+            "zero": "#bdc5bd",
+            "black": "#242933",
+            "red": "#bd6062",
+            "green": "#a3d6a9",
+            "yellow": "#f0dfaf",
+            "magenta": "#c7a9d9",
+            "violet": "#9aca99",
+            "blue": "#8fb4d8",
+            "teal": "#81a1c1",
+            },
     "nord": {
             "zero": "#D8DEE9",
             "black": "#2e3440",

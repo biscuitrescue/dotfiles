@@ -44,10 +44,10 @@ opt.conceallevel = 2
 
 vim.api.nvim_set_hl(0, 'Comment', { italic=true })
 
+-- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 -- vim.cmd("hi Comment guifg=darkgrey")
 -- vim.cmd("IndentLinesEnable")
 -- vim.cmd("hi NvimTreeNormal guibg=NONE")
--- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 -- vim.api.nvim_set_hl(0, 'Comment', { italic=true })
 
 g.mapleader = " "
@@ -77,5 +77,4 @@ require 'colorizer'.setup()
 
 vim.cmd("hi IndentBlanklineSpaceCharBlankline guifg=Comment")
 vim.cmd("hi IndentBlanklineSpaceChar guifg=Comment")
-vim.api.nvim_set_hl(0, 'Comment', { italic=true })
-vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("catppuccin-macchiato")
