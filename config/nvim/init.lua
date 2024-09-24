@@ -44,7 +44,6 @@ opt.conceallevel = 2
 
 vim.api.nvim_set_hl(0, 'Comment', { italic=true })
 
--- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 -- vim.cmd("hi Comment guifg=darkgrey")
 -- vim.cmd("IndentLinesEnable")
 -- vim.cmd("hi NvimTreeNormal guibg=NONE")
@@ -78,3 +77,4 @@ require 'colorizer'.setup()
 vim.cmd("hi IndentBlanklineSpaceCharBlankline guifg=Comment")
 vim.cmd("hi IndentBlanklineSpaceChar guifg=Comment")
 vim.cmd.colorscheme("catppuccin-macchiato")
+-- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')

@@ -234,6 +234,7 @@ require("lazy").setup({
       --   })
       -- end,
     },
+    { 'myagko/nymph', branch = 'Nvim' },
     {
       'andersevenrud/nordic.nvim',
       config = function()
