@@ -4,7 +4,7 @@ from libqtile import bar, widget
 from colours import themes
 
 
-theme = "kanagawa"
+theme = "latte"
 
 theme = themes[theme]
 
@@ -191,7 +191,7 @@ screens = [
     Screen(
         top=bar.Bar(
             default,
-            40,
+            36,
             # opacity=0.9,
             # margin=[0, 0, 6, 0],
             background=theme["black"],

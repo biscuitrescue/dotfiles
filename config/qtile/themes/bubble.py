@@ -4,9 +4,9 @@ from libqtile import layout, bar, widget, hook
 from qtile_extras.widget.decorations import RectDecoration
 from qtile_extras import widget
 from colours import themes
+theme = "latte"
 
 
-theme = "kanagawa"
 
 theme = themes[theme]
 
@@ -245,7 +245,7 @@ screens = [
             default,
             42,
             # opacity=0.9,
-            margin=[8, 8, 2, 8],
+            # margin=[8, 8, 2, 8],
             background=theme["black"],
             foreground=theme["zero"],
         ),
