@@ -9,7 +9,8 @@ theme = "ashes"
 theme = themes[theme]
 
 xx = 20
-xf = "Zed Mono Extended Bold"
+# xf = "Zed Mono Extended Bold"
+xf = "M Plus 1 Code Nerd Font Bold"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -42,10 +43,23 @@ default = [
         scale=0.45,
         custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
     ),
-
-
-    widget.Spacer(),
-
+    widget.TextBox(
+        foreground=theme["red"],
+        text="|",
+        font=xf,
+    ),
+    widget.WindowName(
+        font=xf,
+        fontsize=18,
+        # background=theme["yellow"],
+        foreground=theme["zero"],
+        max_chars=40
+        ),
+    widget.TextBox(
+        foreground=theme["red"],
+        text="|",
+        font=xf,
+    ),
     widget.Systray(
         icon_size=20,
         padding=4,
@@ -58,7 +72,7 @@ default = [
     ),
     widget.CPU(
         foreground=theme["red"],
-        format=' {load_percent}%',
+        format='  {load_percent}%',
         font=xf,
         fontsize=xx,
     ),
@@ -86,7 +100,7 @@ default = [
         fontsize=xx,
         foreground=theme["magenta"],
         measure_swap='G',
-        format='{SwapUsed: .2f} GB',
+        format=' {SwapUsed: .2f} GB',
     ),
     widget.TextBox(
         foreground=theme["green"],
@@ -107,7 +121,7 @@ default = [
     ),
     widget.Clock(
         foreground=theme["blue"],
-        format=' %d %B, %a',
+        format='  %d %B, %a',
         font=xf,
         fontsize=xx,
     ),
@@ -191,7 +205,7 @@ screens = [
     Screen(
         bottom = bar.Bar(
             default,
-            50,
+            44,
             # opacity=0.9,
             margin=[0, 40, 0,40],
             background=theme["black"],

@@ -57,7 +57,7 @@ themes = {
         "teal": "#AEC795",
     },
     "ashes": {
-        "zero": "#83b6af",
+        "zero": "#c8ccd4",
         "black": "#1c2023",
         "red": "#c79595",
         "green": "#95c7ae",
