@@ -9,7 +9,7 @@ theme = "ashes"
 theme = themes[theme]
 
 xx = 20
-xf = "Zed Mono Extended Bold"
+xf = "M Plus 1 Code Nerd Font Bold"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -58,7 +58,7 @@ default = [
     ),
     widget.CPU(
         foreground=theme["red"],
-        format=' {load_percent}%',
+        format='  {load_percent}%',
         font=xf,
         fontsize=xx,
     ),
@@ -86,7 +86,7 @@ default = [
         fontsize=xx,
         foreground=theme["magenta"],
         measure_swap='G',
-        format='{SwapUsed: .2f} GB',
+        format=' {SwapUsed: .2f} GB',
     ),
     widget.TextBox(
         foreground=theme["green"],
@@ -107,7 +107,7 @@ default = [
     ),
     widget.Clock(
         foreground=theme["blue"],
-        format=' %d %B, %a',
+        format='  %d %B, %a',
         font=xf,
         fontsize=xx,
     ),
@@ -120,7 +120,7 @@ default = [
         foreground=theme["violet"],
         font=xf,
         fontsize=xx,
-        format=' %I:%M %p',
+        format='  %I:%M %p',
     ),
     widget.TextBox(
         foreground=theme["teal"],
