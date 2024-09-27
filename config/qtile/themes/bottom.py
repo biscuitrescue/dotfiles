@@ -1,8 +1,8 @@
 import os
 from libqtile.config import Screen
 from libqtile import bar, widget
+from qtile_extras import widget
 from colours import themes
-
 
 theme = "ashes"
 
@@ -50,7 +50,7 @@ default = [
     ),
     widget.WindowName(
         font=xf,
-        fontsize=18,
+        fontsize=20,
         # background=theme["yellow"],
         foreground=theme["zero"],
         max_chars=40
@@ -161,33 +161,34 @@ if len(os.listdir("/sys/class/power_supply")) == 0:
 else:
     default.extend(
         [
-            # widget.UPowerWidget(
-            #     font=xf,
-            #     battery_width=27,
-            #     battery_height=14,
-            #     fontsize=xx,
-            #     percentage_low=0.5,
-            #     percentage_critical=0.3,
-            #     fill_critical="#ff0000",
-            #     fill_charge=theme["green"],
-            #     fill_low=theme["yellow"],
-            #     fill_normal=theme["teal"],
-            #     border_colour=theme["teal"],
-            #     border_critical_colour="#ff0000",
-            #     border_low_colour=theme["yellow"],
-            #     border_charge_colour=theme["green"],
-            #     text_charging="",
-            #     text_discharging="",
-            #     text_displaytime="",
-            #     margin=10,
-            # ),
+            # widget.UPowerWidget(),
+            widget.UPowerWidget(
+                font=xf,
+                battery_width=27,
+                battery_height=14,
+                fontsize=xx,
+                percentage_low=0.5,
+                percentage_critical=0.3,
+                fill_critical="#ff0000",
+                fill_charge=theme["teal"],
+                fill_low=theme["yellow"],
+                fill_normal=theme["green"],
+                border_colour=theme["teal"],
+                border_critical_colour="#ff0000",
+                border_low_colour=theme["yellow"],
+                border_charge_colour=theme["teal"],
+                text_charging="",
+                text_discharging="",
+                text_displaytime="",
+                margin=10,
+            ),
             widget.Battery(
                 fontsize=xx,
                 font=xf,
                 low_percentage=0.3,
                 low_background=theme["black"],
-                low_foreground=theme["teal"],
-                foreground=theme["teal"],
+                low_foreground=theme["red"],
+                foreground=theme["green"],
                 charge_char='↑',
                 discharge_char='',
                 update_interval=1,

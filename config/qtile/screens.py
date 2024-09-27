@@ -1,7 +1,6 @@
 import os
 from libqtile.config import Screen
 from libqtile import bar, widget
-from qtile_extras import widget
 from colours import themes
 
 
@@ -10,8 +9,7 @@ theme = "ashes"
 theme = themes[theme]
 
 xx = 20
-# xf = "Zed Mono Extended Bold"
-xf = "M Plus 1 Code Nerd Font Bold"
+xf = "Zed Mono Extended Bold"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -44,23 +42,10 @@ default = [
         scale=0.45,
         custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
     ),
-    widget.TextBox(
-        foreground=theme["red"],
-        text="|",
-        font=xf,
-    ),
-    widget.WindowName(
-        font=xf,
-        fontsize=18,
-        # background=theme["yellow"],
-        foreground=theme["zero"],
-        max_chars=40
-        ),
-    widget.TextBox(
-        foreground=theme["red"],
-        text="|",
-        font=xf,
-    ),
+
+
+    widget.Spacer(),
+
     widget.Systray(
         icon_size=20,
         padding=4,
@@ -73,7 +58,7 @@ default = [
     ),
     widget.CPU(
         foreground=theme["red"],
-        format='  {load_percent}%',
+        format=' {load_percent}%',
         font=xf,
         fontsize=xx,
     ),
@@ -101,7 +86,7 @@ default = [
         fontsize=xx,
         foreground=theme["magenta"],
         measure_swap='G',
-        format=' {SwapUsed: .2f} GB',
+        format='{SwapUsed: .2f} GB',
     ),
     widget.TextBox(
         foreground=theme["green"],
@@ -122,7 +107,7 @@ default = [
     ),
     widget.Clock(
         foreground=theme["blue"],
-        format='  %d %B, %a',
+        format=' %d %B, %a',
         font=xf,
         fontsize=xx,
     ),
@@ -162,27 +147,26 @@ if len(os.listdir("/sys/class/power_supply")) == 0:
 else:
     default.extend(
         [
-            # widget.UPowerWidget(),
-            widget.UPowerWidget(
-                font=xf,
-                battery_width=27,
-                battery_height=14,
-                fontsize=xx,
-                percentage_low=0.5,
-                percentage_critical=0.3,
-                fill_critical="#ff0000",
-                fill_charge=theme["green"],
-                fill_low=theme["yellow"],
-                fill_normal=theme["teal"],
-                border_colour=theme["teal"],
-                border_critical_colour="#ff0000",
-                border_low_colour=theme["yellow"],
-                border_charge_colour=theme["green"],
-                text_charging="",
-                text_discharging="",
-                text_displaytime="",
-                margin=10,
-            ),
+            # widget.UPowerWidget(
+            #     font=xf,
+            #     battery_width=27,
+            #     battery_height=14,
+            #     fontsize=xx,
+            #     percentage_low=0.5,
+            #     percentage_critical=0.3,
+            #     fill_critical="#ff0000",
+            #     fill_charge=theme["green"],
+            #     fill_low=theme["yellow"],
+            #     fill_normal=theme["teal"],
+            #     border_colour=theme["teal"],
+            #     border_critical_colour="#ff0000",
+            #     border_low_colour=theme["yellow"],
+            #     border_charge_colour=theme["green"],
+            #     text_charging="",
+            #     text_discharging="",
+            #     text_displaytime="",
+            #     margin=10,
+            # ),
             widget.Battery(
                 fontsize=xx,
                 font=xf,
@@ -205,11 +189,11 @@ else:
 
 screens = [
     Screen(
-        bottom = bar.Bar(
+        top=bar.Bar(
             default,
-            44,
+            36,
             # opacity=0.9,
-            margin=[0, 40, 0,40],
+            # margin=[0, 0, 6, 0],
             background=theme["black"],
         ),
     ),

@@ -211,47 +211,32 @@ require("lazy").setup({
 
     -- themes
     'shaunsingh/nord.nvim',
-    {'drewtempelmeyer/palenight.vim', lazy = true},
+    -- {'drewtempelmeyer/palenight.vim', lazy = true},
     {'NTBBloodbath/doom-one.nvim', lazy = true},
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
     "rebelot/kanagawa.nvim",
-    'tanvirtin/monokai.nvim',
-    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true },
-    { "savq/melange-nvim" },
-    {
-      "nyoom-engineering/oxocarbon.nvim",
-      -- lazy = false,
-    },
-    {
-      "neanias/everforest-nvim",
-      version = false,
-      lazy = false,
-      priority = 1000, -- make sure to load this before all the other start plugins
-      -- Optional; default configuration will be used if setup isn't called.
-      -- config = function()
-      --   require("everforest").setup({
-      --     -- Your config here
-      --   })
-      -- end,
-    },
-    { 'myagko/nymph', branch = 'Nvim' },
-    {
-      'andersevenrud/nordic.nvim',
-      config = function()
-        -- The table used in this example contains the default settings.
-        -- Modify or remove these to your liking (this also applies to alternatives below):
-        require('nordic').colorscheme({
-          -- Underline style used for spelling
-          -- Options: 'none', 'underline', 'undercurl'
-          underline_option = 'undercurl',
-          -- italic = true,
-          -- italic_comments = true,
-          minimal_mode = false,
-          alternate_backgrounds = false,
-
-        })
-      end
-    },
+    -- { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true },
+    -- {
+    --   "nyoom-engineering/oxocarbon.nvim",
+    --   -- lazy = false,
+    -- },
+    -- {
+    --   'andersevenrud/nordic.nvim',
+    --   config = function()
+    --     -- The table used in this example contains the default settings.
+    --     -- Modify or remove these to your liking (this also applies to alternatives below):
+    --     require('nordic').colorscheme({
+    --       -- Underline style used for spelling
+    --       -- Options: 'none', 'underline', 'undercurl'
+    --       underline_option = 'undercurl',
+    --       -- italic = true,
+    --       -- italic_comments = true,
+    --       minimal_mode = false,
+    --       alternate_backgrounds = false,
+    --
+    --     })
+      -- end
+    -- },
     {
       'Mofiqul/dracula.nvim',
       config = function ()
@@ -260,8 +245,8 @@ require("lazy").setup({
       end
     },
 
-    'kdheepak/monochrome.nvim',
-    'Abstract-IDE/Abstract-cs',
+    -- 'kdheepak/monochrome.nvim',
+    -- 'Abstract-IDE/Abstract-cs',
 
     -- {
     --   'maxmx03/dracula.nvim',
