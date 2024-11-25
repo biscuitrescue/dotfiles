@@ -1,7 +1,25 @@
 # GitNow — Speed up your Git workflow. 🐠
 # https://github.com/joseluisq/gitnow
 
+set -g gitnow_version 2.12.0
+
 # Default global variables
+set -q GITNOW_CONFIG_FILE; or set -g GITNOW_CONFIG_FILE ~/.gitnow
+set -g gitnow_commands 'all' 'assume' 'bitbucket' 'bugfix' 'commit' 'commit-all' 'feature' 'github' 'gitnow' 'hotfix' 'logs' 'merge' 'move' 'pull' 'push' 'release' 'show' 'stage' 'state' 'tag' 'unstage' 'untracked' 'upstream'
+
+if set -q __fish_config_dir
+    set -g fish_config "$__fish_config_dir"
+else
+    set -q XDG_CONFIG_HOME
+        and set -g fish_config "$XDG_CONFIG_HOME/fish"
+        or set -g fish_config "~/.config/fish"
+end
+
+set -q fish_snippets; or set -g fish_snippets "$fish_config/conf.d"
+
+__gitnow_load_config
+
+# Other specific global variables
 set -g g_current_branch
 
 function __gitnow_install -e gitnow_install
@@ -30,7 +48,7 @@ function state -d "Gitnow: Show the working tree status in compact way"
     command git status -sb
 end
 
-function stage -d "Gitnow: Stage files in current working directory"
+function stage -d "Gitnow: Stage files in current working directory" -w 'git add'
     if not __gitnow_is_git_repository
         __gitnow_msg_not_valid_repository "stage"
         return
@@ -46,7 +64,7 @@ function stage -d "Gitnow: Stage files in current working directory"
     command git add $opts
 end
 
-function unstage -d "Gitnow: Unstage files in current working directory"
+function unstage -d "Gitnow: Unstage files in current working directory" -w 'git reset'
     if not __gitnow_is_git_repository
         __gitnow_msg_not_valid_repository "unstage"
         return
@@ -62,7 +80,7 @@ function unstage -d "Gitnow: Unstage files in current working directory"
     command git reset $opts
 end
 
-function show -d "Gitnow: Show commit detail objects"
+function show -d "Gitnow: Show commit detail objects" -w 'git show'
     if not __gitnow_is_git_repository
         __gitnow_msg_not_valid_repository "show"
         return
@@ -87,7 +105,7 @@ function untracked -d "Gitnow: Check for untracked files and directories on curr
 
 end
 
-function commit -d "Gitnow: Commit changes to the repository"
+function commit -d "Gitnow: Commit changes to the repository" -w 'git commit'
     if not __gitnow_is_git_repository
         __gitnow_msg_not_valid_repository "commit"
         return
@@ -112,7 +130,7 @@ function commit-all -d "Gitnow: Add and commit all changes to the repository"
     commit .
 end
 
-function pull -d "Gitnow: Pull changes from remote server but stashing uncommitted changes"
+function pull -d "Gitnow: Pull changes from remote server but stashing uncommitted changes" -w 'git pull'
     if not __gitnow_is_git_repository
         __gitnow_msg_not_valid_repository "pull"
         return
@@ -159,7 +177,7 @@ end
 
 # Git push with --set-upstream
 # Shortcut inspired from https://github.com/jamiew/git-friendly
-function push -d "Gitnow: Push commit changes to remote repository"
+function push -d "Gitnow: Push commit changes to remote repository" -w 'git push'
     if not __gitnow_is_git_repository
         __gitnow_msg_not_valid_repository "push"
         return
@@ -373,7 +391,7 @@ function move -d "GitNow: Switch from current branch to another but stashing unc
         end
     end
 
-    # Move to prev branch either via the --prev option or the "-" shorthand char 
+    # Move to prev branch either via the --prev option or the "-" shorthand char
     if begin test -n "$v_prev"; or [ "$args" = "-" ]; end
         if begin test -z "$g_current_branch"; or [ "$g_current_branch" = (__gitnow_current_branch_name) ]; end
             echo "Previous branch not found or the same as current one. Nothing to do."

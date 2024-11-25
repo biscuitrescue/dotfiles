@@ -1,16 +1,16 @@
-palette = "ashes"
+palette = "dracula"
 
 [character]
 #
 # success_symbol = "[[!/](blue)❯ ](magenta)"
-success_symbol = "[ ](yellow)"
+success_symbol = "[ ](green)"
 error_symbol = "[ ](red)"
-vicmd_symbol = "[ ](blue)"
+vicmd_symbol = "[ ](magenta)"
 
 [directory]
 truncation_length = 4
 # Catppuccin 'lavender'
-style = "bold red"
+style = "bold blue"
 
 # palette tables should be last in the config ⚓️
 

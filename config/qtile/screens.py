@@ -4,7 +4,7 @@ from libqtile import bar, widget
 from colours import themes
 
 
-theme = "ashes"
+theme = "dracula"
 
 theme = themes[theme]
 
@@ -24,14 +24,14 @@ default = [
         padding_y=3,
         padding_x=4,
         borderwidth=8,
-        inactive=theme["green"],
-        active=theme["red"],
+        inactive=theme["blue"],
+        active=theme["magenta"],
         rounded=True,
         urgent_alert_method="block",
         urgent_text="#f07a78",
         highlight_color=theme["yellow"],
         highlight_method="block",
-        this_current_screen_border=theme["red"],
+        this_current_screen_border=theme["blue"],
         block_highlight_text_color=theme["black"],
     ),
     widget.Sep(
