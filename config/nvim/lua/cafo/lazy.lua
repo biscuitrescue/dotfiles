@@ -261,6 +261,7 @@ require("lazy").setup({
     -- themes
     'shaunsingh/nord.nvim',
     -- {'drewtempelmeyer/palenight.vim', lazy = true},
+    'navarasu/onedark.nvim',
     {'NTBBloodbath/doom-one.nvim', lazy = true},
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
     "rebelot/kanagawa.nvim",

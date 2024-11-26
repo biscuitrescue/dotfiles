@@ -13,11 +13,11 @@ TERM = "xterm-256color"
 size = 10
 
 [font.bold]
-family = "M Plus 1 Code nerd font"
+family = "Fira Code"
 style = "Bold"
 
 [font.bold_italic]
-family = "M Plus 1 Code nerd font"
+family = "Fira Code"
 style = "Bold Italic"
 
 [font.italic]
@@ -25,8 +25,8 @@ family = "Operator Mono"
 style = "Italic"
 
 [font.normal]
-family = "M Plus 1 Code nerd font"
-style = "Medium"
+family = "Fira Code"
+style = "Regular"
 
 [font.offset]
 x = -1
@@ -133,4 +133,4 @@ x = 10
 y = 10
 
 [general]
-import = ["/home/cafo/.config/alacritty/dracula.toml"]
+import = ["/home/cafo/.config/alacritty/one.toml"]

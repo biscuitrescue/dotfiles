@@ -4,7 +4,7 @@ from libqtile import bar, widget
 from colours import themes
 
 
-theme = "dracula"
+theme = "one"
 
 theme = themes[theme]
 
@@ -25,7 +25,7 @@ default = [
         padding_x=4,
         borderwidth=8,
         inactive=theme["blue"],
-        active=theme["magenta"],
+        active=theme["violet"],
         rounded=True,
         urgent_alert_method="block",
         urgent_text="#f07a78",

@@ -1,4 +1,3 @@
-fish_config theme choose "Dracula Official"
 set -x EDITOR "nvim"
 set -x BAT_THEME "ansi"
 set fish_greeting
