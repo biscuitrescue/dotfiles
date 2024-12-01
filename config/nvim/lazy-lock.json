@@ -16,6 +16,7 @@
   "cmp_luasnip": { "branch": "master", "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90" },
   "doom-one.nvim": { "branch": "main", "commit": "2d15798d1eccdaf12c2cb7dda571c5b0ae65a257" },
   "dracula.nvim": { "branch": "main", "commit": "e6128ec3923b92bb2b16e81b4a0f04ed0308038e" },
+  "everforest-nvim": { "branch": "main", "commit": "4f41a53d69b679c9bf770da76129d78754d8d8c0" },
   "friendly-snippets": { "branch": "main", "commit": "de8fce94985873666bd9712ea3e49ee17aadb1ed" },
   "gitsigns.nvim": { "branch": "main", "commit": "9521fe8be39255b9abc6ec54e352bf04c410f5cf" },
   "go.nvim": { "branch": "master", "commit": "6368756601a358b1491ac2ff10d0e2939a76df5e" },

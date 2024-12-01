@@ -1,4 +1,4 @@
-palette = "one"
+palette = "everforest"
 
 [character]
 #
@@ -13,6 +13,13 @@ truncation_length = 4
 style = "bold blue"
 
 # palette tables should be last in the config ⚓️
+[palettes.everforest]
+green = "#a7c080"
+red = "#e67e80"
+mauve = "#a292a3"
+blue = "#7fbbb3"
+magenta = "#d699b6"
+yellow = "#dbbc7f"
 
 [palettes.ashes]
 green = "#95C7AE"

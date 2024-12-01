@@ -3,7 +3,7 @@
 themes = {
     "everforest": {
         "zero": "#83b6af",
-        "black": "#323d43",
+        "black": "#272e33",
         "red": "#e68183",
         "green": "#a7c080",
         "yellow": "#dbbc7f",

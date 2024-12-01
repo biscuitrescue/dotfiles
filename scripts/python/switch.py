@@ -40,6 +40,21 @@ def switch_theme(obj, theme):
 
 
 themes = {
+    "Everforest": {
+        "openbox": "Ashes-Openbox",
+        "qtile": "everforest",
+        "nvim": "everforest",
+        "Gtk": "Everforest-Dark",
+        "kitty": "kanagawa",
+        "polybar": "ashes",
+        "alacritty": "everforest_dark",
+        "zathura": "everforest",
+        "waybar": "ashes",
+        "dunst": "nord",
+        "emacs": "everforest",
+        "starship": "everforest",
+        "rofi": "one"
+    },
     "Kanagawa": {
         "openbox": "Ashes-Openbox",
         "qtile": "kanagawa",

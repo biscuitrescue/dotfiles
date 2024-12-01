@@ -4,7 +4,7 @@ from libqtile import bar, widget
 from colours import themes
 
 
-theme = "one"
+theme = "everforest"
 
 theme = themes[theme]
 
