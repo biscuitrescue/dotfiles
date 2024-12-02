@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # See README.md for usage instructions
-bar_color="#95aec7"
+bar_color="#d8caac"
 volume_step=5
 brightness_step=5
 
