@@ -1,12 +1,12 @@
 # vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Fonts {{{
-font_family      Fira Code
-bold_font        Fira Code bold
+font_family      M Plus 1 Code nerd font medium
+bold_font        M Plus 1 Code nerd font Bold
 italic_font      Operator Mono Medium Italic
 bold_italic_font auto
 
-font_size 11
+font_size 10
 
 force_ltr no
 
@@ -451,7 +451,7 @@ inactive_tab_font_style normal
 
 #: Color scheme {{{
 
-background_opacity 1
+background_opacity 0.8
 # background_image ~/Pictures/wallpapers/extra-14.png
 
 background_image_layout scaled
@@ -661,10 +661,4 @@ linux_display_server auto
 
 #: }}}
 
-# include themes/kanagawa.conf
-
-
-# BEGIN_KITTY_THEME
-# Everforest Dark Hard
-include current-theme.conf
-# END_KITTY_THEME
+include themes/kanagawa.conf
