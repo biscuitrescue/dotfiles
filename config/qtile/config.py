@@ -13,18 +13,19 @@ border = dict(
     border_width=3
 )
 layouts = [
-    # layout.MonadTall(
-    #     margin=13,
-    #     ratio=0.55,
-    #     **border
-    # ),
-    layout.Tile(
-        margin=3,
+    layout.MonadTall(
+        margin=15,
+        new_client_position = 'before_current',
         ratio=0.55,
-        # border_on_single=False,
-        shift_windows=True,
         **border
     ),
+    # layout.Tile(
+    #     margin=8,
+    #     ratio=0.55,
+    #     # border_on_single=False,
+    #     shift_windows=True,
+    #     **border
+    # ),
     layout.TreeTab(
         font = "Iosevka Bold",
         fontsize = 17,
