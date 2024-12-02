@@ -10,7 +10,7 @@ from libqtile.backend.wayland import InputConfig
 
 border = dict(
     border_focus=theme["blue"],
-    border_width=3
+    border_width=0
 )
 layouts = [
     layout.MonadTall(
