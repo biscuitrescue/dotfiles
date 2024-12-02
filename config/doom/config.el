@@ -40,7 +40,7 @@
 (setq indent-tabs-mode t
       tab-width 4)
 (setq doom-theme 'everforest)
-(setq doom-font (font-spec :family "Fira Code" :size 21))
+(setq doom-font (font-spec :family "Fira Code" :size 18))
 ;; (after! rustic
 ;;   (setq lsp-rust-server 'rust-analyzer))
 (after! doom-themes

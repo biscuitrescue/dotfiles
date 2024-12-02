@@ -10,7 +10,7 @@ vi_mode_style = "Underline"
 TERM = "xterm-256color"
 
 [font]
-size = 10
+size = 11
 
 [font.bold]
 family = "Fira Code"
@@ -117,7 +117,7 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 0.9
+opacity = 1
 title = "Alacritty"
 
 [window.class]

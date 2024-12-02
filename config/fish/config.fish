@@ -78,4 +78,3 @@ function ipub
 end
 
 starship init fish | source
-# echo "RESUME CCS 14/08/2005"
