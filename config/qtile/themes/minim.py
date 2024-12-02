@@ -4,12 +4,12 @@ from libqtile import bar, widget
 from colours import themes
 
 
-theme = "latte"
+theme = "everforest"
 
 theme = themes[theme]
 
 xx = 20
-xf = "Zed Mono Extended Bold"
+xf = "M Plus 1 Code Nerd Font Bold"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -24,14 +24,14 @@ default = [
         padding_y=3,
         padding_x=4,
         borderwidth=8,
-        inactive=theme["green"],
-        active=theme["red"],
+        inactive=theme["blue"],
+        active=theme["violet"],
         rounded=True,
         urgent_alert_method="block",
         urgent_text="#f07a78",
         highlight_color=theme["yellow"],
         highlight_method="block",
-        this_current_screen_border=theme["red"],
+        this_current_screen_border=theme["blue"],
         block_highlight_text_color=theme["black"],
     ),
     widget.Sep(
@@ -58,7 +58,7 @@ default = [
     ),
     widget.CPU(
         foreground=theme["red"],
-        format=' {load_percent}%',
+        format='  {load_percent}%',
         font=xf,
         fontsize=xx,
     ),
@@ -86,7 +86,7 @@ default = [
         fontsize=xx,
         foreground=theme["magenta"],
         measure_swap='G',
-        format='{SwapUsed: .2f} GB',
+        format=' {SwapUsed: .2f} GB',
     ),
     widget.TextBox(
         foreground=theme["green"],
@@ -107,7 +107,7 @@ default = [
     ),
     widget.Clock(
         foreground=theme["blue"],
-        format=' %d %B, %a',
+        format='  %d %B, %a',
         font=xf,
         fontsize=xx,
     ),
@@ -120,7 +120,7 @@ default = [
         foreground=theme["violet"],
         font=xf,
         fontsize=xx,
-        format=' %I:%M %p',
+        format='  %I:%M %p',
     ),
     widget.TextBox(
         foreground=theme["teal"],

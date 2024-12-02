@@ -207,8 +207,8 @@ screens = [
         bottom = bar.Bar(
             default,
             44,
-            # opacity=0.9,
-            margin=[0, 40, 0,40],
+            opacity=0.8,
+            margin=[0, 40, 0, 40],
             background=theme["black"],
         ),
     ),
