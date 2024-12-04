@@ -13,11 +13,11 @@ TERM = "xterm-256color"
 size = 10
 
 [font.bold]
-family = "Fira Code"
+family = "Operator Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "Fira Code"
+family = "Operator Mono"
 style = "Bold Italic"
 
 [font.italic]
@@ -25,8 +25,8 @@ family = "Operator Mono"
 style = "Italic"
 
 [font.normal]
-family = "Fira Code"
-style = "Regular"
+family = "Operator Mono"
+style = "Book"
 
 [font.offset]
 x = -1
