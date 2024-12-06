@@ -39,7 +39,7 @@ groups = [
               #     Match(wm_class=["discord"]),
               #     Match(wm_class=["Mailspring"]),
               #     Match(wm_class=["Session"]),
-                  # ]
+              # ]
               ),
 
         Group("5", label="5",
@@ -50,9 +50,9 @@ groups = [
 
         Group("6", label="6",
               # matches=[
-                  # Match(wm_class=["pcmanfm"]),
-                  # Match(wm_class=["qBittorrent"]),
-                  # ]
+              #     Match(wm_class=["pcmanfm"]),
+              #     Match(wm_class=["qBittorrent"]),
+              #     ]
               ),
 
         Group("7", label="7",
@@ -96,7 +96,8 @@ for i in groups:
 # groups.append(Group(''))
 
 groups.append(ScratchPad('Scratchpad', [
-    DropDown("sig", "signal-desktop-beta --password-store='gnome-libsecret'", height=0.85,
+    DropDown("sig", "signal-desktop-beta --password-store='gnome-libsecret'",
+             height=0.85,
              width=0.85, x=0.075, y=0.075, opacity=1,
              on_focus_lost_hide=True),
     DropDown("term", f'{myTerm} -e tmux new -A -s Dropdown',

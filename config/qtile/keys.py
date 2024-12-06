@@ -1,7 +1,6 @@
 import os
 from libqtile.config import Click, Drag, KeyChord, Key
 from libqtile.lazy import lazy
-from libqtile import layout, hook, extension
 
 mod = "mod4"
 mod1 = "mod1"
@@ -10,6 +9,7 @@ mod3 = "shift"
 home = os.path.expanduser('~')
 term2 = "kitty"
 myTerm = "alacritty"
+
 
 @lazy.function
 def window_to_prev_group(qtile):
@@ -41,7 +41,8 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("dunster volume_down")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("dunster volume_up")),
 
-    Key(["control"], "XF86AudioPlay", lazy.spawn("playerctl -p spotify play-pause")),
+    Key(["control"], "XF86AudioPlay", lazy.spawn("playerctl -p spotify \
+            play-pause")),
     Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
     Key([], "XF86AudioNext", lazy.spawn("playerctl next")),
     Key([], "XF86AudioPrev", lazy.spawn("playerctl previous")),

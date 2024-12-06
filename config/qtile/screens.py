@@ -1,8 +1,8 @@
 import os
 from libqtile.config import Screen
+from libqtile import qtile
 from libqtile import bar, widget
 from colours import themes
-
 
 theme = "everforest"
 
