@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
 
 themes = {
+    "everforest_light": {
+        "zero": "#272e33",
+        "black": "#fdf6e3",
+        "red": "#f85552",
+        "green": "#8da101",
+        "yellow": "#dfa000",
+        "magenta": "#df69ba",
+        "violet": "#a292a3",
+        "blue": "#df69ba",
+        "teal": "#83c092",
+        },
     "everforest": {
         "zero": "#83b6af",
         "black": "#272e33",
@@ -11,7 +22,7 @@ themes = {
         "violet": "#a292a3",
         "blue": "#7fbbb3",
         "teal": "#83c092",
-    },
+        },
     "kanagawa_lotus": {
         "zero": "#83b6af",
         "black": "#f2ecbc",

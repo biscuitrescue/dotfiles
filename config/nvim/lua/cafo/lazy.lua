@@ -356,6 +356,12 @@ require("lazy").setup({
     --   "MunifTanjim/nougat.nvim",
     -- },
     -- LUALINE
+    -- {
+    --   "rebelot/heirline.nvim",
+    --   -- You can optionally lazy-load heirline on UiEnter
+    --   -- to make sure all required plugins and colorschemes are loaded before setup
+    --   -- event = "UiEnter",
+    -- },
     {
       'nvim-lualine/lualine.nvim',
       dependencies = { 'kyazdani42/nvim-web-devicons'}
@@ -370,7 +376,7 @@ require("lazy").setup({
       -- Optional; default configuration will be used if setup isn't called.
       config = function()
         require("everforest").setup({
-          background = "hard",
+          background = "soft",
           transparent_background_level = 0,
           italics = true,
           disable_italic_comments = false,
