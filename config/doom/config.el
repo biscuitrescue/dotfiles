@@ -38,11 +38,9 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq indent-tabs-mode t
-      tab-width 4)
-(setq doom-theme 'everforest)
+      tab-width 2)
+(setq doom-theme 'mocha)
 (setq doom-font (font-spec :family "Fira Code" :size 20))
-;; (after! rustic
-;;   (setq lsp-rust-server 'rust-analyzer))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
@@ -73,7 +71,9 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 (setq flyspell-issue-welcome-flag nil) ;; fix flyspell problem
-
+(setq racer-rust-src-path "/home/cafo/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library")
+(after! rustic
+  (setq lsp-rust-server 'rust-analyzer))
 
 ;; (use-package catppuccin-theme
 ;;   :config
@@ -84,7 +84,6 @@
 ;;                (shell-command-to-string "rustc --print sysroot"))
 ;;               "/lib/rustlib/src/rust/src"))
 ;;
-(setq racer-rust-src-path "/home/cafo/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library")
 ;; (use-package racer
 ;;   :requires rust-mode
 

@@ -44,7 +44,7 @@ alias checkout="git checkout"
 alias mirror="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
 alias ll='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ls='exa -l --color=always --group-directories-first'  # long format
+alias l='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | grep -E "^\."'
 alias vim='nvim'

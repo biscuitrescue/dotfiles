@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <unistd.h>
 #include <cstdlib>
@@ -8,17 +7,14 @@ using namespace std;
 string rem_num(string str, bool alpha) {
     string str2;
 
-    int current = 0;
     for( unsigned int i=0; i<=str.length(); i++ ) {
         if(alpha) {
             if(isalnum(str[i])) {
                 str2 += str[i];
-                current++;
             }
         } else {
             if( !(isalpha(str[i])) ) {
                 str2 += str[i];
-                current++;
             }
         }
     }
@@ -62,12 +58,12 @@ int main() {
         string swapdisk = read("swap");
         string disk = read("disk");
         double memory = stod(read("mem"));
-        string cmd = "";
+        string cmd;
 
         if( swapdisk.length() == 0 && memory >= maxmem) {
-            cmd += "sudo swapon /dev/"+disk;
+            cmd = "sudo swapon /dev/"+disk;
         } else if( swapdisk.length() > 0 && memory < maxmem ) {
-            cmd += "sudo swapoff /dev/"+disk;
+            cmd = "sudo swapoff /dev/"+disk;
         }
 
         system(cmd.c_str());

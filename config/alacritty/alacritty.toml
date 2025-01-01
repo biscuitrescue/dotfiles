@@ -10,22 +10,22 @@ vi_mode_style = "Underline"
 TERM = "xterm-256color"
 
 [font]
-size = 10
+size = 9
 
 [font.bold]
-family = "Operator Mono"
+family = "Zed Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "Operator Mono"
+family = "Zed Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "Operator Mono"
+family = "Zed Mono"
 style = "Italic"
 
 [font.normal]
-family = "Operator Mono"
+family = "Zed Mono"
 style = "Book"
 
 [font.offset]
@@ -117,7 +117,7 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 0.95
+opacity = 0.85
 title = "Alacritty"
 
 [window.class]

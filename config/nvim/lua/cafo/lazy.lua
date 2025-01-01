@@ -414,12 +414,13 @@ require("lazy").setup({
     --     })
       -- end
     -- },
+    'wilmanbarrios/palenight.nvim',
     {
       'Mofiqul/dracula.nvim',
-      config = function ()
-        require('dracula').setup()
-        vim.cmd.colorscheme 'dracula'
-      end
+      -- config = function ()
+        -- require('dracula').setup()
+        -- vim.cmd.colorscheme 'dracula'
+      -- end
     },
 
     -- 'kdheepak/monochrome.nvim',
