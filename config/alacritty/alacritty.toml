@@ -10,22 +10,22 @@ vi_mode_style = "Underline"
 TERM = "xterm-256color"
 
 [font]
-size = 9
+size = 8
 
 [font.bold]
-family = "Zed Mono"
+family = "Fira Code"
 style = "Bold"
 
 [font.bold_italic]
-family = "Zed Mono"
+family = "Fira Code"
 style = "Bold Italic"
 
 [font.italic]
-family = "Zed Mono"
+family = "Fira Code"
 style = "Italic"
 
 [font.normal]
-family = "Zed Mono"
+family = "Fira Code"
 style = "Book"
 
 [font.offset]
@@ -117,7 +117,7 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 0.85
+opacity = 1
 title = "Alacritty"
 
 [window.class]
@@ -133,4 +133,4 @@ x = 10
 y = 10
 
 [general]
-import = ["/home/cafo/.config/alacritty/catppuccin-mocha.toml"]
+import = ["/home/cafo/.config/alacritty/kanagawa.toml"]

@@ -8,6 +8,7 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -Ux FZF_DEFAULT_OPTS "--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD"
 
 fish_add_path "$HOME/.cargo/bin"
+fish_add_path "$HOME/.local/share/bob/nightly/bin"
 fish_add_path "$HOME/scripts/bash"
 fish_add_path "$HOME/scripts/python"
 fish_add_path "$HOME/scripts/c"
@@ -44,7 +45,7 @@ alias checkout="git checkout"
 alias mirror="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
 alias ll='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias l='exa -l --color=always --group-directories-first'  # long format
+alias ls='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | grep -E "^\."'
 alias vim='nvim'

@@ -1,5 +1,5 @@
 [colors.primary]
-background = "#1E1E2E"
+background = "#1e1e2e"
 foreground = "#CDD6F4"
 dim_foreground = "#CDD6F4"
 bright_foreground = "#CDD6F4"
@@ -37,7 +37,7 @@ text = "#1E1E2E"
 background = "#F5E0DC"
 
 [colors.normal]
-black = "#45475A"
+black = "#1e1e2e"
 red = "#F38BA8"
 green = "#A6E3A1"
 yellow = "#F9E2AF"

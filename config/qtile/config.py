@@ -14,7 +14,7 @@ border = dict(
 )
 layouts = [
     layout.MonadTall(
-        margin=13,
+        margin=5,
         new_client_position = 'before_current',
         ratio=0.55,
         **border

@@ -5,7 +5,7 @@
     "ipc": "true",
     "gtk-layer-shell": true,
     "layer": "top",
-    "position": "left",
+    "position": "top",
     "height": "",
     "width": "30",
     "modules-left": ["river/tags", "hyprland/workspaces"],

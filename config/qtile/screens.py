@@ -4,11 +4,11 @@ from libqtile import qtile
 from libqtile import bar, widget
 from colours import themes
 
-theme = "mocha"
+theme = "kanagawa"
 
 theme = themes[theme]
 
-xx = 18
+xx = 15
 xf = "M Plus 1 Code Nerd Font Bold"
 default = [
     widget.TextBox(
@@ -17,22 +17,22 @@ default = [
         font=xf,
     ),
     widget.GroupBox(
-        font="Zed Mono Extended Bold",
-        fontsize=16,
+        font=xf,
+        fontsize=xx,
         margin_y=4,
         margin_x=5,
-        padding_y=3,
-        padding_x=4,
-        borderwidth=8,
+        padding_y=1,
+        padding_x=5,
+        borderwidth=3,
         inactive=theme["blue"],
-        active=theme["violet"],
+        active=theme["red"],
         rounded=True,
         urgent_alert_method="block",
         urgent_text="#f07a78",
-        highlight_color=theme["yellow"],
-        highlight_method="block",
-        this_current_screen_border=theme["blue"],
-        block_highlight_text_color=theme["black"],
+        highlight_color=theme["black"],
+        highlight_method="line",
+        this_current_screen_border=theme["red"],
+        block_highlight_text_color=theme["red"],
     ),
     widget.Sep(
         padding=2,
@@ -189,12 +189,13 @@ else:
 
 screens = [
     Screen(
-        top=bar.Bar(
+        bottom=bar.Bar(
             default,
-            36,
+            26,
             # opacity=0.9,
             # margin=[0, 0, 6, 0],
-            background=theme["black"],
+            # background="#000000",
+            background=theme["black"]
         ),
     ),
 ]
