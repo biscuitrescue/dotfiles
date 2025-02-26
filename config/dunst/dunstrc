@@ -1,5 +1,5 @@
 [global]
-    font = Iosevka 12
+    font = Iosevka 10
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
@@ -255,23 +255,23 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#1c2023"
-    foreground = "#97c7ae"
+    background = "#181616"
+    foreground = "#8ea4a2"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     icon = ~/.config/dunst/images/notification.png
 
 [urgency_normal]
 
-    background = "#1c2023"
-    foreground = "#97aec7"
+    background = "#181616"
+    foreground = "#8ba4b0"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     icon = ~/.config/dunst/images/notification.png
 
 [urgency_critical]
     background = "#1c2023"
-    foreground = "#C79595"
+    foreground = "#c4746e"
     frame_color = "#00000000"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable

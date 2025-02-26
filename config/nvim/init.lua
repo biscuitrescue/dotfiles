@@ -76,5 +76,5 @@ require 'colorizer'.setup()
 
 vim.cmd("hi IndentBlanklineSpaceCharBlankline guifg=Comment")
 vim.cmd("hi IndentBlanklineSpaceChar guifg=Comment")
-vim.cmd.colorscheme("catppuccin-macchiato")
+vim.cmd.colorscheme("kanagawa")
 -- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
