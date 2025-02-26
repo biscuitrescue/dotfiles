@@ -1,4 +1,4 @@
-palette = "kanagawa"
+palette = "ashes"
 
 [character]
 #
@@ -38,12 +38,12 @@ magenta = "#a292a3"
 yellow = "#f0dfaf"
 
 [palettes.kanagawa]
-green = "#ff6c6b"
-red = "#c4b28a"
+red = "#ff6c6b"
+yellow = "#c4b28a"
 mauve = "#a292a3"
 blue = "#8ba4b0"
 magenta = "#a292a3"
-yellow = "#42be65"
+green = "#42be65"
 
 [palettes.one]
 green = "#98be65"

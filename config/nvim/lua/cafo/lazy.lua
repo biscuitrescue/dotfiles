@@ -45,7 +45,7 @@ require("lazy").setup({
       { "<leader>gf", function() Snacks.lazygit.log_file() end, desc = "Lazygit Current File History" },
       { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
       { "<leader>gl", function() Snacks.lazygit.log() end, desc = "Lazygit Log (cwd)" },
-      { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
+      { "<leader>n.", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
       { "<c-/>",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
       { "<c-_>",      function() Snacks.terminal() end, desc = "which_key_ignore" },
       { "]]",         function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
@@ -104,13 +104,6 @@ require("lazy").setup({
     -- cmd = require("telescope.builtin"),
   },
 
-  -- {
-  --   'goolord/alpha-nvim',
-  --   dependencies = { 'kyazdani42/nvim-web-devicons' },
-  --   config = function ()
-  --     require'alpha'.setup(require'alpha.themes.startify'.config)
-  --   end
-  -- },
   {
     'christoomey/vim-tmux-navigator',
     lazy=false,
@@ -122,8 +115,6 @@ require("lazy").setup({
   'numToStr/FTerm.nvim',
   'theprimeagen/harpoon',
 
-  -- 'vimwiki/vimwiki',
-  -- {'chipsenkbeil/vimwiki-server.nvim', tag = 'v0.1.0-alpha.5' },
   {
     'toppair/peek.nvim',
     build = 'deno task --quiet build:fast',
@@ -148,14 +139,6 @@ require("lazy").setup({
     end
   },
 
-  -- {
-  --   'akinsho/bufferline.nvim',
-  --   version = "*",
-  --   dependencies = 'nvim-tree/nvim-web-devicons',
-  --   config = function()
-  --     require("bufferline").setup{}
-  --   end
-  -- },
   {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 
   {
@@ -166,10 +149,6 @@ require("lazy").setup({
     },
     init = function() vim.g.barbar_auto_setup = false end,
     opts = {
-      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-      -- animation = true,
-      -- insert_at_start = true,
-      -- …etc.
     },
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },
@@ -186,7 +165,6 @@ require("lazy").setup({
       require('windows').setup()
     end
   },
-  -- 'Raimondi/delimitMate',
   {
     'numToStr/Comment.nvim',
     config = function()
@@ -263,8 +241,6 @@ require("lazy").setup({
       build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
     },
 
-    -- {'onsails/lspkind.nvim'},
--- nvim v0.8.0
 {
   "kdheepak/lazygit.nvim",
   lazy = true,
@@ -275,12 +251,9 @@ require("lazy").setup({
     "LazyGitFilter",
     "LazyGitFilterCurrentFile",
   },
-  -- optional for floating window border decoration
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
-  -- setting the keybinding for LazyGit with 'keys' is recommended in
-  -- order to load the plugin when the command is run for the first time
   keys = {
     { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
   }
@@ -352,16 +325,6 @@ require("lazy").setup({
       end,
     },
 
-    -- {
-    --   "MunifTanjim/nougat.nvim",
-    -- },
-    -- LUALINE
-    -- {
-    --   "rebelot/heirline.nvim",
-    --   -- You can optionally lazy-load heirline on UiEnter
-    --   -- to make sure all required plugins and colorschemes are loaded before setup
-    --   -- event = "UiEnter",
-    -- },
     {
       'nvim-lualine/lualine.nvim',
       dependencies = { 'kyazdani42/nvim-web-devicons'}
@@ -373,7 +336,6 @@ require("lazy").setup({
       version = false,
       lazy = false,
       priority = 1000, -- make sure to load this before all the other start plugins
-      -- Optional; default configuration will be used if setup isn't called.
       config = function()
         require("everforest").setup({
           background = "soft",
@@ -387,33 +349,10 @@ require("lazy").setup({
       end,
     },
     'shaunsingh/nord.nvim',
-    -- {'drewtempelmeyer/palenight.vim', lazy = true},
     'navarasu/onedark.nvim',
     {'NTBBloodbath/doom-one.nvim', lazy = true},
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
     "rebelot/kanagawa.nvim",
-    -- { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true },
-    -- {
-    --   "nyoom-engineering/oxocarbon.nvim",
-    --   -- lazy = false,
-    -- },
-    -- {
-    --   'andersevenrud/nordic.nvim',
-    --   config = function()
-    --     -- The table used in this example contains the default settings.
-    --     -- Modify or remove these to your liking (this also applies to alternatives below):
-    --     require('nordic').colorscheme({
-    --       -- Underline style used for spelling
-    --       -- Options: 'none', 'underline', 'undercurl'
-    --       underline_option = 'undercurl',
-    --       -- italic = true,
-    --       -- italic_comments = true,
-    --       minimal_mode = false,
-    --       alternate_backgrounds = false,
-    --
-    --     })
-      -- end
-    -- },
     'wilmanbarrios/palenight.nvim',
     {
       'Mofiqul/dracula.nvim',
@@ -422,17 +361,4 @@ require("lazy").setup({
         -- vim.cmd.colorscheme 'dracula'
       -- end
     },
-
-    -- 'kdheepak/monochrome.nvim',
-    -- 'Abstract-IDE/Abstract-cs',
-
-    -- {
-    --   'maxmx03/dracula.nvim',
-    --   lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    --   priority = 1000, -- make sure to load this before all the other start plugins
-    --   config = function ()
-    --     require('dracula').setup()
-    --     -- vim.cmd.colorscheme 'dracula'
-    --   end
-    -- },
   })

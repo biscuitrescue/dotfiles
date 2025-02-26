@@ -10,23 +10,23 @@ vi_mode_style = "Underline"
 TERM = "xterm-256color"
 
 [font]
-size = 8
+size = 10
 
 [font.bold]
-family = "Fira Code"
+family = "jetbrainsmono nerd font"
 style = "Bold"
 
 [font.bold_italic]
-family = "Fira Code"
+family = "jetbrainsmono nerd font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Fira Code"
+family = "jetbrainsmono nerd font"
 style = "Italic"
 
 [font.normal]
-family = "Fira Code"
-style = "Book"
+family = "jetbrainsmono nerd font"
+style = "Medium"
 
 [font.offset]
 x = -1
@@ -117,7 +117,7 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 1
+opacity = 0.9
 title = "Alacritty"
 
 [window.class]
@@ -133,4 +133,4 @@ x = 10
 y = 10
 
 [general]
-import = ["/home/cafo/.config/alacritty/kanagawa.toml"]
+import = ["/home/cafo/.config/alacritty/ashes.toml"]

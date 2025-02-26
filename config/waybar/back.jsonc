@@ -5,15 +5,15 @@
     "ipc": "true",
     "gtk-layer-shell": true,
     "layer": "top",
-    "position": "left",
-    "height": "", 		
-    "width": 32,
-    "modules-left": ["river/tags", "wlr/workspaces"],
+    "position": "top",
+    "height": "",
+    "width": "30",
+    "modules-left": ["river/tags", "hyprland/workspaces"],
     "modules-right": ["tray", "cpu", "pulseaudio", "memory#mem", "memory#swap", "clock#date", "clock#time", "battery"],
     "river/tags": {
         "num-tags": 9,
     },
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "on-click": "activate",
         "disable-scroll": false,
         "sort-by-number": true,
@@ -96,7 +96,7 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}",
-        "format-muted": "",
+        "format-muted": "M",
         "format-full": "",
         "format-icons": {
             "default": ["", "", " "]

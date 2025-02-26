@@ -241,7 +241,7 @@ themes = {
 thing = {
     'openbox': ((42, (10, -8)), '.config/openbox/rc.xml'),
     'qtile': ((6, (9, -2)), '.config/qtile/screens.py'),
-    # 'kitty': ((-1, (15, -6)), '.config/kitty/kitty.conf'),
+    'kitty': ((-1, (15, -6)), '.config/kitty/kitty.conf'),
     'alacritty': ((-1, (40, -8)), '.config/alacritty/alacritty.toml'),
     'Gtk': ((1, (15, -1)), '.config/gtk-3.0/settings.ini'),
     'polybar': ((0, (40, -5)), '.config/polybar/config.ini'),

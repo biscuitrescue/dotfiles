@@ -1,9 +1,9 @@
 import os
-from libqtile.config import Group, Key, Match, ScratchPad, DropDown, EzKey
+from libqtile.config import Group, Key, ScratchPad, DropDown
 from libqtile.lazy import lazy
 from keys import keys
 
-myTerm = "alacritty"
+myTerm = "kitty"
 mod = "mod4"
 mod1 = "mod1"
 mod2 = "control"

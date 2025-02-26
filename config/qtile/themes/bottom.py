@@ -1,16 +1,15 @@
 import os
 from libqtile.config import Screen
+from libqtile import qtile
 from libqtile import bar, widget
-from qtile_extras import widget
 from colours import themes
 
-theme = "ashes"
+theme = "kanagawa"
 
 theme = themes[theme]
 
-xx = 20
-# xf = "Zed Mono Extended Bold"
-xf = "M Plus 1 Code Nerd Font Bold"
+xx = 13
+xf = "Jetbrainsmono Nerd Font Bold"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -18,22 +17,22 @@ default = [
         font=xf,
     ),
     widget.GroupBox(
-        font="Zed Mono Extended Bold",
-        fontsize=18,
+        font=xf,
+        fontsize=xx,
         margin_y=4,
         margin_x=5,
-        padding_y=3,
-        padding_x=4,
-        borderwidth=8,
-        inactive=theme["green"],
+        padding_y=1,
+        padding_x=5,
+        borderwidth=3,
+        inactive=theme["blue"],
         active=theme["red"],
         rounded=True,
         urgent_alert_method="block",
         urgent_text="#f07a78",
-        highlight_color=theme["yellow"],
-        highlight_method="block",
+        highlight_color=theme["black"],
+        highlight_method="line",
         this_current_screen_border=theme["red"],
-        block_highlight_text_color=theme["black"],
+        block_highlight_text_color=theme["red"],
     ),
     widget.Sep(
         padding=2,
@@ -43,23 +42,10 @@ default = [
         scale=0.45,
         custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
     ),
-    widget.TextBox(
-        foreground=theme["red"],
-        text="|",
-        font=xf,
-    ),
-    widget.WindowName(
-        font=xf,
-        fontsize=20,
-        # background=theme["yellow"],
-        foreground=theme["zero"],
-        max_chars=40
-        ),
-    widget.TextBox(
-        foreground=theme["red"],
-        text="|",
-        font=xf,
-    ),
+
+
+    widget.Spacer(),
+
     widget.Systray(
         icon_size=20,
         padding=4,
@@ -134,7 +120,7 @@ default = [
         foreground=theme["violet"],
         font=xf,
         fontsize=xx,
-        format=' %I:%M %p',
+        format='  %I:%M %p',
     ),
     widget.TextBox(
         foreground=theme["teal"],
@@ -161,34 +147,33 @@ if len(os.listdir("/sys/class/power_supply")) == 0:
 else:
     default.extend(
         [
-            # widget.UPowerWidget(),
-            widget.UPowerWidget(
-                font=xf,
-                battery_width=27,
-                battery_height=14,
-                fontsize=xx,
-                percentage_low=0.5,
-                percentage_critical=0.3,
-                fill_critical="#ff0000",
-                fill_charge=theme["teal"],
-                fill_low=theme["yellow"],
-                fill_normal=theme["green"],
-                border_colour=theme["teal"],
-                border_critical_colour="#ff0000",
-                border_low_colour=theme["yellow"],
-                border_charge_colour=theme["teal"],
-                text_charging="",
-                text_discharging="",
-                text_displaytime="",
-                margin=10,
-            ),
+            # widget.UPowerWidget(
+            #     font=xf,
+            #     battery_width=27,
+            #     battery_height=14,
+            #     fontsize=xx,
+            #     percentage_low=0.5,
+            #     percentage_critical=0.3,
+            #     fill_critical="#ff0000",
+            #     fill_charge=theme["green"],
+            #     fill_low=theme["yellow"],
+            #     fill_normal=theme["teal"],
+            #     border_colour=theme["teal"],
+            #     border_critical_colour="#ff0000",
+            #     border_low_colour=theme["yellow"],
+            #     border_charge_colour=theme["green"],
+            #     text_charging="",
+            #     text_discharging="",
+            #     text_displaytime="",
+            #     margin=10,
+            # ),
             widget.Battery(
                 fontsize=xx,
                 font=xf,
                 low_percentage=0.3,
                 low_background=theme["black"],
-                low_foreground=theme["red"],
-                foreground=theme["green"],
+                low_foreground=theme["teal"],
+                foreground=theme["teal"],
                 charge_char='↑',
                 discharge_char='',
                 update_interval=1,
@@ -204,12 +189,13 @@ else:
 
 screens = [
     Screen(
-        bottom = bar.Bar(
+        bottom=bar.Bar(
             default,
-            44,
-            opacity=0.8,
-            margin=[0, 40, 0, 40],
-            background=theme["black"],
+            26,
+            # opacity=0.9,
+            # margin=[0, 0, 6, 0],
+            # background="#000000",
+            background=theme["black"]
         ),
     ),
 ]
