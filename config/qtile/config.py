@@ -27,8 +27,8 @@ layouts = [
     #     **border
     # ),
     layout.TreeTab(
-        font = "Iosevka Bold",
-        fontsize = 17,
+        font = "JetbrainsMono Nerd Font Bold",
+        fontsize = 13,
         border_width = 0,
         bg_color = theme["black"],
         active_bg = theme["red"],

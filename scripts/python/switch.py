@@ -191,7 +191,7 @@ themes = {
         "waybar": "dracula"
     },
     "Dracula": {
-        "openbox": "Dracula-withoutBorder",
+        "openbox": "Dracula",
         "qtile": "dracula",
         "nvim": "dracula",
         "Gtk": "Dracula",

@@ -1,5 +1,5 @@
 [global]
-    font = Zed Mono 10
+    font = JetbrainsMono Nerd Font 12
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
