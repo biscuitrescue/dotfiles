@@ -55,6 +55,21 @@ themes = {
         "starship": "everforest",
         "rofi": "everforest"
     },
+    "Kanagawa-wave": {
+        "openbox": "Ashes-Openbox",
+        "qtile": "kanagawa",
+        "nvim": "kanagawa-wave",
+        "Gtk": "Colloid-Dark",
+        "kitty": "kanagawa_wave",
+        "polybar": "ashes",
+        "alacritty": "kanagawa",
+        "zathura": "ashes",
+        "waybar": "ashes",
+        "dunst": "kanagawa",
+        "emacs": "kanagawa",
+        "starship": "kanagawa",
+        "rofi": "ashes"
+    },
     "Kanagawa": {
         "openbox": "Ashes-Openbox",
         "qtile": "kanagawa",
