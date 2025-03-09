@@ -2876,27 +2876,27 @@ windowcontrols > button.minimize:backdrop:hover, windowcontrols > button.minimiz
 }
 
 windowcontrols > button.minimize > image {
-  background-color: #fdbe04;
+  background-color: #e5c890;
 }
 
 windowcontrols > button.minimize:active > image {
-  background-color: mix(black,#fdbe04,0.75);
+  background-color: mix(black,#e5c890,0.75);
 }
 
 windowcontrols > button.maximize > image {
-  background-color: #38c76a;
+  background-color: #a6d189;
 }
 
 windowcontrols > button.maximize:active > image {
-  background-color: mix(black,#38c76a,0.75);
+  background-color: mix(black,#a6d189,0.75);
 }
 
 windowcontrols > button.close > image {
-  background-color: #fd5f51;
+  background-color: #ea999c;
 }
 
 windowcontrols > button.close:active > image {
-  background-color: mix(black,#fd5f51,0.75);
+  background-color: mix(black,#ea999c,0.75);
 }
 
 windowcontrols {
@@ -4689,7 +4689,7 @@ shortcut > .keycap, .card {
   background-color: @card_bg_color;
   color: @card_fg_color;
   border-radius: 12px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 1px rgba(239, 241, 245, 0.12);
 }
 
 .osd shortcut > .keycap, shortcut > .osd.keycap, .osd .card, .card.osd {
@@ -5800,6 +5800,18 @@ window.shortcuts searchbar {
   transition: background-color 200ms ease-out;
 }
 
+.sidebar-pane listview,
+.sidebar-pane list:not(.navigation-sidebar),
+.sidebar-pane list.boxed-list,
+.sidebar-pane list.content {
+  background-color: mix(white,@sidebar_bg_color,0.95);
+  color: @sidebar_fg_color;
+}
+
+.sidebar-pane list.boxed-list-separate {
+  color: @sidebar_fg_color;
+}
+
 .sidebar-pane flap > dimming,
 .sidebar-pane leaflet > dimming,
 .sidebar-pane navigation-view > dimming,
@@ -6075,6 +6087,106 @@ stacksidebar row > label {
 
 stacksidebar row.needs-attention > label {
   background-size: 6px 6px, 0 0;
+}
+
+#NautilusPathButton, .content-pane headerbar menubutton.image-button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) > button, .content-pane headerbar button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque), .content-pane headerbar button.arrow-button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque), .content-pane headerbar button.image-button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque), .content-pane headerbar button.image-text-button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
+  color: @window_fg_color;
+}
+
+#NautilusPathButton:focus:not(:hover):not(:active), .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:focus:not(:hover):not(:active), .content-pane headerbar button:focus:not(:hover):not(:active):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
+  color: @window_fg_color;
+}
+
+#NautilusPathButton:hover, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:hover, .content-pane headerbar button:hover:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
+  color: @window_fg_color;
+}
+
+.keyboard-activating#NautilusPathButton, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button.keyboard-activating, .content-pane headerbar button.keyboard-activating:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque), #NautilusPathButton:active, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:active, .content-pane headerbar button:active:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
+  color: @window_fg_color;
+}
+
+#NautilusPathButton:disabled, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:disabled, .content-pane headerbar button:disabled:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
+  color: @window_fg_color;
+}
+
+#NautilusPathButton:checked, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:checked, .content-pane headerbar button:checked:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
+  color: @window_fg_color;
+}
+
+#NautilusPathButton:checked:hover, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:checked:hover, .content-pane headerbar button:checked:hover:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
+  color: @window_fg_color;
+}
+
+#NautilusPathButton:checked:active, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:checked:active, .content-pane headerbar button:checked:active:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
+  color: @window_fg_color;
+}
+
+#NautilusPathButton:checked:disabled, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:checked:disabled, .content-pane headerbar button:checked:disabled:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
+  color: @window_fg_color;
+}
+
+.content-pane headerbar {
+  color: @window_fg_color;
+}
+
+.content-pane headerbar entry {
+  color: @window_fg_color;
+}
+
+.content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close {
+  color: transparent;
+}
+
+.content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize:active, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize:active, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close:active {
+  color: white;
+}
+
+.content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize:backdrop > image, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize:backdrop > image, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close:backdrop > image {
+  background-color: alpha(@window_fg_color,0.3);
+}
+
+.content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize:backdrop:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize:backdrop:active, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize:backdrop:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize:backdrop:active, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close:backdrop:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close:backdrop:active {
+  color: alpha(@window_fg_color,0.45);
+}
+
+.content-pane headerbar switch {
+  background-color: alpha(@window_fg_color,0.15);
+}
+
+.content-pane headerbar switch:hover {
+  background-color: alpha(@window_fg_color,0.2);
+}
+
+.content-pane headerbar switch:active {
+  background-color: alpha(@window_fg_color,0.25);
+}
+
+.content-pane headerbar switch:hover > slider, .content-pane headerbar switch:active > slider {
+  box-shadow: 0 2px 3px transparent, 0 0 0 6px alpha(@window_fg_color,0.1);
+}
+
+.content-pane headerbar switch:checked {
+  background-color: @accent_bg_color;
+}
+
+.content-pane tabbar .box {
+  color: @window_fg_color;
+}
+
+.content-pane tabbar tab {
+  color: @window_fg_color;
+}
+
+.content-pane tabbar tab:selected {
+  color: @window_fg_color;
+}
+
+.content-pane tabbar tab:hover {
+  color: @window_fg_color;
+}
+
+.content-pane tabbar tab:active {
+  color: @window_fg_color;
 }
 
 /**********************
@@ -7729,7 +7841,7 @@ menubutton stack > box {
 
 .running-stopwatch .seconds-label,
 .running-stopwatch .miliseconds-label {
-  color: #5b9bf8;
+  color: #8caaee;
 }
 
 .stopped-stopwatch .miliseconds-label,
@@ -7762,20 +7874,20 @@ menubutton stack > box {
 }
 
 .night .clock-time {
-  color: #3c84f7;
-  background-color: alpha(#5b9bf8,0.25);
+  color: #1e66f5;
+  background-color: alpha(#8caaee,0.25);
 }
 
 .naut .clock-time,
 .astro .clock-time {
-  color: #FF7043;
-  background-color: alpha(#FF8A65,0.25);
+  color: #fe640b;
+  background-color: alpha(#ef9f76,0.25);
 }
 
 .civil .clock-time,
 .day .clock-time {
-  color: #FBC02D;
-  background: alpha(#FFD600,0.25);
+  color: #df8e1d;
+  background: alpha(#e5c890,0.25);
 }
 
 .exit-info {
@@ -7897,6 +8009,7 @@ window.org-gnome-TextEditor popover.open-popover > contents {
   background-color: alpha(currentColor,0.05);
   border-radius: 6px;
   padding: 0;
+  color: @window_fg_color;
 }
 
 #NautilusPathButton {
@@ -7966,7 +8079,7 @@ screenshot-carousel button,
 }
 
 .origin-beta {
-  color: #FFD600;
+  color: #e5c890;
 }
 
 .origin-button > button {
@@ -8228,7 +8341,7 @@ button.star {
 }
 
 star-image {
-  color: #FBC02D;
+  color: #df8e1d;
 }
 
 .dimmer-label {
@@ -8248,7 +8361,7 @@ star-image {
 }
 
 .upgrade-banner-background {
-  background: linear-gradient(to bottom, #66BB6A, #5b9bf8);
+  background: linear-gradient(to bottom, #a6d189, #8caaee);
   color: white;
 }
 
@@ -8392,8 +8505,8 @@ carousel.card {
 }
 
 .context-tile-lozenge.blue, .context-tile-lozenge.details-rating-5 {
-  color: #5b9bf8;
-  background-color: alpha(#5b9bf8,0.15);
+  color: #8caaee;
+  background-color: alpha(#8caaee,0.15);
 }
 
 .context-tile-lozenge.yellow, .context-tile-lozenge.details-rating-12 {
@@ -8402,8 +8515,8 @@ carousel.card {
 }
 
 .context-tile-lozenge.details-rating-15 {
-  color: #FF8A65;
-  background-color: alpha(#FF8A65,0.15);
+  color: #ef9f76;
+  background-color: alpha(#ef9f76,0.15);
 }
 
 .context-tile-lozenge.red, .context-tile-lozenge.details-rating-18 {
@@ -8474,7 +8587,7 @@ row.app > box.header > image {
 }
 
 row.app label.warning {
-  color: #F44336;
+  color: #ea999c;
 }
 
 @keyframes pre-delay {
@@ -8726,6 +8839,182 @@ popover.menu themeswitcher checkbutton.dark {
   background-color: #1e1e1e;
 }
 
+styleselector checkbutton {
+  padding: 0;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0;
+  background-clip: content-box;
+  border-radius: 9999px;
+  box-shadow: none;
+  border: none;
+}
+
+styleselector checkbutton:hover {
+  box-shadow: inset 0 0 0 2px alpha(currentColor,0.12);
+}
+
+styleselector checkbutton:checked {
+  box-shadow: inset 0 0 0 2px var(--accent-bg-color);
+}
+
+styleselector checkbutton:checked > radio, styleselector checkbutton:checked > radio:hover, styleselector checkbutton:checked > radio:checked, styleselector checkbutton:checked > radio:checked:hover {
+  -gtk-icon-size: 20px;
+  -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/checkbox-checked-symbolic.svg")), -gtk-recolor(url("assets/checkbox-checked-symbolic@2.svg")));
+  color: var(--accent-fg-color);
+  background-color: var(--accent-bg-color);
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+styleselector checkbutton > radio {
+  min-height: 20px;
+  min-width: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+styleselector checkbutton > radio:not(:checked):not(:indeterminate), styleselector checkbutton > radio:not(:checked):not(:indeterminate):hover {
+  color: transparent;
+  border: none;
+  background: none;
+  box-shadow: none;
+  -gtk-icon-source: none;
+}
+
+.note-window, .note-window .text-view.view, .note-window window.print .text-view.dialog-action-box, window.print .note-window .text-view.dialog-action-box, .note-window .text-view.view > text, .note-window window.print .text-view.dialog-action-box > text, window.print .note-window .text-view.dialog-action-box > text, .note-window .toolbar, .note-window .toolbar button {
+  color: @accent_fg_color;
+}
+
+.note-window .top-bar > windowhandle:backdrop {
+  filter: none;
+}
+
+.note-window popover > arrow,
+.note-window popover > contents {
+  border: 1px solid alpha(@accent_fg_color,0.1);
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.09), 0 2px 14px 3px rgba(0, 0, 0, 0.05);
+}
+
+.note-window.style-yellow, .note-window.style-yellow .text-view.view, .note-window.style-yellow window.print .text-view.dialog-action-box, window.print .note-window.style-yellow .text-view.dialog-action-box, .note-window.style-yellow .text-view.view > text, .note-window.style-yellow window.print .text-view.dialog-action-box > text, window.print .note-window.style-yellow .text-view.dialog-action-box > text {
+  background-color: var(--accent-yellow);
+}
+
+.note-window.style-yellow headerbar.flat, .note-window.style-yellow window.print headerbar.titlebar, window.print .note-window.style-yellow headerbar.titlebar, .note-window.style-yellow window.pagesetup headerbar.titlebar, window.pagesetup .note-window.style-yellow headerbar.titlebar, .note-window.style-yellow window.aboutdialog headerbar.titlebar, window.aboutdialog .note-window.style-yellow headerbar.titlebar, .note-window.style-yellow window.colorchooser headerbar.titlebar, window.colorchooser .note-window.style-yellow headerbar.titlebar, .note-window.style-yellow window.appchooser headerbar.titlebar, window.appchooser .note-window.style-yellow headerbar.titlebar, .note-window.style-yellow window.shortcuts headerbar.titlebar, window.shortcuts .note-window.style-yellow headerbar.titlebar, .note-window.style-yellow headerbar.flat:backdrop, .note-window.style-yellow .toolbar, .note-window.style-yellow .toolbar:backdrop {
+  background-color: var(--accent-yellow);
+}
+
+.note-window.style-yellow .text-view.view > text > selection, .note-window.style-yellow window.print .text-view.dialog-action-box > text > selection, window.print .note-window.style-yellow .text-view.dialog-action-box > text > selection {
+  background-color: alpha(@accent_fg_color,0.35);
+}
+
+.note-window.style-yellow popover > arrow,
+.note-window.style-yellow popover > contents {
+  background-color: mix(@accent_fg_color,var(--accent-yellow),0.9);
+}
+
+.note-window.style-pink, .note-window.style-pink .text-view.view, .note-window.style-pink window.print .text-view.dialog-action-box, window.print .note-window.style-pink .text-view.dialog-action-box, .note-window.style-pink .text-view.view > text, .note-window.style-pink window.print .text-view.dialog-action-box > text, window.print .note-window.style-pink .text-view.dialog-action-box > text {
+  background-color: var(--accent-pink);
+}
+
+.note-window.style-pink headerbar.flat, .note-window.style-pink window.print headerbar.titlebar, window.print .note-window.style-pink headerbar.titlebar, .note-window.style-pink window.pagesetup headerbar.titlebar, window.pagesetup .note-window.style-pink headerbar.titlebar, .note-window.style-pink window.aboutdialog headerbar.titlebar, window.aboutdialog .note-window.style-pink headerbar.titlebar, .note-window.style-pink window.colorchooser headerbar.titlebar, window.colorchooser .note-window.style-pink headerbar.titlebar, .note-window.style-pink window.appchooser headerbar.titlebar, window.appchooser .note-window.style-pink headerbar.titlebar, .note-window.style-pink window.shortcuts headerbar.titlebar, window.shortcuts .note-window.style-pink headerbar.titlebar, .note-window.style-pink headerbar.flat:backdrop, .note-window.style-pink .toolbar, .note-window.style-pink .toolbar:backdrop {
+  background-color: var(--accent-pink);
+}
+
+.note-window.style-pink .text-view.view > text > selection, .note-window.style-pink window.print .text-view.dialog-action-box > text > selection, window.print .note-window.style-pink .text-view.dialog-action-box > text > selection {
+  background-color: alpha(@accent_fg_color,0.35);
+}
+
+.note-window.style-pink popover > arrow,
+.note-window.style-pink popover > contents {
+  background-color: mix(@accent_fg_color,var(--accent-pink),0.9);
+}
+
+.note-window.style-green, .note-window.style-green .text-view.view, .note-window.style-green window.print .text-view.dialog-action-box, window.print .note-window.style-green .text-view.dialog-action-box, .note-window.style-green .text-view.view > text, .note-window.style-green window.print .text-view.dialog-action-box > text, window.print .note-window.style-green .text-view.dialog-action-box > text {
+  background-color: var(--accent-green);
+}
+
+.note-window.style-green headerbar.flat, .note-window.style-green window.print headerbar.titlebar, window.print .note-window.style-green headerbar.titlebar, .note-window.style-green window.pagesetup headerbar.titlebar, window.pagesetup .note-window.style-green headerbar.titlebar, .note-window.style-green window.aboutdialog headerbar.titlebar, window.aboutdialog .note-window.style-green headerbar.titlebar, .note-window.style-green window.colorchooser headerbar.titlebar, window.colorchooser .note-window.style-green headerbar.titlebar, .note-window.style-green window.appchooser headerbar.titlebar, window.appchooser .note-window.style-green headerbar.titlebar, .note-window.style-green window.shortcuts headerbar.titlebar, window.shortcuts .note-window.style-green headerbar.titlebar, .note-window.style-green headerbar.flat:backdrop, .note-window.style-green .toolbar, .note-window.style-green .toolbar:backdrop {
+  background-color: var(--accent-green);
+}
+
+.note-window.style-green .text-view.view > text > selection, .note-window.style-green window.print .text-view.dialog-action-box > text > selection, window.print .note-window.style-green .text-view.dialog-action-box > text > selection {
+  background-color: alpha(@accent_fg_color,0.35);
+}
+
+.note-window.style-green popover > arrow,
+.note-window.style-green popover > contents {
+  background-color: mix(@accent_fg_color,var(--accent-green),0.9);
+}
+
+.note-window.style-purple, .note-window.style-purple .text-view.view, .note-window.style-purple window.print .text-view.dialog-action-box, window.print .note-window.style-purple .text-view.dialog-action-box, .note-window.style-purple .text-view.view > text, .note-window.style-purple window.print .text-view.dialog-action-box > text, window.print .note-window.style-purple .text-view.dialog-action-box > text {
+  background-color: var(--accent-purple);
+}
+
+.note-window.style-purple headerbar.flat, .note-window.style-purple window.print headerbar.titlebar, window.print .note-window.style-purple headerbar.titlebar, .note-window.style-purple window.pagesetup headerbar.titlebar, window.pagesetup .note-window.style-purple headerbar.titlebar, .note-window.style-purple window.aboutdialog headerbar.titlebar, window.aboutdialog .note-window.style-purple headerbar.titlebar, .note-window.style-purple window.colorchooser headerbar.titlebar, window.colorchooser .note-window.style-purple headerbar.titlebar, .note-window.style-purple window.appchooser headerbar.titlebar, window.appchooser .note-window.style-purple headerbar.titlebar, .note-window.style-purple window.shortcuts headerbar.titlebar, window.shortcuts .note-window.style-purple headerbar.titlebar, .note-window.style-purple headerbar.flat:backdrop, .note-window.style-purple .toolbar, .note-window.style-purple .toolbar:backdrop {
+  background-color: var(--accent-purple);
+}
+
+.note-window.style-purple .text-view.view > text > selection, .note-window.style-purple window.print .text-view.dialog-action-box > text > selection, window.print .note-window.style-purple .text-view.dialog-action-box > text > selection {
+  background-color: alpha(@accent_fg_color,0.35);
+}
+
+.note-window.style-purple popover > arrow,
+.note-window.style-purple popover > contents {
+  background-color: mix(@accent_fg_color,var(--accent-purple),0.9);
+}
+
+.note-window.style-blue, .note-window.style-blue .text-view.view, .note-window.style-blue window.print .text-view.dialog-action-box, window.print .note-window.style-blue .text-view.dialog-action-box, .note-window.style-blue .text-view.view > text, .note-window.style-blue window.print .text-view.dialog-action-box > text, window.print .note-window.style-blue .text-view.dialog-action-box > text {
+  background-color: var(--accent-blue);
+}
+
+.note-window.style-blue headerbar.flat, .note-window.style-blue window.print headerbar.titlebar, window.print .note-window.style-blue headerbar.titlebar, .note-window.style-blue window.pagesetup headerbar.titlebar, window.pagesetup .note-window.style-blue headerbar.titlebar, .note-window.style-blue window.aboutdialog headerbar.titlebar, window.aboutdialog .note-window.style-blue headerbar.titlebar, .note-window.style-blue window.colorchooser headerbar.titlebar, window.colorchooser .note-window.style-blue headerbar.titlebar, .note-window.style-blue window.appchooser headerbar.titlebar, window.appchooser .note-window.style-blue headerbar.titlebar, .note-window.style-blue window.shortcuts headerbar.titlebar, window.shortcuts .note-window.style-blue headerbar.titlebar, .note-window.style-blue headerbar.flat:backdrop, .note-window.style-blue .toolbar, .note-window.style-blue .toolbar:backdrop {
+  background-color: var(--accent-blue);
+}
+
+.note-window.style-blue .text-view.view > text > selection, .note-window.style-blue window.print .text-view.dialog-action-box > text > selection, window.print .note-window.style-blue .text-view.dialog-action-box > text > selection {
+  background-color: alpha(@accent_fg_color,0.35);
+}
+
+.note-window.style-blue popover > arrow,
+.note-window.style-blue popover > contents {
+  background-color: mix(@accent_fg_color,var(--accent-blue),0.9);
+}
+
+.note-window.style-gray, .note-window.style-gray .text-view.view, .note-window.style-gray window.print .text-view.dialog-action-box, window.print .note-window.style-gray .text-view.dialog-action-box, .note-window.style-gray .text-view.view > text, .note-window.style-gray window.print .text-view.dialog-action-box > text, window.print .note-window.style-gray .text-view.dialog-action-box > text {
+  background-color: #565656;
+}
+
+.note-window.style-gray headerbar.flat, .note-window.style-gray window.print headerbar.titlebar, window.print .note-window.style-gray headerbar.titlebar, .note-window.style-gray window.pagesetup headerbar.titlebar, window.pagesetup .note-window.style-gray headerbar.titlebar, .note-window.style-gray window.aboutdialog headerbar.titlebar, window.aboutdialog .note-window.style-gray headerbar.titlebar, .note-window.style-gray window.colorchooser headerbar.titlebar, window.colorchooser .note-window.style-gray headerbar.titlebar, .note-window.style-gray window.appchooser headerbar.titlebar, window.appchooser .note-window.style-gray headerbar.titlebar, .note-window.style-gray window.shortcuts headerbar.titlebar, window.shortcuts .note-window.style-gray headerbar.titlebar, .note-window.style-gray headerbar.flat:backdrop, .note-window.style-gray .toolbar, .note-window.style-gray .toolbar:backdrop {
+  background-color: #565656;
+}
+
+.note-window.style-gray .text-view.view > text > selection, .note-window.style-gray window.print .text-view.dialog-action-box > text > selection, window.print .note-window.style-gray .text-view.dialog-action-box > text > selection {
+  background-color: alpha(@accent_fg_color,0.35);
+}
+
+.note-window.style-gray popover > arrow,
+.note-window.style-gray popover > contents {
+  background-color: mix(@accent_fg_color,#565656,0.9);
+}
+
+.note-window.style-charcoal, .note-window.style-charcoal .text-view.view, .note-window.style-charcoal window.print .text-view.dialog-action-box, window.print .note-window.style-charcoal .text-view.dialog-action-box, .note-window.style-charcoal .text-view.view > text, .note-window.style-charcoal window.print .text-view.dialog-action-box > text, window.print .note-window.style-charcoal .text-view.dialog-action-box > text {
+  background-color: #2b2b2b;
+}
+
+.note-window.style-charcoal headerbar.flat, .note-window.style-charcoal window.print headerbar.titlebar, window.print .note-window.style-charcoal headerbar.titlebar, .note-window.style-charcoal window.pagesetup headerbar.titlebar, window.pagesetup .note-window.style-charcoal headerbar.titlebar, .note-window.style-charcoal window.aboutdialog headerbar.titlebar, window.aboutdialog .note-window.style-charcoal headerbar.titlebar, .note-window.style-charcoal window.colorchooser headerbar.titlebar, window.colorchooser .note-window.style-charcoal headerbar.titlebar, .note-window.style-charcoal window.appchooser headerbar.titlebar, window.appchooser .note-window.style-charcoal headerbar.titlebar, .note-window.style-charcoal window.shortcuts headerbar.titlebar, window.shortcuts .note-window.style-charcoal headerbar.titlebar, .note-window.style-charcoal headerbar.flat:backdrop, .note-window.style-charcoal .toolbar, .note-window.style-charcoal .toolbar:backdrop {
+  background-color: #2b2b2b;
+}
+
+.note-window.style-charcoal .text-view.view > text > selection, .note-window.style-charcoal window.print .text-view.dialog-action-box > text > selection, window.print .note-window.style-charcoal .text-view.dialog-action-box > text > selection {
+  background-color: alpha(@accent_fg_color,0.35);
+}
+
+.note-window.style-charcoal popover > arrow,
+.note-window.style-charcoal popover > contents {
+  background-color: mix(@accent_fg_color,#2b2b2b,0.9);
+}
+
 window#desktopwindow.background {
   background: none;
 }
@@ -8733,51 +9022,51 @@ window#desktopwindow.background {
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
-@define-color accent_bg_color #5b9bf8;
-@define-color accent_fg_color #FFFFFF;
-@define-color accent_color #5b9bf8;
-@define-color destructive_bg_color #F44336;
-@define-color destructive_fg_color #FFFFFF;
-@define-color destructive_color #F44336;
-@define-color success_bg_color #66BB6A;
-@define-color success_fg_color #FFFFFF;
-@define-color success_color #66BB6A;
-@define-color warning_bg_color #FFD600;
-@define-color warning_fg_color rgba(0, 0, 0, 0.87);
-@define-color warning_color #FFD600;
-@define-color error_bg_color #F44336;
-@define-color error_fg_color #FFFFFF;
-@define-color error_color #F44336;
-@define-color window_bg_color #2C2C2C;
-@define-color window_fg_color #FFFFFF;
-@define-color view_bg_color #2C2C2C;
-@define-color view_fg_color #FFFFFF;
-@define-color headerbar_bg_color #2C2C2C;
-@define-color headerbar_fg_color #FFFFFF;
-@define-color headerbar_border_color #FFFFFF;
-@define-color headerbar_backdrop_color #242424;
+@define-color accent_bg_color #8caaee;
+@define-color accent_fg_color rgba(17, 17, 27, 0.87);
+@define-color accent_color #8caaee;
+@define-color destructive_bg_color #ea999c;
+@define-color destructive_fg_color rgba(17, 17, 27, 0.87);
+@define-color destructive_color #ea999c;
+@define-color success_bg_color #a6d189;
+@define-color success_fg_color rgba(17, 17, 27, 0.87);
+@define-color success_color #a6d189;
+@define-color warning_bg_color #e5c890;
+@define-color warning_fg_color rgba(17, 17, 27, 0.87);
+@define-color warning_color #e5c890;
+@define-color error_bg_color #ea999c;
+@define-color error_fg_color rgba(17, 17, 27, 0.87);
+@define-color error_color #ea999c;
+@define-color window_bg_color #292c3c;
+@define-color window_fg_color #eff1f5;
+@define-color view_bg_color #292c3c;
+@define-color view_fg_color #eff1f5;
+@define-color headerbar_bg_color #292c3c;
+@define-color headerbar_fg_color #eff1f5;
+@define-color headerbar_border_color #eff1f5;
+@define-color headerbar_backdrop_color #24273a;
 @define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
-@define-color headerbar_darker_shade_color rgba(0, 0, 0, 0.75);
-@define-color sidebar_bg_color #242424;
-@define-color sidebar_fg_color #FFFFFF;
-@define-color sidebar_backdrop_color #2C2C2C;
+@define-color headerbar_darker_shade_color rgba(17, 17, 27, 0.75);
+@define-color sidebar_bg_color #24273a;
+@define-color sidebar_fg_color #eff1f5;
+@define-color sidebar_backdrop_color #292c3c;
 @define-color sidebar_shade_color rgba(0, 0, 0, 0.25);
-@define-color sidebar_border_color rgba(255, 255, 255, 0.08);
-@define-color secondary_sidebar_bg_color #2C2C2C;
-@define-color secondary_sidebar_fg_color #FFFFFF;
-@define-color secondary_sidebar_backdrop_color #2C2C2C;
+@define-color sidebar_border_color rgba(239, 241, 245, 0.08);
+@define-color secondary_sidebar_bg_color #292c3c;
+@define-color secondary_sidebar_fg_color #eff1f5;
+@define-color secondary_sidebar_backdrop_color #292c3c;
 @define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.25);
-@define-color secondary_sidebar_border_color rgba(255, 255, 255, 0.12);
-@define-color card_bg_color rgba(255, 255, 255, 0.04);
-@define-color card_fg_color #FFFFFF;
+@define-color secondary_sidebar_border_color rgba(239, 241, 245, 0.12);
+@define-color card_bg_color rgba(239, 241, 245, 0.04);
+@define-color card_fg_color #eff1f5;
 @define-color card_shade_color rgba(0, 0, 0, 0.36);
-@define-color dialog_bg_color #242424;
-@define-color dialog_fg_color #FFFFFF;
-@define-color popover_bg_color #2C2C2C;
-@define-color popover_fg_color #FFFFFF;
+@define-color dialog_bg_color #24273a;
+@define-color dialog_fg_color #eff1f5;
+@define-color popover_bg_color #292c3c;
+@define-color popover_fg_color #eff1f5;
 @define-color popover_shade_color rgba(0, 0, 0, 0.25);
-@define-color thumbnail_bg_color #3C3C3C;
-@define-color thumbnail_fg_color #FFFFFF;
+@define-color thumbnail_bg_color #303446;
+@define-color thumbnail_fg_color #eff1f5;
 @define-color shade_color rgba(0, 0, 0, 0.25);
 @define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);
 /* Public colors from Default */

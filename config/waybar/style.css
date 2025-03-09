@@ -73,7 +73,7 @@
 }
 
 #tray {
-    background-color: @surface1;
+    background-color: @surface0;
     padding: 0.3rem;
     padding-top: 0.7rem;
     padding-bottom: 0.5rem;
