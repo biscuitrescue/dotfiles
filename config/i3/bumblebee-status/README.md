@@ -1,10 +1,16 @@
-# bumblebee-status
+<img src="https://github.com/kellya/bumblebee-status-icon/blob/main/img/bumblebee_status_rtl.svg" width="50" style="display:inline-block">bumblebee-status
+=====================================================
 
-[![Build Status](https://app.travis-ci.com/tobi-wan-kenobi/bumblebee-status.svg?branch=main)](https://app.travis-ci.com/tobi-wan-kenobi/bumblebee-status)
+logo courtesy of [kellya](https://github.com/kellya) - thank you!
+
 [![Documentation Status](https://readthedocs.org/projects/bumblebee-status/badge/?version=main)](https://bumblebee-status.readthedocs.io/en/main/?badge=main)
+![Commits since release](https://img.shields.io/github/commits-since/tobi-wan-kenobi/bumblebee-status/latest)
 ![AUR version (release)](https://img.shields.io/aur/version/bumblebee-status)
 ![AUR version (git)](https://img.shields.io/aur/version/bumblebee-status-git)
-[![PyPI version](https://badge.fury.io/py/bumblebee-status.svg)](https://badge.fury.io/py/bumblebee-status)
+![PyPI version](https://img.shields.io/pypi/v/bumblebee-status)
+![Contributors](https://img.shields.io/github/contributors-anon/tobi-wan-kenobi/bumblebee-status)
+[![Tests](https://github.com/tobi-wan-kenobi/bumblebee-status/actions/workflows/autotest.yml/badge.svg?branch=main)](https://github.com/tobi-wan-kenobi/bumblebee-status/actions/workflows/autotest.yml)
+
 [![Code Climate](https://codeclimate.com/github/tobi-wan-kenobi/bumblebee-status/badges/gpa.svg)](https://codeclimate.com/github/tobi-wan-kenobi/bumblebee-status)
 [![Test Coverage](https://codeclimate.com/github/tobi-wan-kenobi/bumblebee-status/badges/coverage.svg)](https://codeclimate.com/github/tobi-wan-kenobi/bumblebee-status/coverage)
 [![Issue Count](https://codeclimate.com/github/tobi-wan-kenobi/bumblebee-status/badges/issue_count.svg)](https://codeclimate.com/github/tobi-wan-kenobi/bumblebee-status)
@@ -79,6 +85,19 @@ pip install --user bumblebee-status
 There is also a SlackBuild available here: [slackbuilds:bumblebee-status](http://slackbuilds.org/repository/14.2/desktop/bumblebee-status/) - many thanks to [@Tonus1](https://github.com/Tonus1)!
 
 An ebuild, for Gentoo Linux, is available on [gallifrey overlay](https://github.com/fedeliallalinea/gallifrey/tree/master/x11-misc/bumblebee-status). Instructions for adding the overlay can be found [here](https://github.com/fedeliallalinea/gallifrey/blob/master/README.md).
+
+bumblebee-status is also avaliable in nixpkgs unstable channel- many thanks to [@augustebaum][https://github.com/augustebaum]!
+
+For installing from nixpkgs, add the following snippet into your `configuration.nix`:
+
+```nix
+{
+  environment.systemPackages = with pkgs; [
+      (bumblebee-status.override{plugins = p:[p.cpu];})
+  ];
+}
+```
+replace `[p.cpu]` with the list of plugins that you want to use.
 
 # Dependencies
 [Available modules](https://bumblebee-status.readthedocs.io/en/main/modules.html) lists the dependencies (Python modules and external executables)

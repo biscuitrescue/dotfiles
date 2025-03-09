@@ -1,6 +1,14 @@
 {
     "output": {
         "blocklist": [],
+        "convolver#0": {
+            "autogain": true,
+            "bypass": false,
+            "input-gain": -2.0,
+            "ir-width": 100,
+            "kernel-name": "Dolby ATMOS ((128K MP3)) 1.Default",
+            "output-gain": 0.0
+        },
         "equalizer#0": {
             "balance": 0.0,
             "bypass": false,
@@ -238,7 +246,8 @@
         },
         "plugins_order": [
             "equalizer#0",
-            "reverb#0"
+            "reverb#0",
+            "convolver#0"
         ],
         "reverb#0": {
             "amount": -12.0,

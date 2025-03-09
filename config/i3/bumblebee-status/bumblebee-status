@@ -68,13 +68,18 @@ def handle_commands(config, update_lock):
 
 def handle_events(config, update_lock):
     while True:
-        line = sys.stdin.readline().strip(",").strip()
-        if line == "[": continue
-        logging.info("input event: {}".format(line))
-        process_event(line, config, update_lock)
+        try:
+            line = sys.stdin.readline().strip(",").strip()
+            if line == "[": continue
+            logging.info("input event: {}".format(line))
+            process_event(line, config, update_lock)
+        except Exception as e:
+            logging.error(e)
 
 
 def main():
+    global started
+
     config = core.config.Config(sys.argv[1:])
     level = logging.DEBUG if config.debug() else logging.ERROR
     if config.logfile():
@@ -97,14 +102,15 @@ def main():
     core.input.register(None, core.input.WHEEL_UP, "i3-msg workspace prev_on_output")
     core.input.register(None, core.input.WHEEL_DOWN, "i3-msg workspace next_on_output")
 
+    core.event.trigger("start")
+    started = True
+
     update_lock = threading.Lock()
     event_thread = threading.Thread(target=handle_events, args=(config, update_lock, ))
     event_thread.daemon = True
-    event_thread.start()
 
     cmd_thread = threading.Thread(target=handle_commands, args=(config, update_lock, ))
     cmd_thread.daemon = True
-    cmd_thread.start()
 
     def sig_USR1_handler(signum,stack):
         if update_lock.acquire(blocking=False) == True:
@@ -122,13 +128,14 @@ def main():
     if config.reverse():
         modules.reverse()
 
+    event_thread.start()
+    cmd_thread.start()
+
     output.modules(modules)
 
     if util.format.asbool(config.get("engine.collapsible", True)) == True:
         core.input.register(None, core.input.MIDDLE_MOUSE, output.toggle_minimize)
 
-    core.event.trigger("start")
-    started = True
     signal.signal(10, sig_USR1_handler)
     while True:
         if update_lock.acquire(blocking=False) == True:
@@ -146,6 +153,7 @@ if __name__ == "__main__":
         main()
     except Exception as e:
         # really basic errors -> make sure these are shown in the status bar by minimal config
+        logging.exception(e)
         if not started:
             print("{\"version\":1}")
             print("[")

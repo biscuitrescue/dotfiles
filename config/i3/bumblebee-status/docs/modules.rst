@@ -60,7 +60,7 @@ Shows free diskspace, total diskspace and the percentage of free disk space.
 
 Parameters:
     * disk.warning: Warning threshold in % of disk space (defaults to 80%)
-    * disk.critical: Critical threshold in % of disk space (defaults ot 90%)
+    * disk.critical: Critical threshold in % of disk space (defaults to 90%)
     * disk.path: Path to calculate disk usage from (defaults to /)
     * disk.open: Which application / file manager to launch (default xdg-open)
     * disk.format: Format string, tags {path}, {used}, {left}, {size} and {percent} (defaults to '{path} {used}/{size} ({percent:05.02f}%)')
@@ -92,6 +92,22 @@ Shows when a key is pressed
 
 Parameters:
     * keys.keys: Comma-separated list of keys to monitor (defaults to "")
+
+layout
+~~~~~~
+
+Displays the current keyboard layout using libX11
+
+Requires the following library:
+    * libX11.so.6
+and python module:
+    * xkbgroup
+
+Parameters:
+    * layout-xkb.showname: Boolean that indicate whether the full name should be displayed. Defaults to false (only the symbol will be displayed)
+    * layout-xkb.show_variant: Boolean that indecates whether the variant name should be displayed. Defaults to true.
+
+.. image:: ../screenshots/layout.png
 
 layout-xkb
 ~~~~~~~~~~
@@ -171,7 +187,9 @@ Parameters:
     * nic.exclude: Comma-separated list of interface prefixes (supporting regular expressions) to exclude (defaults to 'lo,virbr,docker,vboxnet,veth,br,.*:avahi')
     * nic.include: Comma-separated list of interfaces to include
     * nic.states: Comma-separated list of states to show (prefix with '^' to invert - i.e. ^down -> show all devices that are not in state down)
-    * nic.format: Format string (defaults to '{intf} {state} {ip} {ssid}')
+    * nic.format: Format string (defaults to '{intf} {state} {ip} {ssid} {strength}')
+    * nic.strength_warning: Integer to set the threshold for warning state (defaults to 50)
+    * nic.strength_critical: Integer to set the threshold for critical state (defaults to 30)
 
 .. image:: ../screenshots/nic.png
 
@@ -197,6 +215,8 @@ pulseaudio
 
 Displays volume and mute status and controls for PulseAudio devices. Use wheel up and down to change volume, left click mutes, right click opens pavucontrol.
 
+!!! This module will eventually be deprecated (since it has bad performance and high CPU load) and be replaced with "pulsectl", which is a much better drop-in replacement !!!
+
 Aliases: pasink (use this to control output instead of input), pasource
 
 Parameters:
@@ -206,6 +226,20 @@ Parameters:
       Note: If the left and right channels have different volumes, the limit might not be reached exactly.
     * pulseaudio.showbars: 1 for showing volume bars, requires --markup=pango;
       0 for not showing volume bars (default)
+    * pulseaudio.showdevicename: If set to 'true' (default is 'false'), the currently selected default device is shown.
+      Per default, the sink/source name returned by "pactl list sinks short" is used as display name.
+
+      As this name is usually not particularly nice (e.g "alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo"),
+      its possible to map the name to more a user friendly name.
+
+      e.g to map "alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo" to the name "Headset", add the following
+      bumblebee-status config entry: pulseaudio.alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo=Headset
+
+      Furthermore its possible to specify individual (unicode) icons for all sinks/sources. e.g in order to use the icon 🎧 for the
+      "alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo" sink, add the following bumblebee-status config entry:
+      pulseaudio.icon.alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo=🎧
+    * Per default a left mouse button click mutes/unmutes the device. In case you want to open a dropdown menu to change the current
+      default device add the following config entry to your bumblebee-status config: pulseaudio.left-click=select_default_device_popup
 
 Requires the following executable:
     * pulseaudio
@@ -213,6 +247,44 @@ Requires the following executable:
     * pavucontrol
 
 .. image:: ../screenshots/pulseaudio.png
+
+pulsectl
+~~~~~~~~
+
+Displays volume and mute status and controls for PulseAudio devices. Use wheel up and down to change volume, left click mutes, right click opens pavucontrol.
+
+**Please prefer this module over the "pulseaudio" module, which will eventually be deprecated
+
+Aliases: pulseout (for outputs, such as headsets, speakers), pulsein (for microphones)
+
+NOTE: Do **not** use this module directly, but rather use either pulseout or pulsein!
+NOTE2: For the parameter names below, please also use pulseout or pulsein, instead of pulsectl
+
+Parameters:
+    * pulsectl.autostart: If set to 'true' (default is 'false'), automatically starts the pulsectl daemon if it is not running
+    * pulsectl.percent_change: How much to change volume by when scrolling on the module (default is 2%)
+    * pulsectl.limit: Upper limit for setting the volume (default is 0%, which means 'no limit')
+    * pulsectl.popup-filter: Comma-separated list of device strings (if the device name contains it) to exclude
+      from the default device popup menu (e.g. Monitor for sources)
+    * pulsectl.showbars: 'true' for showing volume bars, requires --markup=pango;
+      'false' for not showing volume bars (default)
+    * pulsectl.showdevicename: If set to 'true' (default is 'false'), the currently selected default device is shown.
+      Per default, the sink/source name returned by "pactl list sinks short" is used as display name.
+
+      As this name is usually not particularly nice (e.g "alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo"),
+      its possible to map the name to more a user friendly name.
+
+      e.g to map "alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo" to the name "Headset", add the following
+      bumblebee-status config entry: pulsectl.alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo=Headset
+
+      Furthermore its possible to specify individual (unicode) icons for all sinks/sources. e.g in order to use the icon 🎧 for the
+      "alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo" sink, add the following bumblebee-status config entry:
+      pulsectl.icon.alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo=🎧
+    * Per default a left mouse button click mutes/unmutes the device. In case you want to open a dropdown menu to change the current
+      default device add the following config entry to your bumblebee-status config: pulsectl.left-click=select_default_device_popup
+
+Requires the following Python module:
+    * pulsectl
 
 redshift
 ~~~~~~~~
@@ -229,8 +301,17 @@ Parameters:
     * redshift.lat : latitude if location is set to 'manual'
     * redshift.lon : longitude if location is set to 'manual'
     * redshift.show_transition: information about the transitions (x% day) defaults to True
+    * redshift.adjust: set this to 'true' (defaults to false) to let bumblebee-status adjust color temperature, instead of just showing the current settings
 
 .. image:: ../screenshots/redshift.png
+
+scroll
+~~~~~~
+
+Displays two widgets that can be used to scroll the whole status bar
+
+Parameters:
+    * scroll.width: Width (in number of widgets) to display
 
 sensors2
 ~~~~~~~~
@@ -246,7 +327,7 @@ Parameters:
     * sensors2.showother: Enable or display 'other' sensor readings (default: false)
     * sensors2.showname: Enable or disable show of sensor name (default: false)
     * sensors2.chip_include: Comma-separated list of chip to include (defaults to '' will include all by default, example: 'coretemp,bat')
-    * sensors2.chip_exclude:Comma separated list of chip to exclude (defaults to '' will exlude none by default)
+    * sensors2.chip_exclude:Comma separated list of chip to exclude (defaults to '' will exclude none by default)
     * sensors2.field_include: Comma separated list of chip to include (defaults to '' will include all by default, example: 'temp,fan')
     * sensors2.field_exclude: Comma separated list of chip to exclude (defaults to '' will exclude none by default)
     * sensors2.chip_field_exclude: Comma separated list of chip field to exclude (defaults to '' will exclude none by default, example: 'coretemp-isa-0000.temp1,coretemp-isa-0000.fan1')
@@ -345,12 +426,15 @@ Requires the following executable:
     * amixer
 
 Parameters:
+    * amixer.card: Sound Card to use (default is 0)
     * amixer.device: Device to use (default is Master,0)
     * amixer.percent_change: How much to change volume by when scrolling on the module (default is 4%)
 
 contributed by `zetxx <https://github.com/zetxx>`_ - many thanks!
 
 input handling contributed by `ardadem <https://github.com/ardadem>`_ - many thanks!
+
+multiple audio cards contributed by `hugoeustaquio <https://github.com/hugoeustaquio>`_ - many thanks!
 
 .. image:: ../screenshots/amixer.png
 
@@ -375,6 +459,9 @@ saved screen layout as well as toggle on/off individual connected displays.
 Parameters:
     * No configuration parameters
 
+Requires the following python modules:
+    * tkinter
+
 Requires the following executable:
     * arandr
     * xrandr
@@ -391,6 +478,8 @@ Requires the following executable:
 
 contributed by `lucassouto <https://github.com/lucassouto>`_ - many thanks!
 
+.. image:: ../screenshots/arch-update.png
+
 arch_update
 ~~~~~~~~~~~
 
@@ -400,6 +489,18 @@ Requires the following executable:
     * checkupdates (from pacman-contrib)
 
 contributed by `lucassouto <https://github.com/lucassouto>`_ - many thanks!
+
+aur-update
+~~~~~~~~~~
+
+Check updates for AUR.
+
+Requires the following executable:
+    * yay (https://github.com/Jguer/yay)
+
+contributed by `ishaanbhimwal <https://github.com/ishaanbhimwal>`_ - many thanks!
+
+.. image:: ../screenshots/aur-update.png
 
 battery
 ~~~~~~~
@@ -471,6 +572,26 @@ Parameters:
     * bluetooth.manager : application to launch on click (blueman-manager)
 
 contributed by `martindoublem <https://github.com/martindoublem>`_ - many thanks!
+
+blugon
+~~~~~~
+
+Displays temperature of blugon and Controls it.
+
+Use wheel up and down to change temperature, middle click to toggle and right click to reset temperature.
+
+Default Values:
+    * Minimum temperature: 1000 (red)
+    * Maximum temperature: 20000 (blue)
+    * Default temperature: 6600
+
+Requires the following executable:
+    * blugon
+
+Parameters:
+    * blugon.step: The amount of increase/decrease on scroll (default: 200)
+
+contributed by `DTan13 <https://github.com/DTan13>`
 
 brightness
 ~~~~~~~~~~
@@ -560,14 +681,57 @@ Parameters:
          * cpu2.fanspeed
     * cpu2.colored: 1 for colored per core load graph, 0 for mono (default)
     * cpu2.temp_pattern: pattern to look for in the output of 'sensors -u';
-      required if cpu2.temp widged is used
+      required if cpu2.temp widget is used
     * cpu2.fan_pattern: pattern to look for in the output of 'sensors -u';
-      required if cpu2.fanspeed widged is used
+      required if cpu2.fanspeed widget is used
 
 Note: if you are getting 'n/a' for CPU temperature / fan speed, then you're
 lacking the aforementioned pattern settings or they have wrong values.
 
 contributed by `somospocos <https://github.com/somospocos>`_ - many thanks!
+
+cpu3
+~~~~
+
+Multiwidget CPU module
+
+Can display any combination of:
+
+    * max CPU frequency
+    * total CPU load in percents (integer value)
+    * per-core CPU load as graph - either mono or colored
+    * CPU temperature (in Celsius degrees)
+    * CPU fan speed
+
+Requirements:
+
+    * the psutil Python module for the first three items from the list above
+    * sensors executable for the rest
+
+Parameters:
+    * cpu3.layout: Space-separated list of widgets to add.
+      Possible widgets are:
+
+         * cpu3.maxfreq
+         * cpu3.cpuload
+         * cpu3.coresload
+         * cpu3.temp
+         * cpu3.fanspeed
+    * cpu3.colored: 1 for colored per core load graph, 0 for mono (default)
+    * cpu3.temp_json: json path to look for in the output of 'sensors -j';
+      required if cpu3.temp widget is used
+    * cpu3.fan_json: json path to look for in the output of 'sensors -j';
+      required if cpu3.fanspeed widget is used
+
+Note: if you are getting 'n/a' for CPU temperature / fan speed, then you're
+lacking the aforementioned json path settings or they have wrong values.
+
+Example json paths:
+  * `cpu3.temp_json="coretemp-isa-0000.Package id 0.temp1_input"`
+  * `cpu3.fan_json="thinkpad-isa-0000.fan1.fan1_input"`
+
+contributed by `SuperQ <https://github.com/SuperQ>`
+based on cpu2 by `<somospocos <https://github.com/somospocos>`
 
 currency
 ~~~~~~~~
@@ -720,6 +884,9 @@ be running. Scripts will be executed when dunst gets unpaused.
 Requires:
     * dunst v1.5.0+
 
+Parameters:
+    * dunstctl.disabled(Boolean): dunst state on start
+
 contributed by `cristianmiranda <https://github.com/cristianmiranda>`_ - many thanks!
 contributed by `joachimmathes <https://github.com/joachimmathes>`_ - many thanks!
 
@@ -736,9 +903,36 @@ Requires the following executable:
 Parameters:
     * emerge_status.format: Format string (defaults to '{current}/{total} {action} {category}/{pkg}')
 
-This code is based on `emerge_status module from p3status <https://github.com/ultrabug/py3status/blob/master/py3status/modules/emerge_status.py>`_ original created by `AnwariasEu <https://github.com/AnwariasEu>`_.
+This code is based on emerge_status module from p3status [1] original created by AnwariasEu.
+
+[1] https://github.com/ultrabug/py3status/blob/master/py3status/modules/emerge_status.py 
 
 .. image:: ../screenshots/emerge_status.png
+
+gcalendar
+~~~~~~~~~
+
+Displays first upcoming event in google calendar.
+
+Events that are set as 'all-day' will not be shown.
+
+Requires credentials.json from a google api application where the google calendar api is installed.
+On first time run the browser will open and google will ask for permission for this app to access
+the google calendar and then save a .gcalendar_token.json file to the credentials_path directory
+which stores this permission.
+
+A refresh is done every 15 minutes.
+
+Parameters:
+    * gcalendar.time_format: Format time output. Defaults to "%H:%M".
+    * gcalendar.date_format: Format date output. Defaults to "%d.%m.%y".
+    * gcalendar.credentials_path: Path to credentials.json. Defaults to "~/".
+    * gcalendar.locale: locale to use rather than the system default.
+
+Requires these pip packages:
+   * google-api-python-client >= 1.8.0
+   * google-auth-httplib2
+   * google-auth-oauthlib
 
 getcrypto
 ~~~~~~~~~
@@ -781,6 +975,29 @@ contributed by:
     * v2 - `cristianmiranda <https://github.com/cristianmiranda>`_ - many thanks!
 
 .. image:: ../screenshots/github.png
+
+gitlab
+~~~~~~
+
+Displays the GitLab todo count:
+
+    * https://docs.gitlab.com/ee/user/todos.html
+    * https://docs.gitlab.com/ee/api/todos.html
+
+Uses `xdg-open` or `x-www-browser` to open web-pages.
+
+Requires the following library:
+    * requests
+
+Errors:
+    if the GitLab todo query failed, the shown value is `n/a`
+
+Parameters:
+    * gitlab.token: GitLab personal access token, the token needs to have the "read_api" scope.
+    * gitlab.host: Host of the GitLab instance, default is "gitlab.com".
+    * gitlab.actions: Comma separated actions to be parsed (e.g.: gitlab.actions=assigned,approval_required)
+
+.. image:: ../screenshots/gitlab.png
 
 gpmdp
 ~~~~~
@@ -846,18 +1063,6 @@ contributed by `pierre87 <https://github.com/pierre87>`_ - many thanks!
 
 .. image:: ../screenshots/kernel.png
 
-layout
-~~~~~~
-
-Displays and changes the current keyboard layout
-
-Requires the following executable:
-    * setxkbmap
-
-contributed by `Pseudonick47 <https://github.com/Pseudonick47>`_ - many thanks!
-
-.. image:: ../screenshots/layout.png
-
 layout-xkbswitch
 ~~~~~~~~~~~~~~~~
 
@@ -893,7 +1098,7 @@ messagereceiver
 
 Displays the message that's received via unix socket.
 
-Parameteres:
+Parameters:
     * messagereceiver   : Unix socket address (e.g: /tmp/bumblebee_messagereceiver.sock)
 
 Example:
@@ -978,11 +1183,21 @@ Parameters:
            if {file} = '/foo/bar.baz', then {file2} = 'bar'
 
     * mpd.host: MPD host to connect to. (mpc behaviour by default)
+    * mpd.port: MPD port to connect to. (mpc behaviour by default)
     * mpd.layout: Space-separated list of widgets to add. Possible widgets are the buttons/toggles mpd.prev, mpd.next, mpd.shuffle and mpd.repeat, and the main display with play/pause function mpd.main.
 
 contributed by `alrayyes <https://github.com/alrayyes>`_ - many thanks!
 
 .. image:: ../screenshots/mpd.png
+
+network
+~~~~~~~
+
+A module to show the currently active network connection (ethernet or wifi) and connection strength if the connection is wireless.
+
+Requires the Python netifaces package and iw installed on Linux.
+
+A simpler take on nic and network_traffic. No extra config necessary!
 
 network_traffic
 ~~~~~~~~~~~~~~~
@@ -1016,11 +1231,15 @@ Displays GPU name, temperature and memory usage.
 
 Parameters:
    * nvidiagpu.format: Format string (defaults to '{name}: {temp}°C %{usedmem}/{totalmem} MiB')
-     Available values are: {name} {temp} {mem_used} {mem_total} {fanspeed} {clock_gpu} {clock_mem}
+     Available values are: {name} {temp} {mem_used} {mem_total} {fanspeed} {clock_gpu} {clock_mem} {gpu_usage_pct} {mem_usage_pct} {mem_io_pct}
 
 Requires nvidia-smi
 
 contributed by `RileyRedpath <https://github.com/RileyRedpath>`_ - many thanks!
+
+Note: mem_io_pct is (from `man nvidia-smi`):
+> Percent of time over the past sample period during which global (device)
+> memory was being read or written.
 
 octoprint
 ~~~~~~~~~
@@ -1039,13 +1258,21 @@ Parameters:
 
 contributed by `bbernhard <https://github.com/bbernhard>`_ - many thanks!
 
+optman
+~~~~~~
+
+Displays currently active gpu by optimus-manager
+Requires the following packages:
+
+    * optimus-manager
+
 pacman
 ~~~~~~
 
 Displays update information per repository for pacman.
 
 Parameters:
-    * pacman.sum: If you prefere displaying updates with a single digit (defaults to 'False')
+    * pacman.sum: If you prefer displaying updates with a single digit (defaults to 'False')
 
 Requires the following executables:
     * fakeroot
@@ -1055,6 +1282,31 @@ contributed by `Pseudonick47 <https://github.com/Pseudonick47>`_ - many thanks!
 
 .. image:: ../screenshots/pacman.png
 
+pamixer
+~~~~~~~
+
+get volume level or control it
+
+Requires the following executable:
+    * pamixer
+
+Parameters:
+    * pamixer.percent_change: How much to change volume by when scrolling on the module (default is 4%)
+
+heavily based on amixer module
+
+persian_date
+~~~~~~~~~~~~
+
+Displays the current date and time in Persian(Jalali) Calendar.
+
+Requires the following python packages:
+    * jdatetime
+
+Parameters:
+    * datetime.format: strftime()-compatible formatting string. default: "%A %d %B" e.g., "جمعه ۱۳ اسفند"
+    * datetime.locale: locale to use. default: "fa_IR"
+
 pihole
 ~~~~~~
 
@@ -1062,9 +1314,29 @@ Displays the pi-hole status (up/down) together with the number of ads that were 
 
 Parameters:
     * pihole.address     : pi-hole address (e.q: http://192.168.1.3)
-    * pihole.pwhash      : pi-hole webinterface password hash (can be obtained from the /etc/pihole/SetupVars.conf file)
+
+
+    * pihole.apitoken    : pi-hole API token (can be obtained in the pi-hole webinterface (Settings -> API)
+
+    OR (deprecated!)
+
+    *  pihole.pwhash     : pi-hole webinterface password hash (can be obtained from the /etc/pihole/SetupVars.conf file)
+
 
 contributed by `bbernhard <https://github.com/bbernhard>`_ - many thanks!
+
+pipewire
+~~~~~~~~
+
+get volume level or control it
+
+Requires the following executable:
+    * wpctl
+
+Parameters:
+    * pipewire.percent_change: How much to change volume by when scrolling on the module (default is 4%)
+
+heavily based on amixer module
 
 playerctl
 ~~~~~~~~~
@@ -1080,7 +1352,8 @@ Parameters:
     * playerctl.layout:   Comma-separated list to change order of widgets (defaults to song, previous, pause, next)
       Widget names are: playerctl.song, playerctl.prev, playerctl.pause, playerctl.next
     * playerctl.args:     The arguments added to playerctl.
-      You can check 'playerctl --help' or `its readme <https://github.com/altdesktop/playerctl#using-the-cli>`_. For example, it could be '-p vlc,%any'.
+      You can check 'playerctl --help' or `its README <https://github.com/altdesktop/playerctl#using-the-cli>`_. For example, it could be '-p vlc,%any'.
+    * playerctl.hide:   Hide the widgets when no players are found. Defaults to "false".
 
 Parameters are inspired by the `spotify` module, many thanks to its developers!
 
@@ -1104,7 +1377,7 @@ Parameters:
       Example: 'notify-send 'Time up!''. If you want to chain multiple commands,
       please use an external wrapper script and invoke that. The module itself does
       not support command chaining (see https://github.com/tobi-wan-kenobi/bumblebee-status/issues/532
-      for a detailled explanation)
+      for a detailed explanation)
 
 contributed by `martindoublem <https://github.com/martindoublem>`_, inspired by `karthink <https://github.com/karthink>`_ - many thanks!
 
@@ -1168,7 +1441,29 @@ contributed by `remi-dupre <https://github.com/remi-dupre>`_ - many thanks!
 publicip
 ~~~~~~~~
 
-Displays public IP address
+Displays information about the public IP address associated with the default route:
+    * Public IP address
+    * Country Name
+    * Country Code
+    * City Name
+    * Geographic Coordinates
+
+Left mouse click on the widget forces immediate update.
+Any change to the default route will cause the widget to update.
+
+Requirements:
+    * netifaces
+
+Parameters:
+    * publicip.format: Format string (defaults to ‘{ip} ({country_code})’)
+    * Available format strings - ip, country_name, country_code, city_name, coordinates
+
+Examples:
+    * bumblebee-status -m publicip -p publicip.format="{ip} ({country_code})"
+    * bumblebee-status -m publicip -p publicip.format="{ip} which is in {city_name}"
+    * bumblebee-status -m publicip -p publicip.format="Your packets are right here: {coordinates}"
+
+contributed by `tfwiii <https://github.com/tfwiii>` - many thanks!
 
 rofication
 ~~~~~~~~~~
@@ -1180,6 +1475,9 @@ simple module to show an icon + the number of notifications stored in rofication
 module will have normal highlighting if there are zero notifications,
                  "warning" highlighting if there are nonzero notifications,
                  "critical" highlighting if there are any critical notifications
+
+Parameters:
+* rofication.regolith: Switch to regolith fork of rofication, see <https://github.com/regolith-linux/regolith-rofication>.
 
 rotation
 ~~~~~~~~
@@ -1210,9 +1508,7 @@ sensors
 Displays sensor temperature
 
 Parameters:
-    * sensors.use_sensors: whether to use the 'sensors' command.
-      If set to 'false', the sysfs-interface at '/sys/class/thermal' is used.
-      If not set, 'sensors' will be used if available.
+    * sensors.use_sensors: whether to use the sensors command
     * sensors.path: path to temperature file (default /sys/class/thermal/thermal_zone0/temp).
     * sensors.json: if set to 'true', interpret sensors.path as JSON 'path' in the output
       of 'sensors -j' (i.e. <key1>/<key2>/.../<value>), for example, path could
@@ -1288,9 +1584,19 @@ Requires the following executables:
     * smartctl
 
 Parameters:
-    * smartstatus.display: how to display (defaults to 'combined', other choices: 'combined_singles', 'seperate' or 'singles')
+    * smartstatus.display: how to display (defaults to 'combined', other choices: 'combined_singles', 'separate' or 'singles')
     * smartstatus.drives: in the case of singles which drives to display, separated comma list value, multiple accepted (defaults to 'sda', example:'sda,sdc')
     * smartstatus.show_names: boolean in the form of "True" or "False" to show the name of the drives in the form of sda, sbd, combined or none at all. 
+
+solaar
+~~~~~~
+
+Shows status and load percentage of logitech's unifying device
+
+Requires the following executable:
+    * solaar (from community)
+
+contributed by `cambid <https://github.com/cambid>`_ - many thanks!
 
 spaceapi
 ~~~~~~~~
@@ -1308,7 +1614,7 @@ Parameters:
 
 Format Strings:
     * Format strings are indicated by double %%
-    * They represent a leaf in the JSON tree, layers seperated by '.'
+    * They represent a leaf in the JSON tree, layers separated by '.'
     * Boolean values can be overwritten by appending '%true%false'
       in the format string
     * Example: to reference 'open' in '{'state':{'open': true}}'
@@ -1351,7 +1657,9 @@ Display a stock quote from finance.yahoo.com
 
 Parameters:
     * stock.symbols : Comma-separated list of symbols to fetch
-    * stock.change : Should we fetch change in stock value (defaults to True)
+    * stock.apikey : API key created on https://alphavantage.co
+    * stock.url : URL to use, defaults to "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={symbol}&apikey={apikey}"
+    * stock.fields : Fields from the response to show, defaults to "01. symbol,05. price,10. change percent"
 
 
 contributed by `msoulier <https://github.com/msoulier>`_ - many thanks!
@@ -1386,11 +1694,11 @@ adds the possibility to
         * reboot
 
 the system.
-        
+
 Per default a confirmation dialog is shown before the actual action is performed.
-        
+
 Parameters:
-        * system.confirm: show confirmation dialog before performing any action (default: true) 
+        * system.confirm: show confirmation dialog before performing any action (default: true)
         * system.reboot: specify a reboot command (defaults to 'reboot')
         * system.shutdown: specify a shutdown command (defaults to 'shutdown -h now')
         * system.logout: specify a logout command (defaults to 'i3exit logout')
@@ -1398,7 +1706,7 @@ Parameters:
         * system.lock: specify a command for locking the screen (defaults to 'i3exit lock')
         * system.suspend: specify a command for suspending (defaults to 'i3exit suspend')
         * system.hibernate: specify a command for hibernating (defaults to 'i3exit hibernate')
-        
+
 Requirements:
         tkinter (python3-tk package on debian based systems either you can install it as python package)
 
@@ -1414,6 +1722,7 @@ Requires the following library:
 
 Parameters:
     * taskwarrior.taskrc : path to the taskrc file (defaults to ~/.taskrc)
+    * taskwarrior.show_active: true/false(default) to show the active task ID and description when one is active, otherwise show the total number pending.
 
 
 contributed by `chdorb <https://github.com/chdorb>`_ - many thanks!
@@ -1459,6 +1768,7 @@ Parameters:
     * title.max : Maximum character length for title before truncating. Defaults to 64.
     * title.placeholder : Placeholder text to be placed if title was truncated. Defaults to '...'.
     * title.scroll : Boolean flag for scrolling title. Defaults to False
+    * title.short : Boolean flag for short title. Defaults to False
 
 
 contributed by `UltimatePancake <https://github.com/UltimatePancake>`_ - many thanks!
@@ -1487,6 +1797,27 @@ Parameters:
     * todo_org.remaining: False by default. When true, will output the number of remaining todos instead of the number completed (i.e. 1/4 means 1 of 4 todos remaining, rather than 1 of 4 todos completed)
 Based on the todo module by `codingo <https://github.com/codingo>`
 
+todoist
+~~~~~~~
+
+Displays the nº of Todoist tasks that are due:
+
+    * https://developer.todoist.com/rest/v2/#get-active-tasks
+
+Uses `xdg-open` or `x-www-browser` to open web-pages.
+
+Requires the following library:
+    * requests
+
+Errors:
+    if the Todoist get active tasks query failed, the shown value is `n/a`
+
+Parameters:
+    * todoist.token: Todoist api token, you can get it in https://todoist.com/app/settings/integrations/developer.
+    * todoist.filter: a filter statement defined by Todoist (https://todoist.com/help/articles/introduction-to-filters), eg: "!assigned to: others & (Overdue | due: today)"
+
+.. image:: ../screenshots/todoist.png
+
 traffic
 ~~~~~~~
 
@@ -1498,7 +1829,7 @@ Parameters:
     * traffic.showname: If set to False, hide network interface name (defaults to True)
     * traffic.format: Format string for download/upload speeds.
       Defaults to '{:.2f}'
-    * traffic.graphlen: Graph lenth in seconds. Positive even integer. Each
+    * traffic.graphlen: Graph length in seconds. Positive even integer. Each
       char shows 2 seconds. If set, enables up/down traffic
       graphs
 
@@ -1525,6 +1856,27 @@ contributed by `ccoors <https://github.com/ccoors>`_ - many thanks!
 
 .. image:: ../screenshots/uptime.png
 
+usage
+~~~~~
+
+Module for ActivityWatch (https://activitywatch.net/)
+Displays the amount of time the system was used actively.
+
+Requirements:
+    * sqlite3 module for python
+    * ActivityWatch
+
+Errors:
+    * when you get 'error: unable to open database file', modify the parameter 'database' to your ActivityWatch database file
+    -> often found by running 'locate aw-server/peewee-sqlite.v2.db'
+
+Parameters:
+    * usage.database: path to your database file
+    * usage.format: Specify what gets printed to the bar
+    -> use 'HH', 'MM' or 'SS', they will get replaced by the number of hours, minutes and seconds, respectively
+
+contributed by lasnikr (https://github.com/lasnikr)
+
 vpn
 ~~~
 
@@ -1544,6 +1896,34 @@ Displays the VPN profile that is currently in use.
 
 contributed by `bbernhard <https://github.com/bbernhard>`_ - many thanks!
 
+wakatime
+~~~~~~~~
+
+Displays the WakaTime daily/weekly/monthly times:
+
+    * https://wakatime.com/developers#stats
+
+Uses `xdg-open` or `x-www-browser` to open web-pages.
+
+Requires the following library:
+    * requests
+
+Errors:
+    if the Wakatime status query failed, the shown value is `n/a`
+
+Parameters:
+    * wakatime.token: Wakatime secret api key, you can get it in https://wakatime.com/settings/account.
+    * wakatime.range: Range of the output, default is "Today". Can be one of “Today”, “Yesterday”, “Last 7 Days”, “Last 7 Days from Yesterday”, “Last 14 Days”, “Last 30 Days”, “This Week”, “Last Week”, “This Month”, or “Last Month”.
+    * wakatime.format: Format of the output, default is "digital"
+        Valid inputs are:
+          * "decimal" -> 1.37
+          * "digital" -> 1:22
+          * "seconds" -> 4931.29
+          * "text" -> 1 hr 22 mins
+          * "%H:%M:%S" -> 01:22:31 (or any other valid format)
+
+.. image:: ../screenshots/wakatime.png
+
 watson
 ~~~~~~
 
@@ -1551,6 +1931,10 @@ Displays the status of watson (time-tracking tool)
 
 Requires the following executable:
     * watson
+
+Parameters:
+    * watson.format: Output format, defaults to "{project} [{tags}]"
+      Supported fields are: {project}, {tags}, {relative_start}, {absolute_start}
 
 contributed by `bendardenne <https://github.com/bendardenne>`_ - many thanks!
 
@@ -1569,7 +1953,7 @@ Parameters:
     * weather.unit: metric (default), kelvin, imperial
     * weather.showcity: If set to true, show location information, otherwise hide it (defaults to true)
     * weather.showminmax: If set to true, show the minimum and maximum temperature, otherwise hide it (defaults to false)
-    * weather.apikey: API key from http://api.openweathermap.org
+    * weather.apikey: API key from https://api.openweathermap.org
 
 
 contributed by `TheEdgeOfRage <https://github.com/TheEdgeOfRage>`_ - many thanks!

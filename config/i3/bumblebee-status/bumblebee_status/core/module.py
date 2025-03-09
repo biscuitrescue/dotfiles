@@ -1,5 +1,6 @@
 import os
 import importlib
+import importlib.util
 import logging
 import threading
 
@@ -112,6 +113,15 @@ class Module(core.input.Object):
     def hidden(self):
         return False
 
+    """Override this to show the module even if it normally would be scrolled away
+
+    :return: True if the module should be hidden, False otherwise
+    :rtype: boolean
+    """
+
+    def scroll(self):
+        return True
+
     """Retrieve CLI/configuration parameters for this module. For example, if
     the module is called "test" and the user specifies "-p test.x=123" on the
     commandline, using self.parameter("x") retrieves the value 123.
@@ -201,7 +211,7 @@ class Module(core.input.Object):
     """
 
     def add_widget(self, full_text="", name=None, hidden=False):
-        widget_id = "{}::{}".format(self.name, len(self.widgets()))
+        widget_id = "{}::{}".format(self.id, len(self.widgets()))
         widget = core.widget.Widget(full_text=full_text, name=name, widget_id=widget_id, hidden=hidden)
         self.widgets().append(widget)
         widget.module = self
@@ -295,7 +305,7 @@ class Error(Module):
     def full_text(self, widget):
         return "{}: {}".format(self.__module, self.__error)
 
-    """Overriden state, always returns critical (it *is* an error, after all"""
+    """Overridden state, always returns critical (it *is* an error, after all"""
 
     def state(self, widget):
         return ["critical"]

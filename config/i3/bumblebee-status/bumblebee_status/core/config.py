@@ -240,11 +240,16 @@ class Config(util.store.Store):
     :param filename: path to the file to load
     """
 
-    def load_config(self, filename):
-        if os.path.exists(filename):
+    def load_config(self, filename, content=None):
+        if os.path.exists(filename) or content != None:
             log.info("loading {}".format(filename))
             tmp = RawConfigParser()
-            tmp.read(u"{}".format(filename))
+            tmp.optionxform = str
+
+            if content:
+                tmp.read_string(content)
+            else:
+                tmp.read(u"{}".format(filename))
 
             if tmp.has_section("module-parameters"):
                 for key, value in tmp.items("module-parameters"):
@@ -275,6 +280,15 @@ class Config(util.store.Store):
 
     def interval(self, default=1):
         return util.format.seconds(self.get("interval", default))
+
+    """Returns the global popup menu font size
+
+    :return: popup menu font size
+    :rtype: int
+    """
+
+    def popup_font_size(self, default=12):
+        return util.format.asint(self.get("popup_font_size", default))
 
     """Returns whether debug mode is enabled
 

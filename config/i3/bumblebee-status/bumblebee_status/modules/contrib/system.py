@@ -8,11 +8,11 @@ adds the possibility to
 	* reboot
 
 the system.
-	
+
 Per default a confirmation dialog is shown before the actual action is performed.
-	
+
 Parameters:
-	* system.confirm: show confirmation dialog before performing any action (default: true) 
+	* system.confirm: show confirmation dialog before performing any action (default: true)
         * system.reboot: specify a reboot command (defaults to 'reboot')
         * system.shutdown: specify a shutdown command (defaults to 'shutdown -h now')
         * system.logout: specify a logout command (defaults to 'i3exit logout')
@@ -72,7 +72,12 @@ class Module(core.module.Module):
             util.cli.execute(command)
 
     def popup(self, widget):
-        menu = util.popup.menu()
+        popupcmd = self.parameter("popupcmd", "");
+        if (popupcmd != ""):
+            util.cli.execute(popupcmd)
+            return
+
+        menu = util.popup.menu(self.__config)
         reboot_cmd = self.parameter("reboot", "reboot")
         shutdown_cmd = self.parameter("shutdown", "shutdown -h now")
         logout_cmd = self.parameter("logout", "i3exit logout")
@@ -96,7 +101,7 @@ class Module(core.module.Module):
         menu.add_menuitem(
             "log out",
             callback=functools.partial(
-                self.__on_command, "Log out", "Log out?", "i3exit logout"
+                self.__on_command, "Log out", "Log out?", logout_cmd
             ),
         )
         # don't ask for these

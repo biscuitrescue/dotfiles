@@ -58,6 +58,8 @@ class BatteryManager(object):
         capacity = self.read(battery, "capacity", 100)
         if capacity != "n/a":
             capacity = int(capacity)
+        else:
+            capacity = 0    
 
         return capacity if capacity < 100 else 100
 
@@ -134,6 +136,9 @@ class Module(core.module.Module):
             if util.format.asbool(self.parameter("decorate", True)) == False:
                 widget.set("theme.exclude", "suffix")
 
+    def hidden(self):
+        return len(self._batteries) == 0
+
     def ac(self, widget):
         return "ac"
 
@@ -177,11 +182,6 @@ class Module(core.module.Module):
             log.debug("battery state: {}".format(state))
             return ["critical", "unknown"]
 
-        if capacity < int(self.parameter("critical", 10)):
-            state.append("critical")
-        elif capacity < int(self.parameter("warning", 20)):
-            state.append("warning")
-
         if widget.get("ac"):
             state.append("AC")
         else:
@@ -206,6 +206,18 @@ class Module(core.module.Module):
                     state.append("charged")
                 else:
                     state.append("charging")
+
+        if (
+            capacity < int(self.parameter("critical", 10))
+            and self.__manager.charge_any(self._batteries) == "Discharging"
+        ):
+            state.append("critical")
+        elif (
+            capacity < int(self.parameter("warning", 20))
+            and self.__manager.charge_any(self._batteries) == "Discharging"
+        ):
+            state.append("warning")
+
         return state
 
 

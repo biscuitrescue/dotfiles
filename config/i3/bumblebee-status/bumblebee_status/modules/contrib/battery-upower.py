@@ -68,7 +68,7 @@ class UPowerManager:
         isPresent = battery_proxy_interface.Get(
             self.UPOWER_NAME + ".Device", "IsPresent"
         )
-        isRechargable = battery_proxy_interface.Get(
+        isRechargeable = battery_proxy_interface.Get(
             self.UPOWER_NAME + ".Device", "IsRechargeable"
         )
         online = battery_proxy_interface.Get(self.UPOWER_NAME + ".Device", "Online")
@@ -128,7 +128,7 @@ class UPowerManager:
             "HasHistory": hasHistory,
             "HasStatistics": hasStatistics,
             "IsPresent": isPresent,
-            "IsRechargeable": isRechargable,
+            "IsRechargeable": isRechargeable,
             "Online": online,
             "PowerSupply": powersupply,
             "Capacity": capacity,
@@ -207,6 +207,14 @@ class UPowerManager:
         data = upower_interface.GetTotal()
         return data
 
+    def is_battery_present(self, battery):
+        battery_proxy = self.bus.get_object(self.UPOWER_NAME, battery)
+        battery_proxy_interface = dbus.Interface(battery_proxy, self.DBUS_PROPERTIES)
+
+        return bool(
+            battery_proxy_interface.Get(self.UPOWER_NAME + ".Device", "IsPresent")
+        )
+
     def is_loading(self, battery):
         battery_proxy = self.bus.get_object(self.UPOWER_NAME, battery)
         battery_proxy_interface = dbus.Interface(battery_proxy, self.DBUS_PROPERTIES)
@@ -259,6 +267,11 @@ class Module(core.module.Module):
         widget.set("capacity", -1)
         widget.set("ac", False)
         output = "n/a"
+        if not self.power.is_battery_present(self.device):
+            widget.set("ac", True)
+            widget.set("capacity", 100)
+            output = "ac"
+            return output
         try:
             capacity = int(self.power.get_device_percentage(self.device))
             capacity = capacity if capacity < 100 else 100
@@ -298,11 +311,6 @@ class Module(core.module.Module):
         if capacity < 0:
             return ["critical", "unknown"]
 
-        if capacity < int(self.parameter("critical", 10)):
-            state.append("critical")
-        elif capacity < int(self.parameter("warning", 20)):
-            state.append("warning")
-
         if widget.get("ac"):
             state.append("AC")
         else:
@@ -328,6 +336,16 @@ class Module(core.module.Module):
                     state.append("charged")
                 else:
                     state.append("charging")
+        if (
+            capacity < int(self.parameter("critical", 10))
+            and self.power.get_state(self.device) == "Discharging"
+        ):
+            state.append("critical")
+        elif (
+            capacity < int(self.parameter("warning", 20))
+            and self.power.get_state(self.device) == "Discharging"
+        ):
+            state.append("warning")
         return state
 
 

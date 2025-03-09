@@ -4,7 +4,7 @@
 
 Parameters:
     * disk.warning: Warning threshold in % of disk space (defaults to 80%)
-    * disk.critical: Critical threshold in % of disk space (defaults ot 90%)
+    * disk.critical: Critical threshold in % of disk space (defaults to 90%)
     * disk.path: Path to calculate disk usage from (defaults to /)
     * disk.open: Which application / file manager to launch (default xdg-open)
     * disk.format: Format string, tags {path}, {used}, {left}, {size} and {percent} (defaults to '{path} {used}/{size} ({percent:05.02f}%)')
@@ -56,8 +56,8 @@ class Module(core.module.Module):
     def update(self):
         st = os.statvfs(self._path)
         self._size = st.f_blocks * st.f_frsize
-        self._used = (st.f_blocks - st.f_bfree) * st.f_frsize
-        self._left = self._size - self._used
+        self._left = st.f_bavail * st.f_frsize
+        self._used = self._size - self._left
         self._percent = 100.0 * self._used / self._size
 
     def state(self, widget):

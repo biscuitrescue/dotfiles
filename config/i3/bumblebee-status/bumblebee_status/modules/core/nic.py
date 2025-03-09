@@ -22,6 +22,7 @@ import re
 import shutil
 import netifaces
 import subprocess
+import os
 
 import core.module
 import core.decorators
@@ -37,7 +38,9 @@ class Module(core.module.Module):
         self._exclude = util.format.aslist(
             self.parameter("exclude", "lo,virbr,docker,vboxnet,veth,br,.*:avahi")
         )
-        self._include = util.format.aslist(self.parameter("include", ""))
+
+        include_parameter = self.parameter("include", "")
+        self._include = util.format.aslist(include_parameter) if include_parameter else []
 
         self._states = {"include": [], "exclude": []}
         for state in tuple(
@@ -49,8 +52,8 @@ class Module(core.module.Module):
                 self._states["include"].append(state)
         self._format = self.parameter("format", "{intf} {state} {ip} {ssid} {strength}")
 
-        self._strength_threshold_critical = self.parameter("strength_critical", 30)
-        self._strength_threshold_warning = self.parameter("strength_warning", 50)
+        self._strength_threshold_critical = util.format.asint(self.parameter("strength_critical", 30))
+        self._strength_threshold_warning = util.format.asint(self.parameter("strength_warning", 50))
 
         # Limits for the accepted dBm values of wifi strength
         self.__strength_dbm_lower_bound = -110
@@ -88,7 +91,7 @@ class Module(core.module.Module):
 
     def _iswlan(self, intf):
         # wifi, wlan, wlp, seems to work for me
-        if intf.startswith("w"):
+        if intf.startswith("w") and not intf.startswith("wg"):
             return True
         return False
 
@@ -105,6 +108,11 @@ class Module(core.module.Module):
             return []
         return retval
 
+    def _included(self, intf):
+        if not self._include:
+            return True
+        return intf in self._include
+
     def _excluded(self, intf):
         for e in self._exclude:
             if re.match(e, intf):
@@ -115,9 +123,8 @@ class Module(core.module.Module):
         self.clear_widgets()
         interfaces = []
         for i in netifaces.interfaces():
-            if not self._excluded(i):
+            if not self._excluded(i) and self._included(i):
                 interfaces.append(i)
-        interfaces.extend([i for i in netifaces.interfaces() if i in self._include])
 
         for intf in interfaces:
             addr = []
@@ -172,15 +179,11 @@ class Module(core.module.Module):
         if not self._iswlan(intf) or self._istunnel(intf) or not self.iw:
             return None
 
-        with open("/proc/net/wireless", "r") as file:
-            for line in file:
-                if intf in line:
-                    # Remove trailing . by slicing it off ;)
-                    strength_dbm = line.split()[3][:-1]
-                    return util.format.asint(strength_dbm,
-                                minimum=self.__strength_dbm_lower_bound,
-                                maximum=self.__strength_dbm_upper_bound)
-
+        iw_info = util.cli.execute("{} dev {} link".format(self.iw, intf))
+        for line in iw_info.split("\n"):
+            match = re.match(r"^\s+signal:\s(.+) dBm$", line)
+            if match:
+                return int(match.group(1))
         return None
 
     def convert_strength_dbm_percent(self, signal):

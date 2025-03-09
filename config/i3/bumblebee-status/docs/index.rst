@@ -9,6 +9,8 @@ Welcome to bumblebee-status's documentation!
 bumblebee-status is a modular, theme-able status line generator for the
 `i3 window manager <https://i3wm.org/>`__.
 
+Logo courtesy of [kellya](https://github.com/kellya) - thank you!
+
 Focus is on:
 
  - ease of use, sane defaults (no mandatory configuration file)
@@ -23,7 +25,7 @@ Thanks a lot!
 +------------------------------------+------------------------------+
 | **Required i3wm version**          | 4.12+                        |
 +------------------------------------+------------------------------+
-| **Supported Python versions**      | 3.4, 3.5, 3.6, 3.7, 3.8, 3.9 |
+| **Supported Python versions**      | 3.8, 3.9, 3.10, 3.11         |
 +------------------------------------+------------------------------+
 | **Supported FontAwesome versions** | 4 only                       |
 +------------------------------------+------------------------------+
@@ -42,6 +44,10 @@ Example usage:
         -p time.format="%H:%M" \
         -t solarized
    }
+
+
+Thanks to [Sushants-Git](https://github.com/Sushants-Git), there is also a website where you can easily generate configurations: https://bumblebee-status-config-gen.netlify.app/
+
 
 .. toctree::
    :maxdepth: 2

@@ -1,0 +1,14 @@
+[run]
+omit =
+	versioneer.*
+	bumblebee_status/_version.*
+	setup.*
+	tests/*
+	pytests/*
+	*mock*
+	*funcsigs*
+	*pbr*
+	*six*
+	/usr/lib*
+
+[report]

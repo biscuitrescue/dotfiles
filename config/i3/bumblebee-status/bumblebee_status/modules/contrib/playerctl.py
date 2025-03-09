@@ -12,6 +12,7 @@ Parameters:
       Widget names are: playerctl.song, playerctl.prev, playerctl.pause, playerctl.next
     * playerctl.args:     The arguments added to playerctl.
       You can check 'playerctl --help' or `its README <https://github.com/altdesktop/playerctl#using-the-cli>`_. For example, it could be '-p vlc,%any'.
+    * playerctl.hide:   Hide the widgets when no players are found. Defaults to "false".
 
 Parameters are inspired by the `spotify` module, many thanks to its developers!
 
@@ -31,6 +32,9 @@ class Module(core.module.Module):
         super(Module, self).__init__(config, theme, [])
 
         self.background = True
+
+        self.__hide = util.format.asbool(self.parameter("hide", "false"));
+        self.__hidden = self.__hide
 
         self.__layout = util.format.aslist(
             self.parameter(
@@ -83,14 +87,25 @@ class Module(core.module.Module):
             if isinstance(callback_options, dict):
                 core.input.register(widget, **callback_options)
 
-    def update(self):
+    def hidden(self):
+        return self.__hidden
+
+    def status(self):
         try:
             playback_status = str(util.cli.execute(self.__cmd + "status 2>&1 || true", shell = True)).strip()
             if playback_status == "No players found":
-                playback_status = None
+                return None
+            return playback_status
         except Exception as e:
             logging.exception(e)
-            playback_status = None
+            return None
+
+    def update(self):
+        playback_status = self.status()
+        if not playback_status:
+            self.__hidden = self.__hide
+        else:
+            self.__hidden = False
         for widget in self.widgets():
             if playback_status:
                 if widget.name == "playerctl.pause":

@@ -64,6 +64,14 @@
       "prefix": "audio"
     }
   },
+  "pulseout": {
+    "muted": {
+      "prefix": "audio(mute)"
+    },
+    "unmuted": {
+      "prefix": "audio"
+    }
+  },
   "amixer": {
     "muted": {
       "prefix": "audio(mute)"
@@ -73,6 +81,14 @@
     }
   },
   "pasource": {
+    "muted": {
+      "prefix": "mic(mute)"
+    },
+    "unmuted": {
+      "prefix": "mic"
+    }
+  },
+  "pulsein": {
     "muted": {
       "prefix": "mic(mute)"
     },
@@ -293,6 +309,9 @@
   "github": {
     "prefix": "github"
   },
+  "gitlab": {
+    "prefix": "gitlab"
+  },
   "deezer": {
     "prefix": ""
   },
@@ -391,5 +410,8 @@
   "speedtest": {
     "running": { "prefix": [".", "..", "...", ".."] },
 	"not-running": { "prefix": "[start]" }
+  },
+  "power-profile": {
+    "prefix": "profile"
   }
 }

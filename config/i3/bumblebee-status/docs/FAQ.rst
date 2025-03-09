@@ -29,9 +29,9 @@ didn’t have background color support for the status bar.
 Some of the icons don’t render correctly
 ----------------------------------------
 
-Please check that you have |Font Awesome| installed (version 4).
+Please check that you have `Font Awesome`_ installed (version 4).
 
-.. note:: The |Font Awesome| is required for all themes that
+.. note:: The `Font Awesome`_ is required for all themes that
     contain icons (because that is the font that includes these icons).
     Please refer to your distribution’s package management on how to install
     them, or get them from their website directly. Also, please note that
@@ -52,4 +52,15 @@ Please check that you have |Font Awesome| installed (version 4).
    # Other
    # see https://github.com/gabrielelana/awesome-terminal-fonts
 
-.. |Font Awesome| image:: https://fontawesome.com/
+You might also need to add it to the `font` directive in your i3 configuration, for example:
+
+.. code-block::
+
+    bar {
+        font pango:FontAwesome, Fira mono 10
+        status_command bumblebee-status -m title pasink pasource cpu memory battery datetime --iconset awesome-fonts
+    }
+
+If you are unsure about how the font is named, you can use the ``pango-list`` command line tool to look at the fonts installed on your computer. Also note how you can specify multiple fonts, separated by commas, in the above example.
+
+.. _Font Awesome: https://fontawesome.com/

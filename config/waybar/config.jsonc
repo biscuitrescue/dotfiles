@@ -7,13 +7,13 @@
     "layer": "top",
     "position": "left",
     "height": "", 		
-    "width": 32,
-    "modules-left": ["river/tags", "wlr/workspaces"],
+    "width": 38,
+    "modules-left": ["river/tags", "hyprland/workspaces"],
     "modules-right": ["tray", "cpu", "pulseaudio", "memory#mem", "memory#swap", "clock#date", "clock#time", "battery"],
     "river/tags": {
         "num-tags": 9,
     },
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "on-click": "activate",
         "disable-scroll": false,
         "sort-by-number": true,
@@ -71,7 +71,7 @@
     },
     "backlight": {
         "device": "intel_backlight",
-        "format": "{percent}%",
+        "format": "{}{percent}%",
         "format-icons": ["", ""]
     },
     "upower": {

@@ -42,6 +42,7 @@ Parameters:
            if {file} = '/foo/bar.baz', then {file2} = 'bar'
 
     * mpd.host: MPD host to connect to. (mpc behaviour by default)
+    * mpd.port: MPD port to connect to. (mpc behaviour by default)
     * mpd.layout: Space-separated list of widgets to add. Possible widgets are the buttons/toggles mpd.prev, mpd.next, mpd.shuffle and mpd.repeat, and the main display with play/pause function mpd.main.
 
 contributed by `alrayyes <https://github.com/alrayyes>`_ - many thanks!
@@ -73,10 +74,12 @@ class Module(core.module.Module):
         self._repeat = False
         self._tags = defaultdict(lambda: "")
 
-        if not self.parameter("host"):
-            self._hostcmd = ""
-        else:
-            self._hostcmd = " -h " + self.parameter("host")
+        self._hostcmd = ""
+        if self.parameter("host"):
+            self._hostcmd = " -h {}".format(self.parameter("host"))
+        if self.parameter("port"):
+            self._hostcmd += " -p {}".format(self.parameter("port"))
+
 
         # Create widgets
         widget_map = {}
@@ -94,6 +97,12 @@ class Module(core.module.Module):
                     "cmd": "mpc toggle" + self._hostcmd,
                 }
                 widget.full_text(self.description)
+            elif widget_name == "mpd.toggle":
+                widget_map[widget] = {
+                    "button": core.input.LEFT_MOUSE,
+                    "cmd": "mpc toggle" + self._hostcmd,
+                }
+                widget.full_text(self.toggle)
             elif widget_name == "mpd.next":
                 widget_map[widget] = {
                     "button": core.input.LEFT_MOUSE,
@@ -126,6 +135,9 @@ class Module(core.module.Module):
     @core.decorators.scrollable
     def description(self, widget):
         return string.Formatter().vformat(self._fmt, (), self._tags)
+
+    def toggle(self, widget):
+        return str(util.cli.execute("mpc status %currenttime%/%totaltime%", ignore_errors=True)).strip()
 
     def update(self):
         self._load_song()
