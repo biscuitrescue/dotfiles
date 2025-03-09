@@ -70,6 +70,16 @@ if vim.g.neovide then
   vim.g.neovide_padding_left = 1
 end
 
+vim.filetype.add {
+  extension = { rasi = 'rasi' },
+  pattern = {
+    ['.*/waybar/config'] = 'jsonc',
+    ['.*/mako/config'] = 'dosini',
+    ['.*/kitty/*.conf'] = 'bash',
+    ['.*/hypr/.*%.conf'] = 'hyprlang',
+  },
+}
+
 require("cafo.remap")
 require("cafo.lazy")
 require 'colorizer'.setup()
