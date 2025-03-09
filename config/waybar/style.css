@@ -7,6 +7,7 @@
     min-height: 0;
     padding: 0.1rem;
     border-radius:0.4rem;
+    opacity: 1;
 }
 
 #waybar {
@@ -14,6 +15,7 @@
     color: @text;
     padding: 0.05rem;
     border-radius: 0rem;
+    /* opacity: 0.8; */
 }
 
 #tags {
@@ -53,6 +55,7 @@
     padding: 0.15rem;
     color: @base;
     border-radius: 1rem;
+    opacity: 1;
 }
 
 #workspaces button {
@@ -177,4 +180,7 @@
     margin-bottom: 5px;
     padding-left: 4px;
     padding-right: 4px;
+}
+window#waybar {
+  background-color: rgba(30, 30, 46, 0.7)
 }
