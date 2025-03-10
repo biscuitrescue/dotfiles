@@ -6,8 +6,9 @@ border-color=#96CDFB
 progress-color=over #302D41
 border-radius=10
 padding=15
-font=azukifontB 14
+font=JetbrainsMono Nerd Font 12
 default-timeout=5000
+anchor=top-center
 
 [urgency=high]
 border-color=#F8BD96

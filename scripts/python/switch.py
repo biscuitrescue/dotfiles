@@ -51,6 +51,7 @@ themes = {
         "zathura": "everforest",
         "waybar": "everforest",
         "dunst": "everforest",
+        "mako": "everforest",
         "emacs": "everforest",
         "starship": "everforest",
         "rofi": "everforest"
@@ -66,6 +67,7 @@ themes = {
         "zathura": "ashes",
         "waybar": "ashes",
         "dunst": "kanagawa",
+        "mako": "kanagawa",
         "emacs": "kanagawa",
         "starship": "kanagawa",
         "rofi": "ashes"
@@ -81,6 +83,7 @@ themes = {
         "zathura": "ashes",
         "waybar": "ashes",
         "dunst": "kanagawa",
+        "mako": "kanagawa",
         "emacs": "kanagawa",
         "starship": "kanagawa",
         "rofi": "ashes"
@@ -96,6 +99,7 @@ themes = {
         "zathura": "ashes",
         "waybar": "ashes",
         "dunst": "ashes",
+        "mako": "ashes",
         "emacs": "ashes",
         "starship": "ashes",
         "rofi": "ashes"
@@ -111,6 +115,7 @@ themes = {
         "zathura": "ashes",
         "waybar": "ashes",
         "dunst": "ashes",
+        "mako": "ashes",
         "emacs": "ashes",
         "starship": "ashes",
         "rofi": "ashes"
@@ -126,6 +131,7 @@ themes = {
         "zathura": "dracula",
         "waybar": "one",
         "dunst": "one",
+        "mako": "one",
         "emacs": "doom-one",
         "starship": "one",
         "rofi": "one"
@@ -140,6 +146,7 @@ themes = {
         "alacritty": "catppuccin-latte",
         "zathura": "latte",
         "dunst": "latte",
+        "mako": "latte",
         "rofi": "latte",
         "emacs": "latte",
         "starship": "catppuccin_latte",
@@ -155,6 +162,7 @@ themes = {
         "alacritty": "macchiato",
         "zathura": "macchiato",
         "dunst": "macchiato",
+        "mako": "macchiato",
         "rofi": "macchiato",
         "emacs": "macchiato",
         "starship": "catppuccin_macchiato",
@@ -171,6 +179,7 @@ themes = {
         "starship": "catppuccin_frappe",
         "zathura": "frappe",
         "dunst": "frappe",
+        "mako": "frappe",
         "rofi": "frappe",
         "emacs": "frappe",
         "waybar": "frappe"
@@ -185,6 +194,7 @@ themes = {
         "alacritty": "catppuccin-mocha",
         "zathura": "mocha",
         "dunst": "mocha",
+        "mako": "mocha",
         "rofi": "mocha",
         "emacs": "mocha",
         "starship": "catppuccin_mocha",
@@ -200,6 +210,7 @@ themes = {
         "alacritty": "dracula",
         "zathura": "dracula",
         "dunst": "dracula",
+        "mako": "dracula",
         "rofi": "dracula",
         "emacs": "doom-dracula",
         "starship": "catppuccin_mocha",
@@ -215,6 +226,7 @@ themes = {
         "alacritty": "dracula",
         "zathura": "dracula",
         "dunst": "dracula",
+        "mako": "dracula",
         "rofi": "dracula",
         "emacs": "doom-dracula",
         "starship": "dracula",
@@ -230,6 +242,7 @@ themes = {
         "alacritty": "palenight",
         "zathura": "palenight",
         "dunst": "palenight",
+        "mako": "palenight",
         "rofi": "palenight",
         "emacs": "doom-palenight",
         "starship": "dracula",
@@ -245,6 +258,7 @@ themes = {
         "alacritty": "one",
         "zathura": "macchiato",
         "dunst": "nord",
+        "mako": "nord",
         "rofi": "palenight",
         "emacs": "doom-nord",
         "starship": "ashes",
@@ -319,6 +333,9 @@ if exists(f"{home}.themes/{themes[theme]['Gtk']}/gtk-4.0/gtk.css"):
 copyfile(f"{home}.config/dunst/{themes[theme]['dunst']}",
          f"{home}.config/dunst/dunstrc")
 
+copyfile(f"{home}.config/mako/{themes[theme]['mako']}",
+         f"{home}.config/mako/config")
+
 run(
     'qtile cmd-obj -o cmd -f reload_config',
     shell=True
@@ -331,11 +348,11 @@ run(
     "killall -SIGUSR2 waybar",
     shell=True
 )
-# run(
-#     'makoctl reload',
-#     shell=True
-# )
 run(
-    f'bash {home}.config/dunst/reload',
+    'makoctl reload',
     shell=True
 )
+# run(
+#     f'bash {home}.config/dunst/reload',
+#     shell=True
+# )
