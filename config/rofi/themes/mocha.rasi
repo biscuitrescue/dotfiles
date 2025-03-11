@@ -2,7 +2,7 @@
     bg-col:  #1e1e2e;
     bg-col-light: #1e1e2e;
     border-col: #1e1e2e;
-    selected-col: #1e1e2e;
+    selected-col: #eba0ac;
     blue: #89b4fa;
     fg-col: #cdd6f4;
     fg-col2: #f38ba8;
@@ -53,6 +53,7 @@ entry {
     margin: 20px 0px 0px 10px;
     text-color: @fg-col;
     background-color: @bg-col;
+    border-radius: 20px;
 }
 
 listview {
@@ -62,12 +63,14 @@ listview {
     columns: 2;
     lines: 5;
     background-color: @bg-col;
+    border-radius: 20px;
 }
 
 element {
     padding: 5px;
     background-color: @bg-col;
     text-color: @fg-col  ;
+    border-radius: 20px;
 }
 
 element-icon {
@@ -75,8 +78,9 @@ element-icon {
 }
 
 element selected {
-    background-color:  @selected-col ;
-    text-color: @fg-col2  ;
+    background-color: @fg-col2;
+    text-color: @bg-col;
+    border-radius: 10px;
 }
 
 mode-switcher {
@@ -100,7 +104,7 @@ message {
     background-color: @bg-col-light;
     margin: 2px;
     padding: 2px;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 
 textbox {

@@ -68,6 +68,7 @@ alias up="paru -Syu --sudoloop"
 alias it="paru -S --sudoloop"
 alias v="vim"
 alias tmsource="tmux source-file ~/.config/tmux/tmux.conf"
+alias tmux="tmux -u"
 alias mux="tmux new-session -t shell"
 
 function getc

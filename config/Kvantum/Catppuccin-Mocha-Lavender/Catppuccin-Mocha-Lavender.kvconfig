@@ -453,7 +453,7 @@ centered_forms=false
 kinetic_scrolling=false
 middle_click_scroll=false
 no_selection_tint=false
-noninteger_translucency=false
+noninteger_translucency=true
 style_vertical_toolbars=false
 blur_only_active_window=false
 

@@ -1,8 +1,8 @@
-@import "themes/mocha.css";
+@import "themes/ashes.css";
 
 * {
     font-family: Operator Mono Medium;
-    font-size: 17px;
+    font-size: 16px;
     min-width: 0;
     min-height: 0;
     padding: 0.1rem;
@@ -64,7 +64,7 @@
 }
 
 #workspaces button.active {
-    background: @maroon;
+    background: @red;
     color: @base;
     border-radius: 1rem;
 }
@@ -88,14 +88,14 @@
 #clock,
 #clock.date {
     color: @base;
-    background: @maroon;
+    background: @blue;
     padding: 0.6rem;
     margin: 0.2rem;
     margin-top: 0.7rem;
 }
 #clock.time {
     color: @base;
-    background: @blue;
+    background: @maroon;
     padding: 0.3rem;
     margin: 0.2rem;
     margin-top: 0.7rem;
@@ -145,7 +145,7 @@
     color: @base;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background: @pink;
+    background: @red;
     padding: 0.3rem;
     margin: 0.2rem;
     margin-top: 0.7rem;
