@@ -5,9 +5,9 @@
     "ipc": "true",
     "gtk-layer-shell": true,
     "layer": "top",
-    "position": "top",
-    "height": "",
-    "width": "30",
+    "position": "left",
+    "height": "", 		
+    "width": 38,
     "modules-left": ["river/tags", "hyprland/workspaces"],
     "modules-right": ["tray", "cpu", "pulseaudio", "memory#mem", "memory#swap", "clock#date", "clock#time", "battery"],
     "river/tags": {
@@ -71,7 +71,7 @@
     },
     "backlight": {
         "device": "intel_backlight",
-        "format": "{percent}%",
+        "format": "{}{percent}%",
         "format-icons": ["", ""]
     },
     "upower": {
@@ -96,7 +96,7 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}",
-        "format-muted": "M",
+        "format-muted": "",
         "format-full": "",
         "format-icons": {
             "default": ["", "", " "]

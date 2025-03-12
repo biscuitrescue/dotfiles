@@ -86,5 +86,5 @@ require 'colorizer'.setup()
 
 vim.cmd("hi IndentBlanklineSpaceCharBlankline guifg=Comment")
 vim.cmd("hi IndentBlanklineSpaceChar guifg=Comment")
-vim.cmd.colorscheme("catppuccin-mocha")
--- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+vim.cmd.colorscheme("palenight")
+vim.cmd('hi Normal guibg=NONE ctermbg=NONE')

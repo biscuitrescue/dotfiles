@@ -43,11 +43,12 @@ require("lazy").setup({
     keys = {
       -- Top Pickers & Explorer
       { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
+      { "<leader>.", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
       { "<leader>,", function() Snacks.picker.buffers() end, desc = "Buffers" },
       { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
       { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
       { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
-      { "<leader>.", function() Snacks.explorer() end, desc = "File Explorer" },
+      { "<C-n>", function() Snacks.explorer() end, desc = "File Explorer" },
       -- find
       { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
       { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
@@ -332,7 +333,9 @@ require("lazy").setup({
     {'NTBBloodbath/doom-one.nvim', lazy = true},
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
     "rebelot/kanagawa.nvim",
-    'drewtempelmeyer/palenight.vim',
+    "alexmozaidze/palenight.nvim",
+    -- 'JoosepAlviste/palenightfall.nvim',
+    -- 'drewtempelmeyer/palenight.vim',
     {
       'Mofiqul/dracula.nvim',
     },

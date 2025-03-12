@@ -1,4 +1,4 @@
-@import "themes/mocha.css";
+@import "themes/palenight.css";
 
 * {
     font-family: Operator Mono Medium;
@@ -174,7 +174,7 @@
 
 #window {
     color: @text;
-    background: @surface0;
+    background: @base;
     border-radius: 1rem;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -182,5 +182,5 @@
     padding-right: 4px;
 }
 window#waybar {
-  background-color: rgba(30, 30, 46, 0.75)
+  background-color: @bg;
 }
