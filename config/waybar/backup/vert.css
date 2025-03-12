@@ -1,0 +1,186 @@
+@import "themes/palenight.css";
+
+* {
+    font-family: Operator Mono Medium;
+    font-size: 17px;
+    min-width: 0;
+    min-height: 0;
+    padding: 0.1rem;
+    border-radius:0.4rem;
+    opacity: 1;
+}
+
+#waybar {
+    background: @base;
+    color: @text;
+    padding: 0.05rem;
+    border-radius: 0rem;
+    /* opacity: 0.8; */
+}
+
+#tags {
+    border-radius: 0.4rem;
+    margin: 0.2rem;
+    background: @blue;
+    padding: 0.15rem;
+}
+
+#tags button {
+    color: @base;
+    padding: 0.2rem 0rem 0.2rem 0rem;
+    margin-bottom: 0.2rem;
+    border-radius: 0.4rem;
+}
+
+
+#tags button.occupied {
+    background: @red;
+    border-radius: 0.4rem;
+    color: @base;
+}
+#tags button.focused {
+    background: @surface0;
+    border-radius: 0.4rem;
+    color: @blue;
+}
+#tags button:hover {
+    color: @base;
+    background: @maroon;
+    border-radius: 1rem;
+}
+
+#workspaces {
+    margin: 0.2rem;
+    background: @lavender;
+    padding: 0.15rem;
+    color: @base;
+    border-radius: 1rem;
+    opacity: 1;
+}
+
+#workspaces button {
+    color: @base;
+    padding: 0.2rem 0rem 0.2rem 0rem;
+}
+
+#workspaces button.active {
+    background: @maroon;
+    color: @base;
+    border-radius: 1rem;
+}
+
+#workspaces button:hover {
+    color: @base;
+    background: @yellow;
+    border-radius: 1rem;
+}
+
+#tray {
+    background-color: @surface0;
+    padding: 0.3rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+    margin: 0.2rem;
+    color: @blue;
+    margin-bottom: 0.2rem;
+}
+#backlight,
+#clock,
+#clock.date {
+    color: @base;
+    background: @maroon;
+    padding: 0.6rem;
+    margin: 0.2rem;
+    margin-top: 0.7rem;
+}
+#clock.time {
+    color: @base;
+    background: @blue;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    margin-top: 0.7rem;
+}
+
+
+
+#battery {
+    color: @base;
+    background: @lavender;
+    padding: 0.3rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin: 0.2rem;
+    margin-top: 0.7rem;
+}
+
+#battery.charging {
+  background: @green;
+}
+
+#battery.warning:not(.charging) {
+  background: @peach;
+}
+
+#battery.critical:not(.charging) {
+  background: @red;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#pulseaudio {
+    background: @yellow;
+    color: @base;
+    margin: 0.2rem;
+    padding: 0.3rem;
+    padding-left: 0rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0rem;
+    margin-bottom: 0.7rem;
+}
+
+#cpu {
+    color: @base;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background: @pink;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+#memory.mem {
+    color: @base;
+    padding: 0.3rem;
+    background: @mauve;
+    margin: 0.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.15rem;
+    margin-top: 0.4rem;
+}
+#memory.swap {
+    color: @base;
+    padding: 0.3rem;
+    background: @mauve;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0.2rem;
+    margin-top: 0.15rem;
+    margin-bottom: 0.2em;
+}
+
+#window {
+    color: @text;
+    background: @base;
+    border-radius: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+window#waybar {
+  background-color: @bg;
+}

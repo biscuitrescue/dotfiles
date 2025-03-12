@@ -34,13 +34,14 @@ int main() {
     while(true){
         int x = check_battery();
         if(x>=99 && !(check_status())) {
-            system("dunstify -r 3000 'Battery Full' -h int:value:100 -h string:hlcolor:#95c7ae");
+            // system("dunstify -r 3000 'Battery Full' -h int:value:100 -h string:hlcolor:#95c7ae");
+            system("notify-send.sh --replace-file=/tmp/batteryfile 'Battery Full' -h int:value:100 -h string:hlcolor:#95c7ae");
         }
         if(x<=30 && check_status()) {
-            system("dunstify -r 3000 'Fill me up daddy ;('");
+            system("notify-send.sh --replace-file=/tmp/batteryfile 'Fill me up daddy ;('");
         }
         if(x<5 && check_status()) {
-            system("dunstify -r 3000 'Suspending system in 30s'");
+            system("notify-send.sh --replace-file=/tmp/batteryfile 'Suspending system in 30s'");
             sleep(30);
             system("systemctl suspend");
         }
