@@ -306,15 +306,16 @@ require("lazy").setup({
         require("persistence").setup()
       end,
     },
-    {
-      'nvim-lualine/lualine.nvim',
-      dependencies = { 'kyazdani42/nvim-web-devicons'}
-    },
+    { 'bluz71/nvim-linefly' },
+    -- {
+    --   'nvim-lualine/lualine.nvim',
+    --   dependencies = { 'kyazdani42/nvim-web-devicons'}
+    -- },
     -- themes
     {
       "neanias/everforest-nvim",
       version = false,
-      lazy = false,
+      lazy = true,
       priority = 1000, -- make sure to load this before all the other start plugins
       config = function()
         require("everforest").setup({
@@ -328,15 +329,18 @@ require("lazy").setup({
         })
       end,
     },
-    'shaunsingh/nord.nvim',
-    'navarasu/onedark.nvim',
-    {'NTBBloodbath/doom-one.nvim', lazy = true},
+    {
+      "olimorris/onedarkpro.nvim",
+      -- priority = 1000, -- Ensure it loads first
+      lazy=true,
+    },
     { "catppuccin/nvim", name = "catppuccin", lazy = true },
-    "rebelot/kanagawa.nvim",
-    "alexmozaidze/palenight.nvim",
+    {"rebelot/kanagawa.nvim", lazy=true},
+    {"alexmozaidze/palenight.nvim", lazy=true},
     -- 'JoosepAlviste/palenightfall.nvim',
     -- 'drewtempelmeyer/palenight.vim',
     {
       'Mofiqul/dracula.nvim',
+      lazy=true,
     },
   })

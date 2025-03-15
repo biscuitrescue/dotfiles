@@ -123,8 +123,8 @@ themes = {
     "One": {
         "openbox": "Doom-One",
         "qtile": "one",
-        "nvim": "doom-one",
-        "Gtk": "AtomOneDarkTheme",
+        "nvim": "onedark_vivid",
+        "Gtk": "Otis",
         "kitty": "one",
         "polybar": "one",
         "alacritty": "one",
@@ -245,7 +245,7 @@ themes = {
         "mako": "palenight",
         "rofi": "palenight",
         "emacs": "doom-palenight",
-        "starship": "dracula",
+        "starship": "palenight",
         "waybar": "palenight"
     },
     "Nord": {

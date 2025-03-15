@@ -8,8 +8,9 @@
     "position": "left",
     "height": "", 		
     "width": 38,
-    "modules-left": ["river/tags", "hyprland/workspaces"],
-    "modules-right": ["tray", "cpu", "pulseaudio", "memory#mem", "memory#swap", "clock#date", "clock#time", "battery"],
+    "modules-left": ["clock#date", "clock#time", "pulseaudio"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "cpu", "memory#mem", "memory#swap", "battery"],
     "river/tags": {
         "num-tags": 9,
     },

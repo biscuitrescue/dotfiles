@@ -1,4 +1,4 @@
-@import "themes/palenight.css";
+@import "themes/mocha.css";
 
 * {
     font-family: Operator Mono Medium;
@@ -138,14 +138,14 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-right: 0rem;
-    margin-bottom: 0.7rem;
+    margin-top: 0.7rem;
 }
 
 #cpu {
     color: @base;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background: @pink;
+    background: @yellow;
     padding: 0.3rem;
     margin: 0.2rem;
     margin-top: 0.7rem;
@@ -154,7 +154,7 @@
 #memory.mem {
     color: @base;
     padding: 0.3rem;
-    background: @mauve;
+    background: @blue;
     margin: 0.2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -164,7 +164,7 @@
 #memory.swap {
     color: @base;
     padding: 0.3rem;
-    background: @mauve;
+    background: @maroon;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin: 0.2rem;

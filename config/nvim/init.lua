@@ -84,7 +84,30 @@ require("cafo.remap")
 require("cafo.lazy")
 require 'colorizer'.setup()
 
--- vim.cmd("hi IndentBlanklineSpaceCharBlankline guifg=Comment")
--- vim.cmd("hi IndentBlanklineSpaceChar guifg=Comment")
-vim.cmd.colorscheme("palenight")
+vim.cmd.colorscheme("catppuccin-mocha")
 -- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+
+-- linefly
+vim.g.linefly_options = {
+  separator_symbol = "⎪",
+  progress_symbol = "↓",
+  active_tab_symbol = "▪",
+  git_branch_symbol = "",
+  error_symbol = "E",
+  warning_symbol = "W",
+  information_symbol = "I",
+  ellipsis_symbol = "…",
+  tabline = true,
+  winbar = true,
+  with_file_icon = true,
+  with_git_branch = true,
+  with_git_status = true,
+  with_diagnostic_status = true,
+  with_session_status = true,
+  with_attached_clients = true,
+  with_lsp_status = true,
+  with_macro_status = true,
+  with_search_count = true,
+  with_spell_status = true,
+  with_indent_status = true,
+}

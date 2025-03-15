@@ -1,16 +1,16 @@
-palette = "dracula"
+palette = "catppuccin_mocha"
 
 [character]
 #
 # success_symbol = "[[!/](blue)❯ ](magenta)"
 success_symbol = "[ ](green)"
 error_symbol = "[ ](red)"
-vicmd_symbol = "[ ](magenta)"
+vicmd_symbol = "[ ](blue)"
 
 [directory]
 truncation_length = 4
 # Catppuccin 'lavender'
-style = "bold blue"
+style = "bold magenta"
 
 # palette tables should be last in the config ⚓️
 [palettes.everforest]
@@ -60,6 +60,14 @@ mauve = "#be95ff"
 blue = "#78a9ff"
 magenta = "#ff7eb6"
 yellow = "#f1fa8c"
+
+[palettes.palenight]
+green = "#c3e88d"
+red = "#f07178"
+mauve = "#c797ea"
+blue = "#82aaff"
+magenta = "#ea999c"
+yellow = "#ffcb6b"
 
 [palettes.dracula]
 green = "#50fa7b"
