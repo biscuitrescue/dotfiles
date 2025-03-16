@@ -4,7 +4,7 @@ from libqtile import bar
 from qtile_extras.widget.decorations import RectDecoration
 from qtile_extras import widget
 from colours import themes
-theme = "one"
+theme = "kanagawa"
 
 
 theme = themes[theme]
