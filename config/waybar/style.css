@@ -1,85 +1,137 @@
 @import "themes/kanagawa.css";
 
 * {
-    font-family: Operator Mono Medium;
-    font-size: 17px;
-    min-width: 0;
-    min-height: 0;
-    padding: 0.1rem;
-    border-radius:0.4rem;
-    opacity: 1;
+  font-family: "JetBrains Mono Nerd Font";
+  font-weight: bold; 
+  font-size: 14px;
+  border-radius:0.4rem;
+  padding: 0px;
+  opacity: 1;
 }
 
-#waybar {
-    background: @base;
-    color: @text;
-    padding: 0.05rem;
-    border-radius: 0rem;
-    /* opacity: 0.8; */
+window#waybar {
+  background: @base;
+  border-radius: 10px;
 }
 
-#workspaces {
-    margin: 0.2rem;
-    background: @lavender;
-    padding: 0.15rem;
-    color: @base;
-    border-radius: 1rem;
-    opacity: 1;
+
+tooltip {
+  background: @base;
+  color: @sky;
+  font-size: 13px;
+  border-radius: 7px;
+  border: 2px solid #101a24;
+
+
 }
+#workspaces{
+  background: @base;
+  /* color: @base; */
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 7px;
+  transition: 0.2s ease;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 
 #workspaces button {
-    color: @base;
-    padding: 0.2rem 0rem 0.2rem 0rem;
+  color: @mauve;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 9px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  transition: 0.2s ease;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 #workspaces button.active {
-    background: @maroon;
-    color: @base;
-    border-radius: 1rem;
+  background: @mauve;
+  color: @base;
+  transition: all 0.3s ease;
+  padding-left: 4px;
+  padding-right: 4px;
+  /*  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682); */
 }
 
 #workspaces button:hover {
-    color: @base;
-    background: @yellow;
-    border-radius: 1rem;
+  animation: ws_hover 20s ease-in-out 1;
+  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+  color: @base;
+  background: @yellow;
+  border-radius: 1rem;
 }
 
+#taskbar button {
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 4px;
+  padding: 0px;
+  border-radius: 9px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 0px;
+  color: @text;
+  background: @red;
+  animation: tb_normal 20s ease-in-out 1;
+}
+
+#taskbar button.active {
+  color: @text;
+  background: @red;
+  margin-left: 3px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-right: 3px;
+  animation: tb_active 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+  min-height: 9px; 
+}
+
+#taskbar button:hover {
+  color: @text;
+  background: @red;
+  animation: tb_hover 20s ease-in-out 1;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+#window{
+  color: @base;
+  background: @mauve;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
 #tray {
-    background-color: @surface0;
-    padding: 0.3rem;
-    padding-top: 0.7rem;
-    padding-bottom: 0.5rem;
-    margin: 0.2rem;
-    color: @blue;
-    margin-bottom: 0.2rem;
-}
-#backlight,
-#clock,
-#clock.date {
-    color: @base;
-    background: @maroon;
-    padding: 0.6rem;
-    margin: 0.2rem;
-    margin-top: 0.7rem;
-}
-#clock.time {
-    color: @base;
-    background: @blue;
-    padding: 0.3rem;
-    margin: 0.2rem;
-    margin-top: 0.7rem;
+  background-color: @surface0;
+  color: @blue;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
-
+#custom-spacer{
+  opacity: 0.0;
+}
+#custom-smallspacer{
+  opacity: 0.0;
+}
 
 #battery {
-    color: @base;
-    background: @lavender;
-    padding: 0.3rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
-    margin: 0.2rem;
-    margin-top: 0.7rem;
+  color: @base;
+  background: @lavender;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-bottom: 12px;
+  margin-top: 12px;
 }
 
 #battery.charging {
@@ -94,62 +146,122 @@
   background: @red;
 }
 
-#backlight {
-    color: @yellow;
-}
 
+
+#clock{
+  color: @base;
+  background: @maroon;
+  margin-bottom: 12px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-top: 12px;
+}
 #pulseaudio {
-    background: @yellow;
-    color: @base;
-    margin: 0.2rem;
-    padding: 0.3rem;
-    padding-left: 0rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-right: 0rem;
-    margin-top: 0.7rem;
+  background: @yellow;
+  color: @base;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 #cpu {
-    color: @base;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background: @yellow;
-    padding: 0.3rem;
-    margin: 0.2rem;
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
-}
-#memory.mem {
-    color: @base;
-    padding: 0.3rem;
-    background: @blue;
-    margin: 0.2rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.15rem;
-    margin-top: 0.4rem;
-}
-#memory.swap {
-    color: @base;
-    padding: 0.3rem;
-    background: @maroon;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    margin: 0.2rem;
-    margin-top: 0.15rem;
-    margin-bottom: 0.2rem;
+  color: @base;
+  background: @yellow;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-bottom: 12px;
+  margin-top: 12px;
 }
 
-#window {
-    color: @text;
-    background: @base;
-    border-radius: 1rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-left: 4px;
-    padding-right: 4px;
+#memory.mem {
+  color: @base;
+  background: @blue;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-bottom: 12px;
+  margin-top: 12px;
 }
-window#waybar {
-  background-color: @bg;
+#memory.swap {
+  color: @base;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  background: @maroon;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
+
+#mpris{
+  color: white;
+  animation: repeat;
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    color: #4a4a4a;
+
+  }
+}
+#custom-l_end,
+#custom-r_end,
+#custom-sl_end,
+#custom-sr_end,
+#custom-rl_end,
+#mpris{
+  font-size: 15px;
+  font-weight: bold
+}
+#custom-rr_end {
+  font-weight: normal;
+  color: #E8EDF0;
+  background:  rgba(23, 23, 23, 0.0);
+  opacity: 1;
+  margin: 0px 0px 0px 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  ;
+
+}
+
+
+#custom-r_end {
+  border-radius: 0px 7px 7px 0px;
+  margin-right: 1px;
+  padding-right: 3px;
+}
+
+#custom-l_end {
+  border-radius: 7px 0px 0px 7px;
+  margin-left: 1px;
+  padding-left: 3px;
+}
+
+#custom-sr_end {
+  border-radius: 0px;
+  margin-right: 1px;
+  padding-right: 3px;
+}
+
+#custom-sl_end {
+  border-radius: 0px;
+  margin-left: 1px;
+  padding-left: 3px;
+}
+
+#custom-rr_end {
+  border-radius: 0px 7px 7px 0px;
+  margin-right: 1px;
+  padding-right: 3px;
+}
+
+#custom-rl_end {
+  border-radius: 7px 0px 0px 7px;
+  margin-left: 1px;
+  padding-left: 3px;
+}
+

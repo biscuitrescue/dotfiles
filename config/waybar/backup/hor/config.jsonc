@@ -21,12 +21,12 @@
 
 "modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer","mpris"],
 "modules-center": ["custom/padd","custom/l_end","custom/r_end","hyprland/window","custom/padd"],
-"modules-right": ["tray", "custom/smallspacer","pulseaudio", "custom/smallspacer", "memory#mem", "custom/smallspacer","memory#swap", "custom/smallspacer","cpu","clock","custom/smallspacer", "battery", "custom/smallspacer"],
+"modules-right": ["tray", "custom/smallspacer", "pulseaudio", "custom/smallspacer", "memory#mem", "custom/smallspacer", "memory#swap", "custom/smallspacer","cpu", "custom/smallspacer", "clock","custom/smallspacer", "battery", "custom/smallspacer"],
 
 
 // sourced from modules based on config.ctl //
 "custom/smallspacer":{
-  "format": " ",
+  "format": "  ",
 },
 
 "mpris": {

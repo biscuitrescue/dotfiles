@@ -1,11 +1,11 @@
-@import "themes/one.css";
+@import "themes/kanagawa.css";
 
 * {
   font-family: "JetBrains Mono Nerd Font";
   font-weight: bold; 
-  font-size: 15px;
-  padding: 0.1rem;
+  font-size: 14px;
   border-radius:0.4rem;
+  padding: 0px;
   opacity: 1;
 }
 
@@ -33,13 +33,13 @@ tooltip {
   transition: 0.2s ease;
   padding-left: 4px;
   padding-right: 4px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 
 #workspaces button {
-  color: @red;
+  color: @mauve;
   box-shadow: none;
   text-shadow: none;
   border-radius: 9px;
@@ -51,7 +51,7 @@ tooltip {
 }
 
 #workspaces button.active {
-  background: @maroon;
+  background: @mauve;
   color: @base;
   transition: all 0.3s ease;
   padding-left: 4px;
@@ -103,19 +103,19 @@ tooltip {
 }
 #window{
   color: @base;
-  background: @maroon;
+  background: @mauve;
   padding-right: 10px;
   padding-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 #tray {
   background-color: @surface0;
   color: @blue;
-  margin-top: 0.6rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  margin-bottom: 0.6rem;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 #custom-spacer{
@@ -125,51 +125,13 @@ tooltip {
   opacity: 0.0;
 }
 
-
-#custom-mouse{
-  font-size: 14px;
-  margin-bottom: 6px;
-  background:  #161320;
-}
-
-
-#custom-power{
-  font-size: 15px;
-  color: #FFFFFF;
-  background:  rgba(22, 19, 32, 0.9);
-  margin: 6px 0px 6px 0px;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#backlight{
-  color: #2096C0;
-  background: rgba(23, 23, 23, 0.0);
-  font-weight: normal;
-  font-size: 19px;
-  margin: 1px 0px 0px 0px;
-  padding-left: 0px;
-  padding-right: 2px;
-
-}
-#bluetooth,
-#custom-cliphist{
-  color: #E6E7E7;
-  background:  #161320;
-  opacity: 1;
-  margin: 4px 0px 4px 0px;
-  padding-left: 4px;
-  padding-right: 4px;
-
-}
-
 #battery {
   color: @base;
   background: @lavender;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-bottom: 12px;
+  margin-top: 12px;
 }
 
 #battery.charging {
@@ -189,45 +151,44 @@ tooltip {
 #clock{
   color: @base;
   background: @maroon;
-  padding: 0.6rem;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 0.4rem;
-  margin-right: 0rem;
+  margin-bottom: 12px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-top: 12px;
 }
 #pulseaudio {
   background: @yellow;
   color: @base;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 #cpu {
   color: @base;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   background: @yellow;
-  padding: 0.4rem;
-  margin: 0.2rem;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-bottom: 12px;
+  margin-top: 12px;
 }
 
 #memory.mem {
   color: @base;
-  padding: 0.4rem;
   background: @blue;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-bottom: 12px;
+  margin-top: 12px;
 }
 #memory.swap {
   color: @base;
-  padding: 0.6rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
   background: @maroon;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 #mpris{
