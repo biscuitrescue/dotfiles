@@ -84,7 +84,7 @@ require("cafo.remap")
 require("cafo.lazy")
 require 'colorizer'.setup()
 
-vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("onedark")
 -- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 
 -- linefly

@@ -123,7 +123,7 @@ themes = {
     "One": {
         "openbox": "Doom-One",
         "qtile": "one",
-        "nvim": "onedark_vivid",
+        "nvim": "onedark",
         "Gtk": "Otis",
         "kitty": "one",
         "polybar": "one",

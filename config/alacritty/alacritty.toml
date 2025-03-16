@@ -133,4 +133,4 @@ x = 10
 y = 10
 
 [general]
-import = ["/home/cafo/.config/alacritty/catppuccin-mocha.toml"]
+import = ["/home/cafo/.config/alacritty/one.toml"]
