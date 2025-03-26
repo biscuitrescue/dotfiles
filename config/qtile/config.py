@@ -6,7 +6,6 @@ from keys import keys
 from groups import groups
 from screens import screens
 from screens import theme
-from libqtile.backend.wayland import InputConfig
 
 border = dict(
     border_focus=theme["blue"],
@@ -57,11 +56,11 @@ layouts = [
 
 ]
 
-wl_input_rules = {
-    "1267:12608:MSFT0001:00 04F3:3140 Touchpad": InputConfig(natural_scroll=True, tap=True),
-    "*": InputConfig(natural_scroll=True, tap=True),
-    "type:keyboard": InputConfig(kb_options="ctrl:nocaps,compose:ralt"),
-}
+# wl_input_rules = {
+#     "1267:12608:MSFT0001:00 04F3:3140 Touchpad": InputConfig(natural_scroll=True, tap=True),
+#     "*": InputConfig(natural_scroll=True, tap=True),
+#     "type:keyboard": InputConfig(kb_options="ctrl:nocaps,compose:ralt"),
+# }
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List

@@ -80,4 +80,4 @@ function ipub
 end
 
 starship init fish | source
-rxfetch
+# rxfetch

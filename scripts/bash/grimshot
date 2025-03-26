@@ -2,4 +2,5 @@
 
 mkdir -p ~/Pictures/screenshots
 grim -t png ~/Pictures/screenshots/$(date +%s).png
-dunstify -r 3101 'Screenshot taken'
+# dunstify -r 3101 'Screenshot taken'
+notify-send.sh --replace-file=/tmp/shotnotif -u normal "Screenshot Taken"

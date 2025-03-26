@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 grim -g "$(slurp -d)" - | wl-copy -t image/png
-dunstify -r 3101 'Region added to Clipboard'
+notify-send.sh --replace-file=/tmp/shotnotif -u normal "Screenshot Added to Clipboard"

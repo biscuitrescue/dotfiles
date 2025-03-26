@@ -1,6 +1,6 @@
 require("catppuccin").setup({
     flavour = "mocha",
-  transparent_background = true,
+  transparent_background = false,
   show_end_of_buffer = false, -- show the '~' characters after the end of buffers
   term_colors = true,
   dim_inactive = {
@@ -61,7 +61,10 @@ require("catppuccin").setup({
       lavender = "#95aec7",
       text = "#c7ccd1",
       surface0 = "#393f45",
+      mantle = "#1c2023",
+      crust = "#1c2023",
       surface1 = "#565E65",
+      surface2 = "#565E65",
     }
   },
   -- custom_highlights = {},

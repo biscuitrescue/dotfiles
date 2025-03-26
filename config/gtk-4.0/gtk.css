@@ -2864,7 +2864,7 @@ windowcontrols > button.minimize:hover, windowcontrols > button.minimize:active,
 }
 
 windowcontrols > button.minimize:hover, windowcontrols > button.minimize:active, windowcontrols > button.maximize:hover, windowcontrols > button.maximize:active, windowcontrols > button.close:hover, windowcontrols > button.close:active {
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 windowcontrols > button.minimize:backdrop > image, windowcontrols > button.maximize:backdrop > image, windowcontrols > button.close:backdrop > image {
@@ -2876,27 +2876,27 @@ windowcontrols > button.minimize:backdrop:hover, windowcontrols > button.minimiz
 }
 
 windowcontrols > button.minimize > image {
-  background-color: #e8f467;
+  background-color: #fdbe04;
 }
 
 windowcontrols > button.minimize:active > image {
-  background-color: mix(black,#e8f467,0.75);
+  background-color: mix(black,#fdbe04,0.75);
 }
 
 windowcontrols > button.maximize > image {
-  background-color: #4be772;
+  background-color: #38c76a;
 }
 
 windowcontrols > button.maximize:active > image {
-  background-color: mix(black,#4be772,0.75);
+  background-color: mix(black,#38c76a,0.75);
 }
 
 windowcontrols > button.close > image {
-  background-color: #f44d4d;
+  background-color: #fd5f51;
 }
 
 windowcontrols > button.close:active > image {
-  background-color: mix(black,#f44d4d,0.75);
+  background-color: mix(black,#fd5f51,0.75);
 }
 
 windowcontrols {
@@ -5800,18 +5800,6 @@ window.shortcuts searchbar {
   transition: background-color 200ms ease-out;
 }
 
-.sidebar-pane listview,
-.sidebar-pane list:not(.navigation-sidebar),
-.sidebar-pane list.boxed-list,
-.sidebar-pane list.content {
-  background-color: mix(white,@sidebar_bg_color,0.95);
-  color: @sidebar_fg_color;
-}
-
-.sidebar-pane list.boxed-list-separate {
-  color: @sidebar_fg_color;
-}
-
 .sidebar-pane flap > dimming,
 .sidebar-pane leaflet > dimming,
 .sidebar-pane navigation-view > dimming,
@@ -6087,106 +6075,6 @@ stacksidebar row > label {
 
 stacksidebar row.needs-attention > label {
   background-size: 6px 6px, 0 0;
-}
-
-#NautilusPathButton, .content-pane headerbar menubutton.image-button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) > button, .content-pane headerbar button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque), .content-pane headerbar button.arrow-button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque), .content-pane headerbar button.image-button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque), .content-pane headerbar button.image-text-button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-  color: @window_fg_color;
-}
-
-#NautilusPathButton:focus:not(:hover):not(:active), .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:focus:not(:hover):not(:active), .content-pane headerbar button:focus:not(:hover):not(:active):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-  color: @window_fg_color;
-}
-
-#NautilusPathButton:hover, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:hover, .content-pane headerbar button:hover:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-  color: @window_fg_color;
-}
-
-.keyboard-activating#NautilusPathButton, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button.keyboard-activating, .content-pane headerbar button.keyboard-activating:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque), #NautilusPathButton:active, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:active, .content-pane headerbar button:active:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-  color: @window_fg_color;
-}
-
-#NautilusPathButton:disabled, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:disabled, .content-pane headerbar button:disabled:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-  color: @window_fg_color;
-}
-
-#NautilusPathButton:checked, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:checked, .content-pane headerbar button:checked:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-  color: @window_fg_color;
-}
-
-#NautilusPathButton:checked:hover, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:checked:hover, .content-pane headerbar button:checked:hover:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-  color: @window_fg_color;
-}
-
-#NautilusPathButton:checked:active, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:checked:active, .content-pane headerbar button:checked:active:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-  color: @window_fg_color;
-}
-
-#NautilusPathButton:checked:disabled, .content-pane headerbar menubutton:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).image-button > button:checked:disabled, .content-pane headerbar button:checked:disabled:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-  color: @window_fg_color;
-}
-
-.content-pane headerbar {
-  color: @window_fg_color;
-}
-
-.content-pane headerbar entry {
-  color: @window_fg_color;
-}
-
-.content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close {
-  color: transparent;
-}
-
-.content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize:active, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize:active, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close:active {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize:backdrop > image, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize:backdrop > image, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close:backdrop > image {
-  background-color: alpha(@window_fg_color,0.3);
-}
-
-.content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize:backdrop:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).minimize:backdrop:active, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize:backdrop:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).maximize:backdrop:active, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close:backdrop:hover, .content-pane headerbar windowcontrols > button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque).close:backdrop:active {
-  color: alpha(@window_fg_color,0.45);
-}
-
-.content-pane headerbar switch {
-  background-color: alpha(@window_fg_color,0.15);
-}
-
-.content-pane headerbar switch:hover {
-  background-color: alpha(@window_fg_color,0.2);
-}
-
-.content-pane headerbar switch:active {
-  background-color: alpha(@window_fg_color,0.25);
-}
-
-.content-pane headerbar switch:hover > slider, .content-pane headerbar switch:active > slider {
-  box-shadow: 0 2px 3px transparent, 0 0 0 6px alpha(@window_fg_color,0.1);
-}
-
-.content-pane headerbar switch:checked {
-  background-color: @accent_bg_color;
-}
-
-.content-pane tabbar .box {
-  color: @window_fg_color;
-}
-
-.content-pane tabbar tab {
-  color: @window_fg_color;
-}
-
-.content-pane tabbar tab:selected {
-  color: @window_fg_color;
-}
-
-.content-pane tabbar tab:hover {
-  color: @window_fg_color;
-}
-
-.content-pane tabbar tab:active {
-  color: @window_fg_color;
 }
 
 /**********************
@@ -7841,7 +7729,7 @@ menubutton stack > box {
 
 .running-stopwatch .seconds-label,
 .running-stopwatch .miliseconds-label {
-  color: #6272a4;
+  color: #5b9bf8;
 }
 
 .stopped-stopwatch .miliseconds-label,
@@ -7874,20 +7762,20 @@ menubutton stack > box {
 }
 
 .night .clock-time {
-  color: #5d70ac;
-  background-color: alpha(#6272a4,0.25);
+  color: #3c84f7;
+  background-color: alpha(#5b9bf8,0.25);
 }
 
 .naut .clock-time,
 .astro .clock-time {
-  color: #f8a854;
-  background-color: alpha(#ffb86c,0.25);
+  color: #FF7043;
+  background-color: alpha(#FF8A65,0.25);
 }
 
 .civil .clock-time,
 .day .clock-time {
-  color: #e8f467;
-  background: alpha(#f1fa8c,0.25);
+  color: #FBC02D;
+  background: alpha(#FFD600,0.25);
 }
 
 .exit-info {
@@ -8009,7 +7897,6 @@ window.org-gnome-TextEditor popover.open-popover > contents {
   background-color: alpha(currentColor,0.05);
   border-radius: 6px;
   padding: 0;
-  color: @window_fg_color;
 }
 
 #NautilusPathButton {
@@ -8079,7 +7966,7 @@ screenshot-carousel button,
 }
 
 .origin-beta {
-  color: #f1fa8c;
+  color: #FFD600;
 }
 
 .origin-button > button {
@@ -8341,7 +8228,7 @@ button.star {
 }
 
 star-image {
-  color: #e8f467;
+  color: #FBC02D;
 }
 
 .dimmer-label {
@@ -8361,7 +8248,7 @@ star-image {
 }
 
 .upgrade-banner-background {
-  background: linear-gradient(to bottom, #50fa7b, #6272a4);
+  background: linear-gradient(to bottom, #66BB6A, #5b9bf8);
   color: white;
 }
 
@@ -8505,8 +8392,8 @@ carousel.card {
 }
 
 .context-tile-lozenge.blue, .context-tile-lozenge.details-rating-5 {
-  color: #6272a4;
-  background-color: alpha(#6272a4,0.15);
+  color: #5b9bf8;
+  background-color: alpha(#5b9bf8,0.15);
 }
 
 .context-tile-lozenge.yellow, .context-tile-lozenge.details-rating-12 {
@@ -8515,8 +8402,8 @@ carousel.card {
 }
 
 .context-tile-lozenge.details-rating-15 {
-  color: #ffb86c;
-  background-color: alpha(#ffb86c,0.15);
+  color: #FF8A65;
+  background-color: alpha(#FF8A65,0.15);
 }
 
 .context-tile-lozenge.red, .context-tile-lozenge.details-rating-18 {
@@ -8587,7 +8474,7 @@ row.app > box.header > image {
 }
 
 row.app label.warning {
-  color: #ff5555;
+  color: #F44336;
 }
 
 @keyframes pre-delay {
@@ -9022,51 +8909,51 @@ window#desktopwindow.background {
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
-@define-color accent_bg_color #6272a4;
-@define-color accent_fg_color #ffffff;
-@define-color accent_color #6272a4;
-@define-color destructive_bg_color #ff5555;
-@define-color destructive_fg_color #ffffff;
-@define-color destructive_color #ff5555;
-@define-color success_bg_color #50fa7b;
-@define-color success_fg_color rgba(0, 0, 0, 0.87);
-@define-color success_color #50fa7b;
-@define-color warning_bg_color #f1fa8c;
+@define-color accent_bg_color #5b9bf8;
+@define-color accent_fg_color #FFFFFF;
+@define-color accent_color #5b9bf8;
+@define-color destructive_bg_color #F44336;
+@define-color destructive_fg_color #FFFFFF;
+@define-color destructive_color #F44336;
+@define-color success_bg_color #66BB6A;
+@define-color success_fg_color #FFFFFF;
+@define-color success_color #66BB6A;
+@define-color warning_bg_color #FFD600;
 @define-color warning_fg_color rgba(0, 0, 0, 0.87);
-@define-color warning_color #f1fa8c;
-@define-color error_bg_color #ff5555;
-@define-color error_fg_color #ffffff;
-@define-color error_color #ff5555;
-@define-color window_bg_color #242632;
-@define-color window_fg_color #ffffff;
-@define-color view_bg_color #242632;
-@define-color view_fg_color #ffffff;
-@define-color headerbar_bg_color #242632;
-@define-color headerbar_fg_color #ffffff;
-@define-color headerbar_border_color #ffffff;
-@define-color headerbar_backdrop_color #1f2029;
+@define-color warning_color #FFD600;
+@define-color error_bg_color #F44336;
+@define-color error_fg_color #FFFFFF;
+@define-color error_color #F44336;
+@define-color window_bg_color #2C2C2C;
+@define-color window_fg_color #FFFFFF;
+@define-color view_bg_color #2C2C2C;
+@define-color view_fg_color #FFFFFF;
+@define-color headerbar_bg_color #2C2C2C;
+@define-color headerbar_fg_color #FFFFFF;
+@define-color headerbar_border_color #FFFFFF;
+@define-color headerbar_backdrop_color #242424;
 @define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
 @define-color headerbar_darker_shade_color rgba(0, 0, 0, 0.75);
-@define-color sidebar_bg_color #1f2029;
-@define-color sidebar_fg_color #ffffff;
-@define-color sidebar_backdrop_color #242632;
+@define-color sidebar_bg_color #242424;
+@define-color sidebar_fg_color #FFFFFF;
+@define-color sidebar_backdrop_color #2C2C2C;
 @define-color sidebar_shade_color rgba(0, 0, 0, 0.25);
 @define-color sidebar_border_color rgba(255, 255, 255, 0.08);
-@define-color secondary_sidebar_bg_color #242632;
-@define-color secondary_sidebar_fg_color #ffffff;
-@define-color secondary_sidebar_backdrop_color #242632;
+@define-color secondary_sidebar_bg_color #2C2C2C;
+@define-color secondary_sidebar_fg_color #FFFFFF;
+@define-color secondary_sidebar_backdrop_color #2C2C2C;
 @define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.25);
 @define-color secondary_sidebar_border_color rgba(255, 255, 255, 0.12);
 @define-color card_bg_color rgba(255, 255, 255, 0.04);
-@define-color card_fg_color #ffffff;
+@define-color card_fg_color #FFFFFF;
 @define-color card_shade_color rgba(0, 0, 0, 0.36);
-@define-color dialog_bg_color #1f2029;
-@define-color dialog_fg_color #ffffff;
-@define-color popover_bg_color #242632;
-@define-color popover_fg_color #ffffff;
+@define-color dialog_bg_color #242424;
+@define-color dialog_fg_color #FFFFFF;
+@define-color popover_bg_color #2C2C2C;
+@define-color popover_fg_color #FFFFFF;
 @define-color popover_shade_color rgba(0, 0, 0, 0.25);
-@define-color thumbnail_bg_color #343746;
-@define-color thumbnail_fg_color #ffffff;
+@define-color thumbnail_bg_color #3C3C3C;
+@define-color thumbnail_fg_color #FFFFFF;
 @define-color shade_color rgba(0, 0, 0, 0.25);
 @define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);
 /* Public colors from Default */

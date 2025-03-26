@@ -1,16 +1,15 @@
 import os
 from libqtile.config import Screen
-from libqtile import layout, bar, widget, hook
+from libqtile import bar
 from qtile_extras.widget.decorations import RectDecoration
 from qtile_extras import widget
 from colours import themes
-theme = "latte"
-
+theme = "kanagawa"
 
 
 theme = themes[theme]
 
-rad = 7
+rad = 5
 decor = {
     "decorations": [
         RectDecoration(
@@ -46,7 +45,7 @@ decor2 = {
 }
 
 
-xx = 22
+xx = 14
 xf = "jetbrainsmono nerd font bold"
 default = [
     widget.TextBox(
@@ -95,7 +94,7 @@ default = [
     widget.CPU(
         background=theme["red"],
         foreground=theme["black"],
-        format=' {load_percent}%',
+        format='  {load_percent}%',
         font=xf,
         fontsize=xx,
         **decor,
@@ -196,27 +195,27 @@ if len(os.listdir("/sys/class/power_supply")) == 0:
 else:
     default.extend(
         [
-        #     widget.UPowerWidget(
-        #         font=xf,
-        #         battery_width=27,
-        #         battery_height=14,
-        #         fontsize=xx,
-        #         percentage_low=0.5,
-        #         percentage_critical=0.3,
-        #         fill_critical="#ff0000",
-        #         fill_charge=theme["green"],
-        #         fill_low=theme["yellow"],
-        #         fill_normal=theme["black"],
-        #         background=theme["blue"],
-        #         border_colour=theme["black"],
-        #         border_critical_colour=theme["black"],
-        #         border_charge_colour=theme["black"],
-        #         text_charging="",
-        #         text_discharging="",
-        #         text_displaytime="",
-        #         margin=10,
-        #         **decor1,
-        #     ),
+            widget.UPowerWidget(
+                font=xf,
+                battery_width=24,
+                battery_height=14,
+                fontsize=xx,
+                percentage_low=0.5,
+                percentage_critical=0.3,
+                fill_critical="#ff0000",
+                fill_charge=theme["green"],
+                fill_low=theme["yellow"],
+                fill_normal=theme["black"],
+                background=theme["blue"],
+                border_colour=theme["black"],
+                border_critical_colour=theme["black"],
+                border_charge_colour=theme["black"],
+                text_charging="",
+                text_discharging="",
+                text_displaytime="",
+                margin=5,
+                **decor1,
+            ),
             widget.Battery(
                 fontsize=xx,
                 font=xf,
@@ -229,7 +228,7 @@ else:
                 discharge_char='',
                 update_interval=1,
                 format='{percent:2.0%}{char}',
-                **decor,
+                **decor2,
             ),
             widget.TextBox(
                 foreground=theme["teal"],
@@ -243,7 +242,7 @@ screens = [
     Screen(
         top=bar.Bar(
             default,
-            42,
+            37,
             # opacity=0.9,
             # margin=[8, 8, 2, 8],
             background=theme["black"],

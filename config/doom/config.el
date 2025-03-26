@@ -40,7 +40,7 @@
 (setq indent-tabs-mode t
       tab-width 2)
 (setq doom-theme 'kanagawa)
-(setq doom-font (font-spec :family "Fira Code" :size 18))
+(setq doom-font (font-spec :family "Fira Code" :size 17))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))

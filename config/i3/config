@@ -264,11 +264,11 @@ exec_always picom
 #gaps
 for_window [class="org.gnome.Nautilus"] floating enable
 
-for_window [class="^.*"] border normal 3
+for_window [class="^.*"] border pixel 2
 gaps inner 8
 gaps outer 2
 
-bindsym $mod+Shift+b border normal 3
+bindsym $mod+Shift+b border normal 2
 bindsym $mod+b border pixel 3
 
 # TOGGLE GAPS

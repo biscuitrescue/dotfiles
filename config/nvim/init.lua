@@ -61,13 +61,19 @@ vim.api.nvim_create_autocmd({"BufReadPost"}, {
 })
 
 if vim.g.neovide then
-  vim.o.guifont = "jetbrainsmono nerd font:h14"
+  -- vim.o.guifont = "operator mono:h11"
+  vim.o.guifont = "jetbrainsmono nerd font:h11"
   vim.opt.linespace = 0
   vim.g.neovide_scale_factor = 1.0
   vim.g.neovide_padding_top = 1
   vim.g.neovide_padding_bottom = 1
   vim.g.neovide_padding_right = 1
   vim.g.neovide_padding_left = 1
+
+  vim.g.neovide_cursor_vfx_particle_density = 10.0
+  vim.g.neovide_cursor_vfx_mode = "railgun"
+  vim.g.neovide_opacity = 0.9
+  vim.g.neovide_normal_opacity = 0.9
 end
 
 vim.filetype.add {
@@ -84,30 +90,4 @@ require("cafo.remap")
 require("cafo.lazy")
 require 'colorizer'.setup()
 
-vim.cmd.colorscheme("kanagawa-wave")
--- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
-
--- linefly
-vim.g.linefly_options = {
-  separator_symbol = "⎪",
-  progress_symbol = "↓",
-  active_tab_symbol = "▪",
-  git_branch_symbol = "",
-  error_symbol = "E",
-  warning_symbol = "W",
-  information_symbol = "I",
-  ellipsis_symbol = "…",
-  tabline = true,
-  winbar = true,
-  with_file_icon = true,
-  with_git_branch = true,
-  with_git_status = true,
-  with_diagnostic_status = true,
-  with_session_status = true,
-  with_attached_clients = true,
-  with_lsp_status = true,
-  with_macro_status = true,
-  with_search_count = true,
-  with_spell_status = true,
-  with_indent_status = true,
-}
+vim.cmd.colorscheme("kanagawa-dragon")

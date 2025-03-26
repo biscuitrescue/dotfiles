@@ -110,8 +110,8 @@ require("lazy").setup({
       { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse", mode = { "n", "v" } },
       { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
       { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
-      { "<c-/>",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
-      { "<c-_>",      function() Snacks.terminal() end, desc = "which_key_ignore" },
+      -- { "<c-/>",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
+      -- { "<c-_>",      function() Snacks.terminal() end, desc = "which_key_ignore" },
       { "]]",         function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
       { "[[",         function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference", mode = { "n", "t" } },
       {
@@ -165,6 +165,20 @@ require("lazy").setup({
   {
     'christoomey/vim-tmux-navigator',
     lazy=false,
+  },
+  -- SESSIONS
+  {
+    "gennaro-tedesco/nvim-possession",
+    dependencies = {
+      "ibhagwan/fzf-lua",
+    },
+    config = true,
+    keys = {
+      { "<leader>sl", function() require("nvim-possession").list() end, desc = "📌list sessions", },
+      { "<leader>sn", function() require("nvim-possession").new() end, desc = "📌create new session", },
+      { "<leader>su", function() require("nvim-possession").update() end, desc = "📌update current session", },
+      { "<leader>sd", function() require("nvim-possession").delete() end, desc = "📌delete selected session"},
+    },
   },
   {
     'nvim-treesitter/nvim-treesitter',
@@ -259,6 +273,18 @@ require("lazy").setup({
       build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
     },
 
+    {
+      "numToStr/FTerm.nvim",
+      config = function()
+        require("FTerm").setup({
+          border = 'double',
+          dimensions  = {
+            height = 0.9,
+            width = 0.9,
+          },
+        })
+      end
+    },
 {
   "kdheepak/lazygit.nvim",
   lazy = true,
@@ -285,6 +311,19 @@ require("lazy").setup({
       }
     },
     {
+      "toppair/peek.nvim",
+      event = { "VeryLazy" },
+      build = "deno task --quiet build",
+      config = function()
+        require("peek").setup({
+          app = { 'brave', '--new-window' },
+
+        })
+        vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+        vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+      end,
+    },
+    {
       'MeanderingProgrammer/render-markdown.nvim',
       dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
       -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
@@ -306,11 +345,10 @@ require("lazy").setup({
         require("persistence").setup()
       end,
     },
-    { 'bluz71/nvim-linefly' },
-    -- {
-    --   'nvim-lualine/lualine.nvim',
-    --   dependencies = { 'kyazdani42/nvim-web-devicons'}
-    -- },
+    {
+      'nvim-lualine/lualine.nvim',
+      dependencies = { 'kyazdani42/nvim-web-devicons'}
+    },
     -- themes
     {
       "neanias/everforest-nvim",

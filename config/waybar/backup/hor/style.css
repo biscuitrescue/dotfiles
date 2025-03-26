@@ -11,7 +11,7 @@
 
 window#waybar {
   background: @base;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 
@@ -39,7 +39,7 @@ tooltip {
 
 
 #workspaces button {
-  color: @mauve;
+  color: @flamingo;
   box-shadow: none;
   text-shadow: none;
   border-radius: 9px;
@@ -51,7 +51,7 @@ tooltip {
 }
 
 #workspaces button.active {
-  background: @mauve;
+  background: @blue;
   color: @base;
   transition: all 0.3s ease;
   padding-left: 4px;
@@ -103,7 +103,7 @@ tooltip {
 }
 #window{
   color: @base;
-  background: @mauve;
+  background: @flamingo;
   padding-right: 10px;
   padding-left: 10px;
   margin-top: 12px;

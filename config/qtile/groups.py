@@ -143,7 +143,7 @@ groups.append(ScratchPad('Scratchpad', [
 keys.extend([
     Key([mod], "space",
         lazy.group['Scratchpad'].dropdown_toggle('sig')),
-    Key([mod, 'shift'], "v",
+    Key([mod], "o",
         lazy.group['Scratchpad'].dropdown_toggle('vim')),
     Key([mod], "p",
         lazy.group['Scratchpad'].dropdown_toggle('term')),
