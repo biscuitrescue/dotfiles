@@ -12,6 +12,7 @@
     i3lock-color
     colloid-gtk-theme
     swaybg
+    swaylock
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
     # (pkgs.writeShellScriptBin "my-hello" ''
