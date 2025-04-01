@@ -123,33 +123,7 @@ in
     extraGroups = [ "wheel" "audio" "input" "video" "networkmanager" "lp" "scanner" "kvm"]; 
     shell = pkgs.fish;
     packages = with pkgs; [
-      networkmanagerapplet
-      alacritty
-      bat
-      eza
-      git
-      kitty
-      wl-clipboard
-      rofi
-      light
-      alsa-utils
-      pamixer
-      dunst
-      mako
-      glew
-      maim
-      feh
-      polkit_gnome
-      xdotool
-      wmctrl
-      waybar
-      neofetch
-      neovim
-      xclip
-      starship
-      tmux
-      xss-lock
-      libnotify
+
     ];
   };
 

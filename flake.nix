@@ -9,9 +9,10 @@
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, ... }: 
+  outputs = { self, nixpkgs, home-manager, hyprland, zen-browser, ... } @inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -32,6 +33,7 @@
               home-manager.users.cafo = {
                 imports  = [./home.nix ];
               };
+              home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux";};
             }
           {
             programs.hyprland = {

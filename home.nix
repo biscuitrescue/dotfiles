@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, system, inputs, ... }:
 
 {
   home.username = "cafo";
@@ -13,6 +13,35 @@
     colloid-gtk-theme
     swaybg
     swaylock
+    dmenu-rs
+    networkmanagerapplet
+    alacritty
+    bat
+    eza
+    git
+    kitty
+    wl-clipboard
+    rofi
+    light
+    alsa-utils
+    pamixer
+    dunst
+    mako
+    glew
+    maim
+    feh
+    polkit_gnome
+    xdotool
+    wmctrl
+    waybar
+    neofetch
+    neovim
+    xclip
+    starship
+    tmux
+    xss-lock
+    libnotify
+    inputs.zen-browser.packages."${system}".default
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
     # (pkgs.writeShellScriptBin "my-hello" ''
