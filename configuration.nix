@@ -191,6 +191,10 @@ xdg.portal = {
 # Or disable the firewall altogether.
 # networking.firewall.enable = false;
 
+
+
+  security.sudo.extraConfig = "%wheel ALL= NOPASSWD: /usr/bin/systemctl, /usr/bin/swapon, /usr/bin/swapoff, /usr/bin/rfkill, /etc/profiles/per-user/cafo/bin/light";
+
   system.stateVersion = "25.05"; # Did you read the comment?
 
   system.autoUpgrade = {
