@@ -167,6 +167,7 @@ in
     gnumake
     killall
     pulseaudio
+    lazygit
   ];
 
   fonts.fontDir.enable = true;
