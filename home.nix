@@ -35,7 +35,7 @@
     wmctrl
     waybar
     neofetch
-    neovim
+    # neovim
     xclip
     starship
     tmux
@@ -130,6 +130,14 @@
         };
       };
     };
+  };
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
   };
 
   home.sessionVariables = {
