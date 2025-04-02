@@ -25,18 +25,18 @@
       lib = nixpkgs.lib;
 
     in {
-      packages.system.default = 
-      (nvf.lib.neovimConfiguration {
-        pkgs = nixpkgs.legacyPackages.system;
-        modules = [ ./config/nvim/nvim.nix ];
-      }).neovim;
+      # packages.system.default = 
+      # (nvf.lib.neovimConfiguration {
+      #   pkgs = nixpkgs.legacyPackages.system;
+      #   modules = [ ./config/nvim/nvim.nix ];
+      # }).neovim;
 
       nixosConfigurations = {
         cafo = lib.nixosSystem {
           inherit system;
           modules = [ 
             ./configuration.nix
-            nvf.nixosModules.default
+            # nvf.nixosModules.default
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.backupFileExtension = "backup";
