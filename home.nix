@@ -75,10 +75,10 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/cafo/git/dotfiles/config/fish";
       recursive = true;
     };
-    ".config/nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/cafo/git/nvim";
-      recursive = true;
-    };
+    # ".config/nvim" = {
+    #   source = config.lib.file.mkOutOfStoreSymlink "/home/cafo/git/nvim";
+    #   recursive = true;
+    # };
     ".config/mako" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/cafo/git/dotfiles/config/mako";
       recursive = true;
@@ -109,10 +109,6 @@
 
   programs.neovim = {
     enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
   };
 
   home.sessionVariables = {
@@ -122,6 +118,13 @@
   gtk = {
     enable = true;
   };
+
+  # programs.nvf = {
+  #   enable = true;
+  #   vimAlias = true;
+  #   viAlias = true;
+  #   vimdiffAlias = true;
+  # };
 
   programs.home-manager.enable = true;
 }

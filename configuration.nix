@@ -8,6 +8,7 @@ in
   imports =
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./config/nvim/nvim.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
