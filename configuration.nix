@@ -184,8 +184,10 @@ xdg.portal = {
 
 
 
-  security.sudo.extraConfig = "%wheel ALL= NOPASSWD: /usr/bin/systemctl, /usr/bin/swapon, /usr/bin/swapoff, /usr/bin/rfkill, /etc/profiles/per-user/cafo/bin/light\nDefaults env_reset, pwfeedback";
-
+  security = {
+    polkit.enable = true;
+    sudo.extraConfig = "%wheel ALL= NOPASSWD: /usr/bin/systemctl, /usr/bin/swapon, /usr/bin/swapoff, /usr/bin/rfkill, /etc/profiles/per-user/cafo/bin/light\nDefaults env_reset, pwfeedback";
+  };
   system.stateVersion = "25.05"; # Did you read the comment?
 
   system.autoUpgrade = {
@@ -198,6 +200,7 @@ xdg.portal = {
     settings = {
       auto-optimise-store = true;
       experimental-features = [ "nix-command" "flakes" ];
+      flake-registry = "";
     };
     gc = {
       automatic = true;

@@ -8,11 +8,12 @@
   home.packages = with pkgs; [
     htop
     feh
+    oreo-cursors-plus
     nautilus
     i3lock-color
     colloid-gtk-theme
     swaybg
-    swaylock-fancy
+    swaylock-effects
     swayidle
     dmenu-rs
     networkmanagerapplet
@@ -36,14 +37,12 @@
     wmctrl
     waybar
     neofetch
-    # neovim
     xclip
     starship
     tmux
     xss-lock
     libnotify
     inputs.zen-browser.packages."${system}".default
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
@@ -118,6 +117,10 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+  };
+
+  gtk = {
+    enable = true;
   };
 
   programs.home-manager.enable = true;
