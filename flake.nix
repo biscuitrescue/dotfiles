@@ -10,11 +10,11 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    nvf.url = "github:notashelf/nvf";
+    # nvf.url = "github:notashelf/nvf";
 
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, zen-browser, nvf, ... } @inputs:
+  outputs = { self, nixpkgs, home-manager, hyprland, zen-browser, ... } @inputs:
     let
 
       system = "x86_64-linux";
