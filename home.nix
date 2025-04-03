@@ -1,11 +1,16 @@
-{ config, pkgs, system, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  system,
+  inputs,
+  ...
+}: {
   home.username = "cafo";
   home.homeDirectory = "/home/cafo";
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
   home.packages = with pkgs; [
+    qbittorrent
     htop
     feh
     oreo-cursors-plus
@@ -50,7 +55,6 @@
   ];
 
   home.file = {
-
     ".config/hypr" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/cafo/git/dotfiles/config/hypr";
       recursive = true;
@@ -117,6 +121,22 @@
 
   gtk = {
     enable = true;
+  };
+  qt = {
+    enable = true;
+
+    platformTheme.name = "qtct";
+
+    style.name = "kvantum";
+  };
+
+  xdg.configFile = {
+    "Kvantum/kvantum.kvconfig".text = ''
+      [General]
+      theme=GraphiteNordDark
+    '';
+
+    "Kvantum/GraphiteNord".source = "${pkgs.graphite-kde-theme}/share/Kvantum/GraphiteNord";
   };
 
   # programs.nvf = {
