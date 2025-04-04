@@ -160,6 +160,7 @@ in
     killall
     pulseaudio
     lazygit
+    python3Full
   ];
 
   fonts.fontDir.enable = true;

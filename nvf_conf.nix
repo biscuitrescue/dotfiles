@@ -87,6 +87,7 @@
       filetree.nvimTree = {
         enable = true;
         mappings.toggle = "<C-n>";
+        openOnSetup = false;
       };
 
       git = {
