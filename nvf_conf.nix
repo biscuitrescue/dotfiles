@@ -37,9 +37,12 @@
       statusline.lualine.enable = true;
       telescope.enable = true;
 
-      terminal.toggleterm.lazygit = {
+      terminal.toggleterm = {
         enable = true;
-        mappings.open = "<leader>lg";
+        lazygit = {
+          enable = true;
+          mappings.open = "<leader>lg";
+        };
       };
 
       autocomplete = {
@@ -63,6 +66,7 @@
 
       filetree.nvimTree = {
         enable = true;
+        mappings.toggle = "<C-n>";
       };
 
       git = {
@@ -122,7 +126,93 @@
           silent = true;
           action = "^";
         }
+        {
+          key = "<A-1>";
+          mode = ["n" "x"];
+          silent = false;
+          action = "<Cmd>BufferGoto 1<CR>";
+        }
+        {
+          key = "<A-2>";
+          mode = ["n" "x"];
+          silent = false;
+          action = "<Cmd>BufferGoto 2<CR>";
+        }
+        {
+          key = "<A-3>";
+          mode = ["n" "x"];
+          silent = false;
+          action = "<Cmd>BufferGoto 3<CR>";
+        }
+        {
+          key = "<A-4>";
+          mode = ["n" "x"];
+          silent = false;
+          action = "<Cmd>BufferGoto 4<CR>";
+        }
+        {
+          key = "<A-5>";
+          mode = ["n" "x"];
+          silent = false;
+          action = "<Cmd>BufferGoto 5<CR>";
+        }
+        {
+          key = "<A-6>";
+          mode = ["n" "x"];
+          silent = false;
+          action = "<Cmd>BufferGoto 6<CR>";
+        }
+        {
+          key = "<A-7>";
+          mode = ["n" "x"];
+          silent = false;
+          action = "<Cmd>BufferGoto 7<CR>";
+        }
+        {
+          key = "<A-8>";
+          mode = ["n" "x"];
+          silent = false;
+          action = "<Cmd>BufferGoto 8<CR>";
+        }
+        {
+          key = "<A-9>";
+          mode = ["n" "x"];
+          silent = false;
+          action = "<Cmd>BufferGoto 9<CR>";
+        }
+        {
+          key = "<A-0>";
+          mode = ["n" "x"];
+          silent = false;
+          action = "<Cmd>BufferLast<CR>";
+        }
+        {
+          key = "<A-c>";
+          mode = ["n" "x"];
+          silent = false;
+          action = "<Cmd>BufferClose<CR>";
+        }
+        {
+          key = "K";
+          mode = "v";
+          desc = "Move Line up";
+          silent = true;
+          action = ":m '<-2<CR>gv=gv";
+        }
+        {
+          key = "J";
+          mode = "v";
+          desc = "Move Line Down";
+          silent = true;
+          action = ":m '>+1<CR>gv=gv";
+        }
       ];
+
+      treesitter = {
+        indent.enable = true;
+        enable = true;
+        fold = true;
+      };
 
       languages = {
         enableLSP = true;
@@ -147,7 +237,6 @@
 
       snippets.luasnip.enable = true;
       spellcheck.enable = true;
-      syntaxHighlighting.enable = true;
       tabline.nvimBufferline.enable = true;
 
       ui = {
@@ -157,6 +246,8 @@
 
       utility.preview.glow.enable = true;
       visuals = {
+        indent-blankline.enable = true;
+        indent-blankline.setupOpts.scope.enabled = true;
         rainbow-delimiters.enable = true;
         nvim-web-devicons.enable = true;
         fidget-nvim = {
