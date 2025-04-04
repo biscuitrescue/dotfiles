@@ -84,10 +84,11 @@
         enable = true;
       };
 
-      filetree.nvimTree = {
+      filetree.neo-tree= {
         enable = true;
-        mappings.toggle = "<C-n>";
-        openOnSetup = false;
+        setupOpts.filesystem.hijack_netrw_behavior = "disabled";
+        # mappings.toggle = "<C-n>";
+        # openOnSetup = false;
       };
 
       git = {
@@ -100,6 +101,13 @@
       };
 
       keymaps = [
+        {
+          key = "<C-n>";
+          mode = ["n" "x" "i" "v"];
+          desc = "Toggle Neo-Tree";
+          silent = true;
+          action = ":Neotree toggle<CR>";
+        }
         {
           key = "<leader>s";
           desc = "Global Replace";

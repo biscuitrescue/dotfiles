@@ -49,10 +49,6 @@
     xss-lock
     libnotify
     inputs.zen-browser.packages."${system}".default
-
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
   ];
 
   home.file = {
@@ -80,10 +76,6 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/cafo/git/dotfiles/config/fish";
       recursive = true;
     };
-    # ".config/nvim" = {
-    #   source = config.lib.file.mkOutOfStoreSymlink "/home/cafo/git/nvim";
-    #   recursive = true;
-    # };
     ".config/mako" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/cafo/git/dotfiles/config/mako";
       recursive = true;
