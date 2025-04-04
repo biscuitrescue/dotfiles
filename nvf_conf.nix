@@ -18,6 +18,7 @@
         scrolloff = 4;
         laststatus = 3;
         mouse = "a";
+        mousescroll = "ver:20";
 
         swapfile = false;
         backup = false;
@@ -282,6 +283,11 @@
         fidget-nvim = {
           enable = true;
           setupOpts.integration.nvim-tree.enable = true;
+        };
+        cinnamon-nvim = {
+          enable = true;
+          setupOpts.keymaps.basic = true;
+          setupOpts.keymaps.extra = true;
         };
       };
       
