@@ -7,10 +7,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     hyprland.url = "github:hyprwm/Hyprland";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    nvf.url = "github:notashelf/nvf";
   };
 
   outputs = {
@@ -29,26 +32,24 @@
     };
     inherit (nixpkgs) lib;
   in {
-    packages.system.default =
-      (nvf.lib.neovimConfiguration {
-        pkgs = nixpkgs.legacyPackages.system;
-        modules = [./config/nvim/nvim.nix];
-      })
-      .neovim;
+    pkgs = nixpkgs.legacyPackages.system;
 
     nixosConfigurations = {
       cafo = lib.nixosSystem {
         inherit system;
         modules = [
           ./configuration.nix
-          nvf.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.backupFileExtension = "backup";
             home-manager.useUserPackages = true;
             home-manager.users.cafo = {
-              imports = [./home.nix];
+              imports = [
+                nvf.homeManagerModules.default
+                ./home.nix
+                ./nvf_conf.nix
+              ];
             };
             home-manager.extraSpecialArgs = {
               inherit inputs;
@@ -61,13 +62,6 @@
               package = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
               portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
             };
-            # programs.nvf = {
-            #   enable = true;
-            #   settings.vim = {
-            #     vimAlias = true;
-            #     viAlias = true;
-            #   };
-            # };
           }
         ];
       };

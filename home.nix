@@ -16,6 +16,7 @@
     oreo-cursors-plus
     nautilus
     i3lock-color
+    mpv
     colloid-gtk-theme
     swaybg
     swaylock-effects
@@ -139,12 +140,6 @@
     "Kvantum/GraphiteNord".source = "${pkgs.graphite-kde-theme}/share/Kvantum/GraphiteNord";
   };
 
-  # programs.nvf = {
-  #   enable = true;
-  #   vimAlias = true;
-  #   viAlias = true;
-  #   vimdiffAlias = true;
-  # };
 
   programs.home-manager.enable = true;
 }
