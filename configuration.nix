@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   user = "cafo";
@@ -139,9 +139,9 @@ in
     description = "Karttikeya Sinha";
     extraGroups = [ "wheel" "audio" "input" "video" "networkmanager" "lp" "scanner" "kvm"]; 
     shell = pkgs.fish;
-    packages = with pkgs; [
-
-    ];
+    # packages = with pkgs; [
+    #
+    # ];
   };
 
   environment.systemPackages = with pkgs; [
