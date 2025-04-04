@@ -11,28 +11,27 @@ in
     # ./config/nvim/nvim.nix
     ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.systemd-boot.enable = true;
 
-  # boot = {
-  #   kernelPackages = pkgs.linuxPackages_latest;
-  #     # initrd.kernelModules = ["amdgpu"];
-  #
-  #     loader = {
-  #       efi = {
-  #         canTouchEfiVariables = true;
-  #         efiSysMountPoint = "/boot";
-  #       };
-  #       grub = {
-  #         enable = true;
-  #         devices = ["nodev"];
-  #         efiSupport = true;
-  #         useOSProber = true;
-  #         configurationLimit = 5;
-  #       };
-  #       timeout = 5;
-  #     };
-  # };
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+      initrd.kernelModules = ["amdgpu"];
+
+      loader = {
+        efi = {
+          canTouchEfiVariables = true;
+          efiSysMountPoint = "/boot";
+        };
+        grub = {
+          enable = true;
+          devices = ["nodev"];
+          efiSupport = true;
+          useOSProber = true;
+          configurationLimit = 5;
+        };
+        timeout = 5;
+      };
+  };
 
   networking = {
     hostName = "nixos";

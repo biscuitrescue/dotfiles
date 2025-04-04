@@ -13,6 +13,7 @@
     qbittorrent
     htop
     feh
+    grim
     oreo-cursors-plus
     nautilus
     i3lock-color

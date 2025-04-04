@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }: {
   programs.nvf = {
@@ -284,7 +285,9 @@
           setupOpts.integration.nvim-tree.enable = true;
         };
       };
+      
       withPython3 = true;
+
     };
   };
 }
