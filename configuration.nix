@@ -158,7 +158,7 @@ in
     gnumake
     killall
     pulseaudio
-    lazygit
+    ntfs3g
     python3Full
   ];
 

@@ -18,6 +18,7 @@
     nautilus
     i3lock-color
     mpv
+    lazygit
     colloid-gtk-theme
     swaybg
     swaylock-effects
