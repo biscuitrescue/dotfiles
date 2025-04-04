@@ -24,47 +24,40 @@
     zen-browser,
     nvf,
     ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
-    inherit (nixpkgs) lib;
-  in {
-    pkgs = nixpkgs.legacyPackages.system;
-
-    nixosConfigurations = {
-      cafo = lib.nixosSystem {
+    } @ inputs: let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
         inherit system;
-        modules = [
-          ./configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.backupFileExtension = "backup";
-            home-manager.useUserPackages = true;
-            home-manager.users.cafo = {
-              imports = [
-                nvf.homeManagerModules.default
-                ./home.nix
-                ./nvf_conf.nix
-              ];
-            };
-            home-manager.extraSpecialArgs = {
-              inherit inputs;
-              system = "x86_64-linux";
-            };
-          }
-          {
-            programs.hyprland = {
-              enable = true;
-              package = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-              portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-            };
-          }
-        ];
+        config.allowUnfree = true;
+      };
+      inherit (nixpkgs) lib;
+    in {
+      pkgs = nixpkgs.legacyPackages.system;
+
+      nixosConfigurations = {
+        cafo = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.backupFileExtension = "backup";
+              home-manager.useUserPackages = true;
+              home-manager.users.cafo = {
+                imports = [
+                  nvf.homeManagerModules.default
+                  ./home.nix
+                  ./nvf_conf.nix
+                ];
+              };
+              home-manager.extraSpecialArgs = {
+                inherit inputs;
+                system = "x86_64-linux";
+              };
+            }
+          ];
+        };
       };
     };
-  };
 }

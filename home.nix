@@ -13,6 +13,7 @@
     qbittorrent
     htop
     feh
+    yazi-unwrapped
     grim
     oreo-cursors-plus
     nautilus
