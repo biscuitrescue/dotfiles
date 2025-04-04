@@ -7,10 +7,30 @@
       useSystemClipboard = true;
       options = {
         shiftwidth = 2;
+        ignorecase = true;
+        smartcase = true;
+        signcolumn = "yes";
+        confirm = true;
+        autoindent = true;
+        expandtab = true;
+        linebreak = true;
         tabstop = 4;
         scrolloff = 4;
         laststatus = 3;
+        mouse = "a";
+
+        swapfile = false;
+        backup = false;
+        undofile = true;
+
+        hlsearch = false;
+        incsearch = true;
+        updatetime = 50;
+        cursorline = true;
+        cursorcolumn = false;
+        conceallevel = 2;
       };
+
       viAlias = false;
       vimAlias = true;
       lsp = {
