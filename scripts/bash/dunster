@@ -75,13 +75,13 @@ case $1 in
 
     brightness_up)
     # Increases brightness and displays the notification
-    light -A $brightness_step
+    sudo light -A $brightness_step
     show_brightness_notif
     ;;
 
     brightness_down)
     # Decreases brightness and displays the notification
-    light -U $brightness_step
+    sudo light -U $brightness_step
     show_brightness_notif
     ;;
 esac

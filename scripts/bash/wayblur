@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # CREATING WORKING DIRECTORY
 # mkdir -p ~/.image 
@@ -9,8 +9,8 @@
 # convert ~/.image/image.png -channel RGBA -blur 0x8 ~/.image/image_blurred.png
 
 # LOCKING SCREEN
-# swaylock -C ~/.config/swaylock/swaylock.conf
-swaylock -c 00000000
+swaylock -C ~/.config/swaylock/swaylock.conf --clock
+# swaylock -c 00000000
 
 # CLEANING UP
 # rm -rf ~/.image/image.png

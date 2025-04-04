@@ -4,10 +4,9 @@ xrdb -merge ~/.Xresources
 nm-applet &
 dunst &
 cppswap &
-picom -b --experimental-backend &
-xfce-polkit &
+picom -b &
 battery &
 xss-lock --transfer-sleep-lock -- ./.lock.sh --nofork &
-libinput-gestures-setup start &
+# libinput-gestures-setup start &
 xset s 1800 1800 &
 ~/.fehbg

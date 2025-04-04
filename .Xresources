@@ -94,4 +94,4 @@ URxvt*depth: 32
 *color7: #C3BAC6
 *color15: #D9E0EE
 
-Xft.dpi: 157
+Xft.dpi: 100
