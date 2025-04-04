@@ -286,8 +286,8 @@
         };
         cinnamon-nvim = {
           enable = true;
-          setupOpts.keymaps.basic = true;
-          setupOpts.keymaps.extra = true;
+          # setupOpts.keymaps.basic = true;
+          # setupOpts.keymaps.extra = true;
         };
       };
       
