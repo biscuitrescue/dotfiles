@@ -16,6 +16,7 @@
     feh
     yazi-unwrapped
     grim
+    slurp
     oreo-cursors-plus
     nautilus
     i3lock-color
