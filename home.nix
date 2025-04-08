@@ -94,8 +94,8 @@
 
     settings = {
       exec = [
-        "bash ./hypr/autostart.sh"
-        "bash ./hypr/wallpaper.sh"
+        "./hypr/autostart.sh"
+        "./hypr/wallpaper.sh"
       ];
       decoration = {
         rounding = "6";
@@ -288,9 +288,6 @@
     EDITOR = "nvim";
   };
 
-  gtk = {
-    enable = true;
-  };
   qt = {
     enable = true;
 
