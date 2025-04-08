@@ -22,7 +22,7 @@
     i3lock-color
     mpv
     lazygit
-    colloid-gtk-theme
+    
     swaybg
     swaylock-effects
     swayidle
@@ -55,6 +55,35 @@
     libnotify
     inputs.zen-browser.packages."${system}".default
   ];
+
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    # x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 16;
+  };
+
+  gtk = {
+    enable = true;
+
+    theme = {
+      package = pkgs.colloid-gtk-theme;
+      name = "Colloid-Dark";
+    };
+
+    iconTheme = {
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
+    };
+
+    font = {
+      name = "JetbrainsMono Nerd Font";
+      size = 11;
+    };
+  };
+
 
   wayland.windowManager.hyprland = {
     enable = true;
