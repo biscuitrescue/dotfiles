@@ -56,35 +56,6 @@
     inputs.zen-browser.packages."${system}".default
   ];
 
-
-  home.pointerCursor = {
-    gtk.enable = true;
-    # x11.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 16;
-  };
-
-  gtk = {
-    enable = true;
-
-    theme = {
-      package = pkgs.colloid-gtk-theme;
-      name = "Colloid-Dark";
-    };
-
-    iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus-Dark";
-    };
-
-    font = {
-      name = "JetbrainsMono Nerd Font";
-      size = 11;
-    };
-  };
-
-
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
@@ -105,7 +76,6 @@
           passes = 2;
         };
       };
-
 
       misc = {
         disable_hyprland_logo = true;
@@ -288,6 +258,34 @@
     EDITOR = "nvim";
   };
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    # x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 16;
+  };
+
+  gtk = {
+    enable = true;
+
+    theme = {
+      package = pkgs.colloid-gtk-theme;
+      name = "Colloid-Dark";
+    };
+
+    iconTheme = {
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
+    };
+
+    font = {
+      name = "JetbrainsMono Nerd Font";
+      size = 11;
+    };
+  };
+
+
   qt = {
     enable = true;
 
@@ -304,7 +302,6 @@
 
     "Kvantum/GraphiteNord".source = "${pkgs.graphite-kde-theme}/share/Kvantum/GraphiteNord";
   };
-
 
   programs.home-manager.enable = true;
 }

@@ -14,7 +14,7 @@ in
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
-      initrd.kernelModules = ["amdgpu"];
+      # initrd.kernelModules = ["amdgpu"];
 
       loader = {
         efi = {
@@ -123,6 +123,14 @@ in
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
+  # programs.mnw = {
+  #   enable = true;
+  #   plugins = {
+  #     "video" = true;
+  #     "audio" = true;
+  #   };
+  # };
 
   programs.fish.enable = true;
   programs.firefox.enable = true;

@@ -114,7 +114,7 @@
           desc = "Global Replace";
           mode = "n";
           silent = true;
-          action = "[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]";
+          action = ":%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>";
         }
         {
           key = "<leader>wq";
