@@ -10,6 +10,7 @@
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nvf.mnw.follows = "";
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
