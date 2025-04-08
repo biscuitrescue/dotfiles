@@ -40,7 +40,6 @@
           modules = [
             ./configuration.nix
             home-manager.nixosModules.home-manager
-            hyprland.nixosModules.default
             {
               home-manager.useGlobalPkgs = true;
               home-manager.backupFileExtension = "backup";
@@ -50,7 +49,6 @@
                   nvf.homeManagerModules.default
                   ./home.nix
                   ./nvf_conf.nix
-                  # ./hypr.nix
                 ];
               };
               home-manager.extraSpecialArgs = {

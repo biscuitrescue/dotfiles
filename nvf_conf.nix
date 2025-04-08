@@ -42,7 +42,7 @@
         };
         lspconfig.enable = true;
         lspkind.enable = true;
-        # lsplines.enable = true;
+        lsplines.enable = true;
         lspsaga.enable = true;
         null-ls.enable = true;
         trouble.enable = true;

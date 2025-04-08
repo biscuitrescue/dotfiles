@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 let
   user = "cafo";
@@ -7,7 +7,7 @@ in
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    ./hardware-configuration.nix
     ];
 
   # boot.loader.systemd-boot.enable = true;
@@ -136,7 +136,6 @@ in
   programs.firefox.enable = true;
   programs.nix-ld.enable = true;
   programs.hyprland.enable = true;
-  # programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 

@@ -10,7 +10,6 @@
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
   home.packages = with pkgs; [
-    playerctl
     qbittorrent
     htop
     feh
@@ -55,6 +54,7 @@
     inputs.zen-browser.packages."${system}".default
   ];
 
+<<<<<<< HEAD
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
@@ -196,11 +196,13 @@
         );
     };
   };
+=======
+>>>>>>> parent of 99bb285 (hypr)
   home.file = {
-    # ".config/hypr" = {
-    #   source = config.lib.file.mkOutOfStoreSymlink "/home/cafo/git/dotfiles/config/hypr";
-    #   recursive = true;
-    # };
+    ".config/hypr" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/cafo/git/dotfiles/config/hypr";
+      recursive = true;
+    };
     ".config/dunst" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/cafo/git/dotfiles/config/dunst";
       recursive = true;
