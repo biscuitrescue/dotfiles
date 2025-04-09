@@ -60,7 +60,20 @@
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     xwayland.enable = true;
 
-    extraConfig = ''layerrule = blur, waybar'';
+    extraConfig = ''
+layerrule = blur, waybar
+
+animations {
+    bezier=overshot,0.13,0.99,0.29,1.1
+    animation=windows,1,4,default,popin 80%
+    animation=border,1,10,default
+    animation=fade,1,10,default
+    animation=workspaces,1,6,default,slide
+    animation=specialWorkspace,1,4,overshot,slidevert
+    enabled=1
+}
+
+    '';
 
     settings = {
       exec = [
