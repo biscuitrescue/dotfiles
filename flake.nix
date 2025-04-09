@@ -8,9 +8,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvf = {
-      url = "github:notashelf/nvf";
+      url = "github:notashelf/nvf/3e4f99311aeec70cb769ed09564ed9d3914a0ebc";
       inputs.nixpkgs.follows = "nixpkgs";
-      # inputs.nvf.mnw.follows = "";
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
