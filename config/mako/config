@@ -1,14 +1,13 @@
 # Colors
 
-background-color=#1E1D2F
-text-color=#D9E0EE
-border-color=#96CDFB
-progress-color=over #302D41
+background-color=#181616
+text-color=#c5c9c5
+border-color=#8ea4a2
+progress-color=over #393F45
 border-radius=10
 padding=15
-font=JetbrainsMono Nerd Font 12
+font=JetbrainsMono Nerd Font 11
 default-timeout=5000
-anchor=top-center
 
 [urgency=high]
-border-color=#F8BD96
+border-color=#e46976
