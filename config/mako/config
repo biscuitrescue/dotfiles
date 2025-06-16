@@ -1,13 +1,1 @@
-# Colors
-
-background-color=#181616
-text-color=#c5c9c5
-border-color=#8ea4a2
-progress-color=over #393F45
-border-radius=10
-padding=15
-font=JetbrainsMono Nerd Font 11
-default-timeout=5000
-
-[urgency=high]
-border-color=#e46976
+/nix/store/af1jzldq6mdx9w8v2vam44mjrzrrsw6a-home-manager-files/.config/mako/config
