@@ -1,8 +1,8 @@
-@import "themes/ashes.css";
+@import "themes/latte.css";
 
 * {
-    font-family: Operator Mono Medium;
-    font-size: 17px;
+    font-family: "M Plus 1 Code Medium";
+    font-size: 15px;
     min-width: 0;
     min-height: 0;
     padding: 0.1rem;
