@@ -25,7 +25,6 @@ set fish_color_quote bryellow
 
 fish_vi_key_bindings
 
-
 ### GIT
 
 alias clone="git clone"
