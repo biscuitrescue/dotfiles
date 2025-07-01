@@ -19,8 +19,8 @@ fish_add_path "$HOME/.neva/bin"
 
 set fish_color_normal brcyan
 set fish_color_autosuggestion brgrey
-set fish_color_command brgreen # '#50fa7b'
-set fish_color_error brred #'#ff5555'
+set fish_color_command green # '#50fa7b'
+set fish_color_error red #'#ff5555'
 set fish_color_quote bryellow
 
 fish_vi_key_bindings
@@ -82,4 +82,5 @@ function ipub
 end
 
 starship init fish | source
+any-nix-shell fish --info-right | source
 # rxfetch

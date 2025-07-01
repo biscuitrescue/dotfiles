@@ -1,4 +1,4 @@
-palette = "catppuccin_mocha"
+palette = "ink"
 
 [character]
 #
@@ -8,11 +8,20 @@ error_symbol = "[ ](red)"
 vicmd_symbol = "[ ](blue)"
 
 [directory]
-truncation_length = 4
+truncation_length = 3
 # Catppuccin 'lavender'
-style = "bold magenta"
+style = "bold blue"
 
 # palette tables should be last in the config ⚓️
+
+[palettes.homebrew]
+green = "#00ff00"
+red = "#e50000"
+mauve = "#b200b2"
+blue = "#0000ff"
+magenta = "#e500e5"
+yellow = "#e5e500"
+
 [palettes.everforest]
 green = "#a7c080"
 red = "#e67e80"
@@ -36,6 +45,14 @@ mauve = "#c7a9d9"
 blue = "#8ba4b0"
 magenta = "#a292a3"
 yellow = "#f0dfaf"
+
+[palettes.ink]
+red = "#ff6c6b"
+yellow = "#c4b28a"
+mauve = "#a292a3"
+blue = "#8ba4b0"
+magenta = "#a292a3"
+green = "#699469"
 
 [palettes.kanagawa]
 red = "#ff6c6b"
