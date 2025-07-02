@@ -51,9 +51,6 @@ alias vim='nvim'
 alias bstart='startx /usr/bin/bspwm'
 alias openstart='startx /usr/bin/openbox-session'
 alias dstart='startx /usr/local/bin/dwm'
-# alias compdir='sshfs mr_robot@192.168.1.20:/home/mr_robot ~/sshfs'
-# alias sushi="ssh sushi@43.231.56.189 -p 8224"
-# alias sushifs="sshfs sushi@43.231.56.189:/home/sushi/ sshfs/ -p 8224"
 # alias gentup="sudo emerge -avuDN --with-bdeps y @world"
 # alias remerge="sudo emerge -ca"
 # alias clean="sudo eclean-dist -d && sudo revdep-rebuild"
@@ -82,4 +79,5 @@ end
 
 starship init fish | source
 any-nix-shell fish --info-right | source
+direnv hook fish | source
 # rxfetch
