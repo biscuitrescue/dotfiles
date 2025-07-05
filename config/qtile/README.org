@@ -4,7 +4,7 @@
 ***** * Nerd fonts
 ***** * Qtile 21+
 ***** * Qtile-extras
-***** * Picom ( I use jonaburg-fix )
+***** * Picom
 ***** * Xbacklight ( This is default but you can change in keys.py )
 ***** * Playerctl
 ***** * i3lock-color
