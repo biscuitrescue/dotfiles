@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-maim -s | xclip -selection clipboard -t image/png
-dunstify -r 3101 'Region added to Clipboard'

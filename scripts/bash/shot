@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-mkdir -p ~/Pictures/screenshots
-maim ~/Pictures/screenshots/$(date +%s).png
-dunstify -r 3101 'Screenshot taken'

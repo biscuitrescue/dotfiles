@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-grim -g "$(slurp -d)" - | wl-copy -t image/png
-notify-send.sh --replace-file=/tmp/shotnotif -u normal "Screenshot Added to Clipboard"

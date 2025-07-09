@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-hyprctl keyword general:border_size 0
