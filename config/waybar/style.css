@@ -27,9 +27,8 @@
 }
 
 #workspaces button:hover {
-  color: @yellow;
-  border-radius: 0.5rem;
-  margin: 0.3rem;
+  color: @lavender;
+  margin: 0px;
 }
 
 #tray {
