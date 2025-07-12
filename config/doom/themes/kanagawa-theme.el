@@ -29,31 +29,32 @@ Can be an integer to determine the exact padding."
 ;;; Theme definition
 
 (def-doom-theme kanagawa
-  "A dark theme inspired by Material-Palenight"
+    "A dark theme inspired by Material-Palenight"
 
   ;; name        default   256       16
-  ((bg         '("#181616" nil       nil))
-   (bg-alt     '("#181616" nil       nil))
-   (base0      '("#1f1f28" "black"   "black"))
-   (base1      '("#212137" "#212137" "brightblack"))
-   (base2      '("#363646" "#303030" "brightblack"))
-   (base3      '("#3C435E" "#3a3a3a" "brightblack"))
-   (base4      '("#4E5579" "#444444" "brightblack"))
-   (base5      '("#676E95" "#585858" "brightblack"))
-   (base6      '("#697098" "#626262" "brightblack"))
-   (base7      '("#717CB4" "#767676" "brightblack"))
-   (base8      '("#A6Accd" "#a8a8a8" "white"))
-   (fg         '("#dcd7ba" "#ffffff" "brightwhite"))
-   (fg-alt     '("#c8c093" "#ffffff" "white"))
+  ((bg         '("#1F1F28" nil       nil))
+   (bg-alt     '("#1F1F28" nil       nil))
+   (base0      '("#393836" "black"   "black"))
+
+   (base1      '("#1e1e2e" "#1e1e2e" "brightblack"  ))
+   (base2      '("#313244" "#313244" "brightblack"  ))
+   (base3      '("#45475a" "#45475a" "brightblack"  ))
+   (base4      '("#585b70" "#585b70" "brightblack"  ))
+   (base5      '("#6c7086" "#6c7086" "brightblack"  ))
+   (base6      '("#7f849c" "#7f849c" "brightblack"  ))
+   (base7      '("#ccccc7" "#cccccc" "brightblack"  ))
+   (base8      '("#f8f8f2" "#dfdfdf" "white"        ))
+   (fg         '("#DCD7BA" "#ffffff" "brightwhite"))
+   (fg-alt     '("#9e9b93" "#ffffff" "white"))
 
    (grey base5)
 
    (red         '("#c4746e" "#c4746e" "red"))
    (orange      '("#ffa066" "#ffa066" "brightred"))
-   (green       '("#8a9a7b" "#8a9a7b" "green"))
-   (teal        '("#44b9b1" "#00d7af" "brightgreen"))
+   (green       '("#699469" "#699469" "green"))
+   (teal        '("#8ea49e" "#8ea49e" "brightgreen"))
    (yellow      '("#c4b28a" "#c4b28a" "brightyellow"))
-   (blue        '("#8ba4b0" "#8ba4b0" "brightblue"))
+   (blue        '("#938aa9" "#938aa9" "brightblue"))
    (dark-blue   '("#7e9cd8" "#7e9cd8" "blue"))
    (magenta     '("#a292a3" "#a292a3" "brightmagenta"))
    (violet      '("#d27e99" "#d27e99" "magenta"))
