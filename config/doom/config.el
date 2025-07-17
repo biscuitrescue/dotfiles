@@ -23,7 +23,7 @@
 
 (setq indent-tabs-mode t
       tab-width 2)
-(setq doom-theme 'roseprime)
+(setq doom-theme 'hojicha)
 (setq doom-font (font-spec :family "Fira Code" :size 21))
 (after! doom-themes
   (setq doom-themes-enable-bold t

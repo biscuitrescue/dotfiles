@@ -32,33 +32,33 @@ Can be an integer to determine the exact padding."
     "A dark theme inspired by Material-Palenight"
 
   ;; name        default   256       16
-  ((bg         '("#1F1F28" nil       nil))
-   (bg-alt     '("#1F1F28" nil       nil))
+  ((bg         '("#181616" nil       nil))
+   (bg-alt     '("#181616" nil       nil))
    (base0      '("#393836" "black"   "black"))
 
-   (base1      '("#1e1e2e" "#1e1e2e" "brightblack"  ))
-   (base2      '("#313244" "#313244" "brightblack"  ))
+   (base1      '("#181616" "#181616" "brightblack"  ))
+   (base2      '("#393F45" "#393F45" "brightblack"  ))
    (base3      '("#45475a" "#45475a" "brightblack"  ))
    (base4      '("#585b70" "#585b70" "brightblack"  ))
    (base5      '("#6c7086" "#6c7086" "brightblack"  ))
    (base6      '("#7f849c" "#7f849c" "brightblack"  ))
    (base7      '("#ccccc7" "#cccccc" "brightblack"  ))
    (base8      '("#f8f8f2" "#dfdfdf" "white"        ))
-   (fg         '("#DCD7BA" "#ffffff" "brightwhite"))
+   (fg         '("#c5c9c5" "#DCD7BA" "brightwhite"))
    (fg-alt     '("#9e9b93" "#ffffff" "white"))
 
    (grey base5)
 
-   (red         '("#c4746e" "#c4746e" "red"))
+   (red         '("#e46976" "#c4746e" "red"))
    (orange      '("#ffa066" "#ffa066" "brightred"))
-   (green       '("#699469" "#699469" "green"))
+   (green       '("#87a987" "#8a9a7b" "green"))
    (teal        '("#8ea49e" "#8ea49e" "brightgreen"))
-   (yellow      '("#c4b28a" "#c4b28a" "brightyellow"))
-   (blue        '("#938aa9" "#938aa9" "brightblue"))
+   (yellow      '("#e6c384" "#c4b28a" "brightyellow"))
+   (blue        '("#7fb4ca" "#8ba4b0" "brightblue"))
    (dark-blue   '("#7e9cd8" "#7e9cd8" "blue"))
-   (magenta     '("#a292a3" "#a292a3" "brightmagenta"))
+   (magenta     '("#938aa9" "#a292a3" "brightmagenta"))
    (violet      '("#d27e99" "#d27e99" "magenta"))
-   (cyan        '("#89DDFF" "#5fd7ff" "brightcyan"))
+   (cyan        '("#7aa89f" "#8ea4a2" "brightcyan"))
    (dark-cyan   '("#80cbc4" "#00d7af" "cyan"))
 
    ;; face categories -- required for all themes

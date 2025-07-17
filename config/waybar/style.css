@@ -62,8 +62,8 @@
   padding: 0.3rem;
   border-radius: 0.6rem;
   padding-left: 0rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
   padding-right: 0rem;
   margin-top: 0.7rem;
   color: @lavender;
@@ -92,8 +92,8 @@
   padding: 0.3rem;
   padding-left: 0rem;
   border-radius: 0.6rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
   padding-right: 0rem;
   margin-top: 0.7rem;
 }
