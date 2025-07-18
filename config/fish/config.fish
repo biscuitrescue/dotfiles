@@ -4,6 +4,7 @@ set fish_greeting
 set -x RANGER_LOAD_DEFAULT_RC "FALSE"
 # set TERM "alacritty"
 set TERM "xterm-256color"
+set COLORTERM "truecolor"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -Ux FZF_DEFAULT_OPTS "--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD"
 

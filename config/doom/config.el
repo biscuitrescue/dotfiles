@@ -23,7 +23,10 @@
 
 (setq indent-tabs-mode t
       tab-width 2)
-(setq doom-theme 'hojicha)
+;; (setq doom-theme 'hojicha)
+(if (display-graphic-p)
+    (setq doom-theme 'hojicha)
+  (setq doom-theme 'doom-dracula))
 (setq doom-font (font-spec :family "Fira Code" :size 21))
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -43,3 +46,5 @@
   (setq lsp-rust-server 'rust-analyzer))
 
 (setq package-install-upgrade-built-in t)
+
+(setq term-terminal-parameter '("xterm-256color"))

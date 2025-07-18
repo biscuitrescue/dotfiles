@@ -43,8 +43,8 @@ tooltip {
   box-shadow: none;
   text-shadow: none;
   border-radius: 9px;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   transition: 0.2s ease;
   padding-left: 4px;
   padding-right: 4px;

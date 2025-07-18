@@ -12,6 +12,14 @@ truncation_length = 3
 # Catppuccin 'lavender'
 style = "bold blue"
 
+# ~/.config/starship.toml
+
+[hostname]
+ssh_only = true 
+format = '[$hostname](bold mauve) '
+trim_at = '.companyname.com'
+disabled = false
+
 # palette tables should be last in the config ⚓️
 
 [palettes.homebrew]
