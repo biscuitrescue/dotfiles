@@ -14,8 +14,9 @@
 
 // positions generated based on config.ctl //
 
-"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer","mpris"],
-"modules-center": ["custom/padd","custom/l_end","custom/r_end","hyprland/window","custom/padd"],
+"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/smallspacer","hyprland/window","custom/spacer"],
+// "modules-center": ["custom/padd","custom/l_end","custom/r_end","mpris","custom/padd"],
+"modules-center": [],
 "modules-right": ["tray", "custom/smallspacer", "pulseaudio", "custom/smallspacer", "memory#mem", "custom/smallspacer", "memory#swap", "custom/smallspacer","cpu", "custom/smallspacer", "clock","custom/smallspacer", "battery", "custom/smallspacer"],
 
 

@@ -48,8 +48,7 @@ tooltip {
 }
 
 #workspaces button.active {
-  background: @base;
-  color: @blue;
+  color: @maroon;
   transition: all 0.3s ease;
   /*  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682); */
 }
@@ -122,6 +121,7 @@ tooltip {
 #battery {
   color: @base;
   background: @lavender;
+  border-radius: 1rem;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
   /* margin-bottom: 10px; */
@@ -158,10 +158,11 @@ tooltip {
 }
 
 #cpu {
-  color: @yellow;
-  background: @base;
+  background: @yellow;
+  color: @base;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
+  border-radius: 1rem;
 }
 
 #memory.mem {
