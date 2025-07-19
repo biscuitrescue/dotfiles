@@ -45,10 +45,14 @@ tooltip {
   text-shadow: none;
   border-radius: 9px;
   transition: 0.2s ease;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 #workspaces button.active {
-  color: @maroon;
+  color: @base;
+  background: @yellow;
+  border-radius: 1rem;
   transition: all 0.3s ease;
   /*  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682); */
 }
@@ -57,7 +61,7 @@ tooltip {
   animation: ws_hover 20s ease-in-out 1;
   transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
   color: @base;
-  background: @yellow;
+  background: @red;
   border-radius: 1rem;
 }
 
