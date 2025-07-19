@@ -143,13 +143,22 @@ tooltip {
 
 
 #clock{
-  color: @maroon;
-  background: @base;
   /* margin-bottom: 10px; */
+  background: @base;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
   /* margin-top: 10px; */
 }
+#clock.day{
+  color: @maroon;
+}
+#clock.date{
+  color: @blue;
+}
+#clock.time{
+  color: @yellow;
+}
+
 #pulseaudio {
   background: @base;
   color: @yellow;

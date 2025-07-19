@@ -17,7 +17,7 @@
 "modules-left": ["custom/smallspacer","hyprland/workspaces","custom/smallspacer","hyprland/window","custom/spacer"],
 // "modules-center": ["custom/padd","custom/l_end","custom/r_end","mpris","custom/padd"],
 "modules-center": [],
-"modules-right": ["tray", "custom/smallspacer", "pulseaudio", "custom/smallspacer", "memory#mem", "custom/smallspacer", "memory#swap", "custom/smallspacer","cpu", "custom/smallspacer", "clock","custom/smallspacer", "battery", "custom/smallspacer"],
+"modules-right": ["tray", "custom/smallspacer", "pulseaudio", "custom/smallspacer", "memory#mem", "custom/smallspacer", "memory#swap", "custom/smallspacer","cpu", "custom/smallspacer", "clock#date", "clock#day", "clock#time","custom/smallspacer", "battery", "custom/smallspacer"],
 
 
 // sourced from modules based on config.ctl //
@@ -96,9 +96,60 @@
     "firefoxdeveloperedition": "firefox-developer-edition"
   }
 },
+ // | %a | %I:%M %p
 
-"clock": {
+"clock#time": {
   "format": "{:%I:%M %p}",
+  "rotate": 0,
+  "on-click": "/usr/local/bin/ags -t ActivityCenter",
+  "tooltip-format": "<tt>{calendar}</tt>",
+  "calendar": {
+    "mode": "month",
+    "mode-mon-col": 3,
+    "on-scroll": 1,
+    "on-click-right": "mode",
+    "format": {
+      "months": "<span color='#ffead3'><b>{}</b></span>",
+      "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+      "today": "<span color='#ff6699'><b>{}</b></span>"
+    }
+  },
+  "actions": {
+    "on-click-right": "mode",
+    "on-click-forward": "tz_up",
+    "on-click-backward": "tz_down",
+    "on-scroll-up": "shift_up",
+    "on-scroll-down": "shift_down"
+  }
+},
+
+"clock#day": {
+  "format": "{:%a}",
+  "rotate": 0,
+  "on-click": "/usr/local/bin/ags -t ActivityCenter",
+  "tooltip-format": "<tt>{calendar}</tt>",
+  "calendar": {
+    "mode": "month",
+    "mode-mon-col": 3,
+    "on-scroll": 1,
+    "on-click-right": "mode",
+    "format": {
+      "months": "<span color='#ffead3'><b>{}</b></span>",
+      "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+      "today": "<span color='#ff6699'><b>{}</b></span>"
+    }
+  },
+  "actions": {
+    "on-click-right": "mode",
+    "on-click-forward": "tz_up",
+    "on-click-backward": "tz_down",
+    "on-scroll-up": "shift_up",
+    "on-scroll-down": "shift_down"
+  }
+},
+
+"clock#date": {
+  "format": "{:%d/%m}",
   "rotate": 0,
   "on-click": "/usr/local/bin/ags -t ActivityCenter",
   "tooltip-format": "<tt>{calendar}</tt>",
