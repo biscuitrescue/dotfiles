@@ -1,4 +1,4 @@
-palette = "kanagawa"
+palette = "catppuccin_latte"
 
 [character]
 #
@@ -13,6 +13,9 @@ truncation_length = 3
 style = "bold blue"
 
 # ~/.config/starship.toml
+
+[gcloud]
+disabled = true
 
 [hostname]
 ssh_only = true 

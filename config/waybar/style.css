@@ -1,9 +1,9 @@
-@import "themes/ink.css";
+@import "themes/canvas.css";
 
 * {
   font-family: "JetBrains Mono Nerd Font";
   font-weight: bold; 
-  font-size: 14px;
+  font-size: 15px;
   border-radius:0.4rem;
   padding: 0px;
   margin: 0px;
@@ -50,8 +50,8 @@ tooltip {
 }
 
 #workspaces button.active {
+  background: @red;
   color: @base;
-  background: @yellow;
   border-radius: 1rem;
   transition: all 0.3s ease;
   /*  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682); */
@@ -61,7 +61,7 @@ tooltip {
   animation: ws_hover 20s ease-in-out 1;
   transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
   color: @base;
-  background: @red;
+  background: @yellow;
   border-radius: 1rem;
 }
 
@@ -108,7 +108,7 @@ tooltip {
   /* margin-bottom: 12px; */
 }
 #tray {
-  background-color: @mantle;
+  background-color: @surface0;
   color: @blue;
   border-radius: 1rem;
   padding-left: 0.5rem;

@@ -1,8 +1,8 @@
 /* @define-color bg     rgba(239, 241, 245, 1); */
-@define-color bg     #e1e1de
-@define-color tray   #595b62
+@define-color bg     #e1e1de;
+@define-color tray   #e1e1de;
 @define-color base   #e1e1de;
-@define-color mantle #e1e1de;
+@define-color mantle #595b62;
 @define-color crust  #dce0e8;
 
 @define-color text     #595b62;
