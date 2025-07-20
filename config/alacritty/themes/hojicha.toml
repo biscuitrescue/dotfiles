@@ -1,0 +1,56 @@
+# name: HOJICHA colors for Alacritty
+# url: https://github.com/alacritty/alacritty
+# upstream: https://github.com/cdmill/neomodern.nvim/raw/main/extras/alacritty/hojicha.toml
+# author: Casey Miller
+
+# Default colors
+[colors.primary]
+background = '#161616'
+# alternate, darker background = '#111111'
+foreground = '#adacac'
+
+[colors.cursor]
+cursor = '#adacac'
+text = '#161616'
+
+# Normal colors
+# [colors.normal]
+# black = '#696969'
+# red = '#9e5560'
+# green = '#5C635F'
+# yellow = '#b0b58a'
+# blue = '#565A63'
+# magenta = '#5C5A66'
+# cyan = '#695C55'
+# white = '#717070'
+# Bright colors
+
+[colors.normal]
+black = '#161616'
+red = '#9c797d'
+green = '#8a968f'
+yellow = '#b5ae84'
+blue = '#808796'
+magenta = '#8a879c'
+cyan = '#a18b7f'
+white = '#717070'
+
+# Bright colors
+[colors.bright]
+black = '#696969'
+red = '#9c797d'
+green = '#8a968f'
+yellow = '#b5ae84'
+blue = '#808796'
+magenta = '#8a879c'
+cyan = '#a18b7f'
+white = '#adacac'
+
+# Indexed Colors
+[[colors.indexed_colors]]
+index = 16
+color = '#111111'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#a7ab93'
