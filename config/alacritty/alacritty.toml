@@ -13,7 +13,7 @@ TERM = "xterm-256color"
 size = 14
 
 [font.bold]
-family = "jetbrainsmono nerd font"
+family = "M Plus 1 Code"
 style = "Bold"
 
 [font.bold_italic]
@@ -21,11 +21,11 @@ family = "jetbrainsmono nerd font"
 style = "Bold Italic"
 
 [font.italic]
-family = "jetbrainsmono nerd font"
+family = "Operator Mono Medium"
 style = "Italic"
 
 [font.normal]
-family = "jetbrainsmono nerd font"
+family = "M Plus 1 Code"
 style = "Medium"
 
 [font.offset]
@@ -133,4 +133,4 @@ x = 10
 y = 10
 
 [general]
-import = ["/home/cafo/.config/alacritty/themes/ink.toml"]
+import = ["~/.config/alacritty/themes/latte.toml"]
