@@ -8,10 +8,6 @@ set COLORTERM "truecolor"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -Ux FZF_DEFAULT_OPTS "--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD"
 
-# GCLOUD
-# The next line updates PATH for the Google Cloud SDK.
-# if [ -f '/home/cafo/git/gcloud/google-cloud-sdk/path.fish.inc' ]; . '/home/cafo/git/gcloud/google-cloud-sdk/path.fish.inc'; end
-
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/.local/share/bob/nightly/bin"
 fish_add_path "$HOME/scripts/bash"
@@ -30,60 +26,7 @@ set fish_color_quote bryellow
 
 fish_vi_key_bindings
 
-### GIT
-
-alias clone="git clone"
-alias pull="git pull"
-alias add="git add"
-alias rmm="git rm"
-alias remlist="git remote -v"
-alias commit="git commit"
-alias branch="git branch"
-alias addrem="git remote add"
-alias rmrem="git remote remove"
-alias push="git push"
-alias init="git init"
-alias save="git config --global credential.helper store"
-alias checkout="git checkout"
-
-alias mirror="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
-alias ll='exa -al --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ls='exa -l --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a | grep -E "^\."'
-alias vim='nvim'
-alias bstart='startx /usr/bin/bspwm'
-alias openstart='startx /usr/bin/openbox-session'
-alias dstart='startx /usr/local/bin/dwm'
-# alias gentup="sudo emerge -avuDN --with-bdeps y @world"
-# alias remerge="sudo emerge -ca"
-# alias clean="sudo eclean-dist -d && sudo revdep-rebuild"
-alias rclear='echo -en "\x1b[2J\x1b[1;1H" ; echo; echo; seq 1 (tput cols) | sort -R | sparklines | lolcat; echo; echo'
-alias pipes="pipes-rs -k curved -p 3 -t 0.13 -r 0.6"
-alias ":q"="exit"
-alias nosleep="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target"
-alias yesleep="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
-alias bsdk="lsblk"
-# alias up="paru -Syu --sudoloop"
-alias up="sudo nixos-rebuild switch --flake .#cafo --upgrade"
-alias reb="sudo nixos-rebuild switch --flake .#cafo"
-alias it="paru -S --sudoloop"
-alias v="vim"
-alias tmsource="tmux source-file ~/.config/tmux/tmux.conf"
-alias tmux="tmux -u"
-alias mux="tmux new-session -t shell"
-
-function getc
-	gcc -dM -E - < /dev/null | grep __STDC_VERSION__ | awk '{ print $2 " --> " $3 }'
-end
-
-function ipub
-	echo (drill myip.opendns.com @resolver1.opendns.com | awk '/myip/ {printf $5}')
-end
-
 # zoxide
-
 # pwd based on the value of _ZO_RESOLVE_SYMLINKS.
 function __zoxide_pwd
     builtin pwd -L
@@ -105,22 +48,13 @@ function __zoxide_cd
     __zoxide_loop=1 __zoxide_cd_internal $argv
 end
 
-# =============================================================================
-#
 # Hook configuration for zoxide.
-#
-
 # Initialize hook to add new entries to the database.
 function __zoxide_hook --on-variable PWD
     test -z "$fish_private_mode"
     and command zoxide add -- (__zoxide_pwd)
 end
-
-# =============================================================================
-#
 # When using zoxide with --no-cmd, alias these internal functions as desired.
-#
-
 # Jump to a directory using only keywords.
 function __zoxide_z
     set -l argc (builtin count $argv)
@@ -156,16 +90,10 @@ function __zoxide_z_complete
 end
 complete --command __zoxide_z --no-files --arguments '(__zoxide_z_complete)'
 
-# Jump to a directory using interactive search.
 function __zoxide_zi
     set -l result (command zoxide query --interactive -- $argv)
     and __zoxide_cd $result
 end
-
-# =============================================================================
-#
-# Commands for zoxide. Disable these using --no-cmd.
-#
 
 abbr --erase z &>/dev/null
 alias z=__zoxide_z
@@ -174,7 +102,63 @@ abbr --erase zi &>/dev/null
 alias zi=__zoxide_zi
 
 
+alias vim='nvim'
+alias v="nvim"
+alias ":q"="exit"
+### GIT
+alias clone="git clone"
+alias pull="git pull"
+alias add="git add"
+alias rmm="git rm"
+alias remlist="git remote -v"
+alias commit="git commit"
+alias branch="git branch"
+alias addrem="git remote add"
+alias rmrem="git remote remove"
+alias push="git push"
+alias init="git init"
+alias save="git config --global credential.helper store"
+alias checkout="git checkout"
+
+# Gentoo
+alias gentup="sudo emerge -avuDN --with-bdeps y @world"
+alias remerge="sudo emerge -ca"
+alias clean="sudo eclean-dist -d && sudo revdep-rebuild"
+# Arch
+# alias up="paru -Syu --sudoloop"
+alias mirror="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
+alias nosleep="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+alias yesleep="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+# NixOS
+alias ns="nix-shell"
+alias ncg="nix-collect-garbage --delete-older-than 1d"
+alias up="sudo nixos-rebuild switch --flake .#cafo --upgrade-all"
+alias reb="sudo nixos-rebuild switch --flake .#cafo"
+# Exa
+alias ll='exa -al --color=always --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ls='exa -l --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l.='exa -a | grep -E "^\."'
+# X11
+alias bstart='startx /usr/bin/bspwm'
+alias openstart='startx /usr/bin/openbox-session'
+alias dstart='startx /usr/local/bin/dwm'
+# Fancy
+alias pipes="pipes-rs -k curved -p 3 -t 0.13 -r 0.6"
+alias fetch="fastfetch"
+# Tmux
+alias tmsource="tmux source-file ~/.config/tmux/tmux.conf"
+alias tmux="tmux -u"
+alias mux="tmux new-session -t shell"
+
+function getc
+	gcc -dM -E - < /dev/null | grep __STDC_VERSION__ | awk '{ print $2 " --> " $3 }'
+end
+
+function ipub
+	echo (drill myip.opendns.com @resolver1.opendns.com | awk '/myip/ {printf $5}')
+end
 starship init fish | source
 any-nix-shell fish --info-right | source
 zoxide init fish | source
-# rxfetch
