@@ -1,12 +1,15 @@
 @import "themes/ink.css";
 
 * {
-  font-family: "JetBrains Mono Nerd Font";
+  font-family: "JetbrainsMono Nerd Font";
   font-weight: bold; 
-  font-size: 14px;
+  font-size: 13px;
   border-radius:0.4rem;
   padding: 0px;
+  margin: 0px;
   opacity: 1;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 window#waybar {
@@ -33,8 +36,6 @@ tooltip {
   transition: 0.2s ease;
   padding-left: 4px;
   padding-right: 4px;
-  margin-top: 2px;
-  margin-bottom: 2px;
 }
 
 
@@ -43,19 +44,16 @@ tooltip {
   box-shadow: none;
   text-shadow: none;
   border-radius: 9px;
-  margin-top: 0px;
-  margin-bottom: 0px;
   transition: 0.2s ease;
-  padding-left: 4px;
-  padding-right: 4px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 #workspaces button.active {
-  background: @blue;
+  background: @red;
   color: @base;
+  border-radius: 1rem;
   transition: all 0.3s ease;
-  padding-left: 4px;
-  padding-right: 4px;
   /*  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682); */
 }
 
@@ -102,20 +100,19 @@ tooltip {
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 #window{
-  color: @base;
-  background: @flamingo;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  color: @yellow;
+  background: @base;
+  /* padding-right: 10px; */
+  /* padding-left: 10px; */
+  /* margin-top: 12px; */
+  /* margin-bottom: 12px; */
 }
 #tray {
   background-color: @surface0;
   color: @blue;
+  border-radius: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  margin-top: 12px;
-  margin-bottom: 12px;
 }
 
 #custom-spacer{
@@ -128,10 +125,11 @@ tooltip {
 #battery {
   color: @base;
   background: @lavender;
+  border-radius: 1rem;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
-  margin-bottom: 12px;
-  margin-top: 12px;
+  /* margin-bottom: 10px; */
+  /* margin-top: 10px; */
 }
 
 #battery.charging {
@@ -149,46 +147,48 @@ tooltip {
 
 
 #clock{
-  color: @base;
-  background: @maroon;
-  margin-bottom: 12px;
+  /* margin-bottom: 10px; */
+  background: @base;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
-  margin-top: 12px;
+  /* margin-top: 10px; */
 }
+#clock.day{
+  color: @maroon;
+}
+#clock.date{
+  color: @blue;
+}
+#clock.time{
+  color: @yellow;
+}
+
 #pulseaudio {
-  background: @yellow;
-  color: @base;
+  background: @base;
+  color: @yellow;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
-  margin-top: 12px;
-  margin-bottom: 12px;
 }
 
 #cpu {
-  color: @base;
   background: @yellow;
+  color: @base;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
-  margin-bottom: 12px;
-  margin-top: 12px;
+  border-radius: 1rem;
 }
 
 #memory.mem {
-  color: @base;
-  background: @blue;
+  color: @blue;
+  background: @base;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
-  margin-bottom: 12px;
-  margin-top: 12px;
 }
 #memory.swap {
-  color: @base;
+  color: @maroon;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
-  background: @maroon;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  background: @base;
 }
 
 #mpris{
