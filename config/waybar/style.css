@@ -160,7 +160,9 @@ tooltip {
   color: @blue;
 }
 #clock.time{
-  color: @yellow;
+  background: @yellow;
+  color: @base;
+  border-radius: 0.8rem;
 }
 
 #pulseaudio {
