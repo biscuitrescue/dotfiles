@@ -1,4 +1,4 @@
-@import "themes/one.css";
+@import "themes/ink.css";
 
 * {
   font-family: "JetbrainsMono Nerd Font";
@@ -124,7 +124,7 @@ tooltip {
 
 #battery {
   color: @base;
-  background: @lavender;
+  background: @sky;
   border-radius: 1rem;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
