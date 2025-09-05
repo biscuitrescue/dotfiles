@@ -97,6 +97,14 @@ blue = "#82aaff"
 magenta = "#ea999c"
 yellow = "#ffcb6b"
 
+[palettes.roseprime]
+green = "#647977"
+red = "#ba5f60"
+mauve = "#6c6b9b"
+blue = "#6172a0"
+magenta = "#ad82a2"
+yellow = "#c5959c"
+
 [palettes.dracula]
 green = "#50fa7b"
 red = "#ff6e6e"

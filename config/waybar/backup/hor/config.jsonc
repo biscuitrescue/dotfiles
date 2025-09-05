@@ -14,7 +14,7 @@
 
 // positions generated based on config.ctl //
 
-"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/smallspacer","hyprland/window","custom/spacer"],
+"modules-left": ["custom/smallspacer", "river/tags", "hyprland/workspaces","custom/smallspacer","hyprland/window","custom/spacer"],
 "modules-center": ["custom/padd","custom/l_end","custom/r_end","clock#time","custom/padd"],
 // "modules-center": [],
 "modules-right": ["tray", "custom/smallspacer", "pulseaudio", "custom/smallspacer", "memory#mem", "custom/smallspacer", "memory#swap", "custom/smallspacer","cpu", "custom/smallspacer", "clock#day", "clock#date","custom/smallspacer", "battery", "custom/smallspacer"],
@@ -67,6 +67,10 @@
   "format": "|"
 },
 
+
+"river/tags": {
+  "hide-vacant": true,
+},
 
 "hyprland/workspaces": {
   "on-click": "activate",

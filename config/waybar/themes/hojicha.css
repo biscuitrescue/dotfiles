@@ -6,16 +6,16 @@
 */
 
 /* @define-color bg     rgba(22, 22, 29, 1); */
-@define-color bg     #181616;
-@define-color base   #16161D;
-@define-color mantle #1F1F28;
-@define-color crust  #2A2A37;
+@define-color bg     #000000;
+@define-color base   #000000;
+@define-color mantle #161616;
+@define-color crust  #161616;
 
 @define-color text     #DCD7BA;
 @define-color subtext0 #C8C093;
 @define-color subtext1 #C8C093;
 
-@define-color surface0 #363646;
+@define-color surface0 #1e1e1e;
 @define-color surface1 #54546D;
 @define-color surface2 #585b70;
 

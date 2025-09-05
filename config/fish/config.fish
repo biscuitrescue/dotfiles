@@ -6,17 +6,21 @@ set -x RANGER_LOAD_DEFAULT_RC "FALSE"
 set TERM "xterm-256color"
 set COLORTERM "truecolor"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-set -Ux FZF_DEFAULT_OPTS "--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD"
+set -gx FZF_DEFAULT_OPTS '
+  --style=minimal
+  --color=fg:#adadcc,fg+:#adadcc,bg:#000000,bg+:#111111
+  --color=hl:#647977,hl+:#9bbdb8,info:#d2af98,marker:#ba5f60
+  --color=prompt:#ba5f60,spinner:#6C6B9B,pointer:#6C6B9B,header:#c4959c
+  --color=border:#000000,separator:#000000,label:#adadcc,query:#adadcc
+  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
+  --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
 
 fish_add_path "$HOME/.cargo/bin"
-fish_add_path "$HOME/.local/share/bob/nightly/bin"
 fish_add_path "$HOME/scripts/bash"
 fish_add_path "$HOME/scripts/python"
 fish_add_path "$HOME/scripts/c"
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.config/emacs/bin"
-fish_add_path "/usr/bin/flutter/bin"
-fish_add_path "$HOME/.neva/bin"
 
 set fish_color_normal brcyan
 set fish_color_autosuggestion brgrey
@@ -26,19 +30,14 @@ set fish_color_quote bryellow
 
 fish_vi_key_bindings
 
-# zoxide
-# pwd based on the value of _ZO_RESOLVE_SYMLINKS.
 function __zoxide_pwd
     builtin pwd -L
 end
 
-# A copy of fish's internal cd function. This makes it possible to use
-# `alias cd=z` without causing an infinite loop.
 if ! builtin functions --query __zoxide_cd_internal
     string replace --regex -- '^function cd\s' 'function __zoxide_cd_internal ' <$__fish_data_dir/functions/cd.fish | source
 end
 
-# cd + custom logic based on the value of _ZO_ECHO.
 function __zoxide_cd
     if set -q __zoxide_loop
         builtin echo "zoxide: infinite loop detected"
@@ -48,14 +47,10 @@ function __zoxide_cd
     __zoxide_loop=1 __zoxide_cd_internal $argv
 end
 
-# Hook configuration for zoxide.
-# Initialize hook to add new entries to the database.
 function __zoxide_hook --on-variable PWD
     test -z "$fish_private_mode"
     and command zoxide add -- (__zoxide_pwd)
 end
-# When using zoxide with --no-cmd, alias these internal functions as desired.
-# Jump to a directory using only keywords.
 function __zoxide_z
     set -l argc (builtin count $argv)
     if test $argc -eq 0
@@ -72,7 +67,6 @@ function __zoxide_z
     end
 end
 
-# Completions.
 function __zoxide_z_complete
     set -l tokens (builtin commandline --current-process --tokenize)
     set -l curr_tokens (builtin commandline --cut-at-cursor --current-process --tokenize)
