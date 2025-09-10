@@ -2,7 +2,6 @@ set -x EDITOR "nvim"
 set -x BAT_THEME "ansi"
 set fish_greeting
 set -x RANGER_LOAD_DEFAULT_RC "FALSE"
-# set TERM "alacritty"
 set TERM "xterm-256color"
 set COLORTERM "truecolor"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
@@ -96,7 +95,9 @@ abbr --erase zi &>/dev/null
 alias zi=__zoxide_zi
 
 
-alias vim='nvim'
+alias wcc="warp-cli connect"
+alias wdd="warp-cli disconnect"
+alias vim="nvim"
 alias v="nvim"
 alias ":q"="exit"
 ### GIT
