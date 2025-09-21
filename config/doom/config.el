@@ -23,7 +23,7 @@
 
 (setq indent-tabs-mode t
       tab-width 2)
-;; (setq doom-theme 'hojicha)
+;; (setq doom-theme 'roseprime)
 (if (display-graphic-p)
     (setq doom-theme 'hojicha)
   (setq doom-theme 'doom-dracula))
