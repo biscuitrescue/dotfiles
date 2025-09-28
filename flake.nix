@@ -1,63 +1,103 @@
 {
-  description = "A very basic flake";
+  description = "NixOS system flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-      url = "github:notashelf/nvf/3e4f99311aeec70cb769ed09564ed9d3914a0ebc";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     hyprland.url = "github:hyprwm/Hyprland";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    hyprland,
-    zen-browser,
-    nvf,
-    ...
-    } @ inputs: let
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      hyprland,
+      ...
+    }@inputs:
+    let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      inherit (nixpkgs) lib;
-    in {
-      pkgs = nixpkgs.legacyPackages.system;
+      username = "cafo";
+      dir = "/home/${username}";
+      stateVersion = "25.05";
 
-      nixosConfigurations = {
-        cafo = lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./configuration.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.useUserPackages = true;
-              home-manager.users.cafo = {
-                imports = [
-                  nvf.homeManagerModules.default
-                  ./home.nix
-                  ./nvf_conf.nix
-                ];
-              };
-              home-manager.extraSpecialArgs = {
-                inherit inputs;
-                system = "x86_64-linux";
-              };
-            }
-          ];
+      pkgs = nixpkgs.legacyPackages.${system};
+
+      homeModules = [
+        ./home/modules/core.nix
+        ./home/home.nix
+        ./home/modules/dark.nix
+        ./home/modules/packages.nix
+        ./home/modules/hypr/hypr.nix
+        ./home/modules/hypr/hyprpaper.nix
+        ./home/modules/hypr/hypridle.nix
+        ./home/modules/mako.nix
+      ];
+
+      extraSpecialArgs = {
+        inherit
+          inputs
+          system
+          pkgs
+          username
+          dir
+          stateVersion
+          ;
+      };
+
+      mkHomeConfig =
+        modules:
+        home-manager.lib.homeManagerConfiguration {
+          inherit pkgs modules;
+          extraSpecialArgs = extraSpecialArgs;
         };
+    in
+    {
+
+      nixosConfigurations.${username} = nixpkgs.lib.nixosSystem {
+        inherit system;
+
+        modules = [
+          ./nixos/configuration.nix
+
+          home-manager.nixosModules.home-manager
+
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+
+            home-manager.users.${username} = {
+              imports = homeModules;
+              home.username = username;
+              home.homeDirectory = dir;
+              home.stateVersion = stateVersion;
+            };
+
+            home-manager.extraSpecialArgs = extraSpecialArgs;
+          }
+        ];
+      };
+
+      homeConfigurations = {
+        ${username} = mkHomeConfig homeModules;
+      };
+      devShells.${system}.default = pkgs.mkShell {
+        buildInputs = [
+          inputs.home-manager.packages.${system}.home-manager
+          pkgs.jq
+          pkgs.nixpkgs-fmt
+        ];
       };
     };
 }
