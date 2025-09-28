@@ -134,4 +134,4 @@ x = 10
 y = 10
 
 [general]
-import = ["~/.config/alacritty/themes/roseprime.toml"]
+import = ["~/.config/alacritty/themes/hojicha.toml"]

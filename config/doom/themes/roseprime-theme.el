@@ -51,10 +51,10 @@ determine the exact padding."
 
   ;; name        default   256       16
   ((bg         '("#121315" "#121315" "black"        ))
-   (bg-alt     '("#121315" "#121415" "black"        ))
+   (bg-alt     '("#0e0e0e" "#0e0e0e" "black"        ))
    (base0      '("#11111b" "#11111b" "black"        ))
    (base1      '("#121315" "#121315" "brightblack"  ))
-   (base2      '("#16171b" "16171b" "brightblack"  ))
+   (base2      '("#16171b" "#16171b" "brightblack"  ))
    (base3      '("#262830" "#262830" "brightblack"  ))
    (base4      '("#585b70" "#585b70" "brightblack"  ))
    (base5      '("#6c7086" "#6c7086" "brightblack"  ))

@@ -5,7 +5,9 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes nil)
  '(custom-safe-themes
-   '("8ac5a816365b274f8a09f322dcf11dc00633747320e65f18061a77621a5ae6d9"
+   '("d397d0e5ab27a5a4555325fd7a42b4acba0c09a75d56c8d8e8d3ce3dcd525f7d"
+     "926a3583ba66801da812283f08c53d72522bbb316ad1d611eae045a8d84c23ae"
+     "8ac5a816365b274f8a09f322dcf11dc00633747320e65f18061a77621a5ae6d9"
      "f7fdf3f0b40c247c35394383ea82e33b4ee119658354588903280db9c0890536"
      "fbfb903f471c0c8e007535a521ba8e01156df272986ae756546dd12f8c15b0da"
      "4d97a506ca5efc8154359885474826d18ea3bb8148e6e0a16ac9c2b3d7d7a030"
@@ -32,6 +34,7 @@
      "234dbb732ef054b109a9e5ee5b499632c63cc24f7c2383a849815dacc1727cb6"
      "db7e289a55a3931023f59bc52b94cde87344560255b06fdc0b2367cda0283518" default))
  '(magit-todos-insert-after '(bottom) nil nil "Changed by setter of obsolete option `magit-todos-insert-at'")
+ '(package-selected-packages '(windresize))
  '(warning-suppress-types '((doom-init-ui-hook) (doom-init-ui-hook))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

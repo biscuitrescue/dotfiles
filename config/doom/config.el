@@ -24,8 +24,8 @@
 (setq indent-tabs-mode t
       tab-width 2)
 (if (display-graphic-p)
-    (setq doom-theme 'roseprime)
-  (setq doom-theme 'doom-dracula))
+    (setq doom-theme 'hojicha)
+  (setq doom-theme 'hojicha))
 (setq doom-font (font-spec :family "Fira Code" :size 21))
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -47,3 +47,27 @@
 (setq package-install-upgrade-built-in t)
 
 (setq term-terminal-parameter '("xterm-256color"))
+
+;; Keybinds
+(map! :leader
+      :desc "Dirvish"
+      "-" #'dirvish)
+
+(defhydra hydra-resize (:hint nil)
+  "
+Resize window
+_h_: ← shrink   _l_: → enlarge
+_j_: ↓ shrink   _k_: ↑ enlarge
+_q_: quit       _RET_: set
+"
+  ("h" shrink-window-horizontally)
+  ("l" enlarge-window-horizontally)
+  ("j" shrink-window)
+  ("k" enlarge-window)
+  ("RET" (message "Window size set!") :exit t)
+  ("q" nil :exit t))
+
+;; Bind it to something, e.g. SPC w r
+(map! :leader
+      :desc "Hydra resize window"
+      "w r" #'hydra-resize/body)
