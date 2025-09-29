@@ -71,3 +71,5 @@ _q_: quit       _RET_: set
 (map! :leader
       :desc "Hydra resize window"
       "w r" #'hydra-resize/body)
+
+(setq scroll-margin 4)
