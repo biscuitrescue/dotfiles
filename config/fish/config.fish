@@ -5,14 +5,15 @@ set -x RANGER_LOAD_DEFAULT_RC "FALSE"
 set TERM "xterm-256color"
 set COLORTERM "truecolor"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-set -gx FZF_DEFAULT_OPTS '
-  --style=minimal
-  --color=fg:#adadcc,fg+:#adadcc,bg:#000000,bg+:#111111
-  --color=hl:#647977,hl+:#9bbdb8,info:#d2af98,marker:#ba5f60
-  --color=prompt:#ba5f60,spinner:#6C6B9B,pointer:#6C6B9B,header:#c4959c
-  --color=border:#000000,separator:#000000,label:#adadcc,query:#adadcc
-  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
-  --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
+set -gx FZF_DEFAULT_OPTS "--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4"
+# set -gx FZF_DEFAULT_OPTS '
+#   --style=minimal
+#   --color=fg:#adadcc,fg+:#adadcc,bg:#000000,bg+:#111111
+#   --color=hl:#647977,hl+:#9bbdb8,info:#d2af98,marker:#ba5f60
+#   --color=prompt:#ba5f60,spinner:#6C6B9B,pointer:#6C6B9B,header:#c4959c
+#   --color=border:#000000,separator:#000000,label:#adadcc,query:#adadcc
+#   --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
+#   --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
 
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/scripts/bash"
