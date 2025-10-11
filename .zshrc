@@ -131,8 +131,8 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c%m)'
 
 # Custom symbols for staged/untracked/unstaged
 zstyle ':vcs_info:git:*' stagedstr '+'
-zstyle ':vcs_info:git:*' unstagedstr '?'
-zstyle ':vcs_info:git:*' untrackedstr '!'
+zstyle ':vcs_info:git:*' unstagedstr '!'
+zstyle ':vcs_info:git:*' untrackedstr '?'
 
 # Hook for committed but not pushed
 zstyle ':vcs_info:git+set-message:*' hooks git-ahead
