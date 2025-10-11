@@ -4,7 +4,7 @@ set fish_greeting
 set -x RANGER_LOAD_DEFAULT_RC "FALSE"
 set TERM "xterm-256color"
 set COLORTERM "truecolor"
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -x MANPAGER "nvim +Man!"
 # set -gx FZF_DEFAULT_OPTS '--color=fg:#bbc2cf,bg:#282c34,hl:#5f87af --color=fg+:#bbc2cf,bg+:#282c34,hl+:#5fd7ff --color=info:#98be65,prompt:#ff6c6b,pointer:#a9a1e1 --color=marker:#98be65,spinner:#51afef,header:#87afaf'
 # set -gx FZF_DEFAULT_OPTS "\
 # --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
