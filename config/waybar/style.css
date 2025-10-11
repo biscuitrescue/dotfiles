@@ -1,306 +1,142 @@
 @import "themes/dracula.css";
 
 * {
-  font-family: "Fira Code";
-  font-weight: bold; 
+  font-family: "Zed Sans";
   font-size: 12px;
-  border-radius:0.4rem;
-  padding: 0px;
-  margin: 0px;
   opacity: 1;
-  margin-top: 1px;
-  margin-bottom: 1px;
 }
 
-window#waybar {
+#waybar {
   background: @base;
-  border-radius: 0px;
+  color: @text;
 }
 
-
-tooltip {
+#workspaces {
   background: @base;
-  color: @sky;
-  font-size: 13px;
-  border-radius: 7px;
-  border: 2px solid #101a24;
-
-
-}
-#tags {
-  background: @base;
-  /* color: @base; */
-  box-shadow: none;
-  text-shadow: none;
-  border-radius: 7px;
-  transition: 0.2s ease;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-
-
-#tags button {
-  color: @flamingo;
-  background: @base;
-  border-radius: 9px;
-  transition: 0.2s ease;
-}
-
-#tags button.focused {
-  background: @red;
-  color: @base;
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-  margin: 0px;
-  padding: 0px;
-  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682);
-}
-
-#tags button.urgent {
-  animation: ws_hover 20s ease-in-out 1;
-  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
-  color: @base;
-  background: @yellow;
-  border-radius: 1rem;
+  opacity: 1;
 }
 
 #workspaces button {
-  color: @flamingo;
-  box-shadow: none;
-  text-shadow: none;
-  border-radius: 9px;
-  transition: 0.2s ease;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-#workspaces{
-  background: @base;
-  /* color: @base; */
-  box-shadow: none;
-  text-shadow: none;
-  border-radius: 7px;
-  transition: 0.2s ease;
-  padding-left: 4px;
-  padding-right: 4px;
+  color: @lavender;
+  padding: 0.2rem 0rem 0.2rem 0rem;
 }
 
 #workspaces button.active {
-  background: @red;
-  color: @base;
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682);
+  color: @maroon;
+  background: @base;
 }
 
 #workspaces button:hover {
-  animation: ws_hover 20s ease-in-out 1;
-  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
-  color: @base;
-  background: @yellow;
-  border-radius: 1rem;
+  color: @lavender;
+  margin: 0px;
 }
 
-#taskbar button {
-  box-shadow: none;
-  text-shadow: none;
-  font-size: 4px;
-  padding: 0px;
-  border-radius: 9px;
-  margin-bottom: 3px;
-  margin-left: 0px;
-  padding-left: 3px;
-  padding-right: 3px;
-  margin-right: 0px;
-  color: @text;
-  background: @red;
-  animation: tb_normal 20s ease-in-out 1;
-}
-
-#taskbar button.active {
-  color: @text;
-  background: @red;
-  margin-left: 3px;
-  padding-left: 12px;
-  padding-right: 12px;
-  margin-right: 3px;
-  animation: tb_active 20s ease-in-out 1;
-  transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
-  min-height: 9px; 
-}
-
-#taskbar button:hover {
-  color: @text;
-  background: @red;
-  animation: tb_hover 20s ease-in-out 1;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-#window{
-  color: @yellow;
-  background: @base;
-  /* padding-right: 10px; */
-  /* padding-left: 10px; */
-  /* margin-top: 12px; */
-  /* margin-bottom: 12px; */
-}
 #tray {
-  background-color: @surface0;
+  background-color: @bg;
+  padding: 0rem;
+  padding-bottom: 0.3rem;
+}
+#backlight,
+#clock {
+  margin: 0.2rem;
+  padding: 0.3rem;
+  padding-left: 0rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0rem;
+  margin-top: 0.7rem;
+}
+#clock.date {
+  color: @maroon;
+  background: @base;
+}
+#clock.time {
   color: @blue;
-  border-radius: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  background: @base;
 }
 
-#custom-spacer{
-  opacity: 0.0;
-}
-#custom-smallspacer{
-  opacity: 0.0;
-}
+
 
 #battery {
-  color: @base;
-  background: @sky;
-  border-radius: 1rem;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-  /* margin-bottom: 10px; */
-  /* margin-top: 10px; */
+  margin: 0.3rem;
+  padding: 0.3rem;
+  border-radius: 0.6rem;
+  padding-left: 0rem;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+  padding-right: 0rem;
+  margin-top: 0.7rem;
+  color: @lavender;
+  background: @base;
 }
 
 #battery.charging {
   background: @green;
+  color: @base;
 }
 
 #battery.warning:not(.charging) {
   background: @peach;
+  color: @base;
 }
 
 #battery.critical:not(.charging) {
   background: @red;
-}
-
-
-
-#clock{
-  /* margin-bottom: 10px; */
-  background: @base;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-  /* margin-top: 10px; */
-}
-#clock.day{
-  color: @maroon;
-}
-#clock.date{
-  color: @blue;
-}
-#clock.time{
-  background: @yellow;
   color: @base;
-  border-radius: 0.8rem;
 }
 
 #pulseaudio {
-  background: @base;
-  color: @yellow;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
+  background: @yellow;
+  color: @base;
+  margin: 0.3rem;
+  padding: 0.3rem;
+  padding-left: 0rem;
+  border-radius: 0.6rem;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+  padding-right: 0rem;
+  margin-top: 0.7rem;
 }
 
 #cpu {
-  background: @yellow;
-  color: @base;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-  border-radius: 1rem;
+  color: @yellow;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: @base;
+  padding: 0.3rem;
+  margin: 0.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
 }
-
 #memory.mem {
   color: @blue;
+  padding: 0.3rem;
   background: @base;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
+  margin: 0.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.15rem;
+  margin-top: 0.4rem;
 }
 #memory.swap {
   color: @maroon;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
+  padding: 0.3rem;
   background: @base;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 0.2rem;
+  margin-top: 0.15rem;
+  margin-bottom: 0.2rem;
 }
 
-#mpris{
-  color: white;
-  animation: repeat;
-  animation-name: blink;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes blink {
-  to {
-    color: #4a4a4a;
-
-  }
-}
-#custom-l_end,
-#custom-r_end,
-#custom-sl_end,
-#custom-sr_end,
-#custom-rl_end,
-#mpris{
-  font-size: 15px;
-  font-weight: bold
-}
-#custom-rr_end {
-  font-weight: normal;
-  color: #E8EDF0;
-  background:  rgba(23, 23, 23, 0.0);
-  opacity: 1;
-  margin: 0px 0px 0px 0px;
+#window {
+  color: @text;
+  background: @base;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding-left: 4px;
   padding-right: 4px;
-  ;
-
 }
-
-
-#custom-r_end {
-  border-radius: 0px 7px 7px 0px;
-  margin-right: 1px;
-  padding-right: 3px;
+window#waybar {
+  background-color: @bg;
 }
-
-#custom-l_end {
-  border-radius: 7px 0px 0px 7px;
-  margin-left: 1px;
-  padding-left: 3px;
-}
-
-#custom-sr_end {
-  border-radius: 0px;
-  margin-right: 1px;
-  padding-right: 3px;
-}
-
-#custom-sl_end {
-  border-radius: 0px;
-  margin-left: 1px;
-  padding-left: 3px;
-}
-
-#custom-rr_end {
-  border-radius: 0px 7px 7px 0px;
-  margin-right: 1px;
-  padding-right: 3px;
-}
-
-#custom-rl_end {
-  border-radius: 7px 0px 0px 7px;
-  margin-left: 1px;
-  padding-left: 3px;
-}
-

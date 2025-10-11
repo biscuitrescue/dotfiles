@@ -7,8 +7,8 @@
     "reload_style_on_change": true,
     "layer": "top",
     "position": "left",
-    "height": "90",
-    "width": 0,
+    "height": "100",
+    "width": 33,
     "modules-left": ["clock#date", "clock#time", "pulseaudio"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["tray", "cpu", "memory#mem", "memory#swap", "battery"],
@@ -21,7 +21,7 @@
         "sort-by-number": true,
     "on-scroll-up": "hyprctl dispatch workspace e-1",
     "on-scroll-down": "hyprctl dispatch workspace e+1",
-        "format": "{icon}",
+        "format": "{name}",
         "format-icons": {
             "default": ""
         }

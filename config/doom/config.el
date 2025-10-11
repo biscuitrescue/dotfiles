@@ -1,3 +1,5 @@
+;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+
 (setq user-full-name "Karttikeya Sinha"
       user-mail-address "karttikeyasinha11@gmail.com")
 
@@ -6,12 +8,12 @@
 
 (setq confirm-kill-emacs nil)
 
-(setq scroll-margin 4)
+(setq scroll-margin 0)
 (setq indent-tabs-mode t
       tab-width 2)
 
-(setq doom-theme 'hojicha)
-(setq doom-font (font-spec :family "Fira Code" :size 21))
+(setq doom-theme 'doom-dracula)
+(setq doom-font (font-spec :family "Zed Mono" :size 20))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
@@ -32,10 +34,6 @@
 
 (setq term-terminal-parameter '("xterm-256color"))
 
-(map! :leader
-      :desc "Dirvish"
-      "-" #'dirvish)
-
 (defhydra hydra-resize (:hint nil)
   "
 Resize window
@@ -53,3 +51,14 @@ _q_: quit       _RET_: set
 (map! :leader
       :desc "Hydra resize window"
       "w r" #'hydra-resize/body)
+
+(map! :leader
+      :desc "Open Dired Window"
+      "-" #'dired-jump)
+
+(map! :leader
+      :desc "Open Dired Window"
+      "f =" #'dired-create-empty-file)
+
+(map! "M-e" #'evil-end-of-line
+      "M-w" #'evil-first-non-blank)

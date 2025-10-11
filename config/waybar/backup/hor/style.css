@@ -1,10 +1,9 @@
-@import "themes/ink.css";
+@import "themes/dracula.css";
 
 * {
-  font-family: "JetbrainsMono Nerd Font";
-  font-weight: bold; 
+  font-family: "Zed Sans";
   font-size: 13px;
-  border-radius:0.4rem;
+  border-radius: 0.4rem;
   padding: 0px;
   margin: 0px;
   opacity: 1;
@@ -27,7 +26,7 @@ tooltip {
 
 
 }
-#workspaces{
+#tags {
   background: @base;
   /* color: @base; */
   box-shadow: none;
@@ -39,6 +38,32 @@ tooltip {
 }
 
 
+
+#tags button {
+  color: @flamingo;
+  background: @base;
+  border-radius: 9px;
+  transition: 0.2s ease;
+}
+
+#tags button.focused {
+  background: @red;
+  color: @base;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  margin: 0px;
+  padding: 0px;
+  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682);
+}
+
+#tags button.urgent {
+  animation: ws_hover 20s ease-in-out 1;
+  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+  color: @base;
+  background: @yellow;
+  border-radius: 1rem;
+}
+
 #workspaces button {
   color: @flamingo;
   box-shadow: none;
@@ -49,12 +74,23 @@ tooltip {
   margin-right: 2px;
 }
 
+#workspaces{
+  background: @base;
+  /* color: @base; */
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 7px;
+  transition: 0.2s ease;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
 #workspaces button.active {
   background: @red;
   color: @base;
   border-radius: 1rem;
   transition: all 0.3s ease;
-  /*  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682); */
+  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682);
 }
 
 #workspaces button:hover {
@@ -124,7 +160,7 @@ tooltip {
 
 #battery {
   color: @base;
-  background: @lavender;
+  background: @sky;
   border-radius: 1rem;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
@@ -160,7 +196,9 @@ tooltip {
   color: @blue;
 }
 #clock.time{
+  background: @base;
   color: @yellow;
+  border-radius: 0.8rem;
 }
 
 #pulseaudio {

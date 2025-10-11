@@ -1,8 +1,8 @@
-@import "themes/kanagawa.css";
+@import "themes/dracula.css";
 
 * {
   font-family: "M Plus 1 Code Medium";
-  font-size: 13px;
+  font-size: 12px;
   opacity: 1;
 }
 
@@ -12,7 +12,7 @@
 }
 
 #workspaces {
-  background: @base;
+  background: @bg;
   opacity: 1;
 }
 
