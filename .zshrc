@@ -141,7 +141,7 @@ function +vi-git-ahead() {
   local ahead
   ahead=$(git rev-list @{upstream}..HEAD 2>/dev/null | wc -l)
   if (( ahead > 0 )); then
-    hook_com[misc]='⬆'
+    hook_com[misc]='^'
   fi
 }
 
