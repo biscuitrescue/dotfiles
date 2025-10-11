@@ -86,38 +86,72 @@ setopt PROMPT_SUBST
 
 autoload -Uz vcs_info
 
+# # Enable Git info
+# zstyle ':vcs_info:*' enable git
+# zstyle ':vcs_info:*' check-for-changes true
+# zstyle ':vcs_info:*' stagedstr '+'
+# zstyle ':vcs_info:*' unstagedstr '!'
+# zstyle ':vcs_info:git:*' formats '(%b%u%c%m)'   # %m will be used for untracked indicator
+# zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c%m)'
+#
+# # untracked files
+# zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+# zstyle ':vcs_info:git+set-message:*' hooks git-aheadbehind
+#
+# +vi-git-untracked() {
+#     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+#        git status --porcelain | grep '??' &> /dev/null ; then
+#         # Show '?' in the misc (%m) section if untracked files exist
+#         hook_com[misc]='?'
+#     fi
+# }
+#
+# +vi-git-aheadbehind() {
+#   local ahead behind
+#   ahead=$(git rev-list @{upstream}..HEAD 2>/dev/null | wc -l)
+#   if (( ahead > 0 )); then
+#     hook_com[misc]='⬆'
+#   fi
+# }
+# # Run vcs_info before every prompt
+# precmd() { vcs_info }
+# setopt PROMPT_SUBST
+#
+# PS1='
+# %F{blue}%~%f%F{yellow} ${vcs_info_msg_0_}
+# %f%(?.%F{green}.%F{red})%f '
+
+
+autoload -Uz vcs_info
+
 # Enable Git info
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git:*' formats '(%b%u%c)'
-zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
+zstyle ':vcs_info:git:*' formats '(%b%u%c%m)'
+zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c%m)'
+
+# Custom symbols for staged/untracked/unstaged
+zstyle ':vcs_info:git:*' stagedstr '+'
+zstyle ':vcs_info:git:*' unstagedstr '?'
+zstyle ':vcs_info:git:*' untrackedstr '!'
+
+# Hook for committed but not pushed
+zstyle ':vcs_info:git+set-message:*' hooks git-ahead
+
+function +vi-git-ahead() {
+  local ahead
+  ahead=$(git rev-list @{upstream}..HEAD 2>/dev/null | wc -l)
+  if (( ahead > 0 )); then
+    hook_com[misc]='⬆'
+  fi
+}
 
 # Run vcs_info before every prompt
 precmd() { vcs_info }
 
-# Enable prompt variable expansion
 setopt PROMPT_SUBST
 
-# Actual prompt
 PS1='
 %F{blue}%~%f%F{yellow} ${vcs_info_msg_0_}
 %f%(?.%F{green}.%F{red})%f '
-# PS1="%F{blue}%~/%f %F{yellow}\${vcs_info_msg_0_}%f\n%F{\${(?.green.red)}}%f "
-# PS1="
-# %F{blue}%~/%f %F{yellow}${vcs_info_msg_0_}%f
-# %F{%(?.green.red)}%f "
-# autoload -Uz vcs_info
-#
-# # enable git support
-# zstyle ':vcs_info:*' enable git
-#
-# # format for git info
-# zstyle ':vcs_info:git:*' formats '(%b%u%c)'
-# # %b = branch name, %u = unstaged marker, %c = staged marker
-#
-# # optional: show when in detached HEAD state
-# zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
-#
-# # hook into the prompt
-# precmd() { vcs_info }
-# PS1='%F{blue}%~%f %F{yellow}${vcs_info_msg_0_}%f %(?.%F{green}.%F{red})%#%f '
+
 source <(fzf --zsh)
