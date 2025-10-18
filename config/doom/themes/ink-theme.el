@@ -1,14 +1,3 @@
-;;; ../../git/dotfiles/config/doom/themes/roseprime.el -*- lexical-binding: t; -*-
-
-;;; hojicha-theme.el --- adapted from equinusocio's Material themes -*- lexical-binding: t; no-byte-compile: t; -*-
-;;
-;; Added: August 8, 2019 (7c7e871f2221)
-;; Author: Brettm12345 <https://github.com/Brettm12345>
-;; Maintainer:
-;; Source: https://github.com/equinusocio/vsc-material-theme
-;;
-;;; Commentary:
-;;; Code:
 ;;; doom-dracula-theme.el - based on https://draculatheme.com/ -*- lexical-binding: t; no-byte-compile: t; -*-
 (require 'doom-themes)
 
@@ -46,35 +35,35 @@ determine the exact padding."
   :type '(choice integer boolean))
 
 ;;
-(def-doom-theme roseprime
+(def-doom-theme ink
   "A dark theme based on Dracula theme"
 
   ;; name        default   256       16
-  ((bg         '("#111111" "#111111" "black"        ))
-   (bg-alt     '("#0e0e0e" "#0e0e0e" "black"        ))
+  ((bg         '("#1F1F28" "#1F1F28" "black"        ))
+   (bg-alt     '("#1E2029" "#1c1c1c" "black"        ))
    (base0      '("#11111b" "#11111b" "black"        ))
-   (base1      '("#121315" "#121315" "brightblack"  ))
-   (base2      '("#16171b" "#16171b" "brightblack"  ))
-   (base3      '("#262830" "#262830" "brightblack"  ))
+   (base1      '("#1F1F28" "#1F1F28" "brightblack"  ))
+   (base2      '("#313244" "#313244" "brightblack"  ))
+   (base3      '("#45475a" "#45475a" "brightblack"  ))
    (base4      '("#585b70" "#585b70" "brightblack"  ))
    (base5      '("#6c7086" "#6c7086" "brightblack"  ))
    (base6      '("#7f849c" "#7f849c" "brightblack"  ))
    (base7      '("#ccccc7" "#cccccc" "brightblack"  ))
    (base8      '("#f8f8f2" "#dfdfdf" "white"        ))
-   (fg         '("#adadcc" "#adadcc" "white"        ))
-   (fg-alt     '("#e2e2dc" "#bfbfbf" "brightwhite"  ))
+   (fg         '("#DCD7BA" "#DCD7BA" "white"        ))
+   (fg-alt     '("#bfbfbf" "#bfbfbf" "brightwhite"  ))
 
    (grey       base4)
-   (red        '("#ad82a2" "#ba5f60" "red"          ))
-   (orange     '("#fab387" "#fab387" "brightred"    ))
-   (green      '("#9bbdb8" "#647977" "green"        ))
+   (red        '("#c4746e" "#f38baf" "red"          ))
+   (orange     '("#cc928e" "#cc928e" "brightred"    ))
+   (green      '("#699469" "#a6e3a1" "green"        ))
    (teal       '("#94e2d5" "#94e2d5" "brightgreen"  ))
-   (yellow     '("#d2af98" "#c4959c" "yellow"       ))
-   (blue       '("#95b1fc" "#6172a0" "brightblue"   ))
+   (yellow     '("#c4b28a" "#c4b28a" "yellow"       ))
+   (blue       '("#698a9b" "#698a9b" "brightblue"   ))
    (dark-blue  '("#89b4fa" "#89b4fa" "blue"         ))
-   (magenta    '("#a8a6f5" "#6c6b9b" "magenta"      ))
-   (violet     '("#6397cf" "#436285" "brightmagenta"))
-   (cyan       '("#89dceb" "#89dceb" "brightcyan"   ))
+   (magenta    '("#938aa9" "#938aa9" "magenta"      ))
+   (violet     '("#a292a3" "#a292a3" "brightmagenta"))
+   (cyan       '("#8ea49e" "#8ea49e" "brightcyan"   ))
    (dark-cyan  '("#8be9fd" "#88eeff" "cyan"         ))
 
    ;; face categories -- required for all themes

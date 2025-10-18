@@ -12,7 +12,7 @@
 (setq indent-tabs-mode t
       tab-width 2)
 
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'ink)
 (setq doom-font (font-spec :family "Zed Mono" :size 20))
 (after! doom-themes
   (setq doom-themes-enable-bold t
