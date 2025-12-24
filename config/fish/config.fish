@@ -9,7 +9,7 @@ set -x MANPAGER "nvim +Man!"
 
 # Habamax
 set -gx FZF_DEFAULT_OPTS '
-  --color=fg:#d0d0d0,fg+:#d7005f,bg:#121212,bg+:#202020
+  --color=fg:#d0d0d0,fg+:#d7005f,bg:#121212,bg+:#1c1c1c
   --color=hl:#5f87af,hl+:#66bfbf,info:#afaf87,marker:#87ff00
   --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
   --color=border:#262626,label:#aeaeae,query:#d9d9d9
