@@ -1,12 +1,12 @@
 # vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Fonts {{{
-font_family      M Plus 1 Code nerd font medium
-bold_font        M Plus 1 Code nerd font Bold
+font_family      Zed Mono 
+bold_font        Zed Mono Bold
 italic_font      Operator Mono Medium Italic
-bold_italic_font auto
+bold_italic_font Operator Mono Bold Italic
 
-font_size 10
+font_size 12
 
 force_ltr no
 
@@ -368,7 +368,7 @@ confirm_os_window_close 3
 
 #: Tab bar {{{
 
-tab_bar_edge bottom
+tab_bar_edge top
 
 #: Which edge to show the tab bar on, top or bottom
 
@@ -377,7 +377,7 @@ tab_bar_margin_width 0.0
 #: The margin to the left and right of the tab bar (in pts)
 
 tab_bar_style powerline
-tab_powerline_style slanted
+tab_powerline_style round
 
 #: The tab bar style, can be one of: fade, separator, powerline, or
 #: hidden. In the fade style, each tab's edges fade into the
@@ -451,7 +451,7 @@ inactive_tab_font_style normal
 
 #: Color scheme {{{
 
-background_opacity 0.8
+background_opacity 1
 # background_image ~/Pictures/wallpapers/extra-14.png
 
 background_image_layout scaled
@@ -572,7 +572,7 @@ allow_hyperlinks yes
 #: with the mouse. The special value of ``ask`` means that kitty will
 #: ask before opening the link.
 
-term xterm-kitty
+term xterm-256color
 
 #: The value of the TERM environment variable to set. Changing this
 #: can break many terminal programs, only change it if you know what
@@ -661,4 +661,10 @@ linux_display_server auto
 
 #: }}}
 
-include themes/kanagawa.conf
+include themes/iceclimber.conf
+
+
+# BEGIN_KITTY_THEME
+# ANSI 1987
+include current-theme.conf
+# END_KITTY_THEME

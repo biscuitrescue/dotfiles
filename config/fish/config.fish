@@ -6,22 +6,26 @@ set -x RANGER_LOAD_DEFAULT_RC "FALSE"
 set TERM "xterm-256color"
 set COLORTERM "truecolor"
 set -x MANPAGER "nvim +Man!"
-# set -gx FZF_DEFAULT_OPTS '--color=fg:#bbc2cf,bg:#282c34,hl:#5f87af --color=fg+:#bbc2cf,bg+:#282c34,hl+:#5fd7ff --color=info:#98be65,prompt:#ff6c6b,pointer:#a9a1e1 --color=marker:#98be65,spinner:#51afef,header:#87afaf'
-# set -gx FZF_DEFAULT_OPTS "\
-# --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
-# --color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
-# --color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
-# --color=selected-bg:#45475A \
-# --color=border:#6C7086,label:#CDD6F4"
-# set -gx FZF_DEFAULT_OPTS "--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4"
+
+# Habamax
 set -gx FZF_DEFAULT_OPTS '
-  --style=minimal
-  --color=fg:#adadcc,fg+:#adadcc,bg:#171719,bg+:#121315
-  --color=hl:#647977,hl+:#9bbdb8,info:#d2af98,marker:#ba5f60
-  --color=prompt:#ba5f60,spinner:#6C6B9B,pointer:#6C6B9B,header:#c4959c
-  --color=border:#000000,separator:#000000,label:#adadcc,query:#adadcc
-  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
-  --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
+  --color=fg:#d0d0d0,fg+:#d7005f,bg:#121212,bg+:#202020
+  --color=hl:#5f87af,hl+:#66bfbf,info:#afaf87,marker:#87ff00
+  --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
+  --color=border:#262626,label:#aeaeae,query:#d9d9d9
+  --border="thinblock" --border-label="FZF" --border-label-pos="0" --preview-window="border-thinblock"
+  --prompt="> " --marker=">" --pointer="◆" --separator="─"
+  --scrollbar="│" --info="right"'
+
+# Roseprime
+# set -gx FZF_DEFAULT_OPTS '
+#   --style=minimal
+#   --color=fg:#d0d0d0,fg+:#9e4e85,bg:#161616,bg+:#121315
+#   --color=hl:#647977,hl+:#9bbdb8,info:#d2af98,marker:#ba5f60
+#   --color=prompt:#ba5f60,spinner:#6C6B9B,pointer:#6C6B9B,header:#c4959c
+#   --color=border:#000000,separator:#000000,label:#adadcc,query:#adadcc
+#   --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
+#   --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
 
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/scripts/bash"
@@ -30,11 +34,11 @@ fish_add_path "$HOME/scripts/c"
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.config/emacs/bin"
 
-set fish_color_normal brcyan
+set fish_color_normal cyan
 set fish_color_autosuggestion brgrey
-set fish_color_command brgreen # '#50fa7b'
+set fish_color_command green # '#50fa7b'
 set fish_color_error red #'#ff5555'
-set fish_color_quote bryellow
+set fish_color_quote yellow
 
 fish_vi_key_bindings
 
