@@ -1,4 +1,4 @@
-# fish_config theme choose Dracula\ Official
+# fish_config theme choose Catppuccin\ Macchiato
 set -x EDITOR "nvim"
 set -x BAT_THEME "ansi"
 set fish_greeting
@@ -13,15 +13,15 @@ set -x MANPAGER "nvim +Man!"
 # --color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
 # --color=selected-bg:#45475A \
 # --color=border:#6C7086,label:#CDD6F4"
-set -gx FZF_DEFAULT_OPTS "--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4"
-# set -gx FZF_DEFAULT_OPTS '
-#   --style=minimal
-#   --color=fg:#adadcc,fg+:#adadcc,bg:#000000,bg+:#111111
-#   --color=hl:#647977,hl+:#9bbdb8,info:#d2af98,marker:#ba5f60
-#   --color=prompt:#ba5f60,spinner:#6C6B9B,pointer:#6C6B9B,header:#c4959c
-#   --color=border:#000000,separator:#000000,label:#adadcc,query:#adadcc
-#   --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
-#   --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
+# set -gx FZF_DEFAULT_OPTS "--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4"
+set -gx FZF_DEFAULT_OPTS '
+  --style=minimal
+  --color=fg:#adadcc,fg+:#adadcc,bg:#171719,bg+:#121315
+  --color=hl:#647977,hl+:#9bbdb8,info:#d2af98,marker:#ba5f60
+  --color=prompt:#ba5f60,spinner:#6C6B9B,pointer:#6C6B9B,header:#c4959c
+  --color=border:#000000,separator:#000000,label:#adadcc,query:#adadcc
+  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
+  --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
 
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/scripts/bash"
@@ -32,7 +32,7 @@ fish_add_path "$HOME/.config/emacs/bin"
 
 set fish_color_normal brcyan
 set fish_color_autosuggestion brgrey
-set fish_color_command green # '#50fa7b'
+set fish_color_command brgreen # '#50fa7b'
 set fish_color_error red #'#ff5555'
 set fish_color_quote bryellow
 
@@ -136,8 +136,8 @@ alias yesleep="sudo systemctl unmask sleep.target suspend.target hibernate.targe
 # NixOS
 alias ns="nix-shell"
 alias ncg="nix-collect-garbage --delete-older-than 1d"
-alias up="sudo nixos-rebuild switch --flake .#cafo --upgrade-all"
-alias reb="sudo nixos-rebuild switch --flake .#cafo"
+alias up="sudo nixos-rebuild switch --flake .#karttikeya --upgrade-all"
+alias reb="sudo nixos-rebuild switch --flake .#karttikeya"
 # Exa
 alias ll='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs

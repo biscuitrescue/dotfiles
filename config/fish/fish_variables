@@ -17,7 +17,7 @@ SETUVAR _fisher_plugins:oh\x2dmy\x2dfish/plugin\x2dpj\x1efranciscolourenco/done\
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:brgrey
 SETUVAR fish_color_cancel:\x2dr
-SETUVAR fish_color_command:green
+SETUVAR fish_color_command:brgreen
 SETUVAR fish_color_comment:990000
 SETUVAR fish_color_cwd:green
 SETUVAR fish_color_cwd_root:red
@@ -43,7 +43,7 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/cafo/\x2elocal/share/bob/nightly/bin\x1e/home/cafo/scripts/c\x1e/usr/bin/flutter/bin\x1e/home/cafo/\x2econfig/emacs/bin\x1e/home/cafo/scripts/python\x1e/home/cafo/scripts/bash\x1e/home/cafo/\x2eneva/bin\x1e/home/cafo/\x2elocal/bin\x1e/home/cafo/\x2ecargo/bin
+SETUVAR fish_user_paths:/home/karttikeya/\x2ecargo/bin\x1e/home/karttikeya/scripts/c\x1e/home/karttikeya/scripts/python\x1e/home/karttikeya/scripts/bash\x1e/home/cafo/\x2elocal/share/bob/nightly/bin\x1e/home/cafo/scripts/c\x1e/usr/bin/flutter/bin\x1e/home/cafo/\x2econfig/emacs/bin\x1e/home/cafo/scripts/python\x1e/home/cafo/scripts/bash\x1e/home/cafo/\x2eneva/bin\x1e/home/cafo/\x2elocal/bin\x1e/home/cafo/\x2ecargo/bin
 SETUVAR project_path:/home/mr_robot/lang/python/\x1e/home/mr_robot/home
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_check_for_new_release:false
