@@ -7,15 +7,24 @@ set TERM "xterm-256color"
 set COLORTERM "truecolor"
 set -x MANPAGER "nvim +Man!"
 
-# Habamax
 set -gx FZF_DEFAULT_OPTS '
-  --color=fg:#d0d0d0,fg+:#d7005f,bg:#121212,bg+:#1c1c1c
-  --color=hl:#5f87af,hl+:#66bfbf,info:#afaf87,marker:#87ff00
-  --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
-  --color=border:#262626,label:#aeaeae,query:#d9d9d9
+  --color=bg+:#2f312c,bg:#252623,spinner:#e75a7c,hl:#e75a7c
+  --color=fg:#f1e9d2,header:#e75a7c,info:#96c7ef,pointer:#8fb573
+  --color=marker:#8fb573,fg+:#8fb573,prompt:#8fb573,hl+:#e75a7c
+  --color=selected-bg:#383b35
   --border="thinblock" --border-label="FZF" --border-label-pos="0" --preview-window="border-thinblock"
   --prompt="> " --marker=">" --pointer="◆" --separator="─"
   --scrollbar="│" --info="right"'
+
+# Habamax
+# set -gx FZF_DEFAULT_OPTS '
+#   --color=fg:#d0d0d0,fg+:#d7005f,bg:#121212,bg+:#1c1c1c
+#   --color=hl:#5f87af,hl+:#66bfbf,info:#afaf87,marker:#87ff00
+#   --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
+#   --color=border:#262626,label:#aeaeae,query:#d9d9d9
+#   --border="thinblock" --border-label="FZF" --border-label-pos="0" --preview-window="border-thinblock"
+#   --prompt="> " --marker=">" --pointer="◆" --separator="─"
+#   --scrollbar="│" --info="right"'
 
 # Roseprime
 # set -gx FZF_DEFAULT_OPTS '
