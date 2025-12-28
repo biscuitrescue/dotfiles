@@ -1,14 +1,14 @@
-@import "themes/iceclimber.css";
+@import "themes/ashes.css";
 
 * {
   font-family: "Zed Sans";
-  font-size: 13px;
+  font-size: 12px;
   border-radius: 0.4rem;
   padding: 0px;
   margin: 0px;
   opacity: 1;
-  margin-top: 1px;
-  margin-bottom: 1px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
 }
 
 window#waybar {
@@ -126,7 +126,7 @@ tooltip {
   margin-right: 3px;
   animation: tb_active 20s ease-in-out 1;
   transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
-  min-height: 9px; 
+  min-height: 9px;
 }
 
 #taskbar button:hover {
