@@ -12,8 +12,8 @@
 (setq indent-tabs-mode t
       tab-width 2)
 
-(setq doom-theme 'ink)
-(setq doom-font (font-spec :family "Zed Mono" :size 20))
+(setq doom-theme 'bamboo)
+(setq doom-font (font-spec :family "Mononoki nerd font mono" :size 22))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))

@@ -138,32 +138,39 @@ alias save="git config --global credential.helper store"
 alias checkout="git checkout"
 
 # Gentoo
-alias gentup="sudo emerge -avuDN --with-bdeps y @world"
-alias remerge="sudo emerge -ca"
-alias clean="sudo eclean-dist -d && sudo revdep-rebuild"
+# alias gentup="sudo emerge -avuDN --with-bdeps y @world"
+# alias remerge="sudo emerge -ca"
+# alias clean="sudo eclean-dist -d && sudo revdep-rebuild"
 # Arch
 # alias up="paru -Syu --sudoloop"
-alias mirror="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
-alias nosleep="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target"
-alias yesleep="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+# alias mirror="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
+# alias nosleep="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+# alias yesleep="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+
 # NixOS
 alias ns="nix-shell"
 alias ncg="nix-collect-garbage --delete-older-than 1d"
 alias up="sudo nixos-rebuild switch --flake .#karttikeya --upgrade-all"
 alias reb="sudo nixos-rebuild switch --flake .#karttikeya"
+
+alias lg="lazygit"
+
 # Exa
 alias ll='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ls='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | grep -E "^\."'
+
 # X11
 alias bstart='startx /usr/bin/bspwm'
 alias openstart='startx /usr/bin/openbox-session'
 alias dstart='startx /usr/local/bin/dwm'
+
 # Fancy
 alias pipes="pipes-rs -k curved -p 3 -t 0.13 -r 0.6"
 alias fetch="fastfetch"
+
 # Tmux
 alias tmsource="tmux source-file ~/.config/tmux/tmux.conf"
 alias tmux="tmux -u"
@@ -176,6 +183,7 @@ end
 function ipub
 	echo (drill myip.opendns.com @resolver1.opendns.com | awk '/myip/ {printf $5}')
 end
+
 starship init fish | source
 any-nix-shell fish --info-right | source
 zoxide init fish | source

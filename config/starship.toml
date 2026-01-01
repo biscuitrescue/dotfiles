@@ -4,7 +4,7 @@
 #
 success_symbol = "[ ](green)"
 error_symbol = "[ ](red)"
-vicmd_symbol = "[ ](blue)"
+vicmd_symbol = "[ ](blue)"
 
 [directory]
 truncation_length = 3
