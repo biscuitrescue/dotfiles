@@ -30,6 +30,13 @@
 (after! rustic
   (setq lsp-rust-server 'rust-analyzer))
 
+(after! flycheck
+  (setq flycheck-disabled-checkers '(c/c++-clang c/c++-gcc)))
+
+(after! lsp-clangd
+  (setq lsp-clients-clangd-executable "clangd"))
+
+
 (setq package-install-upgrade-built-in t)
 
 (setq term-terminal-parameter '("xterm-256color"))

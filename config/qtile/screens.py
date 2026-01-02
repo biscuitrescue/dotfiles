@@ -2,6 +2,7 @@ import os
 from libqtile.config import Screen
 from libqtile import bar, widget
 from colours import themes
+from typing import List
 
 
 theme = "kanagawa"
@@ -38,14 +39,11 @@ default = [
         padding=2,
         linewidth=0,
     ),
-    widget.CurrentLayoutIcon(
-        scale=0.45,
-        custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
-    ),
-
-
+    # widget.CurrentLayoutIcon(
+    #     scale=0.45,
+    #     custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
+    # ),
     widget.Spacer(),
-
     widget.Systray(
         icon_size=20,
         padding=4,
@@ -58,7 +56,7 @@ default = [
     ),
     widget.CPU(
         foreground=theme["red"],
-        format='  {load_percent}%',
+        format="  {load_percent}%",
         font=xf,
         fontsize=xx,
     ),
@@ -71,9 +69,9 @@ default = [
         font=xf,
         fontsize=xx,
         foreground=theme["yellow"],
-        measure_mem='G',
-        measure_swap='G',
-        format=' {MemUsed: .2f} GB',
+        measure_mem="G",
+        measure_swap="G",
+        format=" {MemUsed: .2f} GB",
     ),
     widget.TextBox(
         foreground=theme["magenta"],
@@ -81,12 +79,12 @@ default = [
         font=xf,
     ),
     widget.Memory(
-        measure_mem='G',
+        measure_mem="G",
         font=xf,
         fontsize=xx,
         foreground=theme["magenta"],
-        measure_swap='G',
-        format=' {SwapUsed: .2f} GB',
+        measure_swap="G",
+        format=" {SwapUsed: .2f} GB",
     ),
     widget.TextBox(
         foreground=theme["green"],
@@ -94,7 +92,7 @@ default = [
         font=xf,
     ),
     widget.Volume(
-        mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("pavucontrol")},
+        mouse_callbacks={"Button3": lambda: qtile.cmd_spawn("pavucontrol")},
         foreground=theme["green"],
         update_interval=0.01,
         font=xf,
@@ -107,7 +105,7 @@ default = [
     ),
     widget.Clock(
         foreground=theme["blue"],
-        format='  %d %B, %a',
+        format="  %d %B, %a",
         font=xf,
         fontsize=xx,
     ),
@@ -120,7 +118,7 @@ default = [
         foreground=theme["violet"],
         font=xf,
         fontsize=xx,
-        format='  %I:%M %p',
+        format="  %I:%M %p",
     ),
     widget.TextBox(
         foreground=theme["teal"],
@@ -174,10 +172,10 @@ else:
                 low_background=theme["black"],
                 low_foreground=theme["teal"],
                 foreground=theme["teal"],
-                charge_char='↑',
-                discharge_char='',
+                charge_char="↑",
+                discharge_char="",
                 update_interval=1,
-                format='{percent:2.0%}{char}',
+                format="{percent:2.0%}{char}",
             ),
             widget.TextBox(
                 foreground=theme["teal"],
