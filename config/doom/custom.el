@@ -5,7 +5,8 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes nil)
  '(custom-safe-themes
-   '("2a3daa098009f2fb3c5ec15f08cbd0034192a55350c455e3614be0516a9a87db"
+   '("966c5e61db1ed2c7e475ff498e677aafde9b78d7d8d6026a1c678df3134d8617"
+     "2a3daa098009f2fb3c5ec15f08cbd0034192a55350c455e3614be0516a9a87db"
      "aa6f0ec39c2a73ae91618c109985ff56ee8fd1653a7f9e0813868ee4e34ed44d"
      "9cefc57427cb2462ecfc8a4870151ca3863bbdc67f1fd188c3165f314b273b88"
      "fc4531d3e35b5914d7408661d10ed002a2e1578670b7ed4b910ed3b5176e10a1"

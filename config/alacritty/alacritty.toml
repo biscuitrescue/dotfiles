@@ -26,7 +26,7 @@ family = "Operator Mono Medium"
 style = "Italic"
 
 [font.normal]
-family = "M Plus 1 Code"
+family = "mononoki nerd font"
 style = "Regular"
 
 [font.offset]
