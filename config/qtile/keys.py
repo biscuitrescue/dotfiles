@@ -6,9 +6,9 @@ mod = "mod4"
 mod1 = "mod1"
 mod2 = "control"
 mod3 = "shift"
-home = os.path.expanduser('~')
-myTerm = "kitty"
-term2 = "alacritty"
+home = os.path.expanduser("~")
+myTerm = "ghostty"
+term2 = "kitty"
 
 
 @lazy.function
@@ -24,6 +24,7 @@ def window_to_next_group(qtile):
         i = qtile.groups.index(qtile.currentGroup)
         qtile.currentWindow.togroup(qtile.groups[i + 1].name)
 
+
 # SHORTCUTS
 
 
@@ -33,16 +34,20 @@ keys = [
     Key([mod], "d", lazy.spawn("rofi -show drun")),
     Key([mod], "r", lazy.spawn("rofi -show run")),
     Key([mod, "shift"], "Return", lazy.spawn("albert toggle")),
-
     Key([], "XF86AudioMute", lazy.spawn("pamixer -t")),
     Key([], "XF86AudioMicMute", lazy.spawn("mictoggle")),
     Key([mod], "XF86AudioMicMute", lazy.spawn("pamixer --source 2725632 -t")),
     Key([], "F4", lazy.spawn("mictoggle")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer -d 5")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer -i 5")),
-
-    Key(["control"], "XF86AudioPlay", lazy.spawn("playerctl -p spotify \
-            play-pause")),
+    Key(
+        ["control"],
+        "XF86AudioPlay",
+        lazy.spawn(
+            "playerctl -p spotify \
+            play-pause"
+        ),
+    ),
     Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
     Key([], "XF86AudioNext", lazy.spawn("playerctl next")),
     Key([], "XF86AudioPrev", lazy.spawn("playerctl previous")),
@@ -64,7 +69,6 @@ keys = [
     Key([mod], "w", lazy.window.toggle_fullscreen()),
     Key([mod], "comma", lazy.layout.decrease_ratio()),
     Key([mod], "period", lazy.layout.increase_ratio()),
-
     Key([mod], "Down", lazy.layout.down()),
     Key([mod], "Up", lazy.layout.up()),
     Key([mod], "Left", lazy.layout.left()),
@@ -91,20 +95,22 @@ keys = [
     Key([mod, "shift"], "m", lazy.layout.grow_right()),
     Key([mod, "shift"], "n", lazy.layout.normalize()),
     Key([mod, "shift"], "i", lazy.layout.flip()),
-    Key([mod, "shift"], "h",
+    Key(
+        [mod, "shift"],
+        "h",
         lazy.layout.move_left(),
-        desc='Move up a section in treetab'
-        ),
-    Key([mod, "shift"], "l",
+        desc="Move up a section in treetab",
+    ),
+    Key(
+        [mod, "shift"],
+        "l",
         lazy.layout.move_right(),
-        desc='Move down a section in treetab'
-        ),
-
+        desc="Move down a section in treetab",
+    ),
     Key([mod], "Tab", lazy.layout.next()),
     Key([mod, "shift"], "Tab", lazy.layout.previous()),
     Key([mod1], "Tab", lazy.layout.next()),
     Key([mod1, "shift"], "Tab", lazy.layout.previous()),
-
     Key([mod], "b", lazy.hide_show_bar()),
     Key([mod], "s", lazy.next_layout()),
     Key([mod], "a", lazy.prev_layout()),
@@ -113,15 +119,12 @@ keys = [
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod], "c", lazy.reload_config()),
     Key([mod, "shift"], "x", lazy.spawn("poweroff")),
-
     Key(["shift"], "Print", lazy.spawn("clip")),
     Key(["control"], "Print", lazy.spawn("vmcrop")),
     Key(["control"], "Print", lazy.spawn("crop")),
     Key([mod], "Print", lazy.spawn("winclip")),
     Key([], "Print", lazy.spawn("shot")),
-
     # APPLICATIONS
-
     Key([mod, "shift"], "Return", lazy.spawn(term2)),
     Key([mod, "shift"], "a", lazy.spawn("./.lock.sh")),
     Key([mod], "KP_Subtract", lazy.spawn("./.lock.sh")),
@@ -131,55 +134,80 @@ keys = [
     Key([mod], "KP_Enter", lazy.spawn(myTerm)),
     Key([mod], "v", lazy.spawn("pavucontrol")),
     Key([], "F9", lazy.spawn("pavucontrol")),
-    Key([mod, "control"], 'd', lazy.spawn('dunstop')),
-    Key([mod, "shift"], 's', lazy.spawn('flatpak run sh.cider.Cider')),
-
-    KeyChord([mod], "i", [
-        Key([], "f", lazy.spawn("firefox")),
-        Key([], "v", lazy.spawn("vivaldi-stable")),
-        Key([], "b", lazy.spawn("brave")),
-        Key([], "q", lazy.spawn("qutebrowser")),
-        Key([], "l", lazy.spawn("librewolf")),
-    ]),
+    Key([mod, "control"], "d", lazy.spawn("dunstop")),
+    Key([mod, "shift"], "s", lazy.spawn("flatpak run sh.cider.Cider")),
+    KeyChord(
+        [mod],
+        "i",
+        [
+            Key([], "f", lazy.spawn("firefox")),
+            Key([], "v", lazy.spawn("vivaldi-stable")),
+            Key([], "b", lazy.spawn("brave")),
+            Key([], "q", lazy.spawn("qutebrowser")),
+            Key([], "l", lazy.spawn("librewolf")),
+        ],
+    ),
     # EDITORS
-    KeyChord([mod], "e", [
-        Key([], "e", lazy.spawn("emacs")),
-        Key([], "v", lazy.spawn("vscodium")),
-        Key([], "n", lazy.spawn("neovide")),
-    ]),
+    KeyChord(
+        [mod],
+        "e",
+        [
+            Key([], "e", lazy.spawn("emacs")),
+            Key([], "v", lazy.spawn("vscodium")),
+            Key([], "n", lazy.spawn("neovide")),
+        ],
+    ),
     # XSS-LOCK
-    KeyChord([mod], "t", [
-        Key([], "x", lazy.spawn("killall xss-lock")),
-        Key([], "r", lazy.spawn(
-            "xss-lock --transfer-sleep-lock -- ./.lock.sh --nofork"
-        ))
-            ]),
+    KeyChord(
+        [mod],
+        "t",
+        [
+            Key([], "x", lazy.spawn("killall xss-lock")),
+            Key(
+                [],
+                "r",
+                lazy.spawn("xss-lock --transfer-sleep-lock -- ./.lock.sh --nofork"),
+            ),
+        ],
+    ),
     # DMSCRIPTS
-    KeyChord([mod], "x", [
-        Key([], "c", lazy.spawn("bash /home/cafo/dmscripts/dmconf")),
-        Key([], "p", lazy.spawn("bash /home/cafo/dmscripts/dmpy")),
-        Key([], "f", lazy.spawn("bash /home/cafo/dmscripts/dmfeh")),
-        Key([], "b", lazy.spawn("bash /home/cafo/dmscripts/pylaunch")),
-        Key([], "s", lazy.spawn("bash /home/cafo/dmscripts/dmswitch")),
-            ]),
-
+    KeyChord(
+        [mod],
+        "x",
+        [
+            Key([], "c", lazy.spawn("bash /home/cafo/dmscripts/dmconf")),
+            Key([], "p", lazy.spawn("bash /home/cafo/dmscripts/dmpy")),
+            Key([], "f", lazy.spawn("bash /home/cafo/dmscripts/dmfeh")),
+            Key([], "b", lazy.spawn("bash /home/cafo/dmscripts/pylaunch")),
+            Key([], "s", lazy.spawn("bash /home/cafo/dmscripts/dmswitch")),
+        ],
+    ),
     # REDSHIFT
-    KeyChord([mod, 'shift'], "r", [
-        Key([], "1", lazy.spawn("redshift -O 6000")),
-        Key([], "2", lazy.spawn("redshift -O 5000")),
-        Key([], "3", lazy.spawn("redshift -O 4500")),
-        Key([], "4", lazy.spawn("redshift -O 4250")),
-        Key([], "5", lazy.spawn("redshift -O 4000")),
-        Key([], "6", lazy.spawn("redshift -O 3500")),
-        Key([], "x", lazy.spawn("redshift -x")),
-            ]),
-    ]
+    KeyChord(
+        [mod, "shift"],
+        "r",
+        [
+            Key([], "1", lazy.spawn("redshift -O 6000")),
+            Key([], "2", lazy.spawn("redshift -O 5000")),
+            Key([], "3", lazy.spawn("redshift -O 4500")),
+            Key([], "4", lazy.spawn("redshift -O 4250")),
+            Key([], "5", lazy.spawn("redshift -O 4000")),
+            Key([], "6", lazy.spawn("redshift -O 3500")),
+            Key([], "x", lazy.spawn("redshift -x")),
+        ],
+    ),
+]
 
 
 mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(),
-         start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(),
-         start=lazy.window.get_size()),
-    Click([mod], "Button2", lazy.window.bring_to_front())
+    Drag(
+        [mod],
+        "Button1",
+        lazy.window.set_position_floating(),
+        start=lazy.window.get_position(),
+    ),
+    Drag(
+        [mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()
+    ),
+    Click([mod], "Button2", lazy.window.bring_to_front()),
 ]

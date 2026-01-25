@@ -9,8 +9,8 @@ theme = "kanagawa"
 
 theme = themes[theme]
 
-xx = 14
-xf = "M Plus 1 Code Nerd Font Bold"
+xx = 22
+xf = "Monaspace Neon NF Bold"
 default = [
     widget.TextBox(
         foreground=theme["teal"],
@@ -19,7 +19,7 @@ default = [
     ),
     widget.GroupBox(
         font=xf,
-        fontsize=xx,
+        fontsize=20,
         margin_y=4,
         margin_x=5,
         padding_y=3,
@@ -56,7 +56,7 @@ default = [
     ),
     widget.CPU(
         foreground=theme["red"],
-        format="  {load_percent}%",
+        format=" {load_percent}%",
         font=xf,
         fontsize=xx,
     ),
@@ -71,7 +71,7 @@ default = [
         foreground=theme["yellow"],
         measure_mem="G",
         measure_swap="G",
-        format=" {MemUsed: .2f} GB",
+        format="{MemUsed: .2f} GB",
     ),
     widget.TextBox(
         foreground=theme["magenta"],
@@ -84,7 +84,7 @@ default = [
         fontsize=xx,
         foreground=theme["magenta"],
         measure_swap="G",
-        format=" {SwapUsed: .2f} GB",
+        format="{SwapUsed: .2f} GB",
     ),
     widget.TextBox(
         foreground=theme["green"],
@@ -105,7 +105,7 @@ default = [
     ),
     widget.Clock(
         foreground=theme["blue"],
-        format="  %d %B, %a",
+        format=" %d %B, %a",
         font=xf,
         fontsize=xx,
     ),
@@ -118,7 +118,7 @@ default = [
         foreground=theme["violet"],
         font=xf,
         fontsize=xx,
-        format="  %I:%M %p",
+        format=" %I:%M %p",
     ),
     widget.TextBox(
         foreground=theme["teal"],
@@ -165,23 +165,23 @@ else:
             #     text_displaytime="",
             #     margin=10,
             # ),
-            widget.Battery(
-                fontsize=xx,
-                font=xf,
-                low_percentage=0.3,
-                low_background=theme["black"],
-                low_foreground=theme["teal"],
-                foreground=theme["teal"],
-                charge_char="↑",
-                discharge_char="",
-                update_interval=1,
-                format="{percent:2.0%}{char}",
-            ),
-            widget.TextBox(
-                foreground=theme["teal"],
-                text="|",
-                font=xf,
-            ),
+            # widget.Battery(
+            #     fontsize=xx,
+            #     font=xf,
+            #     low_percentage=0.3,
+            #     low_background=theme["black"],
+            #     low_foreground=theme["teal"],
+            #     foreground=theme["teal"],
+            #     charge_char="↑",
+            #     discharge_char="",
+            #     update_interval=1,
+            #     format="{percent:2.0%}{char}",
+            # ),
+            # widget.TextBox(
+            #     foreground=theme["teal"],
+            #     text="|",
+            #     font=xf,
+            # ),
         ]
     )
 
@@ -189,7 +189,7 @@ screens = [
     Screen(
         top=bar.Bar(
             default,
-            36,
+            44,
             # opacity=0.9,
             # margin=[0, 0, 6, 0],
             background=theme["black"],
