@@ -7,53 +7,38 @@ from groups import groups
 from screens import screens
 from screens import theme
 
-border = dict(
-    border_focus=theme["blue"],
-    border_width=3
-)
+border = dict(border_focus=theme["blue"], border_width=3)
 layouts = [
     layout.MonadTall(
-        margin=5,
-        new_client_position = 'before_current',
-        ratio=0.55,
-        **border
+        margin=5, new_client_position="before_current", ratio=0.55, **border
     ),
-    # layout.Tile(
-    #     margin=8,
-    #     ratio=0.55,
-    #     # border_on_single=False,
-    #     shift_windows=True,
-    #     **border
-    # ),
     layout.TreeTab(
-        font = "JetbrainsMono Nerd Font Bold",
-        fontsize = 13,
-        border_width = 0,
-        bg_color = theme["black"],
-        active_bg = theme["red"],
-        active_fg = theme["black"],
-        inactive_bg = theme["black"],
-        inactive_fg = theme["teal"],
-        padding_left = 8,
-        padding_x = 8,
-        padding_y = 6,
-        sections = ["ONE", "TWO", "THREE"],
-        section_fontsize = 15,
-        section_fg = theme["blue"],
-        section_top = 15,
-        section_bottom = 15,
-        level_shift = 8,
-        vspace = 3,
-        panel_width = 240
-        ),
-
+        font="JetbrainsMono Nerd Font Bold",
+        fontsize=13,
+        border_width=0,
+        bg_color=theme["black"],
+        active_bg=theme["red"],
+        active_fg=theme["black"],
+        inactive_bg=theme["black"],
+        inactive_fg=theme["teal"],
+        padding_left=8,
+        padding_x=8,
+        padding_y=6,
+        sections=["ONE", "TWO", "THREE"],
+        section_fontsize=15,
+        section_fg=theme["blue"],
+        section_top=15,
+        section_bottom=15,
+        level_shift=8,
+        vspace=3,
+        panel_width=240,
+    ),
     # layout.MonadThreeCol(
     #     min_ratio=0.25,
     #     margin=8,
     #     **border,
     # ),
     layout.Max(),
-
 ]
 
 # wl_input_rules = {
@@ -71,20 +56,21 @@ floating_layout = layout.Floating(
     **border,
     float_rules=[
         *layout.Floating.default_float_rules,
-        Match(wm_class='confirmreset'),  # gitk
-        Match(wm_class='Blueman-manager'),
-        Match(wm_class='Tor Browser'),
-        Match(wm_class='makebranch'),  # gitk
-        Match(wm_class='maketag'),  # gitk
-        Match(wm_class='ssh-askpass'),  # ssh-askpass
-        Match(wm_class='Tk'),
-        Match(wm_class='Todogtk.py'),
-        Match(wm_class='Signal Beta'),  # ssh-askpass
-        Match(wm_class='Cider'),  # ssh-askpass
-        Match(title='branchdialog'),  # gitk
-        Match(wm_class='Gpower.py'),
-        Match(title='pinentry'),  # GPG key password entry
-    ])
+        Match(wm_class="confirmreset"),  # gitk
+        Match(wm_class="Blueman-manager"),
+        Match(wm_class="Tor Browser"),
+        Match(wm_class="makebranch"),  # gitk
+        Match(wm_class="maketag"),  # gitk
+        Match(wm_class="ssh-askpass"),  # ssh-askpass
+        Match(wm_class="Tk"),
+        Match(wm_class="Todogtk.py"),
+        Match(wm_class="Signal Beta"),  # ssh-askpass
+        Match(wm_class="Cider"),  # ssh-askpass
+        Match(title="branchdialog"),  # gitk
+        Match(wm_class="Gpower.py"),
+        Match(title="pinentry"),  # GPG key password entry
+    ]
+)
 
 auto_fullscreen = True
 focus_on_window_activation = "smart"

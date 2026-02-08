@@ -136,6 +136,8 @@ keys = [
     Key([], "F9", lazy.spawn("pavucontrol")),
     Key([mod, "control"], "d", lazy.spawn("dunstop")),
     Key([mod, "shift"], "s", lazy.spawn("flatpak run sh.cider.Cider")),
+    Key([mod, "control"], "1", lazy.to_screen(0)),
+    Key([mod, "control"], "2", lazy.to_screen(1)),
     KeyChord(
         [mod],
         "i",

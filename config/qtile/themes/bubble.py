@@ -4,6 +4,7 @@ from libqtile import bar
 from qtile_extras.widget.decorations import RectDecoration
 from qtile_extras import widget
 from colours import themes
+
 theme = "kanagawa"
 
 
@@ -79,9 +80,7 @@ default = [
         scale=0.4,
         custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
     ),
-
     widget.Spacer(),
-
     widget.Systray(
         icon_size=20,
         padding=4,
@@ -94,7 +93,7 @@ default = [
     widget.CPU(
         background=theme["red"],
         foreground=theme["black"],
-        format='  {load_percent}%',
+        format="  {load_percent}%",
         font=xf,
         fontsize=xx,
         **decor,
@@ -109,9 +108,9 @@ default = [
         fontsize=xx,
         background=theme["yellow"],
         foreground=theme["black"],
-        measure_mem='G',
-        measure_swap='G',
-        format=' {MemUsed: .2f} GB',
+        measure_mem="G",
+        measure_swap="G",
+        format=" {MemUsed: .2f} GB",
         **decor,
     ),
     widget.TextBox(
@@ -120,13 +119,13 @@ default = [
         font=xf,
     ),
     widget.Memory(
-        measure_mem='G',
+        measure_mem="G",
         font=xf,
         fontsize=xx,
         foreground=theme["black"],
         background=theme["magenta"],
-        measure_swap='G',
-        format='{SwapUsed: .2f} GB',
+        measure_swap="G",
+        format="{SwapUsed: .2f} GB",
         **decor,
     ),
     widget.TextBox(
@@ -135,7 +134,7 @@ default = [
         font=xf,
     ),
     widget.Volume(
-        mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("pavucontrol")},
+        mouse_callbacks={"Button3": lambda: qtile.cmd_spawn("pavucontrol")},
         background=theme["green"],
         foreground=theme["black"],
         update_interval=0.01,
@@ -151,7 +150,7 @@ default = [
     widget.Clock(
         foreground=theme["black"],
         background=theme["teal"],
-        format=' %d %B, %a',
+        format=" %d %B, %a",
         font=xf,
         fontsize=xx,
         **decor,
@@ -166,7 +165,7 @@ default = [
         background=theme["violet"],
         font=xf,
         fontsize=xx,
-        format=' %I:%M %p',
+        format=" %I:%M %p",
         **decor,
     ),
     widget.TextBox(
@@ -224,10 +223,10 @@ else:
                 low_foreground=theme["black"],
                 foreground=theme["black"],
                 background=theme["blue"],
-                charge_char='↑',
-                discharge_char='',
+                charge_char="↑",
+                discharge_char="",
                 update_interval=1,
-                format='{percent:2.0%}{char}',
+                format="{percent:2.0%}{char}",
                 **decor2,
             ),
             widget.TextBox(
@@ -243,8 +242,14 @@ screens = [
         top=bar.Bar(
             default,
             37,
-            # opacity=0.9,
-            # margin=[8, 8, 2, 8],
+            background=theme["black"],
+            foreground=theme["zero"],
+        ),
+    ),
+    Screen(
+        top=bar.Bar(
+            default,
+            37,
             background=theme["black"],
             foreground=theme["zero"],
         ),

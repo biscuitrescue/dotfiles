@@ -25,13 +25,16 @@ default = [
         padding_y=3,
         padding_x=4,
         borderwidth=8,
-        inactive=theme["green"],
+        inactive=theme["violet"],
         active=theme["red"],
         rounded=True,
         urgent_alert_method="block",
         urgent_text="#f07a78",
         highlight_color=theme["yellow"],
         highlight_method="block",
+        other_screen_border=theme["yellow"],  # ← add this
+        this_screen_border=theme["blue"],  # ← and this
+        other_current_screen_border=theme["yellow"],  # ← optional but useful
         this_current_screen_border=theme["red"],
         block_highlight_text_color=theme["black"],
     ),
@@ -39,15 +42,10 @@ default = [
         padding=2,
         linewidth=0,
     ),
-    # widget.CurrentLayoutIcon(
-    #     scale=0.45,
-    #     custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
-    # ),
     widget.Spacer(),
     widget.Systray(
         icon_size=20,
         padding=4,
-        # background="#000000",
     ),
     widget.TextBox(
         foreground=theme["red"],
@@ -145,54 +143,34 @@ if len(os.listdir("/sys/class/power_supply")) == 0:
 else:
     default.extend(
         [
-            # widget.UPowerWidget(
-            #     font=xf,
-            #     battery_width=27,
-            #     battery_height=14,
-            #     fontsize=xx,
-            #     percentage_low=0.5,
-            #     percentage_critical=0.3,
-            #     fill_critical="#ff0000",
-            #     fill_charge=theme["green"],
-            #     fill_low=theme["yellow"],
-            #     fill_normal=theme["teal"],
-            #     border_colour=theme["teal"],
-            #     border_critical_colour="#ff0000",
-            #     border_low_colour=theme["yellow"],
-            #     border_charge_colour=theme["green"],
-            #     text_charging="",
-            #     text_discharging="",
-            #     text_displaytime="",
-            #     margin=10,
-            # ),
-            # widget.Battery(
-            #     fontsize=xx,
-            #     font=xf,
-            #     low_percentage=0.3,
-            #     low_background=theme["black"],
-            #     low_foreground=theme["teal"],
-            #     foreground=theme["teal"],
-            #     charge_char="↑",
-            #     discharge_char="",
-            #     update_interval=1,
-            #     format="{percent:2.0%}{char}",
-            # ),
-            # widget.TextBox(
-            #     foreground=theme["teal"],
-            #     text="|",
-            #     font=xf,
-            # ),
+            widget.Battery(
+                fontsize=xx,
+                font=xf,
+                low_percentage=0.3,
+                low_background=theme["black"],
+                low_foreground=theme["teal"],
+                foreground=theme["teal"],
+                charge_char="↑",
+                discharge_char="",
+                update_interval=1,
+                format="{percent:2.0%}{char}",
+            ),
+            widget.TextBox(
+                foreground=theme["teal"],
+                text="|",
+                font=xf,
+            ),
         ]
     )
 
 screens = [
+    Screen(),
     Screen(
-        top=bar.Bar(
+        bottom=bar.Bar(
             default,
             44,
-            # opacity=0.9,
-            # margin=[0, 0, 6, 0],
             background=theme["black"],
+            margin=[0, 10, 10, 10],
         ),
     ),
 ]
