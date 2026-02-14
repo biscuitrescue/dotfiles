@@ -8,8 +8,8 @@
     fg-col2: #C79595;
     grey: #565E65;
 
-    width: 650;
-    font: "M Plus 1 Code Nerd Font Medium 13";
+    width: 800;
+    font: "M Plus 1 Code Nerd Font Medium 12";
 }
 
 element-text, element-icon , mode-switcher {
@@ -87,7 +87,7 @@ button {
     padding: 10px;
     background-color: @bg-col-light;
     text-color: @grey;
-    vertical-align: 0.5; 
+    vertical-align: 0.5;
     horizontal-align: 0.5;
 }
 

@@ -7,8 +7,8 @@ mod1 = "mod1"
 mod2 = "control"
 mod3 = "shift"
 home = os.path.expanduser("~")
-myTerm = "ghostty"
-term2 = "kitty"
+myTerm = "kitty"
+term2 = "ghostty"
 
 
 @lazy.function
@@ -33,13 +33,12 @@ keys = [
     Key([mod], "g", lazy.spawn("rofi -show filebrowser")),
     Key([mod], "d", lazy.spawn("rofi -show drun")),
     Key([mod], "r", lazy.spawn("rofi -show run")),
-    Key([mod, "shift"], "Return", lazy.spawn("albert toggle")),
-    Key([], "XF86AudioMute", lazy.spawn("pamixer -t")),
+    Key([], "XF86AudioMute", lazy.spawn("dunster volume_mute")),
     Key([], "XF86AudioMicMute", lazy.spawn("mictoggle")),
     Key([mod], "XF86AudioMicMute", lazy.spawn("pamixer --source 2725632 -t")),
     Key([], "F4", lazy.spawn("mictoggle")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer -d 5")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer -i 5")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("dunster volume_down")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("dunster volume_up")),
     Key(
         ["control"],
         "XF86AudioPlay",
@@ -138,6 +137,7 @@ keys = [
     Key([mod, "shift"], "s", lazy.spawn("flatpak run sh.cider.Cider")),
     Key([mod, "control"], "1", lazy.to_screen(0)),
     Key([mod, "control"], "2", lazy.to_screen(1)),
+    Key([mod, "control"], "3", lazy.to_screen(2)),
     KeyChord(
         [mod],
         "i",

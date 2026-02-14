@@ -3,6 +3,28 @@
 from typing import List
 
 themes = {
+    "bamboo": {
+        "zero": "#0f1c13",
+        "black": "#252623",
+        "red": "#e67e5c",
+        "green": "#8fbf7f",
+        "yellow": "#d1b86a",
+        "magenta": "#c78fb1",
+        "violet": "#b39ac9",
+        "blue": "#7fa2c9",
+        "teal": "#79c0aa",
+    },
+    "bamboo_light": {
+        "zero": "#1e281c",
+        "black": "#f8f8f2",
+        "red": "#af3a03",
+        "green": "#7aa874",
+        "yellow": "#b7a74d",
+        "magenta": "#9e6f7c",
+        "violet": "#8c7b8f",
+        "blue": "#6d8b9e",
+        "teal": "#6c9a8b",
+    },
     "everforest_light": {
         "zero": "#272e33",
         "black": "#fdf6e3",

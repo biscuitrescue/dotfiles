@@ -5,11 +5,11 @@ from colours import themes
 from typing import List
 
 
-theme = "kanagawa"
+theme = "bamboo"
 
 theme = themes[theme]
 
-xx = 22
+xx = 12
 xf = "Monaspace Neon NF Bold"
 default = [
     widget.TextBox(
@@ -19,7 +19,7 @@ default = [
     ),
     widget.GroupBox(
         font=xf,
-        fontsize=20,
+        fontsize=14,
         margin_y=4,
         margin_x=5,
         padding_y=3,
@@ -164,13 +164,12 @@ else:
     )
 
 screens = [
-    Screen(),
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             default,
-            44,
+            30,
             background=theme["black"],
-            margin=[0, 10, 10, 10],
+            # margin=[5, 10, 5, 10],
         ),
     ),
 ]

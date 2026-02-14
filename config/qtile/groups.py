@@ -3,7 +3,7 @@ from libqtile.config import Group, Key, ScratchPad, DropDown
 from libqtile.lazy import lazy
 from keys import keys
 
-myTerm = "alacritty"
+myTerm = "kitty"
 mod = "mod4"
 mod1 = "mod1"
 mod2 = "control"
@@ -131,8 +131,7 @@ groups.append(
             ),
             DropDown(
                 "term",
-                # f"{myTerm} -e tmux new -A -s Dropdown",
-                "ghostty",
+                f"{myTerm} -e tmux new -A -s Dropdown",
                 width=0.99,
                 height=0.8,
                 x=0.005,

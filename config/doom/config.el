@@ -13,7 +13,7 @@
       tab-width 2)
 
 (setq doom-theme 'bamboo)
-(setq doom-font (font-spec :family "Monaspace Neon NF" :size 25))
+(setq doom-font (font-spec :family "Monaspace Neon NF" :size 15))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
