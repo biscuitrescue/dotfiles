@@ -8,34 +8,16 @@ set COLORTERM "truecolor"
 set -x MANPAGER "nvim +Man!"
 
 set -gx FZF_DEFAULT_OPTS '
-  --color=bg+:#2f312c,bg:#252623,spinner:#e75a7c,hl:#e75a7c
-  --color=fg:#f1e9d2,header:#e75a7c,info:#96c7ef,pointer:#8fb573
-  --color=marker:#8fb573,fg+:#8fb573,prompt:#8fb573,hl+:#e75a7c
-  --color=selected-bg:#383b35
+  --color=bg+:#33415c,bg:#0e0e16,spinner:#ef8a90,hl:#ef8a90
+  --color=fg:#d8d8d8,header:#ef8a90,info:#b0c0e0,pointer:#8ac490
+  --color=marker:#8ac490,fg+:#d8d8d8,prompt:#8ac490,hl+:#ef8a90
+  --color=selected-bg:#252f3d
   --border="thinblock" --border-label="FZF" --border-label-pos="0" --preview-window="border-thinblock"
   --prompt="> " --marker=">" --pointer="◆" --separator="─"
   --scrollbar="│" --info="right"'
 
-# Habamax
-# set -gx FZF_DEFAULT_OPTS '
-#   --color=fg:#d0d0d0,fg+:#d7005f,bg:#121212,bg+:#1c1c1c
-#   --color=hl:#5f87af,hl+:#66bfbf,info:#afaf87,marker:#87ff00
-#   --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
-#   --color=border:#262626,label:#aeaeae,query:#d9d9d9
-#   --border="thinblock" --border-label="FZF" --border-label-pos="0" --preview-window="border-thinblock"
-#   --prompt="> " --marker=">" --pointer="◆" --separator="─"
-#   --scrollbar="│" --info="right"'
-
-# Roseprime
-# set -gx FZF_DEFAULT_OPTS '
-#   --style=minimal
-#   --color=fg:#d0d0d0,fg+:#9e4e85,bg:#161616,bg+:#121315
-#   --color=hl:#647977,hl+:#9bbdb8,info:#d2af98,marker:#ba5f60
-#   --color=prompt:#ba5f60,spinner:#6C6B9B,pointer:#6C6B9B,header:#c4959c
-#   --color=border:#000000,separator:#000000,label:#adadcc,query:#adadcc
-#   --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
-#   --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
-
+set -gx PATH "/home/cafo/.pixi/bin" $PATH
+fish_add_path "$HOME/.pixi/bin"
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/scripts/bash"
 fish_add_path "$HOME/scripts/python"
@@ -187,3 +169,5 @@ end
 starship init fish | source
 any-nix-shell fish --info-right | source
 zoxide init fish | source
+pixi completion --shell fish | source
+

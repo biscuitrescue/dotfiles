@@ -3,6 +3,17 @@
 from typing import List
 
 themes = {
+    "radioactive": {
+        "zero": "#424234",
+        "black": "#282822",
+        "red": "#cd749c",
+        "green": "#bbbc57",
+        "yellow": "#aeae98",
+        "magenta": "#e3e3a8",
+        "violet": "#9d91b4",
+        "blue": "#a2a284",
+        "teal": "#dfdfa9",
+    },
     "bamboo": {
         "zero": "#0f1c13",
         "black": "#252623",

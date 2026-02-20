@@ -5,11 +5,11 @@ from colours import themes
 from typing import List
 
 
-theme = "bamboo"
+theme = "radioactive"
 
 theme = themes[theme]
 
-xx = 12
+xx = 14
 xf = "Monaspace Neon NF Bold"
 default = [
     widget.TextBox(
@@ -19,7 +19,7 @@ default = [
     ),
     widget.GroupBox(
         font=xf,
-        fontsize=14,
+        fontsize=xx,
         margin_y=4,
         margin_x=5,
         padding_y=3,

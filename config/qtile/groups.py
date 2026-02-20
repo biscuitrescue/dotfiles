@@ -228,7 +228,7 @@ keys.extend(
         #     lazy.group['Scratchpad'].dropdown_toggle('editor')),
         Key([mod, "shift"], "s", lazy.group["Scratchpad"].dropdown_toggle("Music")),
         Key([mod, "shift"], "d", lazy.group["Scratchpad"].dropdown_toggle("dc")),
-        Key(["control"], "space", lazy.group["Scratchpad"].dropdown_toggle("fm")),
+        Key(["control"], "Return", lazy.group["Scratchpad"].dropdown_toggle("fm")),
         Key([mod1], "space", lazy.group["Scratchpad"].dropdown_toggle("top")),
         Key(
             [mod1, "shift"], "space", lazy.group["Scratchpad"].dropdown_toggle("hitop")
