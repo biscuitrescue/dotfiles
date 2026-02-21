@@ -10,10 +10,10 @@
 
 (setq scroll-margin 0)
 (setq indent-tabs-mode t
-      tab-width 2)
+      tab-width 4)
 
-(setq doom-theme 'bamboo)
-(setq doom-font (font-spec :family "Monaspace Neon NF" :size 15))
+(setq doom-theme 'hojicha)
+(setq doom-font (font-spec :family "Monaspace Neon NF" :size 20))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))

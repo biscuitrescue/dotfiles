@@ -1,0 +1,44 @@
+# HABAMAX THEME
+# --------------
+
+set default-bg              "#1c1c1c"
+set default-fg              "#d0d0d0"
+
+set statusbar-bg            "#1c1c1c"
+set statusbar-fg            "#d0d0d0"
+
+set inputbar-bg             "#1c1c1c"
+set inputbar-fg             "#7dd5cf"
+
+set completion-bg           "#1c1c1c"
+set completion-fg           "#d0d0d0"
+
+set completion-group-bg     "#151515"
+set completion-group-fg     "#d0d0d0"
+
+set completion-highlight-bg "#eecb8b"
+set completion-highlight-fg "#232323"
+
+set notification-bg         "#505050"
+set notification-fg         "#d0d0d0"
+
+set notification-error-bg   "#ac4142"
+set notification-error-fg   "#f5f5f5"
+
+set notification-warning-bg "#e5b566"
+set notification-warning-fg "#232323"
+
+set highlight-color         "#6c99ba"
+set highlight-active-color  "#7dd5cf"
+
+set index-bg                "#1c1c1c"
+set index-fg                "#d0d0d0"
+
+set index-active-bg         "#eecb8b"
+set index-active-fg         "#232323"
+
+set recolor-darkcolor       "#d0d0d0"
+set recolor-lightcolor      "#1c1c1c"
+
+set render-loading-bg       "#1c1c1c"
+set render-loading-fg       "#d0d0d0"

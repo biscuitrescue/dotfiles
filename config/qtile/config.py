@@ -10,7 +10,7 @@ from screens import theme
 border = dict(border_focus=theme["blue"], border_width=2)
 layouts = [
     layout.MonadTall(
-        margin=5, new_client_position="before_current", ratio=0.55, **border
+        margin=8, new_client_position="before_current", ratio=0.55, **border
     ),
     layout.TreeTab(
         font="JetbrainsMono Nerd Font Bold",
