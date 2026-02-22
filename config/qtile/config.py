@@ -7,7 +7,7 @@ from groups import groups
 from screens import screens
 from screens import theme
 
-border = dict(border_focus=theme["blue"], border_width=2)
+border = dict(border_focus=theme["blue"], border_width=0)
 layouts = [
     layout.MonadTall(
         margin=8, new_client_position="before_current", ratio=0.55, **border

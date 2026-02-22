@@ -5,7 +5,7 @@ from colours import themes
 from typing import List
 
 
-theme = "radioactive"
+theme = "bamboo"
 
 theme = themes[theme]
 
