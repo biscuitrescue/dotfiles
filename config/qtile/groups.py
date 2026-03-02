@@ -121,7 +121,7 @@ groups.append(
         [
             DropDown(
                 "sig",
-                "signal-desktop-beta --password-store='gnome-libsecret'",
+                "signal-desktop --password-store='gnome-libsecret'",
                 height=0.85,
                 width=0.85,
                 x=0.075,
@@ -132,21 +132,10 @@ groups.append(
             DropDown(
                 "term",
                 f"{myTerm} -e tmux new -A -s Dropdown",
-                width=0.99,
-                height=0.8,
-                x=0.005,
-                y=0.19,
-                opacity=1,
-                # width=0.95, height=0.9,
-                # x=0.025, y=0.05, opacity=1,
-                on_focus_lost_hide=False,
-            ),
-            # DropDown(
-            #     "vim", "neovide", width=0.9, height=0.9, x=0.05, y=0.05, opacity=1
-            # ),
-            DropDown(
-                "editor",
-                "emacsclient -n -c -a ''",
+                # width=0.99,
+                # height=0.8,
+                # x=0.005,
+                # y=0.19,
                 width=0.95,
                 height=0.9,
                 x=0.025,
@@ -164,39 +153,11 @@ groups.append(
                 opacity=1,
             ),
             DropDown(
-                "Music",
-                "spotify",
-                height=0.9,
-                opacity=1,
-                width=0.9,
-                x=0.05,
-                y=0.025,
-                on_focus_lost_hide=True,
-            ),
-            DropDown(
-                "fm",
-                myTerm + " -e yazi",
-                width=0.85,
-                height=0.85,
-                x=0.075,
-                y=0.075,
-                opacity=1,
-            ),
-            DropDown(
                 "hitop",
                 myTerm + " -e htop",
                 width=0.85,
                 height=0.85,
                 x=0.075,
-                y=0.075,
-                opacity=1,
-            ),
-            DropDown(
-                "dc",
-                myTerm + " -e gord",
-                width=0.7,
-                height=0.85,
-                x=0.15,
                 y=0.075,
                 opacity=1,
             ),
@@ -222,13 +183,7 @@ groups.append(
 keys.extend(
     [
         Key([mod], "space", lazy.group["Scratchpad"].dropdown_toggle("sig")),
-        Key([mod], "o", lazy.group["Scratchpad"].dropdown_toggle("editor")),
         Key([mod], "p", lazy.group["Scratchpad"].dropdown_toggle("term")),
-        # Key([mod], "o",
-        #     lazy.group['Scratchpad'].dropdown_toggle('editor')),
-        Key([mod, "shift"], "s", lazy.group["Scratchpad"].dropdown_toggle("Music")),
-        Key([mod, "shift"], "d", lazy.group["Scratchpad"].dropdown_toggle("dc")),
-        Key(["control"], "Return", lazy.group["Scratchpad"].dropdown_toggle("fm")),
         Key([mod1], "space", lazy.group["Scratchpad"].dropdown_toggle("top")),
         Key(
             [mod1, "shift"], "space", lazy.group["Scratchpad"].dropdown_toggle("hitop")

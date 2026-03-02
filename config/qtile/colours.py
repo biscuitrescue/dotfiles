@@ -16,7 +16,8 @@ themes = {
     },
     "bamboo": {
         "zero": "#0f1c13",
-        "black": "#252623",
+        "black": "#000000",
+        # "black": "#252623",
         "red": "#e67e5c",
         "green": "#8fbf7f",
         "yellow": "#d1b86a",
