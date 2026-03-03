@@ -154,17 +154,19 @@ alias checkout="git checkout"
 # alias gentup="sudo emerge -avuDN --with-bdeps y @world"
 # alias remerge="sudo emerge -ca"
 # alias clean="sudo eclean-dist -d && sudo revdep-rebuild"
+
 # Arch
-# alias up="paru -Syu --sudoloop"
-# alias mirror="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
-# alias nosleep="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target"
-# alias yesleep="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+alias paru="aura"
+alias up="aura -Syu --sudoloop"
+alias mirror="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
+alias nosleep="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+alias yesleep="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
 
 # NixOS
-alias ns="nix-shell"
-alias ncg="nix-collect-garbage --delete-older-than 1d"
-alias up="sudo nixos-rebuild switch --flake .#karttikeya --upgrade-all"
-alias reb="sudo nixos-rebuild switch --flake .#karttikeya"
+# alias ns="nix-shell"
+# alias ncg="nix-collect-garbage --delete-older-than 1d"
+# alias up="sudo nixos-rebuild switch --flake .#karttikeya --upgrade-all"
+# alias reb="sudo nixos-rebuild switch --flake .#karttikeya"
 
 alias lg="lazygit"
 
@@ -198,7 +200,5 @@ function ipub
 end
 
 starship init fish | source
-any-nix-shell fish --info-right | source
 zoxide init fish | source
-pixi completion --shell fish | source
-
+# pixi completion --shell fish | source
