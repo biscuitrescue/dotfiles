@@ -1,5 +1,6 @@
 import os
-from libqtile.config import Click, Drag, KeyChord, Key
+
+from libqtile.config import Click, Drag, Key, KeyChord
 from libqtile.lazy import lazy
 
 mod = "mod4"
@@ -47,14 +48,15 @@ keys = [
             play-pause"
         ),
     ),
+    Key([mod], "m", lazy.spawn("mono.sh")),
     Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
     Key([], "XF86AudioNext", lazy.spawn("playerctl next")),
     Key([], "XF86AudioPrev", lazy.spawn("playerctl previous")),
     Key([], "XF86AudioStop", lazy.spawn("playerctl stop")),
-    Key([mod], "XF86AudioRaiseVolume", lazy.spawn("sudo light -A 5")),
-    Key([mod], "XF86AudioLowerVolume", lazy.spawn("sudo light -U 5")),
-    Key([], "XF86MonBrightnessUp", lazy.spawn("sudo light -A 5")),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("sudo light -U 5")),
+    Key([mod], "XF86AudioRaiseVolume", lazy.spawn("dunster brightness_up")),
+    Key([mod], "XF86AudioLowerVolume", lazy.spawn("dunster brightness_down")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("dunster brightness_up")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("dunster brightness_down")),
     Key([mod, "control"], "a", lazy.window.toggle_floating()),
     Key([mod], "Up", lazy.layout.up()),
     Key([mod], "Down", lazy.layout.down()),
@@ -123,17 +125,15 @@ keys = [
     Key([mod], "Print", lazy.spawn("winclip")),
     Key([mod, "control"], "s", lazy.spawn("shot")),
     # APPLICATIONS
-    Key([mod, "shift"], "Return", lazy.spawn(term2)),
     Key([mod, "shift"], "a", lazy.spawn("./.lock.sh")),
     Key([mod], "KP_Subtract", lazy.spawn("./.lock.sh")),
-    Key([mod], "KP_Add", lazy.spawn("i3lock -c 000000")),
+    Key([mod], "minus", lazy.spawn("i3lock -c 00000000")),
     Key([mod], "Return", lazy.spawn(myTerm)),
     Key([mod], "o", lazy.spawn("emacsclient -n -c -a ''")),
-    Key([mod], "KP_Enter", lazy.spawn(myTerm)),
     Key([mod], "v", lazy.spawn("pavucontrol")),
     Key([mod, "control"], "d", lazy.spawn("dunstop")),
-    Key([mod, "control"], "1", lazy.to_screen(0)),
-    Key([mod, "control"], "2", lazy.to_screen(1)),
+    Key([mod, "control"], "2", lazy.to_screen(0)),
+    Key([mod, "control"], "1", lazy.to_screen(1)),
     Key([mod, "control"], "3", lazy.to_screen(2)),
     KeyChord(
         [mod],

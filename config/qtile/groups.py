@@ -1,7 +1,8 @@
 import os
-from libqtile.config import Group, Key, ScratchPad, DropDown
-from libqtile.lazy import lazy
+
 from keys import keys
+from libqtile.config import DropDown, Group, Key, ScratchPad
+from libqtile.lazy import lazy
 
 myTerm = "kitty"
 mod = "mod4"
@@ -136,10 +137,10 @@ groups.append(
                 # height=0.8,
                 # x=0.005,
                 # y=0.19,
-                width=0.95,
-                height=0.9,
-                x=0.025,
-                y=0.05,
+                width=0.975,
+                height=0.95,
+                x=0.0125,
+                y=0.025,
                 opacity=1,
                 on_focus_lost_hide=False,
             ),

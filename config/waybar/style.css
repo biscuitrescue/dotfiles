@@ -1,10 +1,9 @@
-@import "themes/ashes.css";
+@import "themes/hojicha.css";
 
 * {
   font-family: "Zed Sans";
-  font-size: 12px;
+  font-size: 15px;
   opacity: 1;
-  border-radius: 1rem;
 }
 
 #waybar {
@@ -15,9 +14,6 @@
 #workspaces {
   background: @base;
   opacity: 1;
-  margin: 0;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
 }
 
 #workspaces button {
@@ -26,8 +22,8 @@
 }
 
 #workspaces button.active {
-  color: @base;
-  background: @maroon;
+  color: @maroon;
+  background: @base;
 }
 
 #workspaces button:hover {
@@ -37,18 +33,10 @@
 
 #tray {
   background-color: @bg;
-  padding: 0.5rem;
-  margin: 0.2rem;
+  padding: 0rem;
 }
 #backlight,
 #clock {
-  margin: 0.3rem;
-  padding: 0.3rem;
-  padding-left: 0rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-right: 0rem;
-  margin-top: 0.7rem;
 }
 #clock.date {
   color: @maroon;
@@ -60,26 +48,23 @@
 }
 
 #battery {
-  margin: 0.3rem;
-  padding: 0.3rem;
+  background: @lavender;
+  color: @base;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding-left: 0.5rem;
   border-radius: 0.6rem;
-  padding-left: 0rem;
-  padding-top: 0.45rem;
-  padding-bottom: 0.45rem;
-  padding-right: 0rem;
-  margin-top: 0.7rem;
-  color: @lavender;
-  background: @base;
+  padding-right: 0.275rem;
 }
 
 #battery.charging {
-  background: @green;
-  color: @base;
+  color: @green;
+  background: @base;
 }
 
 #battery.warning:not(.charging) {
-  background: @peach;
-  color: @base;
+  color: @peach;
+  background: @base;
 }
 
 #battery.critical:not(.charging) {
@@ -90,45 +75,31 @@
 #pulseaudio {
   background: @yellow;
   color: @base;
-  margin: 0.4rem;
-  padding: 0.3rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
   padding-left: 0rem;
-  /* border-radius: 0.6rem; */
-  padding-top: 0.45rem;
-  padding-bottom: 0.45rem;
-  padding-right: 0rem;
-  margin-top: 0.7rem;
+  border-radius: 0.6rem;
+  padding-right: 0.275rem;
 }
 
 #cpu {
   color: @yellow;
-  padding: 0.3rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background: @base;
-  margin: 0.2rem;
-  margin-top: 0.2rem;
-  margin-bottom: 0.1rem;
+  padding: 0.3rem;
 }
 #memory.mem {
   color: @blue;
   padding: 0.3rem;
   background: @base;
   margin: 0.2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.15rem;
-  margin-top: 0.4rem;
 }
 #memory.swap {
   color: @maroon;
   padding: 0.3rem;
   background: @base;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin: 0.2rem;
-  margin-top: 0.15rem;
-  margin-bottom: 0.2rem;
 }
 
 #window {

@@ -3,20 +3,27 @@
     "id": "bar",
     "exclusive": "true",
     "ipc": "true",
+    "output": ["HDMI-A-1"],
     "gtk-layer-shell": true,
     "reload_style_on_change": true,
     "layer": "top",
-    "position": "left",
+    "position": "right",
     "height": "100",
-    "width": 30,
+    "width": 40,
     "margin-top": 5,
     "margin-bottom": 5,
     "margin-left": 5,
     "modules-left": ["clock#date", "clock#time", "pulseaudio"],
-    "modules-center": ["hyprland/workspaces"],
     "modules-right": ["tray", "cpu", "memory#mem", "memory#swap", "battery"],
     "river/tags": {
         "num-tags": 9,
+    },
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+        "active": "",
+        "default": ""
+        }
     },
     "hyprland/workspaces": {
         "on-click": "activate",

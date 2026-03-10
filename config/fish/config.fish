@@ -156,8 +156,7 @@ alias checkout="git checkout"
 # alias clean="sudo eclean-dist -d && sudo revdep-rebuild"
 
 # Arch
-alias paru="aura"
-alias up="aura -Syu --sudoloop"
+alias up="paru -Syu --sudoloop"
 alias mirror="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
 alias nosleep="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target"
 alias yesleep="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"

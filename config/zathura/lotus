@@ -1,0 +1,39 @@
+set default-fg                  "#545464"
+set default-bg                  "#f2ecbc"
+
+set completion-bg               "#d5cea3"
+set completion-fg               "#545464"
+set completion-highlight-bg     "#c9cbd1"
+set completion-highlight-fg     "#43436c"
+set completion-group-bg         "#d5cea3"
+set completion-group-fg         "#4d699b"
+
+set statusbar-fg                "#545464"
+set statusbar-bg                "#e5ddb0"
+
+set notification-bg             "#e5ddb0"
+set notification-fg             "#545464"
+set notification-error-bg       "#e5ddb0"
+set notification-error-fg       "#c84053"
+set notification-warning-bg     "#e5ddb0"
+set notification-warning-fg     "#77713f"
+
+set inputbar-fg                 "#545464"
+set inputbar-bg                 "#e5ddb0"
+
+# Recolor settings for PDF content
+set recolor-lightcolor          "#f2ecbc"
+set recolor-darkcolor           "#545464"
+
+set index-fg                    "#545464"
+set index-bg                    "#f2ecbc"
+set index-active-fg             "#43436c"
+set index-active-bg             "#c9cbd1"
+
+set render-loading-bg           "#f2ecbc"
+set render-loading-fg           "#545464"
+
+# Selection and Search Highlights
+set highlight-color             "#c9cbd1"
+set highlight-fg                "#b35b79"
+set highlight-active-color      "#b35b79"

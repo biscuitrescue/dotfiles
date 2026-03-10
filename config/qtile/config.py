@@ -1,11 +1,10 @@
 ### Karttikeya's Config
 
+from groups import groups
+from keys import keys
 from libqtile import layout
 from libqtile.config import Match
-from keys import keys
-from groups import groups
-from screens import screens
-from screens import theme
+from screens import screens, theme
 
 border = dict(border_focus=theme["blue"], border_width=0)
 layouts = [

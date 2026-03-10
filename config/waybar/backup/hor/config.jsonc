@@ -5,7 +5,7 @@
 
 "layer": "top",
 "position": "top",
-"height": 0,
+"height": 20,
 "mod": "dock",
 "exclusive": true,
 "passthrough": false,
@@ -14,7 +14,7 @@
 
 // positions generated based on config.ctl //
 
-"modules-left": ["custom/smallspacer", "river/tags", "hyprland/workspaces","custom/smallspacer","hyprland/window","custom/spacer"],
+"modules-left": ["custom/smallspacer", "river/tags", "hyprland/workspaces", "niri/workspaces","custom/smallspacer","hyprland/window","custom/spacer"],
 "modules-center": ["custom/padd","custom/l_end","custom/r_end","clock#time","custom/padd"],
 // "modules-center": [],
 "modules-right": ["tray", "custom/smallspacer", "pulseaudio", "custom/smallspacer", "memory#mem", "custom/smallspacer", "memory#swap", "custom/smallspacer","cpu", "custom/smallspacer", "clock#day", "clock#date","custom/smallspacer", "battery", "custom/smallspacer"],
@@ -24,7 +24,15 @@
 "custom/smallspacer":{
   "format": "  ",
 },
-
+"niri/workspaces": {
+	"format": "{name}",
+	"format-icons": {
+		// Named workspaces
+		// (you need to configure them in niri)
+		"active": "",
+		"default": ""
+	}
+},
 "mpris": {
   "format": "{player_icon} {dynamic}",
   "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
@@ -34,7 +42,7 @@
     "mpv": "🎵"
   },
   "status-icons": {
-    "paused": "▶" 
+    "paused": "▶"
   },
     // "ignored-players": ["firefox"]
 },
@@ -128,7 +136,7 @@
 },
 
 "clock#day": {
-  "format": "{:%a}",
+  "format": "{:%D}",
   "rotate": 0,
   "on-click": "/usr/local/bin/ags -t ActivityCenter",
   "tooltip-format": "<tt>{calendar}</tt>",
@@ -153,7 +161,7 @@
 },
 
 "clock#date": {
-  "format": "{:%d/%m}",
+  "format": " | {:%d/%m}",
   "rotate": 0,
   "on-click": "/usr/local/bin/ags -t ActivityCenter",
   "tooltip-format": "<tt>{calendar}</tt>",
@@ -178,7 +186,7 @@
 },
 
 "pulseaudio": {
-  "format": "{icon} {volume}",
+  "format": " {volume}",
   "format-muted": "",
   "format-full": "",
   "format-icons": {

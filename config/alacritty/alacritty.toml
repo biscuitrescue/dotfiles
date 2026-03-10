@@ -11,10 +11,10 @@ vi_mode_style = "Underline"
 TERM = "xterm-256color"
 
 [font]
-size = 19
+size = 14
 
 [font.bold]
-family = "M Plus 1 Code"
+family = "Monaspace Argon NF"
 style = "Bold"
 
 [font.bold_italic]
@@ -22,11 +22,11 @@ family = "jetbrainsmono nerd font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Operator Mono Medium"
+family = "Monaspace Argon NF"
 style = "Italic"
 
 [font.normal]
-family = "Scientifica"
+family = "Monaspace Argon NF"
 style = "Regular"
 
 [font.offset]
@@ -118,7 +118,7 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 1
+opacity = 0.9
 title = "Alacritty"
 
 [window.class]

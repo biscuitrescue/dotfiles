@@ -1,9 +1,9 @@
 import os
-from libqtile.config import Screen
-from libqtile import bar, widget
-from colours import themes
 from typing import List
 
+from colours import themes
+from libqtile import bar, widget
+from libqtile.config import Screen
 
 theme = "kanagawa"
 
@@ -172,4 +172,5 @@ screens = [
             # margin=[5, 10, 5, 10],
         ),
     ),
+    Screen(),
 ]
