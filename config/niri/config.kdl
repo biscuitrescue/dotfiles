@@ -8,21 +8,18 @@
 // https://niri-wm.github.io/niri/Configuration:-Input
 
 workspace "www" {
-    open-on-output "HDMI-A-1"
+    // open-on-output "HDMI-A-1"
+}
+workspace "dev" {
+    // open-on-output "HDMI-A-1"
+}
+workspace "work" {
+    // open-on-output "HDMI-A-1"
 }
 workspace "nix" {
     // open-on-output "eDP-1"
 }
-workspace "dev" {
-    open-on-output "HDMI-A-1"
-}
 workspace "chat" {
-    // open-on-output "eDP-1"
-}
-workspace "work" {
-    open-on-output "HDMI-A-1"
-}
-workspace "mon" {
     // open-on-output "eDP-1"
 }
 workspace "stash" {
@@ -73,6 +70,7 @@ input {
 }
 
 output "HDMI-A-1" {
+    // off
     mode "2560x1440@60.00"
     scale 1
     transform "normal"
@@ -135,7 +133,7 @@ layout {
 }
 
 spawn-at-startup "waybar"
-spawn-sh-at-startup "swaybg -i ~/git/wallpapers/6pp2tdbkbqcg1.jpeg"
+spawn-sh-at-startup "swaybg -i ~/git/wallpapers/l6g8a1fspgc81.png"
 
 hotkey-overlay {
     skip-at-startup
