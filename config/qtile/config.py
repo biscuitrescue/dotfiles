@@ -5,6 +5,7 @@ from keys import keys
 from libqtile import layout
 from libqtile.config import Match
 from screens import screens, theme
+from libqtile.backend.wayland import InputConfig
 
 border = dict(border_focus=theme["blue"], border_width=0)
 layouts = [
@@ -70,6 +71,8 @@ floating_layout = layout.Floating(
         Match(title="pinentry"),  # GPG key password entry
     ]
 )
+
+# wl_input_rules - {}
 
 auto_fullscreen = True
 focus_on_window_activation = "smart"

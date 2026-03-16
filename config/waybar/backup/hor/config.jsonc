@@ -136,7 +136,7 @@
 },
 
 "clock#day": {
-  "format": "{:%D}",
+  "format": "{:%a}",
   "rotate": 0,
   "on-click": "/usr/local/bin/ags -t ActivityCenter",
   "tooltip-format": "<tt>{calendar}</tt>",
@@ -186,7 +186,7 @@
 },
 
 "pulseaudio": {
-  "format": " {volume}",
+  "format": "{volume}",
   "format-muted": "",
   "format-full": "",
   "format-icons": {

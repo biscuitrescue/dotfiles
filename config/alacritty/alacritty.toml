@@ -14,7 +14,7 @@ TERM = "xterm-256color"
 size = 14
 
 [font.bold]
-family = "Monaspace Argon NF"
+family = "mononoki nerd font"
 style = "Bold"
 
 [font.bold_italic]
@@ -22,12 +22,12 @@ family = "jetbrainsmono nerd font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Monaspace Argon NF"
+family = "mononoki nerd font"
 style = "Italic"
 
 [font.normal]
-family = "Monaspace Argon NF"
-style = "Regular"
+family = "mononoki nerd font"
+style = "Medium"
 
 [font.offset]
 x = -1
@@ -118,7 +118,7 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 0.9
+opacity = 1
 title = "Alacritty"
 
 [window.class]
@@ -134,4 +134,4 @@ x = 10
 y = 10
 
 [general]
-import = ["~/.config/alacritty/themes/bamboo.toml"]
+import = ["~/.config/alacritty/themes/dracula.toml"]

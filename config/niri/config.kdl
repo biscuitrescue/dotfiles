@@ -70,16 +70,16 @@ input {
 }
 
 output "HDMI-A-1" {
-    // off
+    off
     mode "2560x1440@60.00"
     scale 1
     transform "normal"
     position x=1080 y=0
 }
 output "eDP-1" {
-    off
+    // off
     mode "1920x1080@60.00"
-    scale 1.125
+    scale 1
     transform "normal"
     position x=0 y=200
 }
@@ -125,10 +125,10 @@ layout {
         color "#0007"
     }
     struts {
-        left 5
-        right 5
-        top 5
-        bottom 5
+        left 0
+        right 0
+        top 0
+        bottom 0
     }
 }
 
@@ -153,7 +153,6 @@ animations {
 window-rule {
     match app-id=r#"kitty$"#
     draw-border-with-background false
-
 }
 
 window-rule {
@@ -175,11 +174,11 @@ window-rule {
 }
 
 binds {
-    Mod+P { spawn "niri-scratchpad" "create" "1" "--as-float"; }
+    Mod+P { spawn "niri-scratchpad" "create" "1"; }
     Mod+Ctrl+N { spawn "niri-scratchpad" "delete" "1"; }
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "alacritty"; }
     Mod+Shift+Space hotkey-overlay-title="Open Nautilus" { spawn "nautilus"; }
     Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "wayblur"; }

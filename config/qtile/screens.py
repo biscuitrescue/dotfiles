@@ -5,7 +5,7 @@ from colours import themes
 from libqtile import bar, widget
 from libqtile.config import Screen
 
-theme = "kanagawa"
+theme = "levuaska"
 
 theme = themes[theme]
 
@@ -165,12 +165,16 @@ else:
 
 screens = [
     Screen(
+        wallpaper="~/git/wallpapers/ign_leafHelmet_grainy.png",
+),
+    Screen(
         top=bar.Bar(
             default,
             30,
             background=theme["black"],
             # margin=[5, 10, 5, 10],
         ),
+        wallpaper="~/git/wallpapers/street.jpeg",
     ),
-    Screen(),
 ]
+

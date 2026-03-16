@@ -4,7 +4,7 @@ from keys import keys
 from libqtile.config import DropDown, Group, Key, ScratchPad
 from libqtile.lazy import lazy
 
-myTerm = "kitty"
+myTerm = "alacritty"
 mod = "mod4"
 mod1 = "mod1"
 mod2 = "control"
