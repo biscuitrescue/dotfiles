@@ -113,7 +113,6 @@ mods = "Shift"
 action = "ScrollToBottom"
 key = "End"
 mods = "Shift"
-
 [scrolling]
 history = 5008
 
@@ -134,4 +133,4 @@ x = 10
 y = 10
 
 [general]
-import = ["~/.config/alacritty/themes/dracula.toml"]
+import = ["~/.config/alacritty/themes/roseprime.toml"]

@@ -1,1 +1,124 @@
-backup/hor/config.jsonc
+{
+    "name": "main",
+    "id": "bar",
+    "exclusive": "true",
+    "ipc": "true",
+    "output": ["eDP-1"],
+    "gtk-layer-shell": true,
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "left",
+    "height": "100",
+    "width": 40,
+    "margin-top": 5,
+    "margin-bottom": 5,
+    "margin-left": 5,
+    "modules-left": ["clock#date", "clock#time", "pulseaudio"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "cpu", "memory#mem", "memory#swap", "battery"],
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+        "active": "",
+        "default": ""
+        }
+    },
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "disable-scroll": false,
+        "sort-by-number": true,
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "format": "{name}",
+        "format-icons": {
+            "default": ""
+        }
+    },
+    "hyprland/window": {
+        "format": " {} ",
+        "separate-outputs": true
+    },
+    "memory#mem": {
+        "interval": 2,
+        "format": "{percentage}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+    "memory#swap": {
+        "interval": 2,
+        "format": "{swapPercentage}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+    "cpu": {
+        "format": "{icon}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "interval": 2
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+    "custom/music": {
+        "format": "  {}",
+        "escape": true,
+        "interval": 5,
+        "tooltip": false,
+        "exec": "playerctl metadata --format='{{ title }}'",
+        "on-click": "playerctl play-pause",
+        "max-length": 50
+    },
+    "clock#date": {
+        "timezone": "Asia/Kolkata",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%d\n%m\n%y}"
+    },
+    "clock#time": {
+        // "rotate": ,
+        "timezone": "Asia/Kolkata",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%H\n%M}"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{}{percent}%",
+        "format-icons": ["", ""]
+    },
+    "upower": {
+        "icon-size": 15,
+        "hide-if-empty": true,
+        "format": "{percentage}",
+        "tooltip": true,
+        "tooltip-spacing": 20
+    },
+    "battery": {
+        "interval": 2,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}",
+        // "format-charging": "",
+        "format-plugged": "",
+        "format-alt": "{icon}",
+        "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""]
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}",
+        "format-muted": "",
+        "format-full": "",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "pamixer -t"
+    },
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
+        "format": ""
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout &",
+        "format": "襤"
+    }
+}

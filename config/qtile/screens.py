@@ -165,7 +165,7 @@ else:
 
 screens = [
     Screen(
-        wallpaper="~/git/wallpapers/ign_leafHelmet_grainy.png",
+        wallpaper="~/git/wallpapers/street.jpeg",
 ),
     Screen(
         top=bar.Bar(
@@ -174,7 +174,7 @@ screens = [
             background=theme["black"],
             # margin=[5, 10, 5, 10],
         ),
-        wallpaper="~/git/wallpapers/street.jpeg",
+        wallpaper="~/git/wallpapers/ign_leafHelmet_grainy.png",
     ),
 ]
 

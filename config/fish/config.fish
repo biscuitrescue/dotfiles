@@ -1,5 +1,5 @@
 # fish_config theme choose Catppuccin\ Macchiato
-set -x EDITOR "nvim"
+set -x EDITOR "emacsclient -c"
 set -x BAT_THEME "ansi"
 set fish_greeting
 set -x RANGER_LOAD_DEFAULT_RC "FALSE"
@@ -47,13 +47,16 @@ set -gx FZF_DEFAULT_OPTS '
 #   --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
 
 
-set -gx PATH "/home/cafo/.pixi/bin" $PATH
+# set -gx PATH "/home/cafo/.pixi/bin" $PATH
+
 fish_add_path "$HOME/.pixi/bin"
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/scripts/bash"
 fish_add_path "$HOME/scripts/python"
+fish_add_path "$HOME/git/zls/zig-out/bin/"
 fish_add_path "$HOME/scripts/c"
 fish_add_path "$HOME/.local/bin"
+fish_add_path "$HOME/.zvm/bin"
 fish_add_path "$HOME/.config/emacs/bin"
 
 set fish_color_normal cyan
@@ -62,7 +65,7 @@ set fish_color_command green # '#50fa7b'
 set fish_color_error red #'#ff5555'
 set fish_color_quote yellow
 
-fish_vi_key_bindings
+fish_default_key_bindings
 
 function __zoxide_pwd
     builtin pwd -L

@@ -15,9 +15,6 @@
     "margin-left": 5,
     "modules-left": ["clock#date", "clock#time", "pulseaudio"],
     "modules-right": ["tray", "cpu", "memory#mem", "memory#swap", "battery"],
-    "river/tags": {
-        "num-tags": 9,
-    },
     "niri/workspaces": {
         "format": "{icon}",
         "format-icons": {
@@ -42,20 +39,18 @@
     },
     "memory#mem": {
         "interval": 2,
-        // "format": "{icon}",
         "format": "{percentage}",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
     "memory#swap": {
         "interval": 2,
         "format": "{swapPercentage}",
-        // "format": "{icon}",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
     "cpu": {
         "format": "{icon}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-        "interval": 2,
+        "interval": 2
     },
     "tray": {
         "icon-size": 15,
@@ -79,7 +74,7 @@
         // "rotate": ,
         "timezone": "Asia/Kolkata",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%H\n%M}",
+        "format": "{:%H\n%M}"
     },
     "backlight": {
         "device": "intel_backlight",

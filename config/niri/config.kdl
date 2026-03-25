@@ -70,7 +70,7 @@ input {
 }
 
 output "HDMI-A-1" {
-    off
+    // off
     mode "2560x1440@60.00"
     scale 1
     transform "normal"
