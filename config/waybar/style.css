@@ -4,7 +4,7 @@
   font-family: "Mononoki Nerd Font";
   font-size: 14px;
   opacity: 1;
-  border-radius: 1rem;
+  border-radius: 100px;
 }
 
 #waybar {
@@ -20,7 +20,7 @@
 }
 
 #workspaces button {
-  background: @red;
+  background: @mauve;
   color: @base;
   padding: 0rem 0rem 0rem 0rem;
   margin-top: 0.3rem;
@@ -29,7 +29,7 @@
 
 #workspaces button.active {
   color: @base;
-  background: @yellow;
+  background: @green;
 }
 
 #workspaces button:hover {
@@ -66,14 +66,13 @@
 #battery {
   margin: 0.3rem;
   padding: 0.3rem;
-  border-radius: 0.6rem;
   padding-left: 0rem;
   padding-top: 0.45rem;
   padding-bottom: 0.45rem;
   padding-right: 0rem;
   margin-top: 0.7rem;
-  color: @lavender;
-  background: @base;
+  color: @base;
+  background: @mauve;
 }
 
 #battery.charging {
