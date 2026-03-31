@@ -1,0 +1,37 @@
+/*
+*
+* Onyx
+*
+*/
+
+@define-color bg     #0c0c0c;
+@define-color base   #0c0c0c;
+@define-color mantle #293334;
+@define-color crust  #393d3f;
+
+@define-color text     #bdc4a7;
+@define-color subtext0 #747c84;
+@define-color subtext1 #DFDFDF;
+
+@define-color surface0 #393f45;
+@define-color surface1 #565e65;
+@define-color surface2 #747c84;
+
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color overlay2 #9399b2;
+
+@define-color blue      #7180ac;
+@define-color lavender  #95c7ae;
+@define-color sapphire  #74c7ec;
+@define-color sky       #99edcc;
+@define-color teal      #75bba7;
+@define-color green     #9fc490;
+@define-color yellow    #e6c79c;
+@define-color peach     #ED7B84;
+@define-color maroon    #B33951;
+@define-color red       #F45B69;
+@define-color mauve     #A1869E;
+@define-color pink      #EDAFB8;
+@define-color flamingo  #D5ACA9;
+@define-color rosewater #B38D97;

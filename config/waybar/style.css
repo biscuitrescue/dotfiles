@@ -1,4 +1,4 @@
-@import "themes/roseprime.css";
+@import "themes/onyx.css";
 
 * {
   font-family: "Mononoki Nerd Font";
@@ -57,7 +57,7 @@
   padding-left: 0.6rem;
 }
 #clock.date {
-  background: @maroon;
+  background: @blue;
   color: @base;
 }
 #clock.time {
@@ -65,7 +65,7 @@
   color: @base;
 }
 #clock.day {
-  background: @blue;
+  background: @rosewater;
   color: @base;
 }
 
@@ -74,7 +74,7 @@
   padding-right: 0.6rem;
   padding-left: 0.6rem;
   color: @base;
-  background: @mauve;
+  background: @text;
 }
 
 #battery.charging {
@@ -93,7 +93,7 @@
 }
 
 #pulseaudio {
-  background: @yellow;
+  background: @green;
   color: @base;
   margin: 0rem;
   margin-top: 0.3rem;
