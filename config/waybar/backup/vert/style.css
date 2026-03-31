@@ -1,40 +1,41 @@
 @import "themes/ashes.css";
 
 * {
-  font-family: "Monaspace Argon NF Bold";
+  font-family: "Mononoki Nerd Font";
   font-size: 14px;
   opacity: 1;
-  border-radius: 1rem;
+  border-radius: 20px;
 }
 
 #waybar {
   background: @base;
   color: @text;
+  border-radius: 0px;
 }
 
 #workspaces {
   background: @base;
   opacity: 1;
-  margin: 0;
-  padding: 0rem;
+  margin: 0.3rem;
+  padding: 0.3rem;
 }
 
 #workspaces button {
-  color: @lavender;
+  background: @mauve;
+  color: @base;
   padding: 0rem 0rem 0rem 0rem;
-  margin: 0px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 #workspaces button.active {
-  color: @maroon;
-  background: @base;
-  padding: 0rem 0rem 0rem 0rem;
-  margin: 0px;
+  color: @base;
+  background: @green;
 }
 
 #workspaces button:hover {
-  color: @lavender;
-  margin: 0px;
+  background: @lavender;
+  color: @base;
   padding: 0px;
 }
 
@@ -54,25 +55,25 @@
   margin-top: 0.7rem;
 }
 #clock.date {
-  color: @maroon;
-  background: @base;
+  background: @maroon;
+  color: @base;
+  margin: 0.3rem;
 }
 #clock.time {
-  color: @blue;
-  background: @base;
+  background: @blue;
+  color: @base;
 }
 
 #battery {
   margin: 0.3rem;
   padding: 0.3rem;
-  border-radius: 0.6rem;
   padding-left: 0rem;
   padding-top: 0.45rem;
   padding-bottom: 0.45rem;
   padding-right: 0rem;
   margin-top: 0.7rem;
-  color: @lavender;
-  background: @base;
+  color: @base;
+  background: @mauve;
 }
 
 #battery.charging {
@@ -104,34 +105,22 @@
 }
 
 #cpu {
-  color: @yellow;
+  background: @yellow;
   padding: 0.3rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background: @base;
-  margin: 0.2rem;
-  margin-top: 0.2rem;
-  margin-bottom: 0.1rem;
+  margin: 0.3rem;
+  color: @base;
 }
 #memory.mem {
-  color: @blue;
+  color: @base;
   padding: 0.3rem;
-  background: @base;
-  margin: 0.2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.15rem;
-  margin-top: 0.4rem;
+  margin: 0.3rem;
+  background: @blue;
 }
 #memory.swap {
-  color: @maroon;
+  background: @maroon;
   padding: 0.3rem;
-  background: @base;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin: 0.2rem;
-  margin-top: 0.15rem;
-  margin-bottom: 0.2rem;
+  color: @base;
+  margin: 0.3rem;
 }
 
 #window {

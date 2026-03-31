@@ -1,5 +1,11 @@
 [soe][Limiter#0]
 gainBoost=false
+inputToLink=0
+inputToSidechain=0
+linkToInput=0
+linkToSidechain=0
 oversampling=21
 release=10
+sidechainToInput=0
+sidechainToLink=0
 threshold=-1

@@ -14,19 +14,19 @@ TERM = "xterm-256color"
 size = 14
 
 [font.bold]
-family = "mononoki nerd font"
+family = "Monaspace Krypton NF"
 style = "Bold"
 
 [font.bold_italic]
-family = "jetbrainsmono nerd font"
+family = "Monaspace Krypton NF"
 style = "Bold Italic"
 
 [font.italic]
-family = "mononoki nerd font"
+family = "Monaspace Krypton NF"
 style = "Italic"
 
 [font.normal]
-family = "mononoki nerd font"
+family = "Monaspace Krypton NF"
 style = "Medium"
 
 [font.offset]
@@ -117,7 +117,7 @@ mods = "Shift"
 history = 5008
 
 [window]
-opacity = 1
+opacity = 0.95
 title = "Alacritty"
 
 [window.class]

@@ -1,14 +1,14 @@
 [Presets]
-lastLoadedOutputPreset=Perfect EQ
+lastLoadedOutputPreset=Laptop
 
 [StreamInputs]
 inputDevice=alsa_input.pci-0000_03_00.6.analog-stereo
 
 [StreamOutputs]
-mostUsedPresets=Perfect EQ,Boosted,Bass Enhancing + Perfect EQ,Laptop
+mostUsedPresets=Laptop,Perfect EQ,Boosted,Bass Enhancing + Perfect EQ
 outputDevice=alsa_output.pci-0000_03_00.6.analog-stereo
-plugins=equalizer#0
-usedPresets=Perfect EQ:4,Laptop:1,Boosted:2,Bass Enhancing + Perfect EQ:1
+plugins=gate#0,compressor#0,multiband_compressor#0,equalizer#0,limiter#0
+usedPresets=Perfect EQ:5,Laptop:6,Boosted:2,Bass Enhancing + Perfect EQ:1
 visiblePage=pluginsPage
 visiblePlugin=equalizer#0
 
@@ -17,6 +17,6 @@ forceBreezeTheme=false
 
 [Window]
 autostartOnLogin=true
-height=1394
+height=1064
 noWindowAfterStarting=true
-width=1400
+width=921

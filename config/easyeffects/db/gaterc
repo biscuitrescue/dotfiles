@@ -2,5 +2,11 @@
 attack=2000
 curveThreshold=-40
 curveZone=-40
+inputToLink=0
+inputToSidechain=0
+linkToInput=0
+linkToSidechain=0
 reduction=-30
 release=2000
+sidechainToInput=0
+sidechainToLink=0

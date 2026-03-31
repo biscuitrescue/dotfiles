@@ -7,7 +7,7 @@ clipboard-write = allow
 window-theme = dark
 window-decoration = none
 
-font-size = 10
+font-size = 13
 font-family = scientifica
 
 cursor-color=#fff8f0

@@ -1,9 +1,15 @@
 [soe][Compressor#0]
 attack=130
 boostThreshold=-60
+inputToLink=0
+inputToSidechain=0
 knee=-24
+linkToInput=0
+linkToSidechain=0
 mode=1
 ratio=5
 release=600
 sidechainMode=1
+sidechainToInput=0
+sidechainToLink=0
 threshold=-10
