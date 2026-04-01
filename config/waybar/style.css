@@ -42,7 +42,6 @@
 #workspaces button:hover {
   background: @lavender;
   color: @base;
-  padding: 0px;
 }
 
 #tray {
