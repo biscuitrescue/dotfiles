@@ -20,12 +20,10 @@
 #workspaces {
   background: @base;
   opacity: 1;
-  margin: 0rem;
-  padding: 0.2rem;
 }
 
 #workspaces button {
-  background: @mauve;
+  background: @red;
   color: @base;
   margin-top: 0.3rem;
   margin-left: 0.3rem;
