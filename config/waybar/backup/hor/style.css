@@ -1,14 +1,20 @@
-@import "themes/hojicha.css";
+@import "themes/onyx.css";
 
 * {
-  font-family: "Zed Sans";
-  font-size: 13px;
+  font-family: "Mononoki Nerd Font";
+  font-size: 12px;
   opacity: 1;
+  border-radius: 20px;
+  margin-left: 0rem;
+  margin-right: 0rem;
 }
 
 #waybar {
   background: @base;
   color: @text;
+  border-radius: 0px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 #workspaces {
@@ -17,39 +23,55 @@
 }
 
 #workspaces button {
-  color: @lavender;
-  padding: 0.2rem 0rem 0.2rem 0rem;
+  background: @red;
+  color: @base;
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  padding: 0rem 0.3rem 0rem 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 #workspaces button.active {
-  color: @maroon;
-  background: @base;
+  color: @base;
+  background: @green;
 }
 
 #workspaces button:hover {
-  color: @lavender;
-  margin: 0px;
+  background: @lavender;
+  color: @base;
 }
 
 #tray {
   background-color: @bg;
   padding: 0rem;
+  margin: 0rem;
 }
 #backlight,
 #clock {
+  margin: 0.3rem;
+  padding-right: 0.6rem;
+  padding-left: 0.6rem;
 }
 #clock.date {
-  color: @maroon;
-  background: @base;
+  background: @blue;
+  color: @base;
 }
 #clock.time {
-  color: @blue;
-  background: @base;
+  background: @blue;
+  color: @base;
+}
+#clock.day {
+  background: @rosewater;
+  color: @base;
 }
 
 #battery {
-  color: @saphire;
-  background: @base;
+  margin: 0.3rem;
+  padding-right: 0.6rem;
+  padding-left: 0.6rem;
+  color: @base;
+  background: @text;
 }
 
 #battery.charging {
@@ -68,40 +90,43 @@
 }
 
 #pulseaudio {
-  background: @yellow;
+  background: @green;
   color: @base;
-  padding-left: 0rem;
-  border-radius: 0.6rem;
-  padding-right: 0.275rem;
+  margin: 0rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  padding-right: 0.6rem;
+  padding-left: 0.6rem;
 }
 
 #cpu {
-  color: @yellow;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background: @base;
-  padding: 0.3rem;
+  background: @yellow;
+  margin: 0px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  padding-right: 0.6rem;
+  padding-left: 0.6rem;
+  color: @base;
 }
-#memory.mem {
-  color: @blue;
-  padding: 0.3rem;
-  background: @base;
-  margin: 0.2rem;
+#memory {
+  margin: 0px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  padding-right: 0.6rem;
+  padding-left: 0.6rem;
+}
+#memory {
+  color: @base;
+  background: @blue;
 }
 #memory.swap {
-  color: @maroon;
-  padding: 0.3rem;
-  background: @base;
-  padding-top: 0.5rem;
+  background: @maroon;
+  color: @base;
 }
 
 #window {
   color: @text;
   background: @base;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding-left: 4px;
-  padding-right: 4px;
 }
 window#waybar {
   background-color: @bg;

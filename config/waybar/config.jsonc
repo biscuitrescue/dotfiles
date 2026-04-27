@@ -10,13 +10,13 @@
 "gtk-layer-shell": true,
 "reload_style_on_change": true,
 
-"modules-left": ["custom/smallspacer", "river/tags", "hyprland/workspaces", "niri/workspaces","custom/smallspacer","hyprland/window","custom/spacer"],
+"modules-left": ["custom/smallspacer", "river/tags", "hyprland/workspaces", "niri/workspaces","custom/smallspacer","hyprland/window"],
 "modules-center": ["custom/padd","custom/l_end","custom/r_end","clock#time","custom/padd"],
 "modules-right": ["tray", "custom/smallspacer", "pulseaudio", "custom/smallspacer", "memory#mem", "custom/smallspacer", "memory#swap", "custom/smallspacer","cpu", "custom/smallspacer", "clock#day", "clock#date","custom/smallspacer", "battery", "custom/smallspacer"],
 
 
 "custom/smallspacer":{
-  "format": "  ",
+  "format": " | ",
 },
 "niri/workspaces": {
 	"format": "{name}",
@@ -73,7 +73,7 @@
 },
 
 "custom/spacer":{
-  "format": "|"
+  "format": "| "
 },
 
 

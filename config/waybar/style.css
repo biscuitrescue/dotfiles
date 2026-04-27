@@ -2,7 +2,7 @@
 
 * {
   font-family: "Mononoki Nerd Font";
-  font-size: 12px;
+  font-size: 13.5px;
   opacity: 1;
   border-radius: 20px;
   margin-left: 0rem;
@@ -23,18 +23,14 @@
 }
 
 #workspaces button {
-  background: @red;
-  color: @base;
-  margin-top: 0.3rem;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
+  color: @red;
+  background: @base;
   padding: 0rem 0.3rem 0rem 0.3rem;
-  margin-bottom: 0.3rem;
 }
 
 #workspaces button.active {
-  color: @base;
-  background: @green;
+  background: @base;
+  color: @green;
 }
 
 #workspaces button:hover {
@@ -50,78 +46,62 @@
 #backlight,
 #clock {
   margin: 0.3rem;
-  padding-right: 0.6rem;
-  padding-left: 0.6rem;
 }
 #clock.date {
-  background: @blue;
-  color: @base;
+  background: @base;
+  color: @blue;
 }
 #clock.time {
-  background: @blue;
-  color: @base;
+  background: @base;
+  color: @yellow;
 }
 #clock.day {
-  background: @rosewater;
-  color: @base;
+  background: @base;
+  color: @rosewater;
 }
 
 #battery {
   margin: 0.3rem;
-  padding-right: 0.6rem;
-  padding-left: 0.6rem;
-  color: @base;
-  background: @text;
+  color: @text;
+  background: @base;
 }
 
 #battery.charging {
-  background: @green;
-  color: @base;
+  background: @base;
+  color: @green;
 }
 
 #battery.warning:not(.charging) {
-  background: @peach;
-  color: @base;
+  background: @base;
+  color: @peach;
 }
 
 #battery.critical:not(.charging) {
-  background: @red;
-  color: @base;
+  background: @base;
+  color: @red;
 }
 
 #pulseaudio {
-  background: @green;
-  color: @base;
+  background: @base;
+  color: @green;
   margin: 0rem;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  padding-right: 0.6rem;
-  padding-left: 0.6rem;
 }
 
 #cpu {
-  background: @yellow;
+  background: @base;
   margin: 0px;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  padding-right: 0.6rem;
-  padding-left: 0.6rem;
-  color: @base;
+  color: @yellow;
 }
 #memory {
   margin: 0px;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  padding-right: 0.6rem;
-  padding-left: 0.6rem;
 }
 #memory {
-  color: @base;
-  background: @blue;
+  color: @blue;
+  background: @base;
 }
 #memory.swap {
-  background: @maroon;
-  color: @base;
+  background: @base;
+  color: @red;
 }
 
 #window {
