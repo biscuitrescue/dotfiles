@@ -23,14 +23,14 @@
 }
 
 #workspaces button {
-  color: @red;
+  color: @green;
   background: @base;
   padding: 0rem 0.3rem 0rem 0.3rem;
 }
 
 #workspaces button.active {
-  background: @base;
-  color: @green;
+  color: @base;
+  background: @green;
 }
 
 #workspaces button:hover {

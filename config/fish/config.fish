@@ -18,13 +18,21 @@ set -x MANPAGER "nvim +Man!"
 
 # ??
 set -gx FZF_DEFAULT_OPTS '
-  --color=bg+:#2f312c,bg:#252623,spinner:#e75a7c,hl:#e75a7c
-  --color=fg:#f1e9d2,header:#e75a7c,info:#96c7ef,pointer:#8fb573
-  --color=marker:#8fb573,fg+:#8fb573,prompt:#8fb573,hl+:#e75a7c
-  --color=selected-bg:#383b35
-  --border="thinblock" --border-label="FZF" --border-label-pos="0" --preview-window="border-thinblock"
-  --prompt="> " --marker=">" --pointer="◆" --separator="─"
-  --scrollbar="│" --info="right"'
+  --color=bg+:#293334,bg:#0c0c0c,spinner:#da627d,hl:#F02D3A
+  --color=fg:#bdc4a7,header:#987284,info:#7e8dba,pointer:#9FC490
+  --color=marker:#9FC490,fg+:#cecece,prompt:#70AE6E,hl+:#F45B69
+  --color=selected-bg:#1a1a1a
+  --color=border:#393D3F,label:#F49D6E,query:#F7F0F5
+  --border="thinblock"
+  --border-label=" Onyx "
+  --border-label-pos="0"
+  --preview-window="border-thinblock"
+  --prompt="> "
+  --marker="▶"
+  --pointer="◆"
+  --separator="─"
+  --scrollbar="│"
+  --info="right"'
 
 # Habamax
 # set -gx FZF_DEFAULT_OPTS '
