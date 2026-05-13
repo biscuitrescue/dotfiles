@@ -1,37 +1,23 @@
-------------------
----- MONITORS ----
-------------------
-
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
 	output = "eDP-1",
 	mode = "1920x1080@60",
 	position = "0x225",
-	scale = "1.2",
+	scale = 1.2,
 })
 
 hl.monitor({
-	output = "1.25",
+	output = "HDMI-A-1",
 	mode = "2560x1440@60",
 	position = "1601x0",
-	scale = "1.25",
+	scale = 1.25,
 })
 
----------------------
----- MY PROGRAMS ----
----------------------
-
--- Set programs that you use
 local terminal = "kitty"
 local fileManager = "nautilus"
 local menu = "rofi -show drun"
 
--------------------
----- AUTOSTART ----
--------------------
-
 hl.on("hyprland.start", function()
-	hl.exec_cmd("waybar")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("battery")
@@ -39,10 +25,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	hl.exec_cmd("waybar & hyprpaper")
 end)
-
--------------------------------
----- ENVIRONMENT VARIABLES ----
--------------------------------
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
@@ -65,10 +47,6 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
 -- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
 
------------------------
----- LOOK AND FEEL ----
------------------------
-
 hl.config({
 	general = {
 		gaps_in = 3,
@@ -77,7 +55,7 @@ hl.config({
 		border_size = 1,
 
 		col = {
-			active_border = { colors = { "0xffF02d3a", "rgba(00ff99ee)" }, angle = 45 },
+			active_border = { colors = { "0xffF02d3a" }, angle = 45 },
 			inactive_border = "0xff7189",
 		},
 
@@ -143,39 +121,33 @@ hl.animation({ leaf = "workspacesIn", enabled = true, speed = 1.21, bezier = "al
 hl.animation({ leaf = "workspacesOut", enabled = true, speed = 1.94, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
 
--- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
--- "Smart gaps" / "No gaps when only"
--- uncomment all if you wish to use that.
-hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 8, gaps_in = 8 })
-hl.workspace_rule({ workspace = "f[1]", gaps_out = 0, gaps_in = 0 })
+hl.workspace_rule({ workspace = "w[tv1]s[false]", gaps_out = 3, gaps_in = 3 })
+hl.workspace_rule({ workspace = "f[1]s[false]", gaps_out = 0, gaps_in = 0 })
 hl.window_rule({
 	name = "no-gaps-wtv1",
-	match = { float = false, workspace = "w[tv1]" },
+	match = { float = false, workspace = "w[tv1]s[false]" },
 	border_size = 0,
 	rounding = 0,
 })
 hl.window_rule({
 	name = "no-gaps-f1",
-	match = { float = false, workspace = "f[1]" },
+	match = { float = false, workspace = "f[1]s[false]" },
 	border_size = 0,
 	rounding = 0,
 })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
 	dwindle = {
 		preserve_split = true, -- You probably want this
 	},
 })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
 hl.config({
 	master = {
 		new_status = "master",
 	},
 })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
 hl.config({
 	scrolling = {
 		fullscreen_on_one_column = true,
@@ -183,20 +155,12 @@ hl.config({
 	},
 })
 
-----------------
-----  MISC  ----
-----------------
-
 hl.config({
 	misc = {
 		force_default_wallpaper = 1, -- Set to 0 or 1 to disable the anime mascot wallpapers
 		disable_hyprland_logo = false, -- If true disables the random hyprland logo / anime girl background. :(
 	},
 })
-
----------------
----- INPUT ----
----------------
 
 hl.config({
 	input = {
@@ -246,14 +210,22 @@ hl.bind(
 )
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + d", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind("SUPER + W", hl.dsp.window.fullscreen({ action = "toggle" }))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
+
+hl.bind(mainMod .. "+ period", hl.dsp.layout("move +col"))
+hl.bind(mainMod .. "+ comma", hl.dsp.layout("move -col"))
+hl.bind(mainMod .. "+ SHIFT + period", hl.dsp.layout("colresize +0.1"))
+hl.bind(mainMod .. "+ SHIFT + comma", hl.dsp.layout("colresize -0.1"))
+hl.bind(mainMod .. "+ CTRL + period", hl.dsp.layout("swapcol r"))
+hl.bind(mainMod .. "+ CTRL + comma", hl.dsp.layout("swapcol l"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
@@ -265,7 +237,7 @@ end
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + P", hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
@@ -337,7 +309,11 @@ hl.window_rule({
 
 	no_focus = true,
 })
-
+hl.config({
+	xwayland = {
+		force_zero_scaling = true,
+	},
+})
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
@@ -354,3 +330,10 @@ hl.window_rule({
 	move = "20 monitor_h-120",
 	float = true,
 })
+
+for i = 6, 10 do
+	hl.workspace_rule({ workspace = tostring(i), monitor = "eDP-1" })
+end
+for i = 1, 5 do
+	hl.workspace_rule({ workspace = tostring(i), monitor = "HDMI-A-1" })
+end
