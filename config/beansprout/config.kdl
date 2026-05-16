@@ -1,0 +1,160 @@
+// Whether new windows should go to the top or bottom of the window stack
+attach_mode top
+// Number of windows in the primary stack
+primary_count 1
+// Proportion of output width taken by the primary stack
+primary_ratio 0.55
+// Proportion of output width taken by a window if it's the only visible tiled window
+// This is intended to be useful for ultrawides where a very wide window might not look very nice
+// When this is < 1.0 and only one window is being tiled, the window will have width
+// output_width * single_window_ratio and be centered on the output
+single_window_ratio 0.95
+/// Side the primary should be on
+primary_side right
+// Whether mousing over a new window should move focus
+focus_follows_pointer #true
+// Whether mousing over a new output should move output focus (i.e. the output new windows spawn on)
+output_focus_follows_pointer #true
+// Whether the focus should warp to the center of newly-focused windows
+pointer_warp_on_focus_change #true
+// Path to image to use as wallpaper
+// The same image is displayed on all outputs, but scaled separately
+// If this config is missing, then the background is blank black screen
+wallpaper_image_path "~/git/wallpapers/street.jpeg"
+// XCursor theme name; size in pixels is optional (default: 24)
+cursor_theme "Adwaita" 24
+borders {
+    width 2
+    // 8 or 10 digit hex color
+    color_focused "0xf02d3a"
+    color_unfocused "0x7180ac"
+}
+// Bar widget; shows the time
+bar {
+    fonts "Monaspace Krypton Frozen:size=11"
+    position top
+    time_format "%A | %d-%m-%y | %I:%M %p"
+    text_color "0xbdc4a7"
+    background_color "0x0c0c0c"
+    center title
+    right clock
+    left wm_info
+}
+// Tag overlay widget; shown briefly when switching tags
+// Remove this block to disable the overlay entirely
+tag_overlay {
+    tag_amount 10
+    background_color "0x1e1e2e"
+    border_color "0x6c7086"
+    square_active_background_color "0x89b4fa"
+    square_active_border_color "0x6c7086"
+    square_active_occupied_color "0xcdd6f4"
+    square_inactive_background_color "0x585b70"
+    square_inactive_border_color "0x6c7086"
+    square_inactive_occupied_color "0xcdd6f4"
+}
+// Window rules; applied once when a window first appears
+// Rules are evaluated top-to-bottom; later rules override earlier ones
+window_rules {
+    // Float Firefox picture-in-picture windows
+    float app_id="firefox" title="Picture-in-Picture"
+    // Float any window with "Preferences" in the title
+    float title="*Preferences*"
+    // Keep mpv windows tiled
+    no_float app_id="mpv"
+    // Send Slack to tag 3 (1<<2 = 0x0004)
+    tags 0x0004 app_id="Slack"
+}
+keybinds {
+    // Swap a window
+    spawn Mod4 Return kitty
+    spawn Mod4 R "rofi -show drun"
+    // Move focus up or down the windows stack
+    focus_next_window Mod4 J
+    focus_prev_window Mod4 K
+    // Move focus between windows
+    focus_next_output Mod4 Period
+    focus_prev_output Mod4 Comma
+    // Move windows between outputs
+    send_to_next_output Mod4+Shift Period
+    send_to_prev_output Mod4+Shift Comma
+    // Swap the currently-focused window with the current primary
+    zoom Mod4 Z
+    // Float/unfloat the currently-focused window
+    toggle_float Mod4 F
+    // Change the primary ratio of the current output
+    change_primary_ratio Mod4 H 0.05
+    change_primary_ratio Mod4 L -0.05
+    // Change the number of windows in the primary side
+    increment_primary_count Mod4 I
+    decrement_primary_count Mod4 D
+    // Reload config file
+    reload_config Mod4+Shift R
+    // Toggle fullscreen on the currently-focused window
+    toggle_fullscreen Mod4 W
+    // Close the currently-focused window
+    close_window Mod4 Q
+    // Exit the entire river session
+    exit_river Mod4+Shift Q
+    // Move windows up or down the stack
+    swap_next Mod4+Shift N
+    swap_prev Mod4+Shift P
+    // Move floating windows; noop on tiled windows
+    move_left Mod4+Shift H 100
+    move_down Mod4+Shift J 100
+    move_up Mod4+Shift K 100
+    move_right Mod4+Shift L 100
+    // Resize floating windows; noop on tiled windows
+    resize_width Mod4+Alt+Shift H -100
+    resize_height Mod4+Alt+Shift J 100
+    resize_height Mod4+Alt+Shift K -100
+    resize_width Mod4+Alt+Shift L 100
+    // Media keys (no modifier)
+    spawn None XF86AudioRaiseVolume "makofy volume_up"
+    spawn None XF86AudioLowerVolume "makofy volume_down"
+    spawn None XF86AudioMute "makofy volume_mute"
+    spawn None XF86AudioMedia "playerctl play-pause"
+    spawn None XF86AudioPlay "playerctl play-pause"
+    spawn None XF86AudioPrev "playerctl previous"
+    spawn None XF86AudioNext "playerctl next"
+    // Brightness keys (no modifier)
+    spawn None XF86MonBrightnessUp "~/.config/river/brightness-up.sh"
+    spawn None XF86MonBrightnessDown "~/.config/river/brightness-down.sh"
+    // Special command to generate keybinds for keys 1-9 and tags 1<<0 through 1<<8
+    tag_bind Mod4 set_output_tags
+    tag_bind Mod4+Shift set_window_tags
+    tag_bind Mod4+Ctrl toggle_output_tags
+    tag_bind Mod4+Ctrl+Shift toggle_window_tags
+}
+pointer_binds {
+    // Mod4 + Left click to move floating windows;
+    // tiled windows will automatically float if moved
+    move_window Mod4 BTN_LEFT
+    // Mod4 + Right click to resize floating windows;
+    // tiled windows will automatically float if resized
+    resize_window Mod4 BTN_RIGHT
+}
+
+// Keyboard layout configuration
+// All fields are optional and default to system/xkbcommon defaults
+keyboard_layout {
+    layout "us"
+    // variant "dvorak"
+    options "compose:rctrl"
+}
+// Default input config for all devices
+input {
+    accel_profile "flat"
+}
+// Framework 13 Touchpad
+input name="PIXA3854:00 093A:0274 Touchpad" {
+    accel_profile "adaptive"
+    click_method "clickfinger"
+    natural_scroll "enabled"
+    tap "disabled"
+}
+// Per-host config using the host= property
+// Nodes with a host property are only applied when the hostname matches
+wallpaper_image_path "~/Pictures/desktop.png" host="desktop"
+wallpaper_image_path "~/Pictures/laptop.png" host="laptop"
+
