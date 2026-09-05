@@ -1,0 +1,8 @@
+dunst-git
+glib
+laptop-mode-tools
+newm-next-git
+notify-send.sh
+paru-bin-debug
+pipes-rs-bin
+spotify-player-full

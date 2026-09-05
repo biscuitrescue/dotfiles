@@ -1,0 +1,215 @@
+{
+  "id": "onyx",
+  "name": "Onyx",
+  "version": "1.1.0",
+  "author": "custom",
+  "description": "A pastel Onyx theme based on Kitty colors with dark accent foregrounds and muted pastel surfaces",
+  "dark": {
+    "primaryText": "#0c0c0c",
+    "surface": "#141414",
+    "surfaceText": "#bdc4a7",
+    "surfaceVariant": "#202526",
+    "background": "#0c0c0c",
+    "backgroundText": "#bdc4a7",
+    "surfaceContainer": "#101010",
+    "surfaceContainerHigh": "#1a1a1a",
+    "surfaceContainerHighest": "#242929",
+    "error": "#F02D3A",
+    "warning": "#F9DF74"
+  },
+  "light": {
+    "primaryText": "#0c0c0c",
+    "surface": "#F7F0F5",
+    "surfaceText": "#393D3F",
+    "surfaceVariant": "#E6C79C",
+    "background": "#ffffff",
+    "backgroundText": "#393D3F",
+    "surfaceContainer": "#F7F0F5",
+    "surfaceContainerHigh": "#E6C79C",
+    "surfaceContainerHighest": "#F7F0F5",
+    "error": "#F02D3A",
+    "warning": "#A86F00"
+  },
+  "variants": {
+    "default": "green",
+    "options": [
+      {
+        "id": "green",
+        "name": "Green",
+        "dark": {
+          "primary": "#9FC490",
+          "primaryContainer": "#26352B",
+          "secondary": "#99EDCC",
+          "surfaceVariantText": "#bdc4a7",
+          "surfaceTint": "#9FC490",
+          "outline": "#607565",
+          "info": "#99EDCC"
+        },
+        "light": {
+          "primary": "#2E9E55",
+          "primaryContainer": "#C8F0D8",
+          "secondary": "#6B54C7",
+          "surfaceVariantText": "#393D3F",
+          "surfaceTint": "#2E9E55",
+          "outline": "#6ABF90",
+          "info": "#6B54C7"
+        }
+      },
+      {
+        "id": "cyan",
+        "name": "Cyan",
+        "dark": {
+          "primary": "#99EDCC",
+          "primaryContainer": "#20352F",
+          "secondary": "#7e8dba",
+          "surfaceVariantText": "#bdc4a7",
+          "surfaceTint": "#99EDCC",
+          "outline": "#5F897B",
+          "info": "#99EDCC"
+        },
+        "light": {
+          "primary": "#287A63",
+          "primaryContainer": "#D5F0E7",
+          "secondary": "#536A9B",
+          "surfaceVariantText": "#393D3F",
+          "surfaceTint": "#287A63",
+          "outline": "#5F9C89",
+          "info": "#536A9B"
+        }
+      },
+      {
+        "id": "blue",
+        "name": "Blue",
+        "dark": {
+          "primary": "#A2D2FF",
+          "primaryContainer": "#252C42",
+          "secondary": "#ed92d8",
+          "surfaceVariantText": "#bdc4a7",
+          "surfaceTint": "#A2D2FF",
+          "outline": "#66759A",
+          "info": "#A2D2FF"
+        },
+        "light": {
+          "primary": "#3A547D",
+          "primaryContainer": "#CCE0F8",
+          "secondary": "#B83A99",
+          "surfaceVariantText": "#393D3F",
+          "surfaceTint": "#3A547D",
+          "outline": "#889CBB",
+          "info": "#3A547D"
+        }
+      },
+      {
+        "id": "yellow",
+        "name": "Yellow",
+        "dark": {
+          "primary": "#F9DF74",
+          "primaryContainer": "#3A331B",
+          "secondary": "#F49D6E",
+          "surfaceVariantText": "#bdc4a7",
+          "surfaceTint": "#F9DF74",
+          "outline": "#8F8247",
+          "info": "#F9DF74"
+        },
+        "light": {
+          "primary": "#806800",
+          "primaryContainer": "#F5E9B8",
+          "secondary": "#A8542D",
+          "surfaceVariantText": "#393D3F",
+          "surfaceTint": "#806800",
+          "outline": "#A28D36",
+          "info": "#806800"
+        }
+      },
+      {
+        "id": "orange",
+        "name": "Orange",
+        "dark": {
+          "primary": "#F49D6E",
+          "primaryContainer": "#3A281F",
+          "secondary": "#F9DF74",
+          "surfaceVariantText": "#bdc4a7",
+          "surfaceTint": "#F49D6E",
+          "outline": "#8F654F",
+          "info": "#F9DF74"
+        },
+        "light": {
+          "primary": "#A8542D",
+          "primaryContainer": "#F6D8C7",
+          "secondary": "#806800",
+          "surfaceVariantText": "#393D3F",
+          "surfaceTint": "#A8542D",
+          "outline": "#B97858",
+          "info": "#806800"
+        }
+      },
+      {
+        "id": "magenta",
+        "name": "Magenta",
+        "dark": {
+          "primary": "#C29BB5",
+          "primaryContainer": "#352631",
+          "secondary": "#7e8dba",
+          "surfaceVariantText": "#bdc4a7",
+          "surfaceTint": "#C29BB5",
+          "outline": "#816477",
+          "info": "#7e8dba"
+        },
+        "light": {
+          "primary": "#9B5094",
+          "primaryContainer": "#EBD6E7",
+          "secondary": "#536A9B",
+          "surfaceVariantText": "#393D3F",
+          "surfaceTint": "#9B5094",
+          "outline": "#B987B2",
+          "info": "#536A9B"
+        }
+      },
+      {
+        "id": "red",
+        "name": "Red",
+        "dark": {
+          "primary": "#F45B69",
+          "primaryContainer": "#3A1E23",
+          "secondary": "#F9DF74",
+          "surfaceVariantText": "#bdc4a7",
+          "surfaceTint": "#F45B69",
+          "outline": "#914A55",
+          "info": "#F9DF74"
+        },
+        "light": {
+          "primary": "#C51F2C",
+          "primaryContainer": "#F7D7DB",
+          "secondary": "#806800",
+          "surfaceVariantText": "#393D3F",
+          "surfaceTint": "#C51F2C",
+          "outline": "#C86670",
+          "info": "#806800"
+        }
+      },
+      {
+        "id": "pink",
+        "name": "Pink",
+        "dark": {
+          "primary": "#FFCAD4",
+          "primaryContainer": "#3A252C",
+          "secondary": "#A2D2FF",
+          "surfaceVariantText": "#bdc4a7",
+          "surfaceTint": "#FFCAD4",
+          "outline": "#926A76",
+          "info": "#A2D2FF"
+        },
+        "light": {
+          "primary": "#B83A99",
+          "primaryContainer": "#F5CCEC",
+          "secondary": "#536A9B",
+          "surfaceVariantText": "#393D3F",
+          "surfaceTint": "#B83A99",
+          "outline": "#C47AB0",
+          "info": "#536A9B"
+        }
+      }
+    ]
+  },
+  "sourceDir": "onyx"
+}

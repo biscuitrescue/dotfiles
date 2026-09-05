@@ -1,0 +1,52 @@
+# palette = "kanagawa"
+
+[character]
+#
+success_symbol = "[ ](green)"
+error_symbol = "[x ](red)"
+vicmd_symbol = "[v ](blue)"
+
+[directory]
+truncation_length = 3
+style = "bold blue"
+
+[gcloud]
+disabled = true
+
+[hostname]
+ssh_only = true
+format = '[$hostname](bold mauve) '
+trim_at = '.companyname.com'
+disabled = false
+
+[palettes.one]
+green = "#98be65"
+red = "#ff6c6b"
+mauve = "#AE95C7"
+blue = "#51afef"
+magenta = "#a9a1e1"
+yellow = "#ecbe7b"
+
+[palettes.oxocarbon]
+green = "#42be65"
+red = "#ff6c6b"
+mauve = "#be95ff"
+blue = "#78a9ff"
+magenta = "#ff7eb6"
+yellow = "#f1fa8c"
+
+[palettes.palenight]
+green = "#c3e88d"
+red = "#f07178"
+mauve = "#c797ea"
+blue = "#82aaff"
+magenta = "#ea999c"
+yellow = "#ffcb6b"
+
+[palettes.roseprime]
+green = "#647977"
+red = "#ba5f60"
+mauve = "#6c6b9b"
+blue = "#6172a0"
+magenta = "#ad82a2"
+yellow = "#c5959c"

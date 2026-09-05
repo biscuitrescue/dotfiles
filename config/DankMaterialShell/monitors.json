@@ -1,0 +1,248 @@
+{
+  "version": 1,
+  "configurations": [
+    {
+      "id": "auto_ea9abafa",
+      "name": "",
+      "outputs": {
+        "eDP-1": {
+          "mode": "1920x1080@59.999",
+          "position": {
+            "x": 2752,
+            "y": 288
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {}
+        },
+        "DP-1": {
+          "mode": "3440x1440@99.997",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {}
+        }
+      }
+    },
+    {
+      "id": "profile_1784200180103_as0eygh",
+      "name": "uw",
+      "outputs": {
+        "DP-1": {
+          "mode": "3440x1440@99.997",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {
+            "colorManagement": "wide",
+            "bitdepth": 10,
+            "sdrBrightness": 2,
+            "sdrSaturation": 1.5
+          }
+        },
+        "eDP-1": {
+          "mode": "1920x1080@59.999",
+          "position": {
+            "x": 548,
+            "y": 1152
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {
+            "colorManagement": "adobe",
+            "bitdepth": 10
+          }
+        }
+      }
+    },
+    {
+      "id": "profile_1784200301496_yo1liqb",
+      "name": "uw only",
+      "outputs": {
+        "eDP-1": {
+          "mode": "1920x1080@59.999",
+          "position": {
+            "x": 2739,
+            "y": 99
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": true,
+          "hyprland": {}
+        },
+        "DP-1": {
+          "mode": "3440x1440@99.997",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {}
+        }
+      }
+    },
+    {
+      "id": "profile_1784209116615_jio4opj",
+      "name": "lg only",
+      "outputs": {
+        "eDP-1": {
+          "mode": "1920x1080@59.999",
+          "position": {
+            "x": 832,
+            "y": 0
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": true,
+          "hyprland": {}
+        },
+        "DP-1": {
+          "mode": "2560x1440@99.946",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {}
+        }
+      }
+    },
+    {
+      "id": "profile_1784317962201_3ojsr83",
+      "name": "only",
+      "outputs": {
+        "eDP-1": {
+          "mode": "1920x1080@59.999",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {
+            "colorManagement": "adobe",
+            "bitdepth": 10
+          }
+        }
+      }
+    },
+    {
+      "id": "auto_749a1f69",
+      "name": "",
+      "outputs": {
+        "eDP-1": {
+          "mode": "1920x1080@59.999",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {}
+        }
+      }
+    },
+    {
+      "id": "profile_1784473258087_rq4jja8",
+      "name": "lg",
+      "outputs": {
+        "eDP-1": {
+          "mode": "1920x1080@59.999",
+          "position": {
+            "x": 2048,
+            "y": 288
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {
+            "colorManagement": "adobe",
+            "bitdepth": 10
+          }
+        },
+        "DP-1": {
+          "mode": "2560x1440@59.951",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {
+            "colorManagement": "wide",
+            "bitdepth": 10,
+            "sdrBrightness": 2,
+            "sdrSaturation": 1.5
+          }
+        }
+      }
+    },
+    {
+      "id": "profile_1784474460912_o3xo5t1",
+      "name": "default",
+      "outputs": {
+        "DP-1": {
+          "mode": "2560x1440@99.946",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {
+            "bitdepth": 10,
+            "colorManagement": "wide",
+            "sdrBrightness": 2,
+            "sdrSaturation": 1.5
+          }
+        },
+        "eDP-1": {
+          "mode": "1920x1080@59.999",
+          "position": {
+            "x": 2048,
+            "y": 288
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {
+            "bitdepth": 10,
+            "colorManagement": "adobe"
+          }
+        }
+      }
+    }
+  ]
+}
