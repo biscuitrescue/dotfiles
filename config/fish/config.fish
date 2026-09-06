@@ -65,10 +65,10 @@ alias checkout="git checkout"
 # alias clean="sudo eclean-dist -d && sudo revdep-rebuild"
 
 # Arch
-# alias up="paru -Syu --sudoloop"
-# alias mirror="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
-# alias nosleep="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target"
-# alias yesleep="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+alias up="paru -Syu --sudoloop"
+alias mirror="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
+alias nosleep="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+alias yesleep="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
 
 # NixOS
 alias ns="nix-shell"
@@ -108,5 +108,4 @@ function ipub
 end
 
 starship init fish | source
-direnv hook fish | source
-any-nix-shell fish --info-right | source
+# direnv hook fish | source
