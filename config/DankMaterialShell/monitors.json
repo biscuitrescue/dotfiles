@@ -104,28 +104,36 @@
       "name": "lg only",
       "outputs": {
         "eDP-1": {
-          "mode": "1920x1080@59.999",
+          "mode": null,
           "position": {
-            "x": 832,
+            "x": 0,
             "y": 0
           },
-          "scale": 1.25,
+          "scale": 1,
           "transform": "Normal",
           "vrr": false,
           "disabled": true,
-          "hyprland": {}
+          "hyprland": {
+            "colorManagement": "adobe",
+            "bitdepth": 10
+          }
         },
         "DP-1": {
           "mode": "2560x1440@99.946",
           "position": {
-            "x": 0,
+            "x": 1536,
             "y": 0
           },
           "scale": 1.25,
           "transform": "Normal",
           "vrr": false,
           "disabled": false,
-          "hyprland": {}
+          "hyprland": {
+            "colorManagement": "hdr",
+            "bitdepth": 10,
+            "sdrBrightness": 2,
+            "sdrSaturation": 1
+          }
         }
       }
     },
@@ -175,7 +183,7 @@
         "eDP-1": {
           "mode": "1920x1080@59.999",
           "position": {
-            "x": 2048,
+            "x": 0,
             "y": 288
           },
           "scale": 1.25,
@@ -190,7 +198,7 @@
         "DP-1": {
           "mode": "2560x1440@99.946",
           "position": {
-            "x": 0,
+            "x": 1536,
             "y": 0
           },
           "scale": 1.25,
@@ -241,6 +249,72 @@
             "bitdepth": 10,
             "colorManagement": "adobe"
           }
+        }
+      }
+    },
+    {
+      "id": "profile_1789376090613_chgnc3k",
+      "name": "new",
+      "outputs": {
+        "eDP-1": {
+          "mode": null,
+          "position": {
+            "x": 2048,
+            "y": 288
+          },
+          "scale": 1.25,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {
+            "colorManagement": "adobe",
+            "bitdepth": 10
+          }
+        },
+        "HDMI-A-1": {
+          "mode": "720x400@70.082",
+          "position": {
+            "x": 3584,
+            "y": 0
+          },
+          "scale": 1,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {}
+        }
+      }
+    },
+    {
+      "id": "profile_1789376090772_q0zqo1n",
+      "name": "new",
+      "outputs": {
+        "eDP-1": {
+          "mode": "1920x1080@59.999",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {
+            "colorManagement": "adobe",
+            "bitdepth": 10
+          }
+        },
+        "HDMI-A-1": {
+          "mode": "1920x1080@60.000",
+          "position": {
+            "x": 1920,
+            "y": 680
+          },
+          "scale": 1,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {}
         }
       }
     }

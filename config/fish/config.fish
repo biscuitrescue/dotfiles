@@ -1,4 +1,4 @@
-set -x EDITOR "nvim"
+set -x EDITOR "emacsclient -c"
 set -x BAT_THEME "ansi"
 set fish_greeting
 set -x RANGER_LOAD_DEFAULT_RC "FALSE"
@@ -71,10 +71,10 @@ alias nosleep="sudo systemctl mask sleep.target suspend.target hibernate.target 
 alias yesleep="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
 
 # NixOS
-alias ns="nix-shell"
-alias ncg="sudo nix-collect-garbage --delete-older-than 1d"
-alias up="sudo nixos-rebuild switch --flake /home/cafo/nixos#cafo --upgrade-all"
-alias reb="sudo nixos-rebuild switch --flake /home/cafo/nixos#cafo"
+# alias ns="nix-shell"
+# alias ncg="sudo nix-collect-garbage --delete-older-than 1d"
+# alias up="sudo nixos-rebuild switch --flake /home/cafo/nixos#cafo --upgrade-all"
+# alias reb="sudo nixos-rebuild switch --flake /home/cafo/nixos#cafo"
 
 alias lg="lazygit"
 
@@ -92,7 +92,6 @@ alias dstart='startx /usr/local/bin/dwm'
 
 # Fancy
 alias pipes="pipes-rs -k curved -p 3 -t 0.13 -r 0.6"
-alias fetch="fastfetch"
 
 # Tmux
 alias tmsource="tmux source-file ~/.config/tmux/tmux.conf"

@@ -1,0 +1,29 @@
+# Colors (Habamax)
+
+[colors.primary]
+background = '#1C1C1C'
+foreground = '#C7C7C7'
+
+[colors.cursor]
+text = '#1C1C1C'
+cursor = '#DADADA'
+
+[colors.normal]
+black = '#1C1C1C'
+red = '#AF5F5F'
+green = '#5FAF5F'
+yellow = '#AF875F'
+blue = '#5F87AF'
+magenta = '#AF87AF'
+cyan = '#5F8787'
+white = '#9E9E9E'
+
+[colors.bright]
+black = '#767676'
+red = '#D75F87'
+green = '#87D787'
+yellow = '#D7AF87'
+blue = '#5FAFD7'
+magenta = '#D787D7'
+cyan = '#87AFAF'
+white = '#C7C7C7'

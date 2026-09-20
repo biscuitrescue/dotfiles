@@ -133,4 +133,4 @@ x = 10
 y = 10
 
 [general]
-import = ["~/.config/alacritty/themes/onyx.toml"]
+import = ["~/.config/alacritty/themes/gruber-onyx.toml"]

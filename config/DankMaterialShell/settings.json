@@ -18,14 +18,15 @@
     "peaceAndQuiet": "blue",
     "onyx": "yellow"
   },
-  "matugenScheme": "scheme-expressive",
-  "widgetBackgroundColor": "sc",
+  "matugenScheme": "scheme-fruit-salad",
+  "widgetBackgroundColor": "sth",
   "widgetColorMode": "colorful",
   "controlCenterTileColorMode": "primaryContainer",
   "cornerRadius": 8,
   "hyprlandLayoutGapsOverride": 6,
   "hyprlandLayoutGapsOutOverride": 9,
   "hyprlandLayoutBorderSize": 0,
+  "calendarBackend": "dankcal",
   "clockFormat": "12h",
   "animationSpeed": 2,
   "modalAnimationSpeed": 2,
@@ -34,6 +35,7 @@
   "blurEnabled": true,
   "controlCenterShowMicPercent": true,
   "appIdSubstitutions": [],
+  "clockDateFormat": "d/M",
   "useAutoLocation": true,
   "networkPreference": "wifi",
   "iconThemePerMode": true,
@@ -80,10 +82,9 @@
   "matugenTemplateVscode": false,
   "matugenTemplateEmacs": false,
   "lockScreenNotificationMode": 1,
-  "dankIslandPalette": "bright",
-  "dankIslandBatteryStyle": "ring",
   "osdPowerProfileEnabled": true,
   "powerMenuDefaultAction": "lock",
+  "displayShowDisconnected": true,
   "barConfigs": [
     {
       "id": "default",
@@ -125,7 +126,7 @@
       "maximizeWidgetText": false,
       "removeWidgetPadding": false,
       "widgetPadding": 8,
-      "gothCornersEnabled": false,
+      "gothCornersEnabled": true,
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 42,
       "borderEnabled": false,
@@ -158,7 +159,7 @@
       "clickThrough": false,
       "hoverPopouts": false,
       "hoverPopoutDelay": 150,
-      "attachToScreenEdge": false
+      "attachToScreenEdge": true
     }
   ],
   "desktopClockCustomColor": {
@@ -208,5 +209,5 @@
   "frameLauncherEmergeSide": "top",
   "frameLauncherEdgeHover": true,
   "frameBarInsetPadding": 8,
-  "configVersion": 17
+  "configVersion": 18
 }

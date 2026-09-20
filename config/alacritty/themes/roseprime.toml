@@ -6,7 +6,7 @@
 # Default colors
 [colors.primary]
 background = '#121315'
-# alternate, darker background = '#111111'
+# background = '#111111'
 foreground = '#adadcc'
 
 #[colors.cursor]

@@ -1,0 +1,36 @@
+# Gruber-Darker / Gruber-Onyx
+# Original Gruber-Darker background
+
+[colors.primary]
+background = '0x181818'
+foreground = '0xe4e4ef'
+
+[colors.cursor]
+cursor = '0xffdd33'
+text = '0x181818'
+
+[colors.selection]
+background = '0x303030'
+text = '0xf4f4f4'
+
+# Normal colors
+[colors.normal]
+black = '0x181818'
+red = '0xf43841'
+green = '0x73c936'
+yellow = '0xffdd33'
+blue = '0x96a6c8'
+magenta = '0x9e95c7'
+cyan = '0x95e5e5'
+white = '0xe4e4ef'
+
+# Bright colors
+[colors.bright]
+black = '0x4a4548'
+red = '0xff4f59'
+green = '0x8bd450'
+yellow = '0xe7c547'
+blue = '0xa5b4d4'
+magenta = '0xb0a7d8'
+cyan = '0xa8eeee'
+white = '0xf4f4f4'
