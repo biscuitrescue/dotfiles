@@ -191,8 +191,7 @@
           "vrr": false,
           "disabled": false,
           "hyprland": {
-            "colorManagement": "adobe",
-            "bitdepth": 10
+            "colorManagement": "dp3"
           }
         },
         "DP-1": {
@@ -203,13 +202,13 @@
           },
           "scale": 1.25,
           "transform": "Normal",
-          "vrr": false,
+          "vrr": true,
           "disabled": false,
           "hyprland": {
-            "colorManagement": "wide",
+            "colorManagement": "auto",
             "bitdepth": 10,
             "sdrBrightness": 2,
-            "sdrSaturation": 1.5
+            "sdrSaturation": 1
           }
         }
       }
